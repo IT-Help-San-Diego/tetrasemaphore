@@ -1,3 +1,9 @@
 .DS_Store
 *.png.import
 __pycache__/
+
+# Local-only research/provenance/private carrier material.
+# Raw dumps, PHI-ish notes, transcripts, and Tourette/profanity
+# carrier texture live here for accountability, never public release.
+/Research Artifacts/
+/private_research_vault/
