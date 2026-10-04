@@ -1,0 +1,191 @@
+{
+ "config": "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/notation/notation-config-final-nonnormative.json",
+ "work_dir": "/private/tmp/claude-501/-Users-careybalboa-Downloads/d375ddbb-e490-46d5-bc3e-eb9305e55aed/scratchpad/notation-build/nn",
+ "approved_masters_before": {
+  "master/MASTER-medallion-METACOGNITIVE-slot820.svg": "d4054fa6e02e66e4",
+  "master/states/MASTER-medallion-NORMATIVE-slot820.svg": "d9d6336b0c9450ac",
+  "master/states/MASTER-medallion-NON-NORMATIVE-slot820.svg": "e1d83bb7e4b6017d",
+  "master/states/MASTER-medallion-CRITICAL-slot820.svg": "055655372b21da5c",
+  "master/states/MASTER-medallion-METACOGNITIVE-slot820.svg": "3a8a7459bb1782d1"
+ },
+ "states": [
+  {
+   "name": "NON-NORMATIVE",
+   "symbol": "σᵥ",
+   "state_hex": "#4FB5B5",
+   "gold_hex": "#C7B469",
+   "owl_master": "master/states/proposals/seam-fix/MASTER-medallion-NON-NORMATIVE-slot820.svg",
+   "owl_master_sha16": "d7b419d0e0017c76",
+   "glyph_source": "/Users/careybalboa/Downloads/andean-carrier-geometry/sigma-v/sigma_v_subscript_ssty.svg",
+   "glyph_source_sha16": "212f8dfaf3802a44",
+   "fit": {
+    "rule": "height_slot_units",
+    "value": 191.802,
+    "note": "ring clearance matched to the sigma-h coin (7.17 mm): mark 466.1 slot units wide"
+   },
+   "source_bbox": [
+    -294.75,
+    -121.28,
+    294.75,
+    121.28
+   ],
+   "source_size": [
+    589.5,
+    242.56
+   ],
+   "bbox_centre": [
+    0.0,
+    0.0
+   ],
+   "scale": 0.79074,
+   "placement_transform": "translate(410 410) scale(0.79074) translate(0 0)",
+   "mark_size_slot_units_vector": [
+    466.141,
+    191.802
+   ],
+   "byte_identical_outside_swapped_node": true,
+   "c14n_identical": true,
+   "owl_node_bytes": 70671,
+   "glyph_node_bytes": 1372,
+   "out": "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/notation/finals/MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+   "out_sha16": "d0812f05dd09c201",
+   "out_bytes": 238791,
+   "exactness_grep": {
+    "tok_defs": 1,
+    "uses": 2,
+    "scale_1_m1": 1,
+    "rotate_180": 0,
+    "glyph_fix": 1
+   },
+   "measure": {
+    "preview_png": "master/states/proposals/notation/finals/MASTER-medallion-NON-NORMATIVE-notation-slot820-preview.png",
+    "preview_sha16": "77cfe211e8f5d80d",
+    "mark_bbox_slot_units": [
+     177.0,
+     314.0,
+     643.0,
+     506.0
+    ],
+    "mark_size_slot_units": [
+     466.0,
+     192.0
+    ],
+    "mark_size_mm": [
+     58.41,
+     24.07
+    ],
+    "mark_bbox_centre_slot_units": [
+     410.0,
+     410.0
+    ],
+    "ink_centroid_slot_units": [
+     410.0,
+     400.86
+    ],
+    "ring_clearance_slot_units": 57.2,
+    "ring_clearance_mm": 7.17,
+    "ring_clearance_at_deg": 188.0,
+    "plaque_span_deg": [
+     45,
+     135
+    ],
+    "plaque_clearance_slot_units": 193.14,
+    "plaque_clearance_mm": 24.21,
+    "print": {
+     "render_px": 5139,
+     "mm_per_px": 0.020001,
+     "mark_size_mm": [
+      58.42,
+      24.04
+     ],
+     "ink_px": 611645,
+     "gold_px": 54088,
+     "gold_over_ink_px": 0,
+     "clear_ground_mm": 1.64,
+     "iou": {
+      "sigma_h": 0.1213,
+      "sigma_v": 0.9999,
+      "c2": 0.1213
+     },
+     "floors": {
+      "skeleton_px": 7003,
+      "endpoints": 12,
+      "median_ridge_width_mm": 1.887,
+      "thinnest_ridge_mm": 0.855,
+      "thinnest_ridge_at_slot": [
+       564.9,
+       349.0
+      ],
+      "thinnest_disc_mm": 0.951,
+      "thinnest_disc_at_slot": [
+       355.1,
+       472.9
+      ],
+      "per_component": [
+       {
+        "component": 1,
+        "area_px": 209101,
+        "centre_slot": [
+         233.1,
+         381.3
+        ],
+        "thinnest_ridge_mm": 0.874,
+        "thinnest_disc_mm": 0.988
+       },
+       {
+        "component": 2,
+        "area_px": 209101,
+        "centre_slot": [
+         586.9,
+         381.3
+        ],
+        "thinnest_ridge_mm": 0.855,
+        "thinnest_disc_mm": 0.988
+       },
+       {
+        "component": 3,
+        "area_px": 96722,
+        "centre_slot": [
+         344.2,
+         440.4
+        ],
+        "thinnest_ridge_mm": 0.924,
+        "thinnest_disc_mm": 0.951
+       },
+       {
+        "component": 4,
+        "area_px": 96721,
+        "centre_slot": [
+         475.8,
+         440.4
+        ],
+        "thinnest_ridge_mm": 0.924,
+        "thinnest_disc_mm": 0.951
+       }
+      ],
+      "skeleton_seconds": 1.6
+     },
+     "thinnest_mm": 0.951,
+     "floor_margin_mm": 0.351,
+     "floor_margin_indeterminate": false,
+     "pass": true,
+     "pass_rule": "thinnest (inscribed disc, taper-excluded) >= 0.6 mm, gold over ink == 0, clear ground >= 0.6 mm, IoU own >= 0.97, others <= 0.9; a margin under 0.1 mm is flagged indeterminate"
+    }
+   }
+  }
+ ],
+ "build_states_check": {
+  "returncode": 0,
+  "stdout": "GUARD PASS d4054fa6e02e66e4 vs master/MASTER-medallion-METACOGNITIVE-slot820.svg d4054fa6e02e66e4\nNORMATIVE IDENTICAL d9d6336b0c9450ac\nNON-NORMATIVE IDENTICAL e1d83bb7e4b6017d\nCRITICAL IDENTICAL 055655372b21da5c\nMETACOGNITIVE IDENTICAL 3a8a7459bb1782d1",
+  "guard_pass": true,
+  "identical": 4
+ },
+ "approved_masters_after": {
+  "master/MASTER-medallion-METACOGNITIVE-slot820.svg": "d4054fa6e02e66e4",
+  "master/states/MASTER-medallion-NORMATIVE-slot820.svg": "d9d6336b0c9450ac",
+  "master/states/MASTER-medallion-NON-NORMATIVE-slot820.svg": "e1d83bb7e4b6017d",
+  "master/states/MASTER-medallion-CRITICAL-slot820.svg": "055655372b21da5c",
+  "master/states/MASTER-medallion-METACOGNITIVE-slot820.svg": "3a8a7459bb1782d1"
+ },
+ "approved_masters_unchanged": true
+}
