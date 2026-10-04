@@ -11,6 +11,7 @@ This directory contains the current public master candidate set for the four Tet
 - CRITICAL choices closed: span A; triangles as filed; C2 token at 85%; upright C; champagne/gold #C7B469; do not reopen scale without new measurement.
 - These are public-facing artwork assets only; private raw-source archives remain outside the repo.
 - Internal lane README files from the Downloads staging area are deliberately not published here; this repo keeps clean public masters, measurements, hashes, and doctrine only.
+- NON-NORMATIVE-transparent.png rendered from the ruled 4mm SVG (sha 725520f3) via Inkscape at 2460x2460 with transparent background, matching the other three transparent print masters; the superseded on-its-side transparent export (sha d0812f05) was NOT reused.
 
 ## Files
 
@@ -27,6 +28,7 @@ This directory contains the current public master candidate set for the four Tet
 | CRITICAL-transparent | `masters/notation-medallions/CRITICAL-transparent.png` | `2726fe9892425925891354882ed41a255fa2ca1d6b32650846b0ae50c46fe0a7` | 2308111 |
 | NON-NORMATIVE | `masters/notation-medallions/NON-NORMATIVE.svg` | `725520f3eec582e6c5b207f664ccc9715703510f82f32d538a5d73f989d8c02c` | 238745 |
 | NON-NORMATIVE-preview | `masters/notation-medallions/NON-NORMATIVE-preview.png` | `46cb63ab8f7f1bec2622d5404e46f1f6494aab1ca4b1ed35150320896f82079b` | 1132366 |
+| NON-NORMATIVE-transparent | `masters/notation-medallions/NON-NORMATIVE-transparent.png` | `d8d527fc10c10dd47e7f407e88ab9ca3f277914bae04114d27bcc2e9235561d1` | 2151850 |
 | NON-NORMATIVE-measurements | `masters/notation-medallions/NON-NORMATIVE-measurements.json` | `469d3bad6efd9fc356db8957074fc1056cf7cac0dab7a705028170f4068c450c` | 5521 |
 | NORMATIVE-measurements | `masters/notation-medallions/NORMATIVE-measurements.json` | `65096528843873867944bbc393741d0d4f35312e51b181f5db82f1e2eb52dfce` | 2828 |
 | METACOGNITIVE-CRITICAL-measurements | `masters/notation-medallions/METACOGNITIVE-CRITICAL-measurements.json` | `34f34f43ebbc2558435c801ce54277210c448c0d593e62c9a8524604e5bbe450` | 10174 |
