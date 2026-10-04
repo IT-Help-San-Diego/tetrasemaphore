@@ -48,8 +48,7 @@ Framework home: **tetrasemaphore.systems**
 
 ## Status
 
-Early. The specification, the four reference glyphs, the frieze proofs,
-and the print masters land here as they pass verification.
+Early. The specification is public, and the current notation-medallion master candidate set now lives under `masters/notation-medallions/` with hashes in `masters/MANIFEST.json`. The masters are public artwork only; private raw transcripts and research-carrier archives stay outside this repository.
 
 ## License
 
