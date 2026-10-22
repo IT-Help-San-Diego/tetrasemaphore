@@ -53,5 +53,5 @@ and the print masters land here as they pass verification.
 
 ## License
 
-[CC BY 4.0](LICENSE) — © Carey James Balboa / IT Help San Diego Inc.
+[CC BY 4.0](LICENSE) — © Carey James Balboa.
 Attribution required; re-derivation encouraged. Check, don't believe.
