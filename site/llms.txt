@@ -1,6 +1,7 @@
 # The Tetrasemaphore
 
-The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL. Each state is a move of a flat picture, and each coin carries a mark built to survive its own move, written in the symbols chemists and mathematicians already use for symmetry. It is the successor to the Owl Semaphore, which carried the same four states with an owl. An owl means different things in different cultures, so the Tetrasemaphore carries the states with mathematical notation instead. Every claim it makes can be checked with your body, a pen and paper, a phone, a printer, a proof checker or a friend, and the one question still open, whether it helps people think about their thinking, can be tested.
+> The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL. Each state is a move of a flat picture, and each coin carries a mark built to survive its own move, written in the symbols chemists and mathematicians already use for symmetry. Every claim it makes can be checked with your body, a pen and paper, a phone, a printer, a proof checker or a friend, and the one question still open, whether it helps people think about their thinking, can be tested.
 
 - [The Tetrasemaphore](https://tetrasemaphore.systems/)
+- [Public note](https://tetrasemaphore.systems/note.html)
 - [Method & tests](https://tetrasemaphore.systems/method.html)

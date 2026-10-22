@@ -14,7 +14,7 @@ def bad(msg):
     print("FAIL: " + msg)
     FAIL = 1
 
-PAGES = ("index.html", "method.html", "404.html")
+PAGES = tuple(p for p in ("index.html", "note.html", "method.html", "404.html") if p in ("index.html", "method.html", "404.html") or os.path.exists(p))
 POLICIES = ("infra/cloudfront/security-headers.json", "infra/cloudfront/assets-headers.json")
 
 # 1. All three <style> blocks must be byte-identical, contain no @import/url(), and their quoted sha256 hash must sit in all 3 meta CSPs + both header policies.
@@ -32,9 +32,9 @@ for p in PAGES:
         if re.search(r"@import\b|url\s*\(", styles[p], re.I):
             bad(f"{p}: <style> contains @import or url()")
 
-if len(styles) == 3:
+if len(styles) == len(PAGES):
     ref_style = styles["index.html"]
-    for p in ("method.html", "404.html"):
+    for p in PAGES[1:]:
         if styles[p] != ref_style:
             bad(f"{p}: <style> block differs from index.html")
     h = "sha256-" + base64.b64encode(hashlib.sha256(ref_style.encode("utf-8")).digest()).decode()
@@ -205,6 +205,19 @@ for p in sorted(glob.glob("assets/*.png")):
     n_png += 1
 
 say(f"OK: {len(actual_assets)} sealed assets verified, {n_png} PNGs tagged sRGB + 300 dpi, no owl/flashcard ships")
+
+# 6. Repo privacy gate: forbid tracking Research Artifacts, private_research_vault, transcripts, or sqlite/jsonl dumps in git.
+import subprocess
+try:
+    tracked = subprocess.check_output(["git", "ls-files"], cwd="..", text=True).splitlines()
+except Exception:
+    tracked = []
+FORBIDDEN_GIT = ("research artifacts/", "private_research_vault/", "wispr", "transcript", ".jsonl", ".sqlite", "doorbell", "handoff")
+for tf in tracked:
+    tfl = tf.lower()
+    if any(tok in tfl for tok in FORBIDDEN_GIT):
+        bad(f"forbidden private/dump path tracked in git: {tf}")
+say("OK: git tracked-files privacy gate clean")
 
 if FAIL == 0:
     say("verify.sh: ALL CHECKS PASS")

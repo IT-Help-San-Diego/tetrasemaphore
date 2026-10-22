@@ -7,6 +7,7 @@ DIST_ID ?= E1EMF780M9UOHH
 ALLOWLIST := \
 	--exclude "*" \
 	--include "index.html" \
+	--include "note.html" \
 	--include "method.html" \
 	--include "404.html" \
 	--include "robots.txt" \
@@ -43,7 +44,7 @@ deploy-dry-run: check
 
 deploy: check
 	aws s3 sync . $(BUCKET) --region $(REGION) $(ALLOWLIST)
-	for f in index.html method.html 404.html; do \
+	for f in index.html note.html method.html 404.html; do \
 		aws s3 cp "$$f" "$(BUCKET)/$$f" --region $(REGION) --content-type "text/html; charset=utf-8" --cache-control "no-cache"; \
 	done
 	for f in robots.txt llms.txt .well-known/security.txt; do \

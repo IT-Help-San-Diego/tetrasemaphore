@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-NUjpbW1N5nrLvoFVjMXmuXcDihkNoT5/pKIKoXDRUUk='; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<title>The Tetrasemaphore</title>
+<meta name="description" content="The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
+<meta name="author" content="Carey James Balboa">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tetrasemaphore">
+<meta property="og:title" content="The Tetrasemaphore">
+<meta property="og:description" content="The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
+<meta property="og:url" content="https://tetrasemaphore.systems/note.html">
+<meta property="og:image" content="https://tetrasemaphore.systems/assets/og-card.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Tetrasemaphore">
+<meta name="twitter:description" content="The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
+<meta name="twitter:image" content="https://tetrasemaphore.systems/assets/og-card.jpg">
+<link rel="canonical" href="https://tetrasemaphore.systems/note.html">
+<link rel="icon" href="/assets/TETRASEMAPHORE-NORMATIVE-en-512.png" type="image/png">
+<style>
+:root{
+  --bg:#0d1117;
+  --panel:#131922;
+  --fg:#e8e4dc;
+  --bg-deep:#07090d;
+  --bg-elev:#0c1017;
+  --muted:#9e998e;
+  --rule:#1f2735;
+  --rule-strong:#2d374a;
+  --c-norm:#c7b469;
+  --c-norm-bright:#e5c97b;
+  --f-norm:#181403;
+  --c-nonnorm:#38a89a;
+  --c-nonnorm-bright:#5ec4b6;
+  --f-nonnorm:#001817;
+  --c-meta:#b07fd6;
+  --c-meta-bright:#c79ce8;
+  --f-meta:#17121d;
+  --c-crit:#d1564b;
+  --c-crit-bright:#e3746a;
+  --f-crit:#1f100e;
+  --gold:#d4a853;
+  --accent:#dfc17b;
+  --math:"STIX Two Math","Latin Modern Math","Cambria Math","STIXGeneral","Apple Symbols","Iowan Old Style",Palatino,Georgia,serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+.skip{position:absolute;left:-9999px;top:0.5rem;z-index:100;background:var(--bg-elev);color:var(--gold);padding:0.4rem 0.75rem;border:1px solid var(--gold);border-radius:3px;font-family:var(--sans);font-size:0.85rem;text-decoration:none}
+.skip:focus{left:1rem}
+html,body{margin:0;padding:0;background-color:var(--bg-deep);color:var(--fg);font-family:var(--serif);font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background-image:
+    radial-gradient(ellipse 60% 40% at 15% 0%,rgba(199,180,105,0.06),transparent 70%),
+    radial-gradient(ellipse 60% 40% at 85% 0%,rgba(176,127,214,0.06),transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 100%,rgba(56,168,154,0.04),transparent 70%);
+  background-attachment:fixed;
+}
+main,header.site,footer.site nav{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:0.5rem}
+footer.site{max-width:56rem;margin:0 auto;padding:0 1.5rem}
+header.site{
+  padding-top:2.25rem;
+  padding-bottom:1.35rem;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+header.site::after{
+  content:"";
+  display:block;
+  position:absolute;
+  left:1.5rem;
+  right:1.5rem;
+  bottom:-1px;
+  height:2px;
+  background:linear-gradient(90deg,var(--c-norm) 0 25%,var(--c-nonnorm) 25% 50%,var(--c-meta) 50% 75%,var(--c-crit) 75% 100%);
+  opacity:0.85;
+}
+header.site .eyebrow{
+  font-family:var(--mono);
+  font-size:0.76rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 0.5rem 0;
+}
+header.site .eyebrow .formula{
+  text-transform:none;
+  font-family:var(--math);
+  font-size:0.98rem;
+  font-weight:500;
+  letter-spacing:0.045em;
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"kern" 1,"liga" 1,"ss01" 1;
+  color:#f9f4e8;
+  background:linear-gradient(180deg,rgba(24,20,3,0.85) 0%,rgba(19,25,34,0.92) 100%);
+  border:1px solid rgba(212,168,83,0.45);
+  box-shadow:0 2px 10px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.07);
+  padding:0.16rem 0.62rem;
+  border-radius:4px;
+}
+header.site h1{
+  font-family:var(--serif);
+  font-size:2.25rem;
+  line-height:1.15;
+  font-weight:600;
+  margin:0 0 0.45rem 0;
+  letter-spacing:-0.015em;
+  color:#f7f3eb;
+}
+header.site p.sub{margin:0;color:var(--muted);font-size:1.02rem}
+nav.top{
+  margin-top:1rem;
+  padding-top:0.75rem;
+  border-top:1px solid rgba(255,255,255,0.05);
+  font-family:var(--sans);
+  font-size:0.86rem;
+  letter-spacing:0.02em;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.25rem;
+}
+nav.top a{color:var(--fg);text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);padding-bottom:2px;transition:color 0.15s ease,border-color 0.15s ease}
+nav.top a:hover,nav.top a:focus{color:var(--accent);border-bottom-color:var(--accent)}
+main{padding-top:1.85rem;padding-bottom:3.25rem}
+section{margin:0 0 2.6rem 0;padding-bottom:2.1rem;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:none}
+h2{
+  font-family:var(--sans);
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 0.95rem 0;
+  display:flex;
+  align-items:center;
+  gap:0.65rem;
+}
+h2::before{
+  content:"";
+  display:inline-block;
+  width:0.52rem;
+  height:0.52rem;
+  border:1px solid var(--gold);
+  transform:rotate(45deg);
+  flex-shrink:0;
+}
+.sources-head{display:block;font-family:var(--sans);font-size:0.98rem;font-weight:600;color:var(--fg);margin:1.4rem 0 0.5rem 0}
+.sig{display:block;margin-top:0.75rem}
+h3{font-family:var(--sans);font-size:0.98rem;font-weight:600;color:var(--fg);margin:1.4rem 0 0.5rem 0}
+p{margin:0 0 1rem 0}
+p.lede{
+  font-size:1.12rem;
+  line-height:1.66;
+  color:#f5f1e8;
+  background:linear-gradient(180deg,rgba(24,20,3,0.55) 0%,rgba(12,16,23,0.75) 100%);
+  border:1px solid var(--rule-strong);
+  border-left:3px solid var(--gold);
+  padding:1.1rem 1.3rem;
+  border-radius:4px;
+}
+p.aim{
+  font-size:1.05rem;
+  line-height:1.62;
+  color:#f2ede2;
+  background:rgba(176,127,214,0.06);
+  border-left:3px solid var(--c-meta);
+  padding:0.75rem 1.1rem;
+  border-radius:0 4px 4px 0;
+}
+a{color:var(--accent);text-underline-offset:0.18em;text-decoration-thickness:1px}
+a:hover,a:focus{color:#f5dea3}
+code{
+  font-family:var(--math);
+  font-size:1.02em;
+  letter-spacing:0.02em;
+  font-variant-numeric:lining-nums tabular-nums;
+  background:rgba(16,21,31,0.88);
+  padding:0.08em 0.42em;
+  border-radius:4px;
+  border:1px solid rgba(212,168,83,0.24);
+  color:#f6eedc;
+}
+figure.coin figcaption code{
+  display:inline-block;
+  font-family:var(--math);
+  font-size:0.98rem;
+  letter-spacing:0.03em;
+  padding:0.2rem 0.58rem;
+  margin-top:0.12rem;
+  background:rgba(7,9,13,0.72);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:4px;
+  color:#f5f0e4;
+}
+pre,kbd{font-family:var(--mono);font-size:0.88em}
+pre{background:var(--bg-elev);padding:1rem 1.15rem;border-radius:4px;border:1px solid var(--rule);overflow-x:auto;line-height:1.5}
+.coins{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.25rem 0 0.75rem 0}
+@media (max-width:820px){
+  .coins{grid-template-columns:repeat(2,1fr);gap:0.75rem}
+  figure.coin{padding:0.75rem 0.55rem}
+  figure.coin img{max-width:156px;margin-bottom:0.5rem}
+}
+figure.coin{
+  margin:0;
+  background:var(--panel);
+  border:1px solid var(--rule-strong);
+  border-radius:6px;
+  padding:0.95rem 0.8rem 0.9rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-shadow:0 10px 28px rgba(0,0,0,0.45);
+  transition:transform 0.18s ease,border-color 0.18s ease;
+}
+figure.coin:hover{transform:translateY(-2px)}
+figure.coin:nth-child(1){background:linear-gradient(180deg,var(--f-norm) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-norm)}
+figure.coin:nth-child(2){background:linear-gradient(180deg,var(--f-nonnorm) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-nonnorm)}
+figure.coin:nth-child(3){background:linear-gradient(180deg,var(--f-meta) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-meta)}
+figure.coin:nth-child(4){background:linear-gradient(180deg,var(--f-crit) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-crit)}
+figure.coin a{display:block;border:none;text-decoration:none}
+figure.coin img{width:100%;max-width:210px;height:auto;aspect-ratio:1/1;display:block;margin:0 auto 0.65rem auto;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,0.65)}
+figure.coin figcaption{font-family:var(--sans);font-size:0.82rem;line-height:1.38;color:var(--muted)}
+figure.coin figcaption strong{display:block;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.06em;margin-bottom:0.2rem}
+figure.coin:nth-child(1) figcaption strong{color:var(--c-norm-bright)}
+figure.coin:nth-child(2) figcaption strong{color:var(--c-nonnorm-bright)}
+figure.coin:nth-child(3) figcaption strong{color:var(--c-meta-bright)}
+figure.coin:nth-child(4) figcaption strong{color:var(--c-crit-bright)}
+details.sources-fold{
+  margin-top:1.1rem;
+  background:rgba(12,16,23,0.6);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:0.65rem 1rem;
+  font-family:var(--sans);
+  font-size:0.9rem;
+}
+details.sources-fold summary{
+  cursor:pointer;
+  font-family:var(--mono);
+  font-size:0.82rem;
+  letter-spacing:0.05em;
+  color:var(--gold);
+  font-weight:600;
+}
+details.sources-fold ul{margin:0.75rem 0 0.25rem 0}
+nav.deeper{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  margin-top:1rem;
+  font-family:var(--sans);
+  font-size:0.88rem;
+}
+nav.deeper a{
+  background:var(--bg-elev);
+  border:1px solid var(--rule-strong);
+  border-radius:4px;
+  padding:0.48rem 0.85rem;
+  text-decoration:none;
+  color:var(--fg);
+}
+nav.deeper a:hover,nav.deeper a:focus{border-color:var(--gold);color:var(--accent)}
+blockquote{
+  margin:1.15rem 0;
+  padding:0.95rem 1.25rem;
+  border-left:3px solid var(--gold);
+  background:linear-gradient(90deg,rgba(212,168,83,0.06) 0%,rgba(16,21,31,0.4) 100%);
+  color:var(--fg);
+  border-radius:0 4px 4px 0;
+}
+blockquote p:last-child{margin-bottom:0}
+ul,ol{margin:0 0 1rem 0;padding-left:1.4rem}
+li{margin-bottom:0.45rem}
+li::marker{color:var(--gold)}
+footer.site{
+  border-top:1px solid var(--rule);
+  padding-top:1.6rem;
+  padding-bottom:3rem;
+  font-family:var(--sans);
+  font-size:0.84rem;
+  color:var(--muted);
+  position:relative;
+}
+footer.site::before{
+  content:"";
+  display:block;
+  position:absolute;
+  left:1.5rem;
+  right:1.5rem;
+  top:-1px;
+  height:1px;
+  background:linear-gradient(90deg,var(--c-norm),var(--c-nonnorm),var(--c-meta),var(--c-crit));
+  opacity:0.6;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "The Tetrasemaphore",
+  "headline": "The Tetrasemaphore",
+  "author": {
+    "@type": "Person",
+    "name": "Carey James Balboa",
+    "identifier": "https://orcid.org/0009-0000-5237-9065"
+  },
+  "url": "https://tetrasemaphore.systems/note.html",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "description": "The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL."
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <p class="eyebrow">Tetrasemaphore &middot; <span class="formula">V&#8324; = {I, &sigma;&#7525;, &sigma;&#8341;, C&#8322;}</span></p>
+  <h1>The Tetrasemaphore</h1>
+  <nav class="top" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/note.html">Public note</a>
+    <a href="/note.html#why-we-left-the-owl">Why we left the owl</a>
+    <a href="/method.html">Method &amp; tests</a>
+    <a href="https://github.com/IT-Help-San-Diego/tetrasemaphore">Repository &#8599;</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section id="one-paragraph">
+  <h2>The Tetrasemaphore in one paragraph</h2>
+  <p class="lede">The Tetrasemaphore is four coins that mark how a piece of work stands: <strong>NORMATIVE</strong>, <strong>NON-NORMATIVE</strong>, <strong>METACOGNITIVE</strong> or <strong>CRITICAL</strong>. Each state is a move of a flat picture, and each coin carries a mark built to survive its own move, written in the symbols chemists and mathematicians already use for symmetry. Every claim it makes can be checked with your body, a pen and paper, a phone, a printer, a proof checker or a friend, and the one question still open, whether it helps people think about their thinking, can be tested.</p>
+</section>
+
+<section id="what-it-is">
+  <h2>What it is</h2>
+  <p>Carey James Balboa, who started the project, put its purpose this way on 5 September 2026: &ldquo;We're going to try to teach people to think about their thinking.&rdquo; The Tetrasemaphore asks two yes-or-no questions of any piece of thinking. Is it looking at its object, or back at its own frame: the premises, method and assumptions it judges from? And does it keep its stance toward the standard, or reverse that stance, the way a mirror reverses left and right? Two yes-or-no questions have exactly four answers. <strong>NORMATIVE</strong> keeps its stance and looks at its object: what has been tested and holds, for now. <strong>NON-NORMATIVE</strong> mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it. <strong>METACOGNITIVE</strong> keeps its stance and looks at its own frame, which is thinking about thinking. <strong>CRITICAL</strong> does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong. The Tetrasemaphore proposes holding two questions about any piece of thinking as two mirrors at a right angle, so that changing your stance or your focus becomes a move you can see, make and undo. In a flat picture the same four answers are four moves: leave it alone (<code>I</code>), flip it left to right (<code>&sigma;&#7525;</code>), flip it top to bottom (<code>&sigma;&#8341;</code>), or turn it half way round (<code>C&#8322;</code>), which is both flips at once. NORMATIVE is <code>I</code>, NON-NORMATIVE is <code>&sigma;&#7525;</code>, METACOGNITIVE is <code>&sigma;&#8341;</code> and CRITICAL is <code>C&#8322;</code>. The moves and their symbols were part of mathematics long before this project, and the coins point at them. As Carey put it (3 October 2026): &ldquo;That's what we do when we discover math. Honor finally what is.&rdquo; Psychology has met this structure before: Jean Piaget held that formal reasoning uses four transformations that combine exactly as these four moves do (his INRC group; Inhelder &amp; Piaget 1958). Each coin's mark is built to survive its own move: the <code>&sigma;&#7525;</code> mark only the left-right flip, the <code>&sigma;&#8341;</code> mark only the top-bottom flip, the <code>C&#8322;</code> mark only the half-turn, and the <code>I</code> mark, whose move changes nothing, every move.</p>
+  <p>The coins are for naming the state of your own thinking, not for labelling anyone else's. That doesn't mean people can't be read: we read each other every day, better than chance for some things and only barely for others, such as lies, and we misread ourselves too. What turns either kind of reading into a measurement is knowing how often it is wrong. This starts with you, and it is meant for everyone.</p>
+  <p>Because the four answer two questions rather than belonging to one field, they can be laid over systems that already sort their claims: the binding requirements of internet standards (RFC 2119) and their informative notes, peer review's findings and hypotheses, a security advisory's critical flag, a laboratory's calibration audit. <a href="#why-we-left-the-owl">The Owl Semaphore</a> grew out of the first of these. They are places to read the four, not the edges of what they are. <span class="sources-head">Sources for this section</span></p>
+  <ul class="sources">
+    <li>Inhelder, B&auml;rbel, and Jean Piaget. <em>The Growth of Logical Thinking: From Childhood to Adolescence</em>. New York: Basic Books, 1958. <a href="https://doi.org/10.1037/10034-000">https://doi.org/10.1037/10034-000</a>. Piaget's account of formal reasoning, including the INRC group: identity, negation, reciprocal and correlative, four transformations that form a Klein four-group.</li>
+    <li>Bond, Charles F., Jr., and Bella M. DePaulo. "Accuracy of Deception Judgments." <em>Personality and Social Psychology Review</em> 10, no. 3 (2006): 214&ndash;234. <a href="https://doi.org/10.1207/s15327957pspr1003_2">https://doi.org/10.1207/s15327957pspr1003_2</a>. Across 206 documents and 24,483 judges with no special aids or training, lie&ndash;truth judgments were 54% correct, where guessing gets 50%.</li>
+    <li>Nisbett, Richard E., and Timothy D. Wilson. "Telling More Than We Can Know: Verbal Reports on Mental Processes." <em>Psychological Review</em> 84, no. 3 (1977): 231&ndash;259. <a href="https://doi.org/10.1037/0033-295X.84.3.231">https://doi.org/10.1037/0033-295X.84.3.231</a>. People's reports on their own higher-order mental processes rest on implicit causal theories rather than direct introspection, and are sometimes accurate.</li>
+    <li>Joint Committee for Guides in Metrology. <em>Evaluation of Measurement Data &mdash; Guide to the Expression of Uncertainty in Measurement</em> (JCGM 100:2008, the GUM), &sect;0.1. A measurement result is reported with a quantitative indication of its quality, so that those who use it can assess its reliability. The Guide states this for physical quantities; this note applies the same standard to readings of a state of thinking.</li>
+  </ul>
+</section>
+
+<section id="how-to-test-it">
+  <h2>How to test it</h2>
+  <p>Every claim here can be checked by someone who does not trust us. Each check below says what it needs, and the first two need nothing but your body, or a pen and a scrap of paper. <strong>With your body:</strong> have someone stand in front of you and watch your head. Stand as you are, and nothing changes (<code>I</code>). Turn around: to them, your left and right swap, and your top stays on top (<code>&sigma;&#7525;</code>). Face them, bend over and look between your legs: your top and bottom swap, and your left and right stay put (<code>&sigma;&#8341;</code>). Turn around, then look between your legs: both swap, and you are looking back at where you started, upside down (<code>C&#8322;</code>). Each move is its own way back, and any two of the last three make the other. The two moves are the two questions, done with the body: turning around reverses the way you face, as NON-NORMATIVE reverses its stance toward the standard, and looking back between your legs turns your view away from what is in front of you and back past yourself, as METACOGNITIVE turns from its object back to its own frame. <strong>With a pen and paper:</strong> write the letters <code>I</code>, <code>A</code>, <code>D</code> and <code>N</code> in block capitals, hold the page up to a window, and turn it over side to side, then top to bottom, then spin it half way round, each time from the start. <code>I</code> survives every move, <code>A</code> only the side-to-side turn, <code>D</code> only the top-to-bottom turn, and <code>N</code> only the half-turn: the same four as the coins. <strong>With a printer or a phone:</strong> <a href="/#coins">print the coins</a> or open them on a screen, look only at the mark in the middle, and flip and turn each one. Switch the screen to greyscale, and the four still differ by shape alone. <strong>With a phone's formula reader:</strong> point it at each of the four camera cards and see whether it reads <code>I</code>, <code>&sigma;&#7525;</code>, <code>&sigma;&#8341;</code> and <code>C&#8322;</code>. <strong>With a computer:</strong> the algebra is machine-checked in the <a href="https://github.com/IT-Help-San-Diego/tetrasemaphore/tree/main/proofs">Lean proof assistant</a>, with a script that runs under bash, wherever Lean is installed, and a report on what the proofs cover and what they do not: they cover the algebra, not the artwork. <strong>With another person:</strong> this is the test that matters most. Teach someone the rule, that each mark survives its own move, in five minutes; then show them prints flipped or turned at random, or make the four moves with your body in a random order, and ask which state each one is. Guessing gets one in four right, so if people who have just learned the rule do little better, the system does not teach, whatever the mathematics says. Whether the coins help people think about their thinking is the open question, and these tests are how to find out. The details follow.</p>
+</section>
+
+<section id="reading-the-coins">
+  <h2>Reading the coins</h2>
+  <p><strong>The symbols.</strong> <code>I</code> is the identity, the move that changes nothing. Chemists write it <code>E</code>, and keep <code>i</code> for inversion, which sends every point through the centre to the opposite side; on a flat picture that is the same move as <code>C&#8322;</code>. We write <code>I</code> because the identity's mark has to look the same after every move, and <code>I</code> is the only one of the usual identity symbols (<code>I</code>, <code>E</code>, <code>1</code>, <code>e</code>) whose letter does. <code>&sigma;</code> is a reflection and <code>C&#8322;</code> a half-turn, in chemists' symbols. The small letter after <code>&sigma;</code> names the mirror line on the page: <code>v</code> for vertical, <code>h</code> for horizontal. Chemists measure <code>v</code> and <code>h</code> from a molecule's main turning axis instead. On a flat picture that axis points straight out of the page, so in their notation both of these mirrors count as vertical (<code>&sigma;v</code> and <code>&sigma;v&prime;</code>), and their <code>&sigma;h</code> would be a reflection through the picture itself, which moves nothing you can see. The gold line on each coin shows which line we mean.</p>
+  <p><strong>Check the mark, not the ring.</strong> The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was. With its words, every whole coin changes under every move; only the mark survives its own.</p>
+  <p><strong>The gold.</strong> Gold shows what the coin's move leaves in place: the whole figure for <code>I</code>, a vertical line for <code>&sigma;&#7525;</code>, a horizontal line for <code>&sigma;&#8341;</code>, a single point for <code>C&#8322;</code>. That is also how to tell <code>I</code> from inversion: inversion leaves only the centre in place, so its gold would be a single point. Lay the two <code>&sigma;</code> coins over each other and their lines cross exactly at <code>C&#8322;</code>'s point. Doing one mirror and then the other is the half-turn, and the points both mirrors leave alone are the point the half-turn leaves alone.</p>
+  <p><strong>Colour comes second.</strong> Shape carries every state. In greyscale the two <code>&sigma;</code> coins are the same grey, and only their axis tells them apart, which is all the mathematics says separates them.</p>
+</section>
+
+<section id="tests-in-detail">
+  <h2>The tests in detail</h2>
+  <p>Every claim above can be checked by someone who does not trust us. The body and paper checks above come first. The tests run from the cheapest to the most demanding.</p>
+  <ol>
+    <li><strong>Do the moves.</strong> <a href="/#coins">Print the four coins</a>, or open them on a phone, and look only at the mark in the middle. Flip each coin left to right, flip it top to bottom, and turn it half way round. The <code>&sigma;&#7525;</code> mark comes back unchanged only after the left-right flip, the <code>&sigma;&#8341;</code> mark only after the top-bottom flip, and the <code>C&#8322;</code> mark only after the half-turn. The <code>I</code> mark comes back unchanged after all three. A mark that survives a move that is not its own is a mistake in the design.</li>
+    <li><strong>Two mirrors make a half-turn.</strong> Write an <code>F</code> on tracing paper. Flip it left to right, then top to bottom: it lands exactly where a half-turn puts it. Then lay the two <code>&sigma;</code> coins over each other, printed on transparencies or at half opacity on a screen. Their gold lines cross at the point that <code>C&#8322;</code>'s gold marks.</li>
+    <li><strong>Take the colour away.</strong> Switch your phone to greyscale, or photocopy the coins in black and white. All four can still be told apart by shape. The two <code>&sigma;</code> coins differ only in the direction of their gold line, which is the only thing the mathematics says separates them.</li>
+    <li><strong>Ask a camera.</strong> Point a formula reader, such as Google Lens or a phone camera's text recognition, at each of the four camera cards, one at a time. A pass is <code>I</code>, <code>&sigma;&#7525;</code>, <code>&sigma;&#8341;</code> and <code>C&#8322;</code>. "It found a formula" is not a pass: a horizontal line between two symbols reads as a fraction bar. Our result (Carey, October 2026): the phone readers he tried did not read the cards reliably. Reading formulas from pictures is still a young technology, so this test is worth repeating as it improves.</li>
+    <li><strong>Check the proofs.</strong> The algebra is machine-checked in Lean. Install the Lean toolchain, run <code>./check.sh</code> under bash, and read the axiom report it prints: it lists everything each theorem assumes. Then try to break it: change a definition and watch a theorem fail. The proofs cover the algebra, not the artwork.</li>
+    <li><strong>Teach it to someone.</strong> This is the test that matters most. Explain the three moves and the rule, that each mark survives its own move, to someone in five minutes. Cover the words, then show them twenty prints, each one flipped, turned half way round, or left alone at random, or make the four moves with your body in a random order, and ask which state each one is. None of the four moves changes which move a mark survives, so the state can always be read. A quarter turn is different: it carries one mirror onto the other, so a print turned a quarter of the way round reads as the other <code>&sigma;</code> coin. That is why the two <code>&sigma;</code> coins are twins. Guessing gets one in four right. If people who have just learned the rule do little better than one in four, the system does not teach, whatever the mathematics says.</li>
+    <li><strong>Ask what the picture means.</strong> Show an <a href="https://dnstool.it-help.tech/owl-semaphore">owl coin</a> and a notation coin to people from different places, and write down what each person says the coin means. The prediction is that answers to the owl vary with where people grew up, and answers to the notation depend only on whether they have learned it. If the notation's answers vary as much as the owl's, that part of the theory is wrong.</li>
+  </ol>
+</section>
+
+<section id="challenges">
+  <h2>Challenges to put to it</h2>
+  <ul>
+    <li><strong>Find a mark that survives a move that is not its own.</strong> Test 1 is how to look.</li>
+    <li><strong>Tell the two <code>&sigma;</code> coins apart without their gold lines.</strong> Only the direction of the mirror should do it. Any other difference carries something the mathematics does not.</li>
+    <li><strong>Add a fifth state.</strong> The four moves are two yes-or-no choices: flip left to right or not, and flip top to bottom or not. Two choices make exactly four combinations: neither (<code>I</code>), the first (<code>&sigma;&#7525;</code>), the second (<code>&sigma;&#8341;</code>), both (<code>C&#8322;</code>). A fifth state would need a third choice, and three choices make eight states, not five.</li>
+    <li><strong>Find a theorem in the Lean file that only restates its own definitions.</strong> The red-team report lists which theorems are bookkeeping and which carry content; check it against the file.</li>
+  </ul>
+</section>
+
+<section id="why-we-left-the-owl">
+  <h2>Why we left the owl</h2>
+  <p>The project began as <a href="https://dnstool.it-help.tech/owl-semaphore">the Owl Semaphore</a>, which carried the same four states with the owl of Athena, read in ancient Greece as a sign of wisdom. Each state was the owl itself moved by its operation: left as it was, flipped left to right, flipped top to bottom, or turned half way round.</p>
+  <p>Translating it for Latin American readers turned that into a question we could check: does an owl mean the same thing everywhere? It does not, and the differences do not fall where we expected. In sixteenth-century central Mexico, Sahag&uacute;n's Nahua informants said that hearing the horned owl meant &ldquo;death or sickness; it was an omen of death&rdquo;. In the K'iche' Maya Popol Vuh, four owls are the messengers of Xibalba, the underworld. Told to sacrifice a young woman and bring back her heart, they spare her, and she tells them they will be esteemed on the face of the earth. In ancient Greece the owl came to stand for wisdom and for Athena, and after 1800 the same bird was seen there as fearsome again; in a recent survey there, most people called owls beneficial, and some still called them bad omens. And when people in three rural communities near Manizales, Colombia, were asked directly, most adults called owls harmless or simply birds, and more called them good luck than bad luck (21&nbsp;% against 9&nbsp;%). The readings differ between countries, between centuries, and between neighbours. The sources are listed at the end of this section, so they can be checked.</p>
+  <p>These are living traditions, not only history. One of our editions for Latin American readers drew on the imagery of the Muisca, a living people of the Colombian Andes. In a mandate that ONIC, Colombia's national indigenous organization, published on 4 May 2024, the authorities of four Muisca resguardos rejected violations of their right to consultation and to free, prior and informed consent, and condemned the use of their knowledge systems and cultural identity for commercial gain, made worse when it is done by people outside their communities. A coin on a shirt that is sold is commercial use. On 17 September 2026, the day we read the mandate, we stopped looking for a carrier in any culture, and the notation itself became the carrier. The dated record of where each edition broke down is in the decision log.</p>
+  <blockquote>
+    <p>I can't speak for any of these peoples, and neither can the AI systems that helped me build this. So we did what we could check: we read the sources, and we stopped where a living people had spoken for themselves. <span class="sig">&mdash; Carey James Balboa, signed 11 October 2026</span></p>
+  </blockquote>
+  <p>A printed coin cannot know who is looking at it, so when a picture's meaning changes from reader to reader, its maker has no way to correct for it. This project calls the meaning a picture brings with it, beyond the structure it carries, carrier colour. In Carey's words (9 October 2026, revised by him on 21 October): &ldquo;The whole thing disintegrates, and that is why you realize how powerful carrier color is.&rdquo; The Tetrasemaphore keeps the four states and their moves and carries them with notation, so the state is read from which move the mark survives, not from what an owl means to the reader. That is the aim of the whole project: to point at some mathematics that was always there, for each reader to check for themselves and think with. It asks no one to take on or give up a belief. Some carrier colour remains, and it can now be listed. The letter <code>&sigma;</code>, the four colours and the look of the coin are choices made here. Which mirror goes with which state is a convention that no mathematics supplies, so each coin states it, with its word and with the gold line that shows its mirror. In the owl, the bird's meaning and the mathematics were one object and could not be pulled apart. The Owl Semaphore's published versions stay as they are, under their own name; the Tetrasemaphore has its own record, linked to them as their successor. <span class="sources-head">Sources for this section</span></p>
+  <ul class="sources">
+    <li>Sahag&uacute;n, Bernardino de. <em>Florentine Codex: General History of the Things of New Spain</em>, Book 5 (the omens), chapter 4. Nahuatl text and English translation by Arthur J. O. Anderson and Charles E. Dibble, 1953&ndash;1982. Getty, <em>Digital Florentine Codex</em>.</li>
+    <li><em>Popol Vuh: Sacred Book of the Quich&eacute; Maya People</em>. Translated by Allen J. Christenson. Mesoweb Publications, 2007 (electronic edition of University of Oklahoma Press, 2003), pp. 105&ndash;106 and 117&ndash;120.</li>
+    <li>Bontzorlos et al. 2023. Owl symbolism in Greek civilization over the last 5000 years: social perceptions and implications for conservation. <em>The European Zoological Journal</em> 90(2): 691&ndash;707. <a href="https://doi.org/10.1080/24750263.2023.2254823">doi:10.1080/24750263.2023.2254823</a></li>
+    <li>Restrepo Cardona, J. S. &amp; Enr&iacute;quez, P. L. 2014. Conocimiento popular sobre los b&uacute;hos en poblaciones rurales del suroccidente de Manizales, Caldas, Colombia. <em>Etnobiolog&iacute;a</em> 12(3): 41&ndash;48.</li>
+    <li>Authorities of the Resguardos Muyscas of Fonquet&aacute; y Cerca de Piedra (Ch&iacute;a), Cota, Sesquil&eacute; and Tocancip&aacute;. <em>Mandato del Pueblo Ind&iacute;gena Muysca y comunicado a la opini&oacute;n p&uacute;blica</em>. ONIC, 4 May 2024. Archived copy: <a href="https://web.archive.org/web/20250120134913/https://onic.org.co/noticias/4695-mandato-del-pueblo-indigena-muysca-y-comunicado-a-la-opinion-publica">https://web.archive.org/web/20250120134913/https://onic.org.co/noticias/4695-mandato-del-pueblo-indigena-muysca-y-comunicado-a-la-opinion-publica</a></li>
+  </ul>
+</section>
+
+<section id="how-this-was-made">
+  <h2>How this was made</h2>
+  <p>Carey James Balboa started the project, made every final decision and is responsible for everything published under it. The work was done with AI systems, and nothing here hides that. Carey's work with AI began with OpenAI's ChatGPT. Claude Science (Anthropic) measured and checked every build, wrote the Lean proofs and drafted this note. Carey's signed statement in &ldquo;Why we left the owl&rdquo; was drafted with Claude Science from his words of 11 October and approved by him. Claude Code (Anthropic) built the coins and the decision pages, attacked the proofs and ran the red teams. Hermes, an AI agent that switches among models from many companies, kept the shared record and prepared this website. SciSpace, an AI research assistant, worked with Carey from April 2026 across the DNS Tool, the Owl Semaphore and this project, in 18 sessions through September, on research, citation checks and outside review. Among other work, it added citations, retrieved sources, split carrier colour into a perceptual and a social sense, and withdrew two claims. Claude Chat (Anthropic) drafted methods note 01 from a dialogue with Carey. Claude Chat and Google's AI Mode took part in dialogues that the decision log cites. Many other AI models, from most of the major makers, were used on purpose: to look for breaks, and for what held across all of them. Because AI models tend to make the same mistakes as one another (Kim, Garg, Peng &amp; Garg 2025, <a href="https://arxiv.org/abs/2506.07962">arXiv:2506.07962</a>), what held across them was then checked against proofs, primary sources and measurements. Where an AI system made a mistake, the failure-modes register says so, and how it was caught.</p>
+  <p><strong>Independence.</strong> All AI services were used through paid subscriptions, apart from occasional free promotional credits. No outside company funded this work beyond those credits, and none approved its content. The subscriptions were paid by IT Help San Diego Inc., a small IT business of which Carey is the majority shareholder. The text and art are released under CC BY 4.0 and the code under Apache 2.0, so no one, Carey and his business included, can later lock up what has been released.</p>
+  <p><strong>Thanks</strong> to the researchers whose openly published work made these systems possible, and to the many people whose writing they learned from.</p>
+</section>
+
+</main>
+
+<footer class="site">
+  <p>&copy; 2026 Carey James Balboa. Text and art <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>; code <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache&nbsp;2.0</a>.</p>
+  <nav aria-label="Site"><a href="/">Home</a> <a href="/note.html">Public note</a> <a href="/method.html">Method &amp; tests</a> <a href="https://github.com/IT-Help-San-Diego/tetrasemaphore">Repository &#8599;</a> <a href="https://dnstool.it-help.tech/owl-semaphore">Owl Semaphore &#8599;</a></nav>
+</footer>
+</body>
+</html>

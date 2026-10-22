@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Method &amp; tests — The Tetrasemaphore</title>
 <meta name="description" content="The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-Dbq2QJo/NNChcj3HFys6fQPJ1eTXEjTQQDQKot6Z0QI='; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-NUjpbW1N5nrLvoFVjMXmuXcDihkNoT5/pKIKoXDRUUk='; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Tetrasemaphore">
@@ -22,7 +22,8 @@
 <meta name="twitter:description" content="The Tetrasemaphore is four coins that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
 <meta name="twitter:image" content="https://tetrasemaphore.systems/assets/og-card.jpg">
 <link rel="icon" href="/assets/TETRASEMAPHORE-NORMATIVE-en-512.png" type="image/png">
-<style>:root{
+<style>
+:root{
   --bg:#0d1117;
   --panel:#131922;
   --fg:#e8e4dc;
@@ -45,6 +46,7 @@
   --f-crit:#1f100e;
   --gold:#d4a853;
   --accent:#dfc17b;
+  --math:"STIX Two Math","Latin Modern Math","Cambria Math","STIXGeneral","Apple Symbols","Iowan Old Style",Palatino,Georgia,serif;
   --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -52,7 +54,7 @@
 *{box-sizing:border-box}
 .skip{position:absolute;left:-9999px;top:0.5rem;z-index:100;background:var(--bg-elev);color:var(--gold);padding:0.4rem 0.75rem;border:1px solid var(--gold);border-radius:3px;font-family:var(--sans);font-size:0.85rem;text-decoration:none}
 .skip:focus{left:1rem}
-html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:var(--serif);font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html,body{margin:0;padding:0;background-color:var(--bg-deep);color:var(--fg);font-family:var(--serif);font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{
   background-image:
     radial-gradient(ellipse 60% 40% at 15% 0%,rgba(199,180,105,0.06),transparent 70%),
@@ -60,10 +62,11 @@ body{
     radial-gradient(ellipse 60% 40% at 50% 100%,rgba(56,168,154,0.04),transparent 70%);
   background-attachment:fixed;
 }
-main,header.site,footer.site{max-width:56rem;margin:0 auto;padding:0 1.5rem}
+main,header.site,footer.site nav{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:0.5rem}
+footer.site{max-width:56rem;margin:0 auto;padding:0 1.5rem}
 header.site{
-  padding-top:2.75rem;
-  padding-bottom:1.5rem;
+  padding-top:2.25rem;
+  padding-bottom:1.35rem;
   border-bottom:1px solid var(--rule);
   position:relative;
 }
@@ -84,51 +87,57 @@ header.site .eyebrow{
   letter-spacing:0.14em;
   text-transform:uppercase;
   color:var(--gold);
-  margin:0 0 0.55rem 0;
+  margin:0 0 0.5rem 0;
 }
 header.site .eyebrow .formula{
   text-transform:none;
-  letter-spacing:0.04em;
-  color:var(--fg);
-  background:rgba(212,168,83,0.09);
-  border:1px solid rgba(212,168,83,0.28);
-  padding:0.12rem 0.48rem;
-  border-radius:3px;
+  font-family:var(--math);
+  font-size:0.98rem;
+  font-weight:500;
+  letter-spacing:0.045em;
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"kern" 1,"liga" 1,"ss01" 1;
+  color:#f9f4e8;
+  background:linear-gradient(180deg,rgba(24,20,3,0.85) 0%,rgba(19,25,34,0.92) 100%);
+  border:1px solid rgba(212,168,83,0.45);
+  box-shadow:0 2px 10px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.07);
+  padding:0.16rem 0.62rem;
+  border-radius:4px;
 }
 header.site h1{
   font-family:var(--serif);
-  font-size:2.35rem;
+  font-size:2.25rem;
   line-height:1.15;
   font-weight:600;
-  margin:0 0 0.5rem 0;
+  margin:0 0 0.45rem 0;
   letter-spacing:-0.015em;
   color:#f7f3eb;
 }
 header.site p.sub{margin:0;color:var(--muted);font-size:1.02rem}
 nav.top{
-  margin-top:1.15rem;
-  padding-top:0.85rem;
+  margin-top:1rem;
+  padding-top:0.75rem;
   border-top:1px solid rgba(255,255,255,0.05);
   font-family:var(--sans);
   font-size:0.86rem;
   letter-spacing:0.02em;
   display:flex;
   flex-wrap:wrap;
-  gap:1.35rem;
+  gap:1.25rem;
 }
 nav.top a{color:var(--fg);text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);padding-bottom:2px;transition:color 0.15s ease,border-color 0.15s ease}
 nav.top a:hover,nav.top a:focus{color:var(--accent);border-bottom-color:var(--accent)}
-main{padding-top:2.25rem;padding-bottom:3.5rem}
-section{margin:0 0 2.85rem 0;padding-bottom:2.35rem;border-bottom:1px solid var(--rule)}
+main{padding-top:1.85rem;padding-bottom:3.25rem}
+section{margin:0 0 2.6rem 0;padding-bottom:2.1rem;border-bottom:1px solid var(--rule)}
 section:last-of-type{border-bottom:none}
 h2{
   font-family:var(--sans);
-  font-size:1.12rem;
+  font-size:1.1rem;
   font-weight:600;
   letter-spacing:0.06em;
   text-transform:uppercase;
   color:var(--gold);
-  margin:0 0 1rem 0;
+  margin:0 0 0.95rem 0;
   display:flex;
   align-items:center;
   gap:0.65rem;
@@ -136,38 +145,74 @@ h2{
 h2::before{
   content:"";
   display:inline-block;
-  width:0.55rem;
-  height:0.55rem;
+  width:0.52rem;
+  height:0.52rem;
   border:1px solid var(--gold);
   transform:rotate(45deg);
   flex-shrink:0;
 }
-h3{font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--fg);margin:1.6rem 0 0.55rem 0}
+.sources-head{display:block;font-family:var(--sans);font-size:0.98rem;font-weight:600;color:var(--fg);margin:1.4rem 0 0.5rem 0}
+.sig{display:block;margin-top:0.75rem}
+h3{font-family:var(--sans);font-size:0.98rem;font-weight:600;color:var(--fg);margin:1.4rem 0 0.5rem 0}
 p{margin:0 0 1rem 0}
 p.lede{
-  font-size:1.14rem;
-  line-height:1.68;
+  font-size:1.12rem;
+  line-height:1.66;
   color:#f5f1e8;
   background:linear-gradient(180deg,rgba(24,20,3,0.55) 0%,rgba(12,16,23,0.75) 100%);
   border:1px solid var(--rule-strong);
   border-left:3px solid var(--gold);
-  padding:1.15rem 1.35rem;
+  padding:1.1rem 1.3rem;
   border-radius:4px;
+}
+p.aim{
+  font-size:1.05rem;
+  line-height:1.62;
+  color:#f2ede2;
+  background:rgba(176,127,214,0.06);
+  border-left:3px solid var(--c-meta);
+  padding:0.75rem 1.1rem;
+  border-radius:0 4px 4px 0;
 }
 a{color:var(--accent);text-underline-offset:0.18em;text-decoration-thickness:1px}
 a:hover,a:focus{color:#f5dea3}
-code,pre,kbd{font-family:var(--mono);font-size:0.88em}
-code{background:var(--bg-elev);padding:0.12em 0.38em;border-radius:3px;border:1px solid var(--rule);color:#e9dfc7}
+code{
+  font-family:var(--math);
+  font-size:1.02em;
+  letter-spacing:0.02em;
+  font-variant-numeric:lining-nums tabular-nums;
+  background:rgba(16,21,31,0.88);
+  padding:0.08em 0.42em;
+  border-radius:4px;
+  border:1px solid rgba(212,168,83,0.24);
+  color:#f6eedc;
+}
+figure.coin figcaption code{
+  display:inline-block;
+  font-family:var(--math);
+  font-size:0.98rem;
+  letter-spacing:0.03em;
+  padding:0.2rem 0.58rem;
+  margin-top:0.12rem;
+  background:rgba(7,9,13,0.72);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:4px;
+  color:#f5f0e4;
+}
+pre,kbd{font-family:var(--mono);font-size:0.88em}
 pre{background:var(--bg-elev);padding:1rem 1.15rem;border-radius:4px;border:1px solid var(--rule);overflow-x:auto;line-height:1.5}
-.coins{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin:1.6rem 0 0.75rem 0}
-@media (max-width:820px){.coins{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:440px){.coins{grid-template-columns:1fr}}
+.coins{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.25rem 0 0.75rem 0}
+@media (max-width:820px){
+  .coins{grid-template-columns:repeat(2,1fr);gap:0.75rem}
+  figure.coin{padding:0.75rem 0.55rem}
+  figure.coin img{max-width:156px;margin-bottom:0.5rem}
+}
 figure.coin{
   margin:0;
   background:var(--panel);
   border:1px solid var(--rule-strong);
   border-radius:6px;
-  padding:1rem 0.85rem 0.95rem;
+  padding:0.95rem 0.8rem 0.9rem;
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -181,25 +226,48 @@ figure.coin:nth-child(2){background:linear-gradient(180deg,var(--f-nonnorm) 0%,v
 figure.coin:nth-child(3){background:linear-gradient(180deg,var(--f-meta) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-meta)}
 figure.coin:nth-child(4){background:linear-gradient(180deg,var(--f-crit) 0%,var(--bg-elev) 100%);border-top:2px solid var(--c-crit)}
 figure.coin a{display:block;border:none;text-decoration:none}
-figure.coin img{width:100%;max-width:220px;height:auto;aspect-ratio:1/1;display:block;margin:0 auto 0.75rem auto;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,0.65)}
-figure.coin figcaption{font-family:var(--sans);font-size:0.84rem;line-height:1.42;color:var(--muted)}
-figure.coin figcaption strong{display:block;font-family:var(--mono);font-size:0.82rem;letter-spacing:0.06em;margin-bottom:0.25rem}
+figure.coin img{width:100%;max-width:210px;height:auto;aspect-ratio:1/1;display:block;margin:0 auto 0.65rem auto;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,0.65)}
+figure.coin figcaption{font-family:var(--sans);font-size:0.82rem;line-height:1.38;color:var(--muted)}
+figure.coin figcaption strong{display:block;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.06em;margin-bottom:0.2rem}
 figure.coin:nth-child(1) figcaption strong{color:var(--c-norm-bright)}
 figure.coin:nth-child(2) figcaption strong{color:var(--c-nonnorm-bright)}
 figure.coin:nth-child(3) figcaption strong{color:var(--c-meta-bright)}
 figure.coin:nth-child(4) figcaption strong{color:var(--c-crit-bright)}
-table{width:100%;border-collapse:collapse;margin:1.15rem 0 1.35rem 0;font-family:var(--sans);font-size:0.9rem;background:rgba(12,16,23,0.65);border:1px solid var(--rule)}
-th,td{text-align:left;vertical-align:top;padding:0.68rem 0.8rem;border-bottom:1px solid var(--rule)}
-th{font-family:var(--mono);font-size:0.75rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold);background:rgba(255,255,255,0.02);border-bottom:1px solid var(--rule-strong)}
-td.sym,th.sym{font-family:var(--mono);white-space:nowrap;color:#f5f1e8;font-weight:600}
-table.states tbody tr:nth-child(1) td:first-child{border-left:3px solid var(--c-norm);color:var(--c-norm-bright)}
-table.states tbody tr:nth-child(2) td:first-child{border-left:3px solid var(--c-nonnorm);color:var(--c-nonnorm-bright)}
-table.states tbody tr:nth-child(3) td:first-child{border-left:3px solid var(--c-meta);color:var(--c-meta-bright)}
-table.states tbody tr:nth-child(4) td:first-child{border-left:3px solid var(--c-crit);color:var(--c-crit-bright)}
-table.cayley{max-width:28rem;font-family:var(--mono);text-align:center}
-table.cayley th,table.cayley td{text-align:center;padding:0.5rem 0.75rem;border:1px solid var(--rule-strong)}
-table.cayley thead th{background:rgba(212,168,83,0.08);color:var(--gold)}
-table.cayley tbody th{background:rgba(212,168,83,0.05);color:var(--gold)}
+details.sources-fold{
+  margin-top:1.1rem;
+  background:rgba(12,16,23,0.6);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:0.65rem 1rem;
+  font-family:var(--sans);
+  font-size:0.9rem;
+}
+details.sources-fold summary{
+  cursor:pointer;
+  font-family:var(--mono);
+  font-size:0.82rem;
+  letter-spacing:0.05em;
+  color:var(--gold);
+  font-weight:600;
+}
+details.sources-fold ul{margin:0.75rem 0 0.25rem 0}
+nav.deeper{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  margin-top:1rem;
+  font-family:var(--sans);
+  font-size:0.88rem;
+}
+nav.deeper a{
+  background:var(--bg-elev);
+  border:1px solid var(--rule-strong);
+  border-radius:4px;
+  padding:0.48rem 0.85rem;
+  text-decoration:none;
+  color:var(--fg);
+}
+nav.deeper a:hover,nav.deeper a:focus{border-color:var(--gold);color:var(--accent)}
 blockquote{
   margin:1.15rem 0;
   padding:0.95rem 1.25rem;
@@ -212,17 +280,6 @@ blockquote p:last-child{margin-bottom:0}
 ul,ol{margin:0 0 1rem 0;padding-left:1.4rem}
 li{margin-bottom:0.45rem}
 li::marker{color:var(--gold)}
-.note{
-  background:var(--panel);
-  border:1px solid var(--rule-strong);
-  border-left:3px solid var(--c-meta);
-  border-radius:4px;
-  padding:1rem 1.2rem;
-  font-family:var(--sans);
-  font-size:0.92rem;
-  color:var(--fg);
-  margin:1.25rem 0;
-}
 footer.site{
   border-top:1px solid var(--rule);
   padding-top:1.6rem;
@@ -247,7 +304,13 @@ footer.site::before{
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<header class="site"><div class="in"><div class="brand"><a href="/">Tetra<span>semaphore</span></a></div><nav class="top" aria-label="Site"><a href="/">Home</a><a href="/method.html" aria-current="page">Method &amp; tests</a><a href="https://github.com/IT-Help-San-Diego/tetrasemaphore" target="_blank" rel="noopener">Repository &#8599;</a></nav></div></header>
+<header class="site"><div class="in"><div class="brand"><a href="/">Tetra<span>semaphore</span></a></div><nav class="top" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/note.html">Public note</a>
+    <a href="/note.html#why-we-left-the-owl">Why we left the owl</a>
+    <a href="/method.html">Method &amp; tests</a>
+    <a href="https://github.com/IT-Help-San-Diego/tetrasemaphore">Repository &#8599;</a>
+  </nav></div></header>
 <main id="main">
 <div class="hero">
 <div class="eyebrow">Method &middot; tests &middot; challenges</div>
@@ -281,6 +344,9 @@ footer.site::before{
 <p><strong>Independence.</strong> All AI services were used through paid subscriptions, apart from occasional free promotional credits. No outside company funded this work beyond those credits, and none approved its content. The subscriptions were paid by IT Help San Diego Inc., a small IT business of which Carey is the majority shareholder. The text and art are released under CC BY 4.0 and the code under Apache 2.0, so no one, Carey and his business included, can later lock up what has been released.</p>
 <p><strong>Thanks</strong> to the researchers whose openly published work made these systems possible, and to the many people whose writing they learned from.</p>
 </main>
-<footer class="site"><div class="in"><div>&copy; 2026 Carey James Balboa. Text and art CC&nbsp;BY&nbsp;4.0; code Apache&nbsp;2.0.</div><div><a href="https://dnstool.it-help.tech/owl-semaphore" target="_blank" rel="noopener">Owl Semaphore &#8599;</a></div></div></footer>
+<footer class="site">
+  <p>&copy; 2026 Carey James Balboa. Text and art <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>; code <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache&nbsp;2.0</a>.</p>
+  <nav aria-label="Site"><a href="/">Home</a> <a href="/note.html">Public note</a> <a href="/method.html">Method &amp; tests</a> <a href="https://github.com/IT-Help-San-Diego/tetrasemaphore">Repository &#8599;</a> <a href="https://dnstool.it-help.tech/owl-semaphore">Owl Semaphore &#8599;</a></nav>
+</footer>
 </body>
 </html>
