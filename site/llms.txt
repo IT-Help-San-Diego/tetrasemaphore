@@ -1,0 +1,20 @@
+# The Tetrasemaphore
+
+> Four states of thinking — NORMATIVE (I), NON-NORMATIVE (sigma_v), METACOGNITIVE (sigma_h), CRITICAL (C2) — carried by mathematical notation instead of a picture. Each coin's mark survives exactly the move it names; fold it, and only its own fold returns it.
+
+The Tetrasemaphore is a finite algebra of epistemic states rendered as four self-identifying glyphs: the Klein four-group V4 = {I, sigma_v, sigma_h, C2}. It succeeds the Owl Semaphore, which carried the same four states on an owl figure. An owl means different things in different cultures, so the successor carries the states with notation that needs no culture: the signal is checkable by anyone who runs the moves.
+
+- Home: https://tetrasemaphore.systems/
+- Method and tests: https://tetrasemaphore.systems/method.html
+- Repository: https://github.com/IT-Help-San-Diego/tetrasemaphore
+- Predecessor: https://dnstool.it-help.tech/owl-semaphore (Owl Semaphore, kept as published)
+- Author: Carey James Balboa, ORCID 0009-0000-5237-9065
+- Licenses: text and art CC BY 4.0; code Apache 2.0
+
+## How to check it
+
+The algebra is machine-checked in the Lean proof assistant; the moves can be checked with the body (turn around; bend and look between your legs; both), with a pen and paper (the capital letters I, A, D, N under the three moves), with a phone (greyscale and formula readers), and by teaching the rule to another person. The site states, for every claim, what it would take to check it.
+
+## Provenance
+
+Every correction on this project is a dated note on the record that names who found it. The public record ships with the result: the proofs and their red team, the decision log, the failure-modes register, and the test register.

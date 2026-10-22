@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method &amp;amp; tests — The Tetrasemaphore</title>
+<meta name="description" content="How to read the four coins, the seven tests from cheapest to most demanding, and the standing challenges that would falsify the design.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' sha256-/TvSd+jkp0mXNnvkPEfdqXJ8CNOuhgjilcP2Wvh3MmA=; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Tetrasemaphore">
+<meta property="og:title" content="Method &amp;amp; tests — The Tetrasemaphore">
+<meta property="og:description" content="How to read the four coins, the seven tests from cheapest to most demanding, and the standing challenges that would falsify the design.">
+<meta property="og:url" content="https://tetrasemaphore.systems/method.html">
+<meta property="og:image" content="https://tetrasemaphore.systems/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Method &amp;amp; tests — The Tetrasemaphore">
+<meta name="twitter:description" content="How to read the four coins, the seven tests from cheapest to most demanding, and the standing challenges that would falsify the design.">
+<meta name="twitter:image" content="https://tetrasemaphore.systems/assets/og-card.jpg">
+<link rel="icon" href="/assets/normative-en-540.png" type="image/png">
+<style>:root{--bg:#0d1117;--fg:#e8e0d2;--muted:#a8b2c1;--gold:#d4a853;--copper:#c8956a;--line:#232a33;--card:#12181f;--sp:24px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#0d1117;padding:8px 16px;z-index:9}
+.skip:focus{left:0}
+a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var(--copper)}
+main{max-width:74ch;margin:0 auto;padding:0 var(--sp) calc(var(--sp)*2.618)}
+header.site{border-bottom:1px solid var(--line)}
+header.site .in{max-width:74ch;margin:0 auto;padding:var(--sp);display:flex;flex-wrap:wrap;gap:var(--sp);align-items:baseline;justify-content:space-between}
+header.site .brand{font-weight:700;letter-spacing:.02em}
+header.site .brand a{text-decoration:none;color:var(--fg)}
+header.site .brand a span{color:var(--gold)}
+nav.top{display:flex;gap:calc(var(--sp)*1.618);flex-wrap:wrap}
+nav.top a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav.top a:hover,nav.top a:focus-visible{color:var(--gold)}
+footer.site{border-top:1px solid var(--line);margin-top:calc(var(--sp)*2.618)}
+footer.site .in{max-width:74ch;margin:0 auto;padding:var(--sp);color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:var(--sp);justify-content:space-between}
+.eyebrow{color:var(--gold);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:calc(var(--sp)*.618)}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.4rem,3.5vw,1.9rem);line-height:1.2;margin:calc(var(--sp)*2.618) 0 calc(var(--sp)*.618);padding-top:calc(var(--sp)*1.618);border-top:1px solid var(--line)}
+h2:first-of-type{border-top:0;padding-top:0}
+h3{font-size:1.1rem;color:var(--gold);margin:calc(var(--sp)*1.618) 0 calc(var(--sp)*.382)}
+p{margin:0 0 calc(var(--sp)*.618)}
+p.lede{font-size:1.15rem;color:var(--fg)}
+blockquote{border-left:3px solid var(--gold);background:var(--card);padding:calc(var(--sp)*.618) var(--sp);margin:calc(var(--sp)*.618) 0;border-radius:0 6px 6px 0}
+blockquote p{margin:0}
+blockquote p+p{margin-top:.5em}
+ul,ol{margin:0 0 calc(var(--sp)*.618);padding-left:1.4em}
+li{margin-bottom:.35em}
+hr{border:0;border-top:1px solid var(--line);margin:calc(var(--sp)*1.618) 0}
+.hero{padding:calc(var(--sp)*2.618) 0 calc(var(--sp)*1.618)}
+.coins{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--sp);margin:calc(var(--sp)*1.618) 0}
+figure.coin{margin:0;text-align:center}
+figure.coin img{width:100%;max-width:220px;height:auto;display:block;margin:0 auto calc(var(--sp)*.382)}
+figure.coin figcaption{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;color:var(--muted);letter-spacing:.06em}
+figure.coin figcaption b{color:var(--fg);font-weight:600}
+.src{font-size:.85rem;color:var(--muted)}
+.src li{margin-bottom:.5em}
+table{width:100%;border-collapse:collapse;margin:calc(var(--sp)*.618) 0;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.5em .7em;text-align:left;vertical-align:top}
+th{background:var(--card);color:var(--gold)}
+.note{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:var(--sp);margin:calc(var(--sp)*1.618) 0}
+.note h3{margin-top:0}
+@media (max-width:520px){.coins{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-color-scheme:light){body{background:#f7f4ec;color:#1c2128}header.site,footer.site{border-color:#ddd5c4}h2{border-top-color:#ddd5c4}blockquote,.note{background:#efe9dc}th{background:#efe9dc}hr{border-top-color:#ddd5c4}code{color:#8a5a20}.src,nav.top a,figure.coin figcaption{color:#5a6068}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="in"><div class="brand"><a href="/">Tetra<span>semaphore</span></a></div><nav class="top" aria-label="Site"><a href="/">Home</a><a href="/method.html" aria-current="page">Method &amp; tests</a><a href="https://github.com/IT-Help-San-Diego/tetrasemaphore" target="_blank" rel="noopener">Repository &#8599;</a></nav></div></header>
+<main id="main">
+<div class="hero">
+<div class="eyebrow">Method &middot; tests &middot; challenges</div>
+<h1>Reading the coins</h1>
+</div>
+<h2>Reading the coins</h2>
+<p><strong>The symbols.</strong> I is the identity, the move that changes nothing. Chemists write it E, and keep i for inversion, which sends every point through the centre to the opposite side; on a flat picture that is the same move as C₂. We write I because the identity's mark has to look the same after every move, and I is the only one of the usual identity symbols (I, E, 1, e) whose letter does. σ is a reflection and C₂ a half-turn, in chemists' symbols. The small letter after σ names the mirror line on the page: v for vertical, h for horizontal. Chemists measure v and h from a molecule's main turning axis instead. On a flat picture that axis points straight out of the page, so in their notation both of these mirrors count as vertical (σv and σv′), and their σh would be a reflection through the picture itself, which moves nothing you can see. The gold line on each coin shows which line we mean.</p>
+<p><strong>Check the mark, not the ring.</strong> The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was. With its words, every whole coin changes under every move; only the mark survives its own.</p>
+<p><strong>The gold.</strong> Gold shows what the coin's move leaves in place: the whole figure for I, a vertical line for σᵥ, a horizontal line for σₕ, a single point for C₂. That is also how to tell I from inversion: inversion leaves only the centre in place, so its gold would be a single point. Lay the two σ coins over each other and their lines cross exactly at C₂'s point. Doing one mirror and then the other is the half-turn, and the points both mirrors leave alone are the point the half-turn leaves alone.</p>
+<p><strong>Colour comes second.</strong> Shape carries every state. In greyscale the two σ coins are the same grey, and only their axis tells them apart, which is all the mathematics says separates them.</p>
+<h2>The tests in detail</h2>
+<p>Every claim above can be checked by someone who does not trust us. The body and paper checks above come first. The tests run from the cheapest to the most demanding.</p>
+<ol><li><strong>Do the moves.</strong> Print the four coins, or open them on a phone, and look only at the mark in the middle. Flip each coin left to</li></ol>
+<p>   right, flip it top to bottom, and turn it half way round. The σᵥ mark comes back unchanged only after the left-right flip, the σₕ mark    only after the top-bottom flip, and the C₂ mark only after the half-turn. The I mark comes back unchanged after all three. A mark that    survives a move that is not its own is a mistake in the design.</p>
+<ol><li><strong>Two mirrors make a half-turn.</strong> Write an F on tracing paper. Flip it left to right, then top to bottom: it lands exactly where a</li></ol>
+<p>   half-turn puts it. Then lay the two σ coins over each other, printed on transparencies or at half opacity on a screen. Their gold lines    cross at the point that C₂'s gold marks.</p>
+<ol><li><strong>Take the colour away.</strong> Switch your phone to greyscale, or photocopy the coins in black and white. All four can still be told apart</li></ol>
+<p>   by shape. The two σ coins differ only in the direction of their gold line, which is the only thing the mathematics says separates them.</p>
+<ol><li><strong>Ask a camera.</strong> Point a formula reader, such as Google Lens or a phone camera's text recognition, at each of the four camera</li></ol>
+<p>   cards, one at a time. A pass is I, σᵥ, σₕ and C₂. "It found a formula" is not a pass: a horizontal line between two symbols reads as a    fraction bar.</p>
+<ol><li><strong>Check the proofs.</strong> The algebra is machine-checked in Lean. Install the Lean toolchain, run <code>./check.sh</code> under bash, and read</li></ol>
+<p>   the axiom report it prints: it lists everything each theorem assumes. Then try to break it: change a definition and watch a    theorem fail. The proofs cover the algebra, not the artwork.</p>
+<ol><li><strong>Teach it to someone.</strong> This is the test that matters most. Explain the three moves and the rule, that each mark survives its own move, to someone in five minutes.</li></ol>
+<p>   Cover the words, then show them twenty prints, each one flipped, turned half way round, or left alone at random, or make the four moves with your body in a random order, and ask which state each one is. None of the four moves changes which move a mark survives, so the state can always be read. A quarter turn is    different: it carries one mirror onto the other, so a print turned a quarter of the way round reads as the other σ coin. That is why the two σ coins are twins.    Guessing gets one in four right. If people who have just learned the rule do little better than one in four, the system does not teach, whatever the mathematics    says.</p>
+<ol><li><strong>Ask what the picture means.</strong> Show an owl coin and a notation coin to people from different places, and write down what each</li></ol>
+<p>   person says the coin means. The prediction is that answers to the owl vary with where people grew up, and answers to the notation    depend only on whether they have learned it. If the notation's answers vary as much as the owl's, that part of the theory is wrong.</p>
+<h2>Challenges to put to it</h2>
+<ul><li><strong>Find a mark that survives a move that is not its own.</strong> Test 1 is how to look.</li><li><strong>Tell the two σ coins apart without their gold lines.</strong> Only the direction of the mirror should do it. Any other difference carries</li></ul>
+<p>  something the mathematics does not.</p>
+<ul><li><strong>Add a fifth state.</strong> The four moves are two yes-or-no choices: flip left to right or not, and flip top to bottom or not. Two choices</li></ul>
+<p>  make exactly four combinations: neither (I), the first (σᵥ), the second (σₕ), both (C₂). A fifth state would need a third choice, and   three choices make eight states, not five.</p>
+<ul><li><strong>Find a theorem in the Lean file that only restates its own definitions.</strong> The red-team report lists which theorems are bookkeeping</li></ul>
+<p>  and which carry content; check it against the file.</p>
+<div class="note">
+<h3>Published with the result</h3>
+<p>When the release goes out, the public record ships with it: the machine-checked Lean proofs and their red-team report, the decision log behind every choice, the failure-modes register (including the AI systems' mistakes and how each was caught), the test register, the methods note, and a set of dated human&ndash;AI exchanges. Each version stays citable under its own DOI; every correction says what changed, who found it, and when.</p>
+</div>
+<h2>How this was made</h2>
+<p>Carey James Balboa started the project, made every final decision and is responsible for everything published under it. The work was done with AI systems, and nothing here hides that. Carey's work with AI began with OpenAI's ChatGPT. Claude Science (Anthropic) measured and checked every build, wrote the Lean proofs and drafted this note. Carey's signed statement in “Why we left the owl” was drafted with Claude Science from his words of 11 October and approved by him. Claude Code (Anthropic) built the coins and the decision pages, attacked the proofs and ran the red teams. Hermes, an AI agent that switches among models from many companies, kept the shared record and prepared this website. SciSpace, an AI research assistant, worked with Carey from April 2026 across the DNS Tool, the Owl Semaphore and this project, in 18 sessions through September, on research, citation checks and outside review. Among other work, it added citations, retrieved sources, split carrier colour into a perceptual and a social sense, and withdrew two claims. Claude Chat (Anthropic) drafted methods note 01 from a dialogue with Carey. Claude Chat and Google's AI Mode took part in dialogues that the decision log cites. Many other AI models, from most of the major makers, were used on purpose: to look for breaks, and for what held across all of them. Because AI models tend to make the same mistakes as one another (Kim, Garg, Peng &amp; Garg 2025, arXiv:2506.07962), what held across them was then checked against proofs, primary sources and measurements. Where an AI system made a mistake, the failure-modes register says so, and how it was caught.</p>
+<p><strong>Independence.</strong> All AI services were used through paid subscriptions, apart from occasional free promotional credits. No outside company funded this work beyond those credits, and none approved its content. The subscriptions were paid by IT Help San Diego Inc., a small IT business of which Carey is the majority shareholder. The text and art are released under CC BY 4.0 and the code under Apache 2.0, so no one, Carey and his business included, can later lock up what has been released.</p>
+<p><strong>Thanks</strong> to the researchers whose openly published work made these systems possible, and to the many people whose writing they learned from.</p>
+</main>
+<footer class="site"><div class="in"><div>&copy; 2026 Carey James Balboa / IT Help San Diego Inc. Text and art CC&nbsp;BY&nbsp;4.0; code Apache&nbsp;2.0.</div><div><a href="https://dnstool.it-help.tech/owl-semaphore" target="_blank" rel="noopener">Owl Semaphore &#8599;</a></div></div></footer>
+</body>
+</html>
