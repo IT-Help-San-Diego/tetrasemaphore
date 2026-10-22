@@ -3,9 +3,9 @@
 __pycache__/
 *.pyc
 
-# Local-only research/provenance/private carrier material.
-# Raw dumps, PHI-ish notes, transcripts, and Tourette/profanity
-# carrier texture live here for accountability, never public release.
+# Local-only research, provenance and private material.
+# Raw dumps, private notes and transcripts are kept locally for
+# accountability and stay out of public releases.
 /Research Artifacts/
 Research Artifacts/
 /private_research_vault/

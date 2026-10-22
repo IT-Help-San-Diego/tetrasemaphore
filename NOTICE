@@ -1,0 +1,6 @@
+The Tetrasemaphore
+Copyright 2026 Carey James Balboa
+
+The code in this repository (the Lean proofs, the checker and the build scripts: the files ending .lean, .sh, .py or .js, and
+proofs/lean-toolchain) is licensed under the Apache License 2.0; see LICENSE-CODE. Everything else, the text and the art, is
+licensed under CC BY 4.0; see LICENSE.
