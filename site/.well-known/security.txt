@@ -1,4 +1,4 @@
 Contact: mailto:security@it-help.tech
-Expires: 2027-12-31T23:59:59-08:00
-Preferred-Languages: en, es
+Expires: 2027-10-01T00:00:00Z
+Preferred-Languages: en
 Canonical: https://tetrasemaphore.systems/.well-known/security.txt
