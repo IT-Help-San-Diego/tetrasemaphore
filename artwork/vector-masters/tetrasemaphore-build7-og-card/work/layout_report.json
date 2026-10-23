@@ -1,0 +1,192 @@
+{
+ "generator": "vector-masters/work/lockscreen-tetrasemaphore/build-og-card.js",
+ "date": "2026-10-22",
+ "ruling": {
+  "file": "/Users/careybalboa/Downloads/TETRASEMAPHORE-DOORBELL-CLAUDE-SCIENCE-SITE-RULINGS.md",
+  "sha16": "412ba93ba0a6979c",
+  "item": 5
+ },
+ "sources": {
+  "font": {
+   "file": "/Users/careybalboa/Downloads/dose-01-FOR-CLAUDE-CODE/05-DejaVuSans-Bold.ttf",
+   "sha16": "7e69e81478e233b8"
+  },
+  "ground_from": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/dose-01-iphone-17-pro-lockscreen-1206x2622-MASTER.svg",
+   "sha16": "1cf8f0f9f4aa30ea",
+   "colour": "#1D252D"
+  }
+ },
+ "canvas": [
+  1200,
+  630
+ ],
+ "file": "og-card-MASTER.svg",
+ "sha16": "0660fd91c2999023",
+ "bytes": 11547869,
+ "ids": 223,
+ "references": 141,
+ "coins": [
+  {
+   "state": "NORMATIVE",
+   "master": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+   "sha16": "e0b6366d5c032523",
+   "transform": "translate(62.918 140) scale(0.268292683)",
+   "translate": [
+    62.918,
+    140
+   ],
+   "scale": 0.268292683,
+   "box_px": 220,
+   "centre": [
+    172.918,
+    250
+   ],
+   "prefix": "n-",
+   "ids": 55,
+   "references": 36,
+   "group_id": "n-medallion-slot820"
+  },
+  {
+   "state": "NON-NORMATIVE",
+   "master": "MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+   "sha16": "4ef1de6ae126279e",
+   "transform": "translate(347.639 140) scale(0.268292683)",
+   "translate": [
+    347.639,
+    140
+   ],
+   "scale": 0.268292683,
+   "box_px": 220,
+   "centre": [
+    457.639,
+    250
+   ],
+   "prefix": "nn-",
+   "ids": 54,
+   "references": 34,
+   "group_id": "nn-medallion-slot820"
+  },
+  {
+   "state": "METACOGNITIVE",
+   "master": "MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+   "sha16": "cccfcff10dc74930",
+   "transform": "translate(632.361 140) scale(0.268292683)",
+   "translate": [
+    632.361,
+    140
+   ],
+   "scale": 0.268292683,
+   "box_px": 220,
+   "centre": [
+    742.361,
+    250
+   ],
+   "prefix": "m-",
+   "ids": 54,
+   "references": 34,
+   "group_id": "m-medallion-slot820"
+  },
+  {
+   "state": "CRITICAL",
+   "master": "MASTER-medallion-CRITICAL-notation-slot820.svg",
+   "sha16": "33413c4af9ec838c",
+   "transform": "translate(917.082 140) scale(0.268292683)",
+   "translate": [
+    917.082,
+    140
+   ],
+   "scale": 0.268292683,
+   "box_px": 220,
+   "centre": [
+    1027.082,
+    250
+   ],
+   "prefix": "c-",
+   "ids": 56,
+   "references": 37,
+   "group_id": "c-medallion-slot820"
+  }
+ ],
+ "title": {
+  "string": "TETRASEMAPHORE",
+  "code_points": [
+   "U+0054",
+   "U+0045",
+   "U+0054",
+   "U+0052",
+   "U+0041",
+   "U+0053",
+   "U+0045",
+   "U+004D",
+   "U+0041",
+   "U+0050",
+   "U+0048",
+   "U+004F",
+   "U+0052",
+   "U+0045"
+  ],
+  "x": 291.5,
+  "baseline": 96,
+  "advance": 616.93,
+  "textlayout_identical": true,
+  "ink": {
+   "x1": 291.783,
+   "y1": 52.953,
+   "x2": 904.182,
+   "y2": 96.821
+  }
+ },
+ "formula": {
+  "string": "V₄ = {I, σᵥ, σₕ, C₂}",
+  "code_points": [
+   "U+0056",
+   "U+2084",
+   "U+0020",
+   "U+003D",
+   "U+0020",
+   "U+007B",
+   "U+0049",
+   "U+002C",
+   "U+0020",
+   "U+03C3",
+   "U+1D65",
+   "U+002C",
+   "U+0020",
+   "U+03C3",
+   "U+2095",
+   "U+002C",
+   "U+0020",
+   "U+0043",
+   "U+2082",
+   "U+007D"
+  ],
+  "box": {
+   "x": 254,
+   "y": 425,
+   "w": 692,
+   "h": 108,
+   "rx": 28,
+   "stroke_width": 4,
+   "stroke": "#D4A853"
+  },
+  "text_x": 297.625,
+  "baseline": 498.625,
+  "advance": 603.902,
+  "textlayout_identical": true,
+  "ink": {
+   "x1": 297.908,
+   "y1": 454.559,
+   "x2": 894.277,
+   "y2": 508.084
+  }
+ },
+ "margins": {
+  "top_to_title_ink": 52.953,
+  "title_ink_bottom_to_coins": 43.179,
+  "coins_bottom_to_box": 65,
+  "box_bottom_to_edge": 97,
+  "row_left": 62.918,
+  "row_right": 62.918
+ }
+}

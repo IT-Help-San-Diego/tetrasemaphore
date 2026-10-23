@@ -1,0 +1,1820 @@
+{
+ "generator": "vector-masters/work/lockscreen-tetrasemaphore/build-five.js",
+ "date": "2026-10-21",
+ "spec": {
+  "file": "/Users/careybalboa/Downloads/TETRASEMAPHORE-SCIENCE-J4-LAYOUT-SPEC.md",
+  "sha16": "a2131c898acbb0e8",
+  "revision": 4
+ },
+ "sources": {
+  "no_title_master": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/dose-01-iphone-17-pro-lockscreen-1206x2622-MASTER.svg",
+   "sha16": "1cf8f0f9f4aa30ea"
+  },
+  "template": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7/dose-01-iphone-17-pro-lockscreen-1206x2622-TETRASEMAPHORE-METACOGNITIVE-MASTER.svg",
+   "sha16": "a62a3dd185089960"
+  },
+  "font": {
+   "file": "/Users/careybalboa/Downloads/dose-01-FOR-CLAUDE-CODE/05-DejaVuSans-Bold.ttf",
+   "sha16": "7e69e81478e233b8"
+  }
+ },
+ "regression_gates": {
+  "sigma_h_row": {
+   "pass": true,
+   "16_sep_sigma_h_layer_bytes": 4416,
+   "16_sep_identical": true,
+   "build7_operator_layer_bytes": 4416,
+   "build7_identical": true,
+   "w": 702,
+   "box_x": 252,
+   "text_x": 295.625,
+   "advance": 613.673
+  },
+  "motto_and_rows": {
+   "pass": true,
+   "cogito_layer_bytes": 22890,
+   "cogito_identical": true,
+   "forall_layer_bytes": 3669,
+   "forall_identical": true,
+   "m_def_layer_bytes": 5855,
+   "m_def_identical": true,
+   "note": "rects from the box rule (width = advance + 88 to the nearest even px, x = 603 − w/2) and glyphs from run() at the 16 Sep master's own text x; the 16 Sep text x values were fitted to the Claude Design reference, so the rule gives different x for these four lines (see rule_x)",
+   "lines": [
+    {
+     "text": "I metacognize; therefore,",
+     "advance": 833.155,
+     "x_in_master": 185.875,
+     "rule_x": 186.375
+    },
+    {
+     "text": "I am again and again.",
+     "advance": 707.838,
+     "x_in_master": 248.375,
+     "rule_x": 249.125
+    }
+   ],
+   "rows": [
+    {
+     "text": "∀n. M(Iₙ) ⊢ Iₙ₊₁",
+     "w": 572,
+     "box_x": 317,
+     "text_x_in_master": 360,
+     "rule_text_x": 360.625,
+     "advance": 484.561
+    },
+    {
+     "text": "M := λx.Think(Think(x))",
+     "w": 858,
+     "box_x": 174,
+     "text_x_in_master": 217.125,
+     "rule_text_x": 217.625,
+     "advance": 770.681
+    }
+   ]
+  },
+  "template_layers": {
+   "pass": true,
+   "divider_1_and_ground_identical_16_sep_vs_build7": true
+  }
+ },
+ "glyph_mapping": "one glyph per code point (cmap); textlayout.js stringToGlyphs (opentype.js 1.3.4) would substitute the U+FB02 fl ligature in the lines marked textlayout_ligature",
+ "screens": {
+  "NORMATIVE": {
+   "kind": "state flashcard",
+   "spec_section": "§3",
+   "coins": [
+    {
+     "state": "NORMATIVE",
+     "master": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "transform": "translate(312 684) scale(0.708536585)",
+     "translate": [
+      312,
+      684
+     ],
+     "scale": 0.708536585,
+     "box_px": 581,
+     "cell": {
+      "x": 312,
+      "y": 684,
+      "w": 581,
+      "h": 581
+     },
+     "prefix": null,
+     "ids": 55,
+     "references": 36,
+     "ring": "#D5AF64",
+     "mark": "#C7B469",
+     "field": "#181403"
+    }
+   ],
+   "layers": {
+    "ground": "byte-identical to 1cf8f0f9f4aa30ea",
+    "medallion": "coin",
+    "operator": -124.279,
+    "forall": -99.557,
+    "divider-1": -74.836,
+    "cogito": -50.115
+   },
+   "rows": [
+    {
+     "role": "operator row",
+     "string": "I : (x, y) → (x, y)",
+     "code_points": [
+      "U+0049",
+      "U+0020",
+      "U+003A",
+      "U+0020",
+      "U+0028",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+0079",
+      "U+0029",
+      "U+0020",
+      "U+2192",
+      "U+0020",
+      "U+0028",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+0079",
+      "U+0029"
+     ],
+     "advance": 515.062,
+     "textlayout_advance": 515.062,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 301,
+      "y": 1328.721,
+      "w": 604,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D5AF64",
+      "rect_as_written": {
+       "x": 303,
+       "y": 1330.721,
+       "width": 600,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1455
+      }
+     },
+     "text_x": 344.625,
+     "baseline": 1402.346,
+     "baseline_in_layer": 1526.625,
+     "layer_ty": -124.279,
+     "path_fills": [
+      "#C7B469",
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 1,
+     "ink": {
+      "x1": 349.949,
+      "y1": 1358.336,
+      "x2": 854.702,
+      "y2": 1414.864
+     }
+    },
+    {
+     "role": "rule box",
+     "string": "∀g. I ∘ g = g",
+     "code_points": [
+      "U+2200",
+      "U+0067",
+      "U+002E",
+      "U+0020",
+      "U+0049",
+      "U+0020",
+      "U+2218",
+      "U+0020",
+      "U+0067",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+0067"
+     ],
+     "advance": 398.92,
+     "textlayout_advance": 398.92,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 360,
+      "y": 1501.443,
+      "w": 486,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 362,
+       "y": 1503.443,
+       "width": 482,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1603
+      }
+     },
+     "text_x": 403.625,
+     "baseline": 1575.068,
+     "baseline_in_layer": 1674.625,
+     "layer_ty": -99.557,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 403.908,
+      "y1": 1532.786,
+      "x2": 797.674,
+      "y2": 1587.586
+     }
+    }
+   ],
+   "divider": {
+    "layer_ty": -74.836,
+    "rule": {
+     "x": 503,
+     "y": 1682.164,
+     "w": 200,
+     "h": 4,
+     "fill": "#D4A853"
+    },
+    "diamond": {
+     "cx": 603,
+     "cy": 1684.164,
+     "half_diagonal": 9.899,
+     "fill": "#D4A853"
+    },
+    "row_y": 1674.164,
+    "bytes_identical_to_master": true
+   },
+   "lines": [
+    {
+     "string": "I state the standard.",
+     "code_points": [
+      "U+0049",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+0074",
+      "U+0065",
+      "U+0020",
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+006E",
+      "U+0064",
+      "U+0061",
+      "U+0072",
+      "U+0064",
+      "U+002E"
+     ],
+     "advance": 674.448,
+     "textlayout_advance": 674.448,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 265.75,
+     "baseline": 1803.635,
+     "baseline_in_layer": 1853.75,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 674.448,
+      "x": 265.75,
+      "baseline": 1803.635
+     },
+     "ink": {
+      "x1": 271.074,
+      "y1": 1759.569,
+      "x2": 934.279,
+      "y2": 1804.456
+     }
+    },
+    {
+     "string": "It marks epistemic status,",
+     "code_points": [
+      "U+0049",
+      "U+0074",
+      "U+0020",
+      "U+006D",
+      "U+0061",
+      "U+0072",
+      "U+006B",
+      "U+0073",
+      "U+0020",
+      "U+0065",
+      "U+0070",
+      "U+0069",
+      "U+0073",
+      "U+0074",
+      "U+0065",
+      "U+006D",
+      "U+0069",
+      "U+0063",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+0074",
+      "U+0075",
+      "U+0073",
+      "U+002C"
+     ],
+     "advance": 855.132,
+     "textlayout_advance": 855.132,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 175.375,
+     "baseline": 1873.51,
+     "baseline_in_layer": 1923.625,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 855.132,
+      "x": 175.375,
+      "baseline": 1873.51
+     },
+     "ink": {
+      "x1": 180.699,
+      "y1": 1829.444,
+      "x2": 1024.588,
+      "y2": 1885.574
+     }
+    },
+    {
+     "string": "not infallibility.",
+     "code_points": [
+      "U+006E",
+      "U+006F",
+      "U+0074",
+      "U+0020",
+      "U+0069",
+      "U+006E",
+      "U+0066",
+      "U+0061",
+      "U+006C",
+      "U+006C",
+      "U+0069",
+      "U+0062",
+      "U+0069",
+      "U+006C",
+      "U+0069",
+      "U+0074",
+      "U+0079",
+      "U+002E"
+     ],
+     "advance": 497.645,
+     "textlayout_advance": 497.645,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 354.125,
+     "baseline": 1943.385,
+     "baseline_in_layer": 1993.5,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 497.645,
+      "x": 354.125,
+      "baseline": 1943.385
+     },
+     "ink": {
+      "x1": 358.996,
+      "y1": 1899.319,
+      "x2": 845.851,
+      "y2": 1955.903
+     }
+    }
+   ],
+   "file": "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NORMATIVE-flashcard-MASTER.svg",
+   "sha16": "26c5648afbf9d3f8",
+   "bytes": 3013376,
+   "ids": 63,
+   "references": 36
+  },
+  "NON-NORMATIVE": {
+   "kind": "state flashcard",
+   "spec_section": "§3",
+   "coins": [
+    {
+     "state": "NON-NORMATIVE",
+     "master": "MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+     "sha16": "4ef1de6ae126279e",
+     "transform": "translate(312 684) scale(0.708536585)",
+     "translate": [
+      312,
+      684
+     ],
+     "scale": 0.708536585,
+     "box_px": 581,
+     "cell": {
+      "x": 312,
+      "y": 684,
+      "w": 581,
+      "h": 581
+     },
+     "prefix": null,
+     "ids": 54,
+     "references": 34,
+     "ring": "#4FB5B5",
+     "mark": "#4FB5B5",
+     "field": "#001817"
+    }
+   ],
+   "layers": {
+    "ground": "byte-identical to 1cf8f0f9f4aa30ea",
+    "medallion": "coin",
+    "operator": -124.279,
+    "forall": -99.557,
+    "divider-1": -74.836,
+    "cogito": -50.115
+   },
+   "rows": [
+    {
+     "role": "operator row",
+     "string": "σᵥ : (x, y) → (−x, y)",
+     "code_points": [
+      "U+03C3",
+      "U+1D65",
+      "U+0020",
+      "U+003A",
+      "U+0020",
+      "U+0028",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+0079",
+      "U+0029",
+      "U+0020",
+      "U+2192",
+      "U+0020",
+      "U+0028",
+      "U+2212",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+0079",
+      "U+0029"
+     ],
+     "advance": 616.307,
+     "textlayout_advance": 616.307,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 251,
+      "y": 1328.721,
+      "w": 704,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#4FB5B5",
+      "rect_as_written": {
+       "x": 253,
+       "y": 1330.721,
+       "width": 700,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1455
+      }
+     },
+     "text_x": 294.625,
+     "baseline": 1402.346,
+     "baseline_in_layer": 1526.625,
+     "layer_ty": -124.279,
+     "path_fills": [
+      "#4FB5B5",
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 2,
+     "ink": {
+      "x1": 297.117,
+      "y1": 1358.336,
+      "x2": 905.947,
+      "y2": 1414.864
+     }
+    },
+    {
+     "role": "rule box",
+     "string": "det(σᵥ) = −1",
+     "code_points": [
+      "U+0064",
+      "U+0065",
+      "U+0074",
+      "U+0028",
+      "U+03C3",
+      "U+1D65",
+      "U+0029",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+2212",
+      "U+0031"
+     ],
+     "advance": 413.76,
+     "textlayout_advance": 413.76,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 352,
+      "y": 1501.443,
+      "w": 502,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 354,
+       "y": 1503.443,
+       "width": 498,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1603
+      }
+     },
+     "text_x": 395.625,
+     "baseline": 1575.068,
+     "baseline_in_layer": 1674.625,
+     "layer_ty": -99.557,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 398.23,
+      "y1": 1531.002,
+      "x2": 805.392,
+      "y2": 1582.714
+     }
+    }
+   ],
+   "divider": {
+    "layer_ty": -74.836,
+    "rule": {
+     "x": 503,
+     "y": 1682.164,
+     "w": 200,
+     "h": 4,
+     "fill": "#D4A853"
+    },
+    "diamond": {
+     "cx": 603,
+     "cy": 1684.164,
+     "half_diagonal": 9.899,
+     "fill": "#D4A853"
+    },
+    "row_y": 1674.164,
+    "bytes_identical_to_master": true
+   },
+   "lines": [
+    {
+     "string": "I reflect the standard.",
+     "code_points": [
+      "U+0049",
+      "U+0020",
+      "U+0072",
+      "U+0065",
+      "U+0066",
+      "U+006C",
+      "U+0065",
+      "U+0063",
+      "U+0074",
+      "U+0020",
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+006E",
+      "U+0064",
+      "U+0061",
+      "U+0072",
+      "U+0064",
+      "U+002E"
+     ],
+     "advance": 720.497,
+     "textlayout_advance": 718.373,
+     "textlayout_ligature": [
+      "U+FB02"
+     ],
+     "textlayout_identical": false,
+     "x": 242.75,
+     "baseline": 1803.635,
+     "baseline_in_layer": 1853.75,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 720.497,
+      "x": 242.75,
+      "baseline": 1803.635
+     },
+     "ink": {
+      "x1": 248.074,
+      "y1": 1759.569,
+      "x2": 957.328,
+      "y2": 1804.456
+     }
+    },
+    {
+     "string": "It is reflection, not rejection.",
+     "code_points": [
+      "U+0049",
+      "U+0074",
+      "U+0020",
+      "U+0069",
+      "U+0073",
+      "U+0020",
+      "U+0072",
+      "U+0065",
+      "U+0066",
+      "U+006C",
+      "U+0065",
+      "U+0063",
+      "U+0074",
+      "U+0069",
+      "U+006F",
+      "U+006E",
+      "U+002C",
+      "U+0020",
+      "U+006E",
+      "U+006F",
+      "U+0074",
+      "U+0020",
+      "U+0072",
+      "U+0065",
+      "U+006A",
+      "U+0065",
+      "U+0063",
+      "U+0074",
+      "U+0069",
+      "U+006F",
+      "U+006E",
+      "U+002E"
+     ],
+     "advance": 943.208,
+     "textlayout_advance": 941.084,
+     "textlayout_ligature": [
+      "U+FB02"
+     ],
+     "textlayout_identical": false,
+     "x": 131.375,
+     "baseline": 1873.51,
+     "baseline_in_layer": 1923.625,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 943.208,
+      "x": 131.375,
+      "baseline": 1873.51
+     },
+     "ink": {
+      "x1": 136.699,
+      "y1": 1829.444,
+      "x2": 1068.664,
+      "y2": 1886.028
+     }
+    }
+   ],
+   "file": "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NON-NORMATIVE-flashcard-MASTER.svg",
+   "sha16": "06c8b13bc205a124",
+   "bytes": 2830346,
+   "ids": 62,
+   "references": 34
+  },
+  "CRITICAL": {
+   "kind": "state flashcard",
+   "spec_section": "§3",
+   "coins": [
+    {
+     "state": "CRITICAL",
+     "master": "MASTER-medallion-CRITICAL-notation-slot820.svg",
+     "sha16": "33413c4af9ec838c",
+     "transform": "translate(312 684) scale(0.708536585)",
+     "translate": [
+      312,
+      684
+     ],
+     "scale": 0.708536585,
+     "box_px": 581,
+     "cell": {
+      "x": 312,
+      "y": 684,
+      "w": 581,
+      "h": 581
+     },
+     "prefix": null,
+     "ids": 56,
+     "references": 37,
+     "ring": "#E25C60",
+     "mark": "#E25C60",
+     "field": "#1F100E"
+    }
+   ],
+   "layers": {
+    "ground": "byte-identical to 1cf8f0f9f4aa30ea",
+    "medallion": "coin",
+    "operator": -124.279,
+    "forall": -99.557,
+    "divider-1": -74.836,
+    "cogito": -50.115
+   },
+   "rows": [
+    {
+     "role": "operator row",
+     "string": "C₂ : (x, y) → (−x, −y)",
+     "code_points": [
+      "U+0043",
+      "U+2082",
+      "U+0020",
+      "U+003A",
+      "U+0020",
+      "U+0028",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+0079",
+      "U+0029",
+      "U+0020",
+      "U+2192",
+      "U+0020",
+      "U+0028",
+      "U+2212",
+      "U+0078",
+      "U+002C",
+      "U+0020",
+      "U+2212",
+      "U+0079",
+      "U+0029"
+     ],
+     "advance": 658.646,
+     "textlayout_advance": 658.646,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 230,
+      "y": 1328.721,
+      "w": 746,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#E25C60",
+      "rect_as_written": {
+       "x": 232,
+       "y": 1330.721,
+       "width": 742,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1455
+      }
+     },
+     "text_x": 273.625,
+     "baseline": 1402.346,
+     "baseline_in_layer": 1526.625,
+     "layer_ty": -124.279,
+     "path_fills": [
+      "#E25C60",
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 2,
+     "ink": {
+      "x1": 276.514,
+      "y1": 1358.336,
+      "x2": 927.286,
+      "y2": 1414.864
+     }
+    },
+    {
+     "role": "rule box",
+     "string": "σᵥ ∘ σₕ = C₂",
+     "code_points": [
+      "U+03C3",
+      "U+1D65",
+      "U+0020",
+      "U+2218",
+      "U+0020",
+      "U+03C3",
+      "U+2095",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+0043",
+      "U+2082"
+     ],
+     "advance": 379.464,
+     "textlayout_advance": 379.464,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 369,
+      "y": 1501.443,
+      "w": 468,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 371,
+       "y": 1503.443,
+       "width": 464,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1603
+      }
+     },
+     "text_x": 412.625,
+     "baseline": 1575.068,
+     "baseline_in_layer": 1674.625,
+     "layer_ty": -99.557,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 415.117,
+      "y1": 1532.021,
+      "x2": 788.832,
+      "y2": 1575.889
+     }
+    }
+   ],
+   "divider": {
+    "layer_ty": -74.836,
+    "rule": {
+     "x": 503,
+     "y": 1682.164,
+     "w": 200,
+     "h": 4,
+     "fill": "#D4A853"
+    },
+    "diamond": {
+     "cx": 603,
+     "cy": 1684.164,
+     "half_diagonal": 9.899,
+     "fill": "#D4A853"
+    },
+    "row_y": 1674.164,
+    "bytes_identical_to_master": true
+   },
+   "lines": [
+    {
+     "string": "I invert the standard.",
+     "code_points": [
+      "U+0049",
+      "U+0020",
+      "U+0069",
+      "U+006E",
+      "U+0076",
+      "U+0065",
+      "U+0072",
+      "U+0074",
+      "U+0020",
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+006E",
+      "U+0064",
+      "U+0061",
+      "U+0072",
+      "U+0064",
+      "U+002E"
+     ],
+     "advance": 700.645,
+     "textlayout_advance": 700.645,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 252.625,
+     "baseline": 1803.635,
+     "baseline_in_layer": 1853.75,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 700.645,
+      "x": 252.625,
+      "baseline": 1803.635
+     },
+     "ink": {
+      "x1": 257.949,
+      "y1": 1759.569,
+      "x2": 947.351,
+      "y2": 1804.456
+     }
+    },
+    {
+     "string": "It is structured inversion,",
+     "code_points": [
+      "U+0049",
+      "U+0074",
+      "U+0020",
+      "U+0069",
+      "U+0073",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0072",
+      "U+0075",
+      "U+0063",
+      "U+0074",
+      "U+0075",
+      "U+0072",
+      "U+0065",
+      "U+0064",
+      "U+0020",
+      "U+0069",
+      "U+006E",
+      "U+0076",
+      "U+0065",
+      "U+0072",
+      "U+0073",
+      "U+0069",
+      "U+006F",
+      "U+006E",
+      "U+002C"
+     ],
+     "advance": 833.778,
+     "textlayout_advance": 833.778,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 186.125,
+     "baseline": 1873.51,
+     "baseline_in_layer": 1923.625,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 833.778,
+      "x": 186.125,
+      "baseline": 1873.51
+     },
+     "ink": {
+      "x1": 191.449,
+      "y1": 1829.444,
+      "x2": 1013.984,
+      "y2": 1881.751
+     }
+    },
+    {
+     "string": "not reaction.",
+     "code_points": [
+      "U+006E",
+      "U+006F",
+      "U+0074",
+      "U+0020",
+      "U+0072",
+      "U+0065",
+      "U+0061",
+      "U+0063",
+      "U+0074",
+      "U+0069",
+      "U+006F",
+      "U+006E",
+      "U+002E"
+     ],
+     "advance": 421.293,
+     "textlayout_advance": 421.293,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 392.375,
+     "baseline": 1943.385,
+     "baseline_in_layer": 1993.5,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 421.293,
+      "x": 392.375,
+      "baseline": 1943.385
+     },
+     "ink": {
+      "x1": 397.246,
+      "y1": 1899.319,
+      "x2": 807.749,
+      "y2": 1944.206
+     }
+    }
+   ],
+   "file": "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-CRITICAL-flashcard-MASTER.svg",
+   "sha16": "7ef95fb6e0aee46e",
+   "bytes": 3012247,
+   "ids": 64,
+   "references": 37
+  },
+  "ALL-FOUR-flashcard": {
+   "kind": "fifth flashcard (all four)",
+   "spec_section": "§4",
+   "grid": {
+    "scale": 0.437899692,
+    "box_px": 359.078,
+    "pitch": 423.799,
+    "side": 782.877,
+    "x0": 211.562,
+    "y0": 481.123,
+    "bottom": 1264
+   },
+   "coins": [
+    {
+     "cell": "top-left",
+     "state": "NORMATIVE",
+     "master": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "transform": "translate(211.562 481.123) scale(0.437899692)",
+     "translate": [
+      211.562,
+      481.123
+     ],
+     "scale": 0.437899692,
+     "box_px": 359.078,
+     "cell_box": {
+      "x": 211.562,
+      "y": 481.123,
+      "w": 359.078,
+      "h": 359.078
+     },
+     "prefix": "n-",
+     "ids": 55,
+     "references": 36,
+     "group_id": "n-medallion-slot820"
+    },
+    {
+     "cell": "top-right",
+     "state": "NON-NORMATIVE",
+     "master": "MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+     "sha16": "4ef1de6ae126279e",
+     "transform": "translate(635.361 481.123) scale(0.437899692)",
+     "translate": [
+      635.361,
+      481.123
+     ],
+     "scale": 0.437899692,
+     "box_px": 359.078,
+     "cell_box": {
+      "x": 635.361,
+      "y": 481.123,
+      "w": 359.078,
+      "h": 359.078
+     },
+     "prefix": "nn-",
+     "ids": 54,
+     "references": 34,
+     "group_id": "nn-medallion-slot820"
+    },
+    {
+     "cell": "bottom-left",
+     "state": "METACOGNITIVE",
+     "master": "MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+     "sha16": "cccfcff10dc74930",
+     "transform": "translate(211.562 904.922) scale(0.437899692)",
+     "translate": [
+      211.562,
+      904.922
+     ],
+     "scale": 0.437899692,
+     "box_px": 359.078,
+     "cell_box": {
+      "x": 211.562,
+      "y": 904.922,
+      "w": 359.078,
+      "h": 359.078
+     },
+     "prefix": "m-",
+     "ids": 54,
+     "references": 34,
+     "group_id": "m-medallion-slot820"
+    },
+    {
+     "cell": "bottom-right",
+     "state": "CRITICAL",
+     "master": "MASTER-medallion-CRITICAL-notation-slot820.svg",
+     "sha16": "33413c4af9ec838c",
+     "transform": "translate(635.361 904.922) scale(0.437899692)",
+     "translate": [
+      635.361,
+      904.922
+     ],
+     "scale": 0.437899692,
+     "box_px": 359.078,
+     "cell_box": {
+      "x": 635.361,
+      "y": 904.922,
+      "w": 359.078,
+      "h": 359.078
+     },
+     "prefix": "c-",
+     "ids": 56,
+     "references": 37,
+     "group_id": "c-medallion-slot820"
+    }
+   ],
+   "layers": {
+    "ground": "byte-identical to 1cf8f0f9f4aa30ea",
+    "figure": "four coin sub-layers",
+    "operator": -124.279,
+    "forall": -99.557,
+    "divider-1": -74.836,
+    "cogito": -50.115
+   },
+   "rows": [
+    {
+     "role": "the four symbols",
+     "string": "V₄ = {I, σᵥ, σₕ, C₂}",
+     "code_points": [
+      "U+0056",
+      "U+2084",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+007B",
+      "U+0049",
+      "U+002C",
+      "U+0020",
+      "U+03C3",
+      "U+1D65",
+      "U+002C",
+      "U+0020",
+      "U+03C3",
+      "U+2095",
+      "U+002C",
+      "U+0020",
+      "U+0043",
+      "U+2082",
+      "U+007D"
+     ],
+     "advance": 603.902,
+     "textlayout_advance": 603.902,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 257,
+      "y": 1328.721,
+      "w": 692,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 259,
+       "y": 1330.721,
+       "width": 688,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1455
+      }
+     },
+     "text_x": 300.625,
+     "baseline": 1402.346,
+     "baseline_in_layer": 1526.625,
+     "layer_ty": -124.279,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 300.908,
+      "y1": 1358.28,
+      "x2": 897.277,
+      "y2": 1411.805
+     }
+    },
+    {
+     "role": "the law",
+     "string": "∀g ∈ V₄. g ∘ g = I",
+     "code_points": [
+      "U+2200",
+      "U+0067",
+      "U+0020",
+      "U+2208",
+      "U+0020",
+      "U+0056",
+      "U+2084",
+      "U+002E",
+      "U+0020",
+      "U+0067",
+      "U+0020",
+      "U+2218",
+      "U+0020",
+      "U+0067",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+0049"
+     ],
+     "advance": 561.592,
+     "textlayout_advance": 561.592,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 278,
+      "y": 1501.443,
+      "w": 650,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 280,
+       "y": 1503.443,
+       "width": 646,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1603
+      }
+     },
+     "text_x": 321.625,
+     "baseline": 1575.068,
+     "baseline_in_layer": 1674.625,
+     "layer_ty": -99.557,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 321.908,
+      "y1": 1532.701,
+      "x2": 877.864,
+      "y2": 1587.586
+     }
+    }
+   ],
+   "divider": {
+    "layer_ty": -74.836,
+    "rule": {
+     "x": 503,
+     "y": 1682.164,
+     "w": 200,
+     "h": 4,
+     "fill": "#D4A853"
+    },
+    "diamond": {
+     "cx": 603,
+     "cy": 1684.164,
+     "half_diagonal": 9.899,
+     "fill": "#D4A853"
+    },
+    "row_y": 1674.164,
+    "bytes_identical_to_master": true
+   },
+   "lines": [
+    {
+     "string": "Four boxes;",
+     "code_points": [
+      "U+0046",
+      "U+006F",
+      "U+0075",
+      "U+0072",
+      "U+0020",
+      "U+0062",
+      "U+006F",
+      "U+0078",
+      "U+0065",
+      "U+0073",
+      "U+003B"
+     ],
+     "advance": 383.032,
+     "textlayout_advance": 383.032,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 411.5,
+     "baseline": 1803.635,
+     "baseline_in_layer": 1853.75,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 383.032,
+      "x": 411.5,
+      "baseline": 1803.635
+     },
+     "ink": {
+      "x1": 416.824,
+      "y1": 1759.569,
+      "x2": 788.047,
+      "y2": 1811.876
+     }
+    },
+    {
+     "string": "one move between any two;",
+     "code_points": [
+      "U+006F",
+      "U+006E",
+      "U+0065",
+      "U+0020",
+      "U+006D",
+      "U+006F",
+      "U+0076",
+      "U+0065",
+      "U+0020",
+      "U+0062",
+      "U+0065",
+      "U+0074",
+      "U+0077",
+      "U+0065",
+      "U+0065",
+      "U+006E",
+      "U+0020",
+      "U+0061",
+      "U+006E",
+      "U+0079",
+      "U+0020",
+      "U+0074",
+      "U+0077",
+      "U+006F",
+      "U+003B"
+     ],
+     "advance": 923.384,
+     "textlayout_advance": 923.384,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 141.25,
+     "baseline": 1873.51,
+     "baseline_in_layer": 1923.625,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 923.384,
+      "x": 141.25,
+      "baseline": 1873.51
+     },
+     "ink": {
+      "x1": 143.742,
+      "y1": 1829.444,
+      "x2": 1058.148,
+      "y2": 1886.028
+     }
+    },
+    {
+     "string": "the way back is the same move.",
+     "code_points": [
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0077",
+      "U+0061",
+      "U+0079",
+      "U+0020",
+      "U+0062",
+      "U+0061",
+      "U+0063",
+      "U+006B",
+      "U+0020",
+      "U+0069",
+      "U+0073",
+      "U+0020",
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0061",
+      "U+006D",
+      "U+0065",
+      "U+0020",
+      "U+006D",
+      "U+006F",
+      "U+0076",
+      "U+0065",
+      "U+002E"
+     ],
+     "advance": 1047.512,
+     "textlayout_advance": 1047.512,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 79.25,
+     "baseline": 1943.385,
+     "baseline_in_layer": 1993.5,
+     "layer_ty": -50.115,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 1047.512,
+      "x": 79.25,
+      "baseline": 1943.385
+     },
+     "ink": {
+      "x1": 80.015,
+      "y1": 1899.319,
+      "x2": 1120.843,
+      "y2": 1955.903
+     }
+    }
+   ],
+   "file": "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-flashcard-MASTER.svg",
+   "sha16": "0b83fba14b3c08d6",
+   "bytes": 11582136,
+   "ids": 227,
+   "references": 141
+  },
+  "ALL-FOUR-lockscreen": {
+   "kind": "fifth lock screen (all four), held for Carey's phone check, 21 Oct",
+   "spec_section": "§5",
+   "grid": {
+    "scale": 0.561605269,
+    "box_px": 460.516,
+    "pitch": 525.238,
+    "side": 985.754,
+    "x0": 110.123,
+    "y0": 481.123,
+    "bottom": 1466.877
+   },
+   "coins": [
+    {
+     "cell": "top-left",
+     "state": "NORMATIVE",
+     "master": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "transform": "translate(110.123 481.123) scale(0.561605269)",
+     "translate": [
+      110.123,
+      481.123
+     ],
+     "scale": 0.561605269,
+     "box_px": 460.516,
+     "cell_box": {
+      "x": 110.123,
+      "y": 481.123,
+      "w": 460.516,
+      "h": 460.516
+     },
+     "prefix": "n-",
+     "ids": 55,
+     "references": 36,
+     "group_id": "n-medallion-slot820"
+    },
+    {
+     "cell": "top-right",
+     "state": "NON-NORMATIVE",
+     "master": "MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+     "sha16": "4ef1de6ae126279e",
+     "transform": "translate(635.361 481.123) scale(0.561605269)",
+     "translate": [
+      635.361,
+      481.123
+     ],
+     "scale": 0.561605269,
+     "box_px": 460.516,
+     "cell_box": {
+      "x": 635.361,
+      "y": 481.123,
+      "w": 460.516,
+      "h": 460.516
+     },
+     "prefix": "nn-",
+     "ids": 54,
+     "references": 34,
+     "group_id": "nn-medallion-slot820"
+    },
+    {
+     "cell": "bottom-left",
+     "state": "METACOGNITIVE",
+     "master": "MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+     "sha16": "cccfcff10dc74930",
+     "transform": "translate(110.123 1006.361) scale(0.561605269)",
+     "translate": [
+      110.123,
+      1006.361
+     ],
+     "scale": 0.561605269,
+     "box_px": 460.516,
+     "cell_box": {
+      "x": 110.123,
+      "y": 1006.361,
+      "w": 460.516,
+      "h": 460.516
+     },
+     "prefix": "m-",
+     "ids": 54,
+     "references": 34,
+     "group_id": "m-medallion-slot820"
+    },
+    {
+     "cell": "bottom-right",
+     "state": "CRITICAL",
+     "master": "MASTER-medallion-CRITICAL-notation-slot820.svg",
+     "sha16": "33413c4af9ec838c",
+     "transform": "translate(635.361 1006.361) scale(0.561605269)",
+     "translate": [
+      635.361,
+      1006.361
+     ],
+     "scale": 0.561605269,
+     "box_px": 460.516,
+     "cell_box": {
+      "x": 635.361,
+      "y": 1006.361,
+      "w": 460.516,
+      "h": 460.516
+     },
+     "prefix": "c-",
+     "ids": 56,
+     "references": 37,
+     "group_id": "c-medallion-slot820"
+    }
+   ],
+   "layers": {
+    "ground": "byte-identical to 1cf8f0f9f4aa30ea",
+    "figure": "four coin sub-layers",
+    "operator": 78.598,
+    "forall": 103.32,
+    "divider-1": 128.041,
+    "cogito": 152.762
+   },
+   "rows": [
+    {
+     "role": "the four symbols",
+     "string": "V₄ = {I, σᵥ, σₕ, C₂}",
+     "code_points": [
+      "U+0056",
+      "U+2084",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+007B",
+      "U+0049",
+      "U+002C",
+      "U+0020",
+      "U+03C3",
+      "U+1D65",
+      "U+002C",
+      "U+0020",
+      "U+03C3",
+      "U+2095",
+      "U+002C",
+      "U+0020",
+      "U+0043",
+      "U+2082",
+      "U+007D"
+     ],
+     "advance": 603.902,
+     "textlayout_advance": 603.902,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 257,
+      "y": 1531.598,
+      "w": 692,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 259,
+       "y": 1533.598,
+       "width": 688,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1455
+      }
+     },
+     "text_x": 300.625,
+     "baseline": 1605.223,
+     "baseline_in_layer": 1526.625,
+     "layer_ty": 78.59800000000001,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 300.908,
+      "y1": 1561.157,
+      "x2": 897.277,
+      "y2": 1614.682
+     }
+    },
+    {
+     "role": "the law",
+     "string": "∀g ∈ V₄. g ∘ g = I",
+     "code_points": [
+      "U+2200",
+      "U+0067",
+      "U+0020",
+      "U+2208",
+      "U+0020",
+      "U+0056",
+      "U+2084",
+      "U+002E",
+      "U+0020",
+      "U+0067",
+      "U+0020",
+      "U+2218",
+      "U+0020",
+      "U+0067",
+      "U+0020",
+      "U+003D",
+      "U+0020",
+      "U+0049"
+     ],
+     "advance": 561.592,
+     "textlayout_advance": 561.592,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "box": {
+      "x": 278,
+      "y": 1704.32,
+      "w": 650,
+      "h": 108,
+      "rx": 28,
+      "stroke_width": 4,
+      "stroke": "#D4A853",
+      "rect_as_written": {
+       "x": 280,
+       "y": 1706.32,
+       "width": 646,
+       "height": 104,
+       "rx": 26,
+       "y_in_layer": 1603
+      }
+     },
+     "text_x": 321.625,
+     "baseline": 1777.945,
+     "baseline_in_layer": 1674.625,
+     "layer_ty": 103.32000000000001,
+     "path_fills": [
+      "#E8E0D2"
+     ],
+     "glyph_split_code_points": 0,
+     "ink": {
+      "x1": 321.908,
+      "y1": 1735.578,
+      "x2": 877.864,
+      "y2": 1790.463
+     }
+    }
+   ],
+   "divider": {
+    "layer_ty": 128.041,
+    "rule": {
+     "x": 503,
+     "y": 1885.041,
+     "w": 200,
+     "h": 4,
+     "fill": "#D4A853"
+    },
+    "diamond": {
+     "cx": 603,
+     "cy": 1887.041,
+     "half_diagonal": 9.899,
+     "fill": "#D4A853"
+    },
+    "row_y": 1877.041,
+    "bytes_identical_to_master": false
+   },
+   "lines": [
+    {
+     "string": "Four boxes;",
+     "code_points": [
+      "U+0046",
+      "U+006F",
+      "U+0075",
+      "U+0072",
+      "U+0020",
+      "U+0062",
+      "U+006F",
+      "U+0078",
+      "U+0065",
+      "U+0073",
+      "U+003B"
+     ],
+     "advance": 383.032,
+     "textlayout_advance": 383.032,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 411.5,
+     "baseline": 2006.512,
+     "baseline_in_layer": 1853.75,
+     "layer_ty": 152.762,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 383.032,
+      "x": 411.5,
+      "baseline": 2006.512
+     },
+     "ink": {
+      "x1": 416.824,
+      "y1": 1962.446,
+      "x2": 788.047,
+      "y2": 2014.753
+     }
+    },
+    {
+     "string": "one move between any two;",
+     "code_points": [
+      "U+006F",
+      "U+006E",
+      "U+0065",
+      "U+0020",
+      "U+006D",
+      "U+006F",
+      "U+0076",
+      "U+0065",
+      "U+0020",
+      "U+0062",
+      "U+0065",
+      "U+0074",
+      "U+0077",
+      "U+0065",
+      "U+0065",
+      "U+006E",
+      "U+0020",
+      "U+0061",
+      "U+006E",
+      "U+0079",
+      "U+0020",
+      "U+0074",
+      "U+0077",
+      "U+006F",
+      "U+003B"
+     ],
+     "advance": 923.384,
+     "textlayout_advance": 923.384,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 141.25,
+     "baseline": 2076.387,
+     "baseline_in_layer": 1923.625,
+     "layer_ty": 152.762,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 923.384,
+      "x": 141.25,
+      "baseline": 2076.387
+     },
+     "ink": {
+      "x1": 143.742,
+      "y1": 2032.321,
+      "x2": 1058.148,
+      "y2": 2088.905
+     }
+    },
+    {
+     "string": "the way back is the same move.",
+     "code_points": [
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0077",
+      "U+0061",
+      "U+0079",
+      "U+0020",
+      "U+0062",
+      "U+0061",
+      "U+0063",
+      "U+006B",
+      "U+0020",
+      "U+0069",
+      "U+0073",
+      "U+0020",
+      "U+0074",
+      "U+0068",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0061",
+      "U+006D",
+      "U+0065",
+      "U+0020",
+      "U+006D",
+      "U+006F",
+      "U+0076",
+      "U+0065",
+      "U+002E"
+     ],
+     "advance": 1047.512,
+     "textlayout_advance": 1047.512,
+     "textlayout_ligature": null,
+     "textlayout_identical": true,
+     "x": 79.25,
+     "baseline": 2146.262,
+     "baseline_in_layer": 1993.5,
+     "layer_ty": 152.762,
+     "fill": "#E8E0D2",
+     "spec": {
+      "advance": 1047.512,
+      "x": 79.25,
+      "baseline": 2146.262
+     },
+     "ink": {
+      "x1": 80.015,
+      "y1": 2102.196,
+      "x2": 1120.843,
+      "y2": 2158.78
+     }
+    }
+   ],
+   "file": "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-MASTER.svg",
+   "sha16": "d551d3c339cdd915",
+   "bytes": 11582194,
+   "ids": 227,
+   "references": 141
+  }
+ }
+}

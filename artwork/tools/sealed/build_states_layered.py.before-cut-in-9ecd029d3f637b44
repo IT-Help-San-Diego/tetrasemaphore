@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""build_states_layered.py --config <states-config-layered.json> --outdir <dir>
+LAYERED state masters for the Tetrasemaphore finals (2026-10-05; Science build sheet sections 5-8). Same sealed parts as
+build_states.py / build_states_proposal.py (compose.py, the ring recipe, legend.js), assembled in a different layer order:
+
+  field  ·  finalA5-rings  ·  finalA5-geometry  ·  finalA5-finish  (the UNCUT ring, all 24 keys)
+         ·  one legend pair per language: legend-plaque-<lang> + legend-text-<lang>  ·  owl-placement (swapped for the mark later)
+
+- field: one disc in the coin's own dark tint, the bottom layer; its edge lies under the outer coloured ring.
+- The ring is uncut, so hiding the legend layers leaves a whole meander and another language's legend can be laid on it.
+- Each language's plaque and lettering come from the sealed legend.js, run on a scratch copy and lifted out as two groups; every
+  legend id gets the language suffix. Languages other than common.default_language are hidden (style display:none).
+- A plaque laid straight onto an uncut ring leaves a lighter patch on the rails wherever a hidden key joins them (measured
+  2026-10-05). So each plaque layer ends with its own WINDOW RAILS: the approved cut ring for that window (geometry + finish, its
+  ids suffixed), clipped to the window sector and drawn over the plaque, which is the approved stacking (plaque, rails, lettering).
+  Under the plaque goes a FLOOR in the coin's field tint, the exact channel sector between the rails: the plaque's rounded
+  corners would otherwise leave gaps where the uncut ring's hidden keys show (two slivers per coin, found by the refuter).
+  With the legend shown the coin renders as approved; with the legend layers hidden the whole meander shows.
+- <title> per state; label 1 says centre mark; the 5a/5b labels record the keys covered and the typeface, size and tracking.
+No sealed tool is edited. Prints the root child index of owl-placement (the notation generator's swapped_node_index)."""
+import argparse, hashlib, json, os, re, shlex, subprocess, tempfile
+import xml.etree.ElementTree as ET
+D = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(D)
+ap = argparse.ArgumentParser(); ap.add_argument('--config', required=True); ap.add_argument('--outdir', required=True); a = ap.parse_args()
+C = json.load(open(a.config, encoding='utf-8')); common = C['common']; os.makedirs(a.outdir, exist_ok=True)
+APPROVED_OWL, APPROVED_RING = '#B498E6', '#8C4191'   # colours carried by the owl source file (pre-legend approved master)
+def sh(*x):
+    r = subprocess.run(x, capture_output=True, text=True); assert r.returncode == 0, (x, r.stderr); return r.stdout
+def sha16(p): return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+def block(s, gid):
+    """[start, end) of <g id="gid" ...>...</g> by depth-counting."""
+    key = f'<g id="{gid}"'; assert s.count(key) == 1, (gid, s.count(key)); i = s.index(key); d = 0
+    for m in re.finditer(r'<g[\s>]|</g>', s[i:]):
+        if m.group(0) == '</g>':
+            d -= 1
+            if d == 0: return i, i + m.end()
+        else:
+            gt = s.index('>', i + m.start())
+            if s[gt - 1] != '/': d += 1
+    raise ValueError('unbalanced ' + gid)
+
+def window_rails(st, lang):
+    """The approved CUT ring for this window (geometry + finish and the defs they use), ids suffixed, clipped to the window sector."""
+    import math
+    k = common[st['keys']]; c = open(k['ring_cut'], encoding='utf-8').read(); tag = f'-win-{lang}'
+    d0, d1 = c.index('<defs>'), c.index('</defs>') + len('</defs>'); assert c.count('<defs>') == 1
+    g0, g1 = block(c, 'finalA5-geometry'); f0, f1 = block(c, 'finalA5-finish')
+    body = c[d0:d1] + '\n' + c[g0:g1] + '\n' + c[f0:f1]
+    ids = set(re.findall(r'\bid="([^"]+)"', body))
+    body = re.sub(r'\bid="([^"]+)"', lambda m: f'id="{m.group(1)}{tag}"', body)
+    body = re.sub(r'url\(#([^)]+)\)', lambda m: f'url(#{m.group(1)}{tag})' if m.group(1) in ids else m.group(0), body)
+    body = re.sub(r'(xlink:href|href)="#([^"]+)"', lambda m: f'{m.group(1)}="#{m.group(2)}{tag}"' if m.group(2) in ids else m.group(0), body)
+    body = re.sub(r' inkscape:groupmode="layer"', '', body)            # sub-groups of the plaque layer, not layers of their own
+    a0, a1 = k['a0'] - common['window_pad_deg'], k['a1'] + common['window_pad_deg']; r0, r1 = common['window_r']
+    XY = lambda a, r: f'{410 + r*math.cos(math.radians(a)):.3f} {410 + r*math.sin(math.radians(a)):.3f}'
+    sector = f'M{XY(a0, r0)} A{r0} {r0} 0 0 1 {XY(a1, r0)} L{XY(a1, r1)} A{r1} {r1} 0 0 0 {XY(a0, r1)} Z'
+    lab = (f'5a-rails window rails ({lang}): the approved cut ring {os.path.basename(k["ring_cut"])} clipped to {a0}-{a1} deg, r {r0}-{r1}, '
+           f'drawn over the plaque so the rails beside the legend are the clean rails of the approved coin')
+    return (f'<g id="legend-rails-{lang}" inkscape:label="{lab}"><defs><clipPath id="legend-window-clip-{lang}" clipPathUnits="userSpaceOnUse"><path d="{sector}"/></clipPath></defs>'
+            f'<g clip-path="url(#legend-window-clip-{lang})">\n{body}\n</g></g>')
+
+def legend_pair(base_svg, st, lang, work):
+    """Run the sealed legend.js for one language on a scratch copy; return (plaque_group, text_group, facts)."""
+    L = st['legend'][lang]; k = common[st['keys']]; out = os.path.join(work, f'{st["name"]}-{lang}.svg')
+    info = json.loads(sh('node', 'tools/legend.js', base_svg, out, '--word', L['word'], '--a0', str(k['a0']), '--a1', str(k['a1']),
+                         '--track', str(L['track']), *shlex.split(common['legend_knobs'])))
+    s = open(out, encoding='utf-8').read()
+    p0, p1 = block(s, 'legend-plaque'); plaque = s[p0:p1]
+    t0, t1 = block(s, 'legend-text'); text = s[t0:t1]
+    text = re.sub(r'<path transform="[^"]*" d=""/>', '', text); plaque = re.sub(r'<path transform="[^"]*" d=""/>', '', plaque)   # a space has no outline
+    suffix = lambda b: re.sub(r'(id="|url\(#)(legend-[a-z-]+)', lambda m: f'{m.group(1)}{m.group(2)}-{lang}', b)
+    plaque, text = suffix(plaque), suffix(text)
+    import math
+    r0, r1 = info['rIn'] - 1.0, info['rOut'] + 1.0    # one unit under each rail, like the plaque's own seam strip; the window rails cover it
+    XY = lambda a_, r: f'{410 + r*math.cos(math.radians(a_)):.3f} {410 + r*math.sin(math.radians(a_)):.3f}'
+    floor = (f'<path id="legend-floor-{lang}" d="M{XY(k["a0"], r0)} A{r0:.3f} {r0:.3f} 0 0 1 {XY(k["a1"], r0)} L{XY(k["a1"], r1)} A{r1:.3f} {r1:.3f} 0 0 0 {XY(k["a0"], r1)} Z" fill="{st["field_hex"]}"/>\n')
+    key = f'<path id="legend-plaque-seams-{lang}"'; assert plaque.count(key) == 1; plaque = plaque.replace(key, floor + key)
+    assert plaque.rstrip().endswith('</g>'); plaque = plaque.rstrip()[:-len('</g>')] + window_rails(st, lang) + '\n</g>'
+    hide = '' if lang == common['default_language'] else ' style="display:none"'
+    lab5a = (f'5a legend plaque ({lang}): inlaid channel on the uncut ring, over keys {k["keys"]} ({k["a0"]}-{k["a1"]} deg): a floor in the field tint, the plaque, then its window rails on top; '
+             f'fill {re.search(r"--plaque (#[0-9A-Fa-f]{6})", common["legend_knobs"]).group(1)}')
+    plaque, n = re.subn(r'(<g id="legend-plaque-%s" inkscape:groupmode="layer") inkscape:label="[^"]*"' % lang, lambda m: f'{m.group(1)} inkscape:label="{lab5a}"{hide}', plaque, count=1); assert n == 1
+    pt = info['fontSize_slot'] * common['print_mm'] / 820 / 25.4 * 72
+    lab5b = (f'5b legend ({lang}) {L["word"]}: {common["legend_typeface"]}, as outlines; cap height {info["cap_mm"]} mm on the channel mid-radius, '
+             f'font size {info["fontSize_slot"]} slot units = {pt:.1f} pt at {common["print_mm"]} mm, tracking {L["track"]}; fill #DEC875, ring bevel recipe'
+             + (f'; {L["status"]}' if L.get('status') else ''))
+    assert '"' not in lab5b and '"' not in lab5a
+    text, n = re.subn(r'(<g id="legend-text-%s" inkscape:groupmode="layer") inkscape:label="[^"]*"' % lang, lambda m: f'{m.group(1)} inkscape:label="{lab5b}"{hide}', text, count=1); assert n == 1
+    facts = dict(lang=lang, word=L['word'], track=L['track'], word_span_deg=info['word_span_deg'], margin_each_deg=info['margin_each_deg'],
+                 margin_each_mm=info['margin_each_mm'], cap_mm=info['cap_mm'], font_size_slot=info['fontSize_slot'], font_size_pt=round(pt, 2),
+                 clearance_to_rails_mm=info.get('clearance_to_rails_mm'), hidden=bool(hide))
+    return plaque, text, facts
+
+def build(st, out, work):
+    tmp = os.path.join(work, st['name'] + '.composed.svg')
+    sh('python3', 'tools/compose.py', common['ring'], common['owl_source'], tmp)
+    s = open(tmp, encoding='utf-8').read()
+    assert s.count(f'fill="{APPROVED_OWL}"') == 2; s = s.replace(f'fill="{APPROVED_OWL}"', f'fill="{st["owl_hex"]}"')
+    m = re.search(r'(<g id="finalA5-rings"[^>]*>)(.*?)(</g>)', s, re.S); head, inner = m.group(1), m.group(2)
+    assert inner.count(f'stroke="{APPROVED_RING}"') == 2
+    head = re.sub(r'inkscape:label="1 [^"]*"', f'inkscape:label="1 {st["name"]} rings {st["ring_hex"]} (state colour; centre mark {st["owl_hex"]})"', head)
+    s = s[:m.start()] + head + inner.replace(f'stroke="{APPROVED_RING}"', f'stroke="{st["ring_hex"]}"') + m.group(3) + s[m.end():]
+    if st.get('operator'):
+        old = re.search(r'<g id="owl-placement" inkscape:label="[^"]*" transform="([^"]*)">', s); assert old
+        s = s[:old.start()] + f'<g id="owl-placement" inkscape:label="4a owl placement: V4 operator for {st["name"]} about the medallion centre (410,410), then the approved placement" transform="{st["operator"]} {old.group(1)}">' + s[old.end():]
+    assert APPROVED_RING not in s
+    t = re.findall(r'<title>.*?</title>', s, re.S); assert len(t) == 1
+    s = s.replace(t[0], f'<title>Tetrasemaphore {st["name"]} medallion — layered vector master (field + rings + uncut meander with glints + legends {" / ".join(common["languages"])} + centre mark), slot820</title>')
+    open(tmp, 'w', encoding='utf-8').write(s)
+    pairs, facts = [], []
+    for lang in common['languages']:
+        p, t_, f = legend_pair(tmp, st, lang, work); pairs += [p, t_]; facts.append(f)
+    ri = s.index('<g id="finalA5-rings"'); oi = s.index('<g id="owl-placement"')
+    assert s[oi - 1] == '\n'
+    fl = (f'0 field: {st["name"]} tint {st["field_hex"]}, the dark ground the colours were chosen against (one lightness and one chroma for all four coins, '
+          f'hue from the coin colour); a disc to r {common["field_r"]}, its edge under the outer ring; outside the coin stays transparent')
+    field = f'<g id="field" inkscape:groupmode="layer" inkscape:label="{fl}"><circle cx="410" cy="410" r="{common["field_r"]}" fill="{st["field_hex"]}"/></g>\n'
+    s = s[:ri] + field + s[ri:oi] + '\n'.join(pairs) + '\n' + s[oi:]
+    open(out, 'w', encoding='utf-8', newline='').write(s)
+    root = ET.parse(out).getroot(); kids = [c.get('id') or c.tag.split('}')[-1] for c in root]
+    want = ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish'] + [f'legend-{k}-{l}' for l in common['languages'] for k in ('plaque', 'text')] + ['owl-placement']
+    assert kids[-len(want):] == want, kids
+    ids = [e.get('id') for e in root.iter() if e.get('id')]; assert len(ids) == len(set(ids)), 'duplicate ids'
+    return dict(name=st['name'], out=out, sha16=sha16(out), root_children=kids, owl_index=kids.index('owl-placement'), legends=facts)
+
+work = tempfile.mkdtemp(prefix='layered-')
+report = dict(config=os.path.abspath(a.config), ring=common['ring'], ring_sha16=sha16(common['ring']), owl_source=common['owl_source'],
+              owl_source_sha16=sha16(common['owl_source']), states=[])
+for st in C['states']:
+    r = build(st, os.path.join(a.outdir, f'MASTER-medallion-{st["name"]}-layered-slot820.svg'), work); report['states'].append(r)
+    print(r['name'], r['sha16'], 'owl-placement is root child', r['owl_index'], '|', '; '.join(f'{f["lang"]} {f["word"]} track {f["track"]} span {f["word_span_deg"]} margin {f["margin_each_deg"]} deg' for f in r['legends']))
+json.dump(report, open(os.path.join(a.outdir, 'layered-build.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)

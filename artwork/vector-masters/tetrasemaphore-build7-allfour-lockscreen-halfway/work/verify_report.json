@@ -1,0 +1,232 @@
+{
+ "inputs": {
+  "svg6": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-allfour-lockscreen-halfway/dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway-MASTER.svg",
+   "sha16": "c102093af228eb72"
+  },
+  "png6": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-allfour-lockscreen-halfway/dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway.png",
+   "sha16": "98539d7457697edb"
+  },
+  "svg5": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-j4-screens/dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-MASTER.svg",
+   "sha16": "d551d3c339cdd915"
+  },
+  "png5": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-j4-screens/dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen.png",
+   "sha16": "c5026f044c48c059"
+  },
+  "mockup": {
+   "file": "/Users/careybalboa/Downloads/TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway-MOCKUP-1206x2622.png",
+   "sha16": "6902002ccfe5fdeb"
+  }
+ },
+ "checks": {
+  "1_svg_differs_only_in_transforms_and_metadata": {
+   "pass_": true,
+   "transforms_rev6": [
+    "id=\"n-medallion-slot820\" transform=\"translate(180 669) scale(0.477439024)\"",
+    "id=\"nn-medallion-slot820\" transform=\"translate(633.5 669) scale(0.477439024)\"",
+    "id=\"m-medallion-slot820\" transform=\"translate(180 1122.5) scale(0.477439024)\"",
+    "id=\"c-medallion-slot820\" transform=\"translate(633.5 1122.5) scale(0.477439024)\"",
+    "id=\"operator\" transform=\"translate(0 126.598)\"",
+    "id=\"forall\" transform=\"translate(0 151.32)\"",
+    "id=\"divider-1\" transform=\"translate(0 176.041)\"",
+    "id=\"cogito\" transform=\"translate(0 200.762)\""
+   ],
+   "bytes_normalised": [
+    11576896,
+    11576896
+   ]
+  },
+  "1b_transforms_equal_update_19": {
+   "pass_": true,
+   "got": [
+    "translate(180 669) scale(0.477439024)",
+    "translate(633.5 669) scale(0.477439024)",
+    "translate(180 1122.5) scale(0.477439024)",
+    "translate(633.5 1122.5) scale(0.477439024)",
+    "translate(0 126.598)",
+    "translate(0 151.32)",
+    "translate(0 176.041)",
+    "translate(0 200.762)"
+   ]
+  },
+  "1c_no_live_text_raster_script_style": {
+   "pass_": true
+  },
+  "2_png_dims_alpha_tags": {
+   "pass_": true,
+   "shape": [
+    2622,
+    1206,
+    4
+   ],
+   "alpha_min": 255,
+   "sRGB": true,
+   "dpi": 300.0
+  },
+  "3_text_band_is_rev5_moved_48px": {
+   "pass_": true,
+   "differing_px": 5,
+   "max_level": 13,
+   "tolerance": "<= 8 px, <= 16 levels (resvg edge rounding)",
+   "pixels": [
+    {
+     "x": 642,
+     "y_rev6": 2047,
+     "rev6": [
+      105,
+      107,
+      107
+     ],
+     "rev5": [
+      117,
+      118,
+      117
+     ],
+     "diff": 12
+    },
+    {
+     "x": 651,
+     "y_rev6": 2052,
+     "rev6": [
+      55,
+      61,
+      66
+     ],
+     "rev5": [
+      42,
+      49,
+      56
+     ],
+     "diff": 13
+    },
+    {
+     "x": 732,
+     "y_rev6": 2052,
+     "rev6": [
+      106,
+      107,
+      107
+     ],
+     "rev5": [
+      93,
+      96,
+      97
+     ],
+     "diff": 13
+    },
+    {
+     "x": 465,
+     "y_rev6": 2055,
+     "rev6": [
+      42,
+      49,
+      56
+     ],
+     "rev5": [
+      29,
+      37,
+      45
+     ],
+     "diff": 13
+    },
+    {
+     "x": 501,
+     "y_rev6": 2055,
+     "rev6": [
+      42,
+      49,
+      56
+     ],
+     "rev5": [
+      29,
+      37,
+      45
+     ],
+     "diff": 13
+    }
+   ]
+  },
+  "4_each_coin_alone_equals_composite_in_its_cell": {
+   "pass_": true,
+   "coins": {
+    "n-": {
+     "cell": [
+      180,
+      669,
+      572,
+      1061
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "nn-": {
+     "cell": [
+      633,
+      669,
+      1025,
+      1061
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "m-": {
+     "cell": [
+      180,
+      1122,
+      572,
+      1514
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "c-": {
+     "cell": [
+      633,
+      1122,
+      1025,
+      1514
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    }
+   }
+  },
+  "5_clearances_measured": {
+   "pass_": true,
+   "first_ink_row": 669,
+   "coin_band": [
+    669,
+    1513
+   ],
+   "text_band": [
+    1579,
+    2206
+   ],
+   "clock_digits_y612_to_coin_top_px": 57,
+   "grid_bottom_to_row1_box_px": 65,
+   "last_ink_to_buttons_y2298_px": 91,
+   "update_19_expected": {
+    "under_clock": 56,
+    "above_buttons": 92
+   }
+  },
+  "6_code_points": {
+   "pass_": true,
+   "strings": [
+    "V\u2084 = {I, \u03c3\u1d65, \u03c3\u2095, C\u2082}",
+    "\u2200g \u2208 V\u2084. g \u2218 g = I",
+    "Four boxes;",
+    "one move between any two;",
+    "the way back is the same move."
+   ]
+  }
+ },
+ "preview": {
+  "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-allfour-lockscreen-halfway/proofs/TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway-preview.png",
+  "sha16": "c4723f982adf7bc6"
+ },
+ "all_pass": true
+}

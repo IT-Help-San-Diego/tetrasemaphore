@@ -1,0 +1,923 @@
+{
+ "_doc": "Tetrasemaphore proposed masters (BUILD 7, 2026-10-14; build 3 of 2026-10-05 was the first of this set) by the Claude Code lane to Science build sheet TETRASEMAPHORE-SCIENCE-BUILD-SHEET-finals.md (9e021adbe53cb849 for build 3; v4 on disk 891b0e7f167bdf66). Build 7 = build 6 with Science's one-line bow-tie guard in litedge.js (no strip of the lit edge spans a join turning more than 170 deg: the 48 hairpins of the 342.854-unit rail; TETRASEMAPHORE-SCIENCE-build7-litedge-guard.diff bf7d5264f178d5f1, ordered in BUILD-7-AND-CARDS) and 300 dpi + sRGB tags on every PNG (pixels as rendered); build 6 is in superseded-build-6/. Build 6 = build 5 with the lit edge (gold version 3, Carey pick; Science rulings update 3): one vector layer finalA5-litedge above the finish in the ring and in the two window-rails copies of every master, so the lit rails run past the stamp where the raster reference from Science stopped at the plate, the one deliberate difference; Science checked build 6 on 10 Oct (pass) and ruled the rails stay lit as built (TETRASEMAPHORE-DOORBELL-CLAUDE-SCIENCE-BUILD-6-CHECKED.md); build 5 = build 4 with the gold bright flecks off and CRÍTICO per Science ruling C; build 4 = build 3 with INFORMATIVO at 1.10; build 3 = build 2 with the stamp cut into the ring (section 15) and INFORMATIVO (section 16). PROPOSALS until Carey says final and Hermes moves them. Paths are relative to the dose-01-meander-v2 folder unless absolute. Not listed: MANIFEST.json itself, README.md, earlier refuter records in refute/, the rest of refute/build3-first-pass-as-refuted/, superseded-build-1/, superseded-build-2/, superseded-build-3/ to -6/, make_manifest.py.",
+ "renderer": "resvg-js 2.6.2 via tools/render.js (node); 820 slot units = 102.785 mm",
+ "files": [
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820.svg",
+   "role": "MASTER NORMATIVE: layered vector master (field, rings, uncut meander, legends en + es with the stamp cut in, centre mark, symmetry marks)",
+   "bytes": 2977433,
+   "sha256": "e0b6366d5c032523dcd9b35658756570cbf0f2f09cbb1563f3885e53f0bec1e6",
+   "sha16": "e0b6366d5c032523"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+   "role": "MASTER NON-NORMATIVE: layered vector master (field, rings, uncut meander, legends en + es with the stamp cut in, centre mark, symmetry marks)",
+   "bytes": 2801300,
+   "sha256": "4ef1de6ae126279e83c65570ba0454fef3862bb6599798bf5d6fc1dc5c100f10",
+   "sha16": "4ef1de6ae126279e"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+   "role": "MASTER METACOGNITIVE: layered vector master (field, rings, uncut meander, legends en + es with the stamp cut in, centre mark, symmetry marks)",
+   "bytes": 2802185,
+   "sha256": "cccfcff10dc74930139864a290b62d65e0c1ef68b65f3821955206d4c5e87c8b",
+   "sha16": "cccfcff10dc74930"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg",
+   "role": "MASTER CRITICAL: layered vector master (field, rings, uncut meander, legends en + es with the stamp cut in, centre mark, symmetry marks)",
+   "bytes": 2977502,
+   "sha256": "33413c4af9ec838cef1252116661b9905066005b6595a3009c40dd418fd5b3a2",
+   "sha16": "33413c4af9ec838c"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820-preview.png",
+   "role": "generator preview, 1640 px",
+   "bytes": 1106059,
+   "sha256": "65fd170ccac2725692f6872c2ca28f3b920785eb0650778e5372aa77673e4dae",
+   "sha16": "65fd170ccac27256"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-METACOGNITIVE-notation-slot820-preview.png",
+   "role": "generator preview, 1640 px",
+   "bytes": 1054172,
+   "sha256": "8d851974558f18ffe80caa59963ef0c385ac56de744775afa063e14aedc6474f",
+   "sha16": "8d851974558f18ff"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NON-NORMATIVE-notation-slot820-preview.png",
+   "role": "generator preview, 1640 px",
+   "bytes": 1053532,
+   "sha256": "74bbc4559e7d8c6c33779324eff1d43e37d78575c177e976e8fa44fe0ea3c9a1",
+   "sha16": "74bbc4559e7d8c6c"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820-preview.png",
+   "role": "generator preview, 1640 px",
+   "bytes": 1108058,
+   "sha256": "dcf7c0c6a8010123275136946c9b96229a9a9aceba9a148c8e7752bd49076c3e",
+   "sha16": "dcf7c0c6a8010123"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-en-1024.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 517040,
+   "sha256": "d59377d73fccc1e6576ccf4f1a0935fe6810990ec2f7f961444746c9f56866f6",
+   "sha16": "d59377d73fccc1e6"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-en-1214.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 681745,
+   "sha256": "d7efbf891970aef009e6293c4f690cc2061696788ec235d3dcc64e695091863d",
+   "sha16": "d7efbf891970aef0"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-en-1298.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 757191,
+   "sha256": "a43da812ca3a7c885a4e688c978e6e4011c0996968b2411b6ca8a959a0ae2461",
+   "sha16": "a43da812ca3a7c88"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-en-2460.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2150660,
+   "sha256": "bdf43bf1db796ea098835b23b0df6f87f8d4dffe41a05902258e1d95651282e9",
+   "sha16": "bdf43bf1db796ea0"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-en-512.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 170102,
+   "sha256": "89dc35c8fcd840f0de8b75e3df094798b9a417472ffaa1ca707b2a7bac5613a3",
+   "sha16": "89dc35c8fcd840f0"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-en-1024.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 491959,
+   "sha256": "cb29b35c8363f4afbf859e75193f942066f0079222bfbbc7e1c675a722839e1b",
+   "sha16": "cb29b35c8363f4af"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-en-1214.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 649119,
+   "sha256": "54595050d3971357c219cfa5fa026f0633c45343cbaffaa4e665d45bd0c2fb3d",
+   "sha16": "54595050d3971357"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-en-1298.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 721125,
+   "sha256": "0f050e240c74e952fb475211b5a31657b832e374d9587656e7f76df085cc0de0",
+   "sha16": "0f050e240c74e952"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-en-2460.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2047413,
+   "sha256": "6c5d24121f4de08c844294f6fc00e2e9ef3918e1da63e30fc1fd3eda9c697d11",
+   "sha16": "6c5d24121f4de08c"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-en-512.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 162619,
+   "sha256": "1fc5ca3480246e1277bcb56849ebb93293866dd43aa7f21d069b90f86df6e2ec",
+   "sha16": "1fc5ca3480246e12"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-1024.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 492172,
+   "sha256": "83341673d1a188a24fa1c5ceca55edeebe8988df7de76c02bfa738d33f6c4878",
+   "sha16": "83341673d1a188a2"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-1214.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 648645,
+   "sha256": "3bc24d0127c0be160237eedd4ffc1c00865eae46297119fd388da029788cc8f9",
+   "sha16": "3bc24d0127c0be16"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-1298.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 720684,
+   "sha256": "658837bd2d2802b35b8a85f91fdd50d839471acf092f57e9f587589f42bc8db0",
+   "sha16": "658837bd2d2802b3"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-2460.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2047499,
+   "sha256": "4f430643f61b19ad705cba8dba687451a0f312f001edbd9a9b6119af23a9d25e",
+   "sha16": "4f430643f61b19ad"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-512.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 163398,
+   "sha256": "9b90f014e077453b7e2446ef42c8dc0b08375ceb194c1d418ad94c162ee1d91e",
+   "sha16": "9b90f014e077453b"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-en-1024.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 513156,
+   "sha256": "700070871d66fc0456d498b421bef8c4ba5f98da33cb219b26026edabf5f0cbc",
+   "sha16": "700070871d66fc04"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-en-1214.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 680362,
+   "sha256": "bf17a636666eca1f7ab8891c38881b34daca8df2efcc797cacaed68f2e644818",
+   "sha16": "bf17a636666eca1f"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-en-1298.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 755820,
+   "sha256": "eacf65bc9181f649ff29d76011bc0cc759f3c9aacb01b0ab4875c764b2526438",
+   "sha16": "eacf65bc9181f649"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-en-2460.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2151407,
+   "sha256": "7d2c42c239b403709e883b8c26725e35e52a74fabaea5123f6eba1e842985e73",
+   "sha16": "7d2c42c239b40370"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-en-512.png",
+   "role": "flattened PNG, field included, English legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 168560,
+   "sha256": "b893c34898ab9ebc4fcd8eb2f915a30253d5afb64548aad0afe1af7b3160600d",
+   "sha16": "b893c34898ab9ebc"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-es-1024.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 516690,
+   "sha256": "30f6b1444daa3273437c6433460a48f44aaeb86482906b4f705cd439353e2b7d",
+   "sha16": "30f6b1444daa3273"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-es-1214.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 681421,
+   "sha256": "1d74924d9a5694e7cbb54020322ea49f0d41673f12d79fc2d32650f0c338ce82",
+   "sha16": "1d74924d9a5694e7"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-es-1298.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 756826,
+   "sha256": "54bcc40dea8e470dc1f7e9a2ab6f5b0f5c73b258339908608e8eed38158015b7",
+   "sha16": "54bcc40dea8e470d"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-es-2460.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2149359,
+   "sha256": "509297829265a0a19b2533c6ff3735c9134b46135355e9996632e1c925f61e4d",
+   "sha16": "509297829265a0a1"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-CRITICAL-es-512.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 170087,
+   "sha256": "30af4e519891b595c81ea243c7b0a87ee9fe9418bf382a7a50b29151dc98eed4",
+   "sha16": "30af4e519891b595"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-es-1024.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 491826,
+   "sha256": "5a75810d97e3a852a0f1b9972c3f9c8b1d51421f7e8bdcd02f1f9ee2c0738ae3",
+   "sha16": "5a75810d97e3a852"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-es-1214.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 649089,
+   "sha256": "7ef4ddfe43c6df98eaf3af85ce9a7e4e6bcb5dbfc3ed9774e237e4de5bddab08",
+   "sha16": "7ef4ddfe43c6df98"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-es-1298.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 720975,
+   "sha256": "0b74d6670118923a2b15c0770c3cc123b658deee5ff7d95add1964066fe2fad4",
+   "sha16": "0b74d6670118923a"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-es-2460.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2047427,
+   "sha256": "0e59f20a7d03e8d16b62217a3d79707fc05d603be012c5d657b4b6095800e592",
+   "sha16": "0e59f20a7d03e8d1"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-METACOGNITIVE-es-512.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 162481,
+   "sha256": "289b7447e6ab663e6a96c8745815080cbaef1f731407760aa8e5f5fdb55f37be",
+   "sha16": "289b7447e6ab663e"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-es-1024.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 489814,
+   "sha256": "374244c0a8e21bcb0ca1a4de2ba9bf50138f4c448c497f07dcc14485d88eaa70",
+   "sha16": "374244c0a8e21bcb"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-es-1214.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 645374,
+   "sha256": "ac2b2b6d21778c865ef92e0b706bae6baa3d8a4e7696e0caea2fce961f05303e",
+   "sha16": "ac2b2b6d21778c86"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-es-1298.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 717005,
+   "sha256": "a4017750741981e9ac61a99f652abd34b82bdf4aafd518e8bc2e8968fef50753",
+   "sha16": "a4017750741981e9"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-es-2460.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2038814,
+   "sha256": "3d148680e77d179f270311197183e833d5cb57abe0bf70be79ec22de6229e7c3",
+   "sha16": "3d148680e77d179f"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-es-512.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 162274,
+   "sha256": "af1236728c2dd7a64603672666a7ba264c44df16335230ca552099f39675c09d",
+   "sha16": "af1236728c2dd7a6"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-es-1024.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 513418,
+   "sha256": "ab54679ee6d54f6630b16a64dbc7ad727ee8f3921e062326f611773f0a4481e8",
+   "sha16": "ab54679ee6d54f66"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-es-1214.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 680505,
+   "sha256": "3250360ddf3e50f5211d9d57b913c4c71bcd172410bb553e6b968984f5040d4c",
+   "sha16": "3250360ddf3e50f5"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-es-1298.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 755972,
+   "sha256": "077215b442760441426bd4270d844bbf16848891edeeea9a00f1b0837101b696",
+   "sha16": "077215b442760441"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-es-2460.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 2151743,
+   "sha256": "33d606f92ae91a8975a7556f79c441264fb88c6e4cab1ca1ca7dcc91dbc05efa",
+   "sha16": "33d606f92ae91a89"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NORMATIVE-es-512.png",
+   "role": "flattened PNG, field included, Spanish legend; renderer resvg-js 2.6.2 (tools/render.js)",
+   "bytes": 168591,
+   "sha256": "1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577",
+   "sha16": "1c49f6829a561265"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 1234977,
+   "sha256": "dd07fcf9a539e95e549eb7f0b288ceb9da3b878e794b4374b7dc4fc70f91b4bb",
+   "sha16": "dd07fcf9a539e95e"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-CRITICAL-no-legend-uncut-ring-1024.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 555619,
+   "sha256": "a021f91fd50c4c3355e3211832c6876874546ce9a478c6099d5492991156c350",
+   "sha16": "a021f91fd50c4c33"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-FINAL-MASTERS-on-white.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 1812463,
+   "sha256": "1513e2bc6b8b0cf5eeaea08b0c467006148f2c1c181336cb9eb3722fd37660c4",
+   "sha16": "1513e2bc6b8b0cf5"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-FINAL-MASTERS-set.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 1839640,
+   "sha256": "686a19dd8dbec954d4d5664e6f355db557352c53d7fda03a3daea7453902db38",
+   "sha16": "686a19dd8dbec954"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-FINAL-MASTERS-spanish-and-uncut.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 3320883,
+   "sha256": "f514fb2740070ba9c71296cef10454e962c4027262ff74e30dc4e0869da9d1b1",
+   "sha16": "f514fb2740070ba9"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-METACOGNITIVE-no-legend-uncut-ring-1024.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 547506,
+   "sha256": "2e28cf6a78c34fd81653a3f26d16ded8233d829c9dcec5ba7f6b829a02b53928",
+   "sha16": "2e28cf6a78c34fd8"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-NON-NORMATIVE-no-legend-uncut-ring-1024.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 548132,
+   "sha256": "6ea26e83786d491c73859f6ba1f6a252ce3772f4c6d8b55ba2135ee6af9d6c92",
+   "sha16": "6ea26e83786d491c"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-NORMATIVE-no-legend-uncut-ring-1024.png",
+   "role": "proof picture (no legend = the uncut ring / set sheets / stamp before and after)",
+   "bytes": 548903,
+   "sha256": "4bc7e620d5bd7b8ae9452c06ae49051916b43f2e4cdfd16565194b01b2d369de",
+   "sha16": "4bc7e620d5bd7b8a"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-CRITICAL-readable-half.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 200033,
+   "sha256": "f0b37156b196386fb4398c4caaaaddb317784e2000c5164ab7247fbcf6d45ba7",
+   "sha16": "f0b37156b196386f"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-CRITICAL-whole-coin.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 1525398,
+   "sha256": "719af68267e1901d4af5a488a7d08ba1b4f5af24413241636cd51a58ce072fcd",
+   "sha16": "719af68267e1901d"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-METACOGNITIVE-readable-half.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 97036,
+   "sha256": "58f9dee0274acaa89067766c13868f7049bc920955d7024c6193448d09fc7ad5",
+   "sha16": "58f9dee0274acaa8"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-METACOGNITIVE-whole-coin.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 1452778,
+   "sha256": "7a5499b403187e289b6c03f091d5f5016a586264ab6b24b881149e640277194b",
+   "sha16": "7a5499b403187e28"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-NON-NORMATIVE-readable-half.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 106071,
+   "sha256": "66fdbf504bc4f492f89bd736a8273a7530f3b9935dfe35d33ae3d4f612de6042",
+   "sha16": "66fdbf504bc4f492"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-NON-NORMATIVE-whole-coin.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 1452223,
+   "sha256": "dc3680aeacc01047a077beccd3a672c0ede2fa4e5eab28a306c628e7e397fe26",
+   "sha16": "dc3680aeacc01047"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-NORMATIVE-readable-half.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 114547,
+   "sha256": "0f6af13e3f92cbbebc928c6dc562488011f89911b9c0040e2f561be378114a24",
+   "sha16": "0f6af13e3f92cbbe"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/scan-cards/SCAN-NORMATIVE-whole-coin.png",
+   "role": "caption-free image for the camera test",
+   "bytes": 1529025,
+   "sha256": "1ba54fc377883665eb5819e5a7b707bd49bb9c3ce3aa8a39b35bbe8d3116eea9",
+   "sha16": "1ba54fc377883665"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/notation-measurements.json",
+   "role": "generator measurements for the four masters (also holds run timings and work-folder paths: a rerun matches every measured value, not this hash)",
+   "bytes": 22409,
+   "sha256": "24c49d6bafacdaf581dbef05a6afac817bcac6bad7914a3d80e7fcf74373efaa",
+   "sha16": "24c49d6bafacdaf5"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/research/spanish-terms-raw.json",
+   "role": "Spanish legend words: raw research record (written before INFORMATIVO was chosen)",
+   "bytes": 69456,
+   "sha256": "6232d380c6ecb12c5bd13fba2a70dc1dca6c7275e18a18fbe0c4a4fb32c995f0",
+   "sha16": "6232d380c6ecb12c"
+  },
+  {
+   "path": "master/states/proposals/notation/notation-config-final-masters.json",
+   "role": "generator config: centre marks and symmetry marks; swapped_node_index 12 since build 6 (the lit layer is one more root child before the mark), otherwise build 2 unchanged",
+   "bytes": 5839,
+   "sha256": "fa8a842b07fdd9d69bcb1c3221a803481c365b7c439acc281a4b2ffcb869b334",
+   "sha16": "fa8a842b07fdd9d6"
+  },
+  {
+   "path": "master/states/proposals/layered/states-config-layered.json",
+   "role": "generator config: layered base masters (field tints, legends, windows, stamp cut-in)",
+   "bytes": 6420,
+   "sha256": "3bcaf0f48459bc9712dc62dca2ba454d616672edd8f51d55ab55f66f6d7a25b9",
+   "sha16": "3bcaf0f48459bc97"
+  },
+  {
+   "path": "master/states/proposals/layered/MASTER-medallion-NORMATIVE-layered-slot820.svg",
+   "role": "layered base master (centre still the owl; input to the notation generator; contains the licensed owl vector: private register only)",
+   "bytes": 3045888,
+   "sha256": "ba6b89bf94983fd6cd7e2324ced5c3844f285704ef623be549f81f54b4bc8506",
+   "sha16": "ba6b89bf94983fd6"
+  },
+  {
+   "path": "master/states/proposals/layered/MASTER-medallion-NON-NORMATIVE-layered-slot820.svg",
+   "role": "layered base master (centre still the owl; input to the notation generator; contains the licensed owl vector: private register only)",
+   "bytes": 2869538,
+   "sha256": "a2aba8f772f2942093549282613bcf378b92c2d4edbb30441a2a97bb61b03e12",
+   "sha16": "a2aba8f772f29420"
+  },
+  {
+   "path": "master/states/proposals/layered/MASTER-medallion-METACOGNITIVE-layered-slot820.svg",
+   "role": "layered base master (centre still the owl; input to the notation generator; contains the licensed owl vector: private register only)",
+   "bytes": 2870413,
+   "sha256": "36a0633d5ae3ca0e6c751817a41febaac9dd13b9addb94e4ecf5392061e80c34",
+   "sha16": "36a0633d5ae3ca0e"
+  },
+  {
+   "path": "master/states/proposals/layered/MASTER-medallion-CRITICAL-layered-slot820.svg",
+   "role": "layered base master (centre still the owl; input to the notation generator; contains the licensed owl vector: private register only)",
+   "bytes": 3046374,
+   "sha256": "46f1faa25c89350cfa48e546fbd2288e82d46201e1746e4c62141ea08f090e36",
+   "sha16": "46f1faa25c89350c"
+  },
+  {
+   "path": "master/states/proposals/layered/layered-build.json",
+   "role": "generator report for the bases, with the measured clearances of every legend",
+   "bytes": 8068,
+   "sha256": "87ed170c23ea8d052f9ab16e996236f557b5ab719aab4b592fee6a6c399faa8c",
+   "sha16": "87ed170c23ea8d05"
+  },
+  {
+   "path": "master/states/states-config.json",
+   "role": "config of the approved owl coins (the centre-mark generator reads the state colours and windows from it; the guard uses it)",
+   "bytes": 1635,
+   "sha256": "3550aab519bbd09163db445e7306fec4f4fa9496c157875f04b5ff1162d0cc88",
+   "sha16": "3550aab519bbd091"
+  },
+  {
+   "path": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-litedge-guard-slot820.svg",
+   "role": "the uncut finished meander ring, seam fix on, bright flecks off, lit edges with the bow-tie guard (ring_build.js --seamFix 1 --knobs finish/finish7-knobs-noflecks.txt --litEdge 0.65; build 7)",
+   "bytes": 1109880,
+   "sha256": "29af7381e53a37a640ec0ff6106516462c14a641d47ebbd4c8802ee01813eaac",
+   "sha16": "29af7381e53a37a6"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-litedge-guard-slot820.svg",
+   "role": "seam-fixed cut ring keys21-2, bright flecks off, lit edges with the bow-tie guard, used for the window rails of the legend layers (build 7)",
+   "bytes": 840260,
+   "sha256": "5ba62c45788b29bea98eee298da823c3a54694786b6bc0dfd8076752f9ee491b",
+   "sha16": "5ba62c45788b29be"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-litedge-guard-slot820.svg",
+   "role": "seam-fixed cut ring keys22-1, bright flecks off, lit edges with the bow-tie guard, used for the window rails of the legend layers (build 7)",
+   "bytes": 929267,
+   "sha256": "f20cf292bdc8113cc385aecf70e0e6a07ba5bacfb4d8ebf44cd38cc30da92c02",
+   "sha16": "f20cf292bdc8113c"
+  },
+  {
+   "path": "finish/proposals/NOTE-build7-litedge-guard.md",
+   "role": "the build-7 rings: the guard, why, exact commands, the lane check numbers",
+   "bytes": 2109,
+   "sha256": "2c85d4c5a1991a74bdc32d9f02047760f0244a2e4fd3184251767dba281bdf5d",
+   "sha16": "2c85d4c5a1991a74"
+  },
+  {
+   "path": "tools/litedge.js",
+   "role": "the lit-edge layer generator (build 7: with Science's one-line bow-tie guard; spec Science rulings update 3 + BUILD-7-AND-CARDS)",
+   "bytes": 9861,
+   "sha256": "88bfd9d7787af720a415b6715b4fd001185526c4bb9551aac791435553e011a3",
+   "sha16": "88bfd9d7787af720"
+  },
+  {
+   "path": "tools/sealed/litedge.js.build6-d1082feb366e17b7",
+   "role": "litedge.js as it was for build 6 (the superseded-build-6 rings reproduce with it)",
+   "bytes": 9173,
+   "sha256": "d1082feb366e17b7d26b8bd068be21d1e6cacbfce29c41011350f8df52f49b80",
+   "sha16": "d1082feb366e17b7"
+  },
+  {
+   "path": "tools/png_tag.py",
+   "role": "the PNG tagger (300 dpi pHYs + sRGB, gAMA, cHRM; pixels untouched; build 7)",
+   "bytes": 2982,
+   "sha256": "a690beca6b7d1c14126c714009345de938afc23f402c6639eefe3d91e6a84b8c",
+   "sha16": "a690beca6b7d1c14"
+  },
+  {
+   "path": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-litedge-slot820.svg",
+   "role": "build-6 uncut ring, kept; the superseded-build-6 configs read it",
+   "bytes": 1111145,
+   "sha256": "91d1a01b8e1392c06f4fc70748163f15ba4e78c2cbffa32780f61927741f30ca",
+   "sha16": "91d1a01b8e1392c0"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-litedge-slot820.svg",
+   "role": "build-6 cut ring keys21-2, kept; the superseded-build-6 configs read it",
+   "bytes": 841200,
+   "sha256": "9af6030e1fe28c27e101f5370db81bf144df257b28a844c8408c5fa7d075f7ad",
+   "sha16": "9af6030e1fe28c27"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-litedge-slot820.svg",
+   "role": "build-6 cut ring keys22-1, kept; the superseded-build-6 configs read it",
+   "bytes": 930338,
+   "sha256": "b809ccf6c6784407ac401277af745384c4fdb37775bb8089e91f731eb04cb1f3",
+   "sha16": "b809ccf6c6784407"
+  },
+  {
+   "path": "finish/proposals/NOTE-build6-litedge.md",
+   "role": "the build-6 rings: why, how, exact commands, the alpha gate result",
+   "bytes": 2485,
+   "sha256": "7c12d9fbe1582556a0c26db584cc4c18ee3902bf198957c15e457fd57604036b",
+   "sha16": "7c12d9fbe1582556"
+  },
+  {
+   "path": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-noflecks-slot820.svg",
+   "role": "build-5 uncut ring, kept; the superseded-build-5 configs read it",
+   "bytes": 271082,
+   "sha256": "f21db7ab012500c8b72137048354b8894a45c91ed4d920132ced9fb7a065b4d2",
+   "sha16": "f21db7ab012500c8"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-noflecks-slot820.svg",
+   "role": "build-5 cut ring keys21-2, kept; the superseded-build-5 configs read it",
+   "bytes": 205698,
+   "sha256": "6086dba12965b2106ecfadaa8145a09ef406bd32fc759e0ec0dcaa84d1d2a962",
+   "sha16": "6086dba12965b210"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-noflecks-slot820.svg",
+   "role": "build-5 cut ring keys22-1, kept; the superseded-build-5 configs read it",
+   "bytes": 227497,
+   "sha256": "e0a648d4451dd7781a0d71c851b5e188eac47131895bf17c98cec7e8a830b01e",
+   "sha16": "e0a648d4451dd778"
+  },
+  {
+   "path": "finish/finish7-knobs-noflecks.txt",
+   "role": "finish knobs of build 5: finish7-knobs.txt plus --fleckOp 0 (Carey with Science, 9 Oct)",
+   "bytes": 233,
+   "sha256": "f3f10832e8ae6194b9b770a64d9905dcacca36dbd0d5bf3cd46a0cc0b99622ce",
+   "sha16": "f3f10832e8ae6194"
+  },
+  {
+   "path": "finish/finish7-knobs.txt",
+   "role": "finish knobs of builds 1-4 (kept; reproduces the earlier rings)",
+   "bytes": 221,
+   "sha256": "bef0253d36e2a95983df5d8d2c4c8f2f0932aef40646db271d1e0e1277c4d74a",
+   "sha16": "bef0253d36e2a959"
+  },
+  {
+   "path": "finish/proposals/NOTE-build5-noflecks.md",
+   "role": "the build-5 rings: why, how, exact commands",
+   "bytes": 1402,
+   "sha256": "f91da5803384ce9ae300ddd4a072c557154a54c5a6c3de735e3721516adae9e8",
+   "sha16": "f91da5803384ce9a"
+  },
+  {
+   "path": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-slot820.svg",
+   "role": "build-4 uncut ring, kept; the superseded-build-4 configs read it",
+   "bytes": 271088,
+   "sha256": "901fd319c2b7e30ab31c44856f707b960ad0075b8262a7767c430fcb6363f83a",
+   "sha16": "901fd319c2b7e30a"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-slot820.svg",
+   "role": "build-4 cut ring keys21-2, kept; the superseded-build-4 configs read it",
+   "bytes": 205704,
+   "sha256": "45dafb97a8a077a18e6ebb2257ecbba531002121d4483253b451a84ba9e5e16b",
+   "sha16": "45dafb97a8a077a1"
+  },
+  {
+   "path": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-slot820.svg",
+   "role": "build-4 cut ring keys22-1, kept; the superseded-build-4 configs read it",
+   "bytes": 227503,
+   "sha256": "06454b6df0e80ef49572dae59185550c9516ccd706a713018ced66eac98763f8",
+   "sha16": "06454b6df0e80ef4"
+  },
+  {
+   "path": "master/pre-legend/MASTER-medallion-METACOGNITIVE-slot820.svg",
+   "role": "owl source (pre-legend approved master)",
+   "bytes": 341618,
+   "sha256": "53e411c36898e6c486c31e66d7ba06adfc03fafccb14515d537375be4027c1e6",
+   "sha16": "53e411c36898e6c4"
+  },
+  {
+   "path": "/Users/careybalboa/Downloads/dose-01-FOR-CLAUDE-CODE/05-DejaVuSans-Bold.ttf",
+   "role": "legend typeface file (DejaVu Sans Bold 2.34)",
+   "bytes": 693876,
+   "sha256": "7e69e81478e233b81c3ad730f5b10abe76c792d48ec6c3e7cc3b3596a37bb3b1",
+   "sha16": "7e69e81478e233b8"
+  },
+  {
+   "path": "glyphs/identity_diamond_one_outline.svg",
+   "role": "glyph source NORMATIVE",
+   "bytes": 1488,
+   "sha256": "e5401609bd7e1a36d3e9fca69086ef4e21d097dc121edf63b0e86dbbf775bb3a",
+   "sha16": "e5401609bd7e1a36"
+  },
+  {
+   "path": "glyphs/sigma_v_twin_look2.svg",
+   "role": "glyph source NON-NORMATIVE",
+   "bytes": 1048,
+   "sha256": "401f32832d833b478260c3e8e1e677ee044d4c9aed8c047e88428336c0227ac5",
+   "sha16": "401f32832d833b47"
+  },
+  {
+   "path": "glyphs/sigma_h_twin_look2.svg",
+   "role": "glyph source METACOGNITIVE",
+   "bytes": 1096,
+   "sha256": "924510f313db072877abef92d27417eb26f0115c4880a4098aa7d49d38f9186d",
+   "sha16": "924510f313db0728"
+  },
+  {
+   "path": "glyphs/tri_solid_A_U85_FINAL_G0.575388.svg",
+   "role": "glyph source CRITICAL",
+   "bytes": 2068,
+   "sha256": "6a439aa605cd2098df1ceee9ddf7cd12727f40c99b73bba91162376a6d201521",
+   "sha16": "6a439aa605cd2098"
+  },
+  {
+   "path": "/System/Library/Fonts/Supplemental/STIXTwoMath.otf",
+   "role": "notation typeface file (STIX Two Math)",
+   "bytes": 838652,
+   "sha256": "3a5f3f26f40d5698b3c62dd085d48d6663696a3f80825aab8b553d5097518e8c",
+   "sha16": "3a5f3f26f40d5698"
+  },
+  {
+   "path": "tools/build_notation.py",
+   "role": "tool",
+   "bytes": 36667,
+   "sha256": "f3b70c3a422a93ed1d7402ef98b3a534cb955cc638feee9662cb843cc8e4516d",
+   "sha16": "f3b70c3a422a93ed"
+  },
+  {
+   "path": "tools/build_states_layered.py",
+   "role": "tool",
+   "bytes": 24833,
+   "sha256": "fdd9f8d9efe3e335e445eb9c6f74a010ea228f09f590164be0d484b4b9e5cd6b",
+   "sha16": "fdd9f8d9efe3e335"
+  },
+  {
+   "path": "tools/export_set.py",
+   "role": "tool",
+   "bytes": 8693,
+   "sha256": "ff39844baa06cb9993636a7263cc0843c9d3a533c7c6fd51c83bceb51a74392a",
+   "sha16": "ff39844baa06cb99"
+  },
+  {
+   "path": "tools/ring_build.js",
+   "role": "tool",
+   "bytes": 2598,
+   "sha256": "dfc9c721f46fe3a8fbc8f6bc90b56ae997685d6cb0c9c8c223bfc9d08a3fb3a2",
+   "sha16": "dfc9c721f46fe3a8"
+  },
+  {
+   "path": "tools/legend.js",
+   "role": "tool",
+   "bytes": 8901,
+   "sha256": "3a0711ab56cc4ac4d2dadd612214cc2aac7a9c6931b14049c9eb7deac6113c60",
+   "sha16": "3a0711ab56cc4ac4"
+  },
+  {
+   "path": "tools/compose.py",
+   "role": "tool",
+   "bytes": 915,
+   "sha256": "551a3e326c3f031ff071b46534ad01dff4e6b9f47da71825c57ae099bb446fe8",
+   "sha16": "551a3e326c3f031f"
+  },
+  {
+   "path": "tools/finish7.js",
+   "role": "tool",
+   "bytes": 23379,
+   "sha256": "90055af236a795d594e52830b73c25b383b4922a3afa8568e1b3861d57608c79",
+   "sha16": "90055af236a795d5"
+  },
+  {
+   "path": "tools/meander3.js",
+   "role": "tool",
+   "bytes": 10455,
+   "sha256": "a95717a5f7481c4716f5e1f30e05eef63361746231a26c304b07962561109586",
+   "sha16": "a95717a5f7481c47"
+  },
+  {
+   "path": "tools/render.js",
+   "role": "tool",
+   "bytes": 430,
+   "sha256": "f8cc0e08bc3c626c678a3d98f4e2b2ab65e144ee547b5cefbd45e37243bb60a2",
+   "sha16": "f8cc0e08bc3c626c"
+  },
+  {
+   "path": "tools/build_states.py",
+   "role": "tool",
+   "bytes": 3352,
+   "sha256": "b80ca81e7c446b296e7216f373c1d3d2ceaf86fcba2115d406f1b9ce974f1e08",
+   "sha16": "b80ca81e7c446b29"
+  },
+  {
+   "path": "tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44",
+   "role": "build_states_layered.py as it was for build 2",
+   "bytes": 12182,
+   "sha256": "9ecd029d3f637b442fc499ed6de97411c711bf03465c32e153f175bb4634a9c8",
+   "sha16": "9ecd029d3f637b44"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-final-masters.py",
+   "role": "check or check record",
+   "bytes": 10466,
+   "sha256": "33a718d0029f3dc53f3cc1cfdbecda3880d39a93088538a13c21e18b9f0e6f24",
+   "sha16": "33a718d0029f3dc5"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build7.py",
+   "role": "check or check record",
+   "bytes": 19015,
+   "sha256": "e92013aa300356c963065ea24c9c8d4a453dbdf1b6fe8986b97061057d8a014a",
+   "sha16": "e92013aa300356c9"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build7-output.txt",
+   "role": "check or check record",
+   "bytes": 21824,
+   "sha256": "a6e7bbec3cae0117746a941c02f7d3fd86b6159ccbf8361d7f07ed71ceff3393",
+   "sha16": "a6e7bbec3cae0117"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build7-report.json",
+   "role": "check or check record",
+   "bytes": 4255,
+   "sha256": "7a0966e4ec9536adbfa881b40da5b3240c1a6c4e52a960aaf7e9ea702817bc7c",
+   "sha16": "7a0966e4ec9536ad"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build6.py",
+   "role": "check or check record",
+   "bytes": 11998,
+   "sha256": "315f92d66f160565af6b80905f18bb4d6c8c70f5132ca3e6ad3c704a92a5d4d9",
+   "sha16": "315f92d66f160565"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build6-output.txt",
+   "role": "check or check record",
+   "bytes": 14368,
+   "sha256": "f8083571e24cd0667a30c52f5fbd66a899a6f623208bf52485aa59454f8dc006",
+   "sha16": "f8083571e24cd066"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build5.py",
+   "role": "check or check record",
+   "bytes": 13234,
+   "sha256": "e77b057ef15ad5a5e2c08f4a7f8bb7875da0954464b7e800972e6171ff79d8ee",
+   "sha16": "e77b057ef15ad5a5"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build5-output.txt",
+   "role": "check or check record",
+   "bytes": 12257,
+   "sha256": "40c848de02f3df558698cbd9b226157bd886076caa807bbb30b09ab526b21070",
+   "sha16": "40c848de02f3df55"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-verify-build3.py",
+   "role": "check or check record",
+   "bytes": 10675,
+   "sha256": "9c8179d7e68c713d3a6bb3d3bef34f0b9b5fb2fe0c348301c45e7cae82c6f80d",
+   "sha16": "9c8179d7e68c713d"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-stamp-floor.py",
+   "role": "check or check record",
+   "bytes": 3400,
+   "sha256": "9364b48f698e47789367c08e983ea354fe43bea30bfb89a3002966759972272e",
+   "sha16": "9364b48f698e4778"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-stamp-floor.json",
+   "role": "check or check record",
+   "bytes": 3846,
+   "sha256": "56457475211d832ab777ef5a2de9adc17ea50a27930e32f6bc5ba1eaaef496f8",
+   "sha16": "56457475211d832a"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/labels-only-diff.py",
+   "role": "check or check record",
+   "bytes": 3406,
+   "sha256": "d7ebd421f7b9cd1d017983852cdbc183307899019416d8a4121dc946dca39588",
+   "sha16": "d7ebd421f7b9cd1d"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/refute-build3.json",
+   "role": "check or check record",
+   "bytes": 152522,
+   "sha256": "a17def0f9e07d7818912c2d95815a73265b662521e5328815d5b0237a879e82c",
+   "sha16": "a17def0f9e07d781"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/window-ends-build3-resvg-4920.png",
+   "role": "check or check record",
+   "bytes": 910196,
+   "sha256": "f9b7b6a64721d5cfbf6eab429bb5503c45123efe3c5a81a42db92a83ccfbd786",
+   "sha16": "f9b7b6a64721d5cf"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/window-end-METACOGNITIVE-left-inkscape.png",
+   "role": "check or check record",
+   "bytes": 718357,
+   "sha256": "302ea6e6b74a95f7f5bce7c58882d639a9a65f5fa7f1d26094528fb33955d3d3",
+   "sha16": "302ea6e6b74a95f7"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/build3-first-pass-as-refuted/notation/MASTER-medallion-NORMATIVE-notation-slot820.svg",
+   "role": "first pass of build 3, as the independent refuters examined it (differs from the master in layer-label text only)",
+   "bytes": 735679,
+   "sha256": "d5532ebfafc62f21bd0c9d2878ee6b42c7ce1e6dd88043da1aef6523bb9b8426",
+   "sha16": "d5532ebfafc62f21"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/build3-first-pass-as-refuted/notation/MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+   "role": "first pass of build 3, as the independent refuters examined it (differs from the master in layer-label text only)",
+   "bytes": 693879,
+   "sha256": "bfb5652ef417c38bbf487e42a551bb396ae2beba5e3a62256378d6a5d916410b",
+   "sha16": "bfb5652ef417c38b"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/build3-first-pass-as-refuted/notation/MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+   "role": "first pass of build 3, as the independent refuters examined it (differs from the master in layer-label text only)",
+   "bytes": 694847,
+   "sha256": "f63747e84d9a6872f346ac8255e5f4168bc58c21b0c91f729da91fe4dc278110",
+   "sha16": "f63747e84d9a6872"
+  },
+  {
+   "path": "master/states/proposals/notation/final-masters-2026-10-05/refute/build3-first-pass-as-refuted/notation/MASTER-medallion-CRITICAL-notation-slot820.svg",
+   "role": "first pass of build 3, as the independent refuters examined it (differs from the master in layer-label text only)",
+   "bytes": 735274,
+   "sha256": "a8fc0bf8802a0e36cf32b0fdeabc8ed8bdb1e9f963236b7712a344841e6aef07",
+   "sha16": "a8fc0bf8802a0e36"
+  }
+ ]
+}

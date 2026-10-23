@@ -1,0 +1,32 @@
+{
+ "sha16": "a62a3dd185089960",
+ "coin_sha16": "cccfcff10dc74930",
+ "build6_screen_sha16": "b27d3f74029358e5",
+ "text_identical_outside_medallion_and_row_vs_16_sep_master": true,
+ "coin_inlined_verbatim": true,
+ "text_identical_to_build6_screen_outside_medallion_title_desc": true,
+ "px_differing_outside_coin_and_row_band_vs_16_sep_render": 0,
+ "row_band_diff_bbox": [
+  252,
+  1328,
+  953,
+  1436
+ ],
+ "px_differing_vs_build6_screen": 10,
+ "max_level_vs_build6": 5,
+ "vs_build6_bbox": [
+  360,
+  746,
+  843,
+  1129
+ ],
+ "px_differing_vs_build6_outside_coin": 0,
+ "box": {
+  "x": 252.0,
+  "w": 702.0,
+  "centre": 603.0
+ },
+ "alpha_all_255": true,
+ "ids": 65,
+ "dup_ids": 0
+}

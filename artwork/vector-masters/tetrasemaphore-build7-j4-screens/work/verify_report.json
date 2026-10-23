@@ -1,0 +1,1359 @@
+{
+ "spec": {
+  "file": "/Users/careybalboa/Downloads/TETRASEMAPHORE-SCIENCE-J4-LAYOUT-SPEC.md",
+  "sha16": "a2131c898acbb0e8",
+  "revision": 4
+ },
+ "layout_report_sha16": "1a9760c6eeb3975e",
+ "checks": {
+  "1_strings": {
+   "NORMATIVE": {
+    "pass_": true,
+    "strings": 5,
+    "code_points_match_s8": true,
+    "hyphen_minus": false,
+    "path_data_equals_fresh_run": true,
+    "stack_paths": 6,
+    "expected_paths": 6,
+    "root_children_ok": true,
+    "stack_layers_ok": true,
+    "elements_outside_coins": [
+     "g",
+     "path",
+     "polygon",
+     "rect"
+    ],
+    "no_text_or_image": true,
+    "notes": []
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "strings": 4,
+    "code_points_match_s8": true,
+    "hyphen_minus": false,
+    "path_data_equals_fresh_run": true,
+    "stack_paths": 5,
+    "expected_paths": 5,
+    "root_children_ok": true,
+    "stack_layers_ok": true,
+    "elements_outside_coins": [
+     "g",
+     "path",
+     "polygon",
+     "rect"
+    ],
+    "no_text_or_image": true,
+    "notes": [
+     "'I reflect the standard.': textlayout.js stock run would draw 22 glyphs for 23 code points (['fl']), advance 718.373 against the spec's 720.497; the SVG carries the code-point run",
+     "'It is reflection, not rejection.': textlayout.js stock run would draw 31 glyphs for 32 code points (['fl']), advance 941.084 against the spec's 943.208; the SVG carries the code-point run"
+    ]
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "strings": 5,
+    "code_points_match_s8": true,
+    "hyphen_minus": false,
+    "path_data_equals_fresh_run": true,
+    "stack_paths": 6,
+    "expected_paths": 6,
+    "root_children_ok": true,
+    "stack_layers_ok": true,
+    "elements_outside_coins": [
+     "g",
+     "path",
+     "polygon",
+     "rect"
+    ],
+    "no_text_or_image": true,
+    "notes": []
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "strings": 5,
+    "code_points_match_s8": true,
+    "hyphen_minus": false,
+    "path_data_equals_fresh_run": true,
+    "stack_paths": 5,
+    "expected_paths": 5,
+    "root_children_ok": true,
+    "stack_layers_ok": true,
+    "elements_outside_coins": [
+     "g",
+     "path",
+     "polygon",
+     "rect"
+    ],
+    "no_text_or_image": true,
+    "notes": []
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "strings": 5,
+    "code_points_match_s8": true,
+    "hyphen_minus": false,
+    "path_data_equals_fresh_run": true,
+    "stack_paths": 5,
+    "expected_paths": 5,
+    "root_children_ok": true,
+    "stack_layers_ok": true,
+    "elements_outside_coins": [
+     "g",
+     "path",
+     "polygon",
+     "rect"
+    ],
+    "no_text_or_image": true,
+    "notes": []
+   }
+  },
+  "2_glyphs": {
+   "NORMATIVE": {
+    "pass_": true,
+    "font_sha16": "7e69e81478e233b8",
+    "distinct_code_points": 32,
+    "missing": [],
+    "cmap_glyph_is_the_drawn_glyph": true
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "font_sha16": "7e69e81478e233b8",
+    "distinct_code_points": 29,
+    "missing": [],
+    "cmap_glyph_is_the_drawn_glyph": true
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "font_sha16": "7e69e81478e233b8",
+    "distinct_code_points": 31,
+    "missing": [],
+    "cmap_glyph_is_the_drawn_glyph": true
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "font_sha16": "7e69e81478e233b8",
+    "distinct_code_points": 38,
+    "missing": [],
+    "cmap_glyph_is_the_drawn_glyph": true
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "font_sha16": "7e69e81478e233b8",
+    "distinct_code_points": 38,
+    "missing": [],
+    "cmap_glyph_is_the_drawn_glyph": true
+   }
+  },
+  "3_coins_element_for_element": {
+   "NORMATIVE": {
+    "pass_": true,
+    "alpha_all_255": true,
+    "coins": {
+     "NORMATIVE": {
+      "master_elements_excl_root": 772,
+      "master_elements_after_title_desc_strip": 770,
+      "inlined_elements": 770,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1563,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(312 684) scale(0.708536585)",
+      "uniform_scale": 0.708536585,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     }
+    }
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "alpha_all_255": true,
+    "coins": {
+     "NON-NORMATIVE": {
+      "master_elements_excl_root": 771,
+      "master_elements_after_title_desc_strip": 769,
+      "inlined_elements": 769,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1558,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(312 684) scale(0.708536585)",
+      "uniform_scale": 0.708536585,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     }
+    }
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "alpha_all_255": true,
+    "coins": {
+     "CRITICAL": {
+      "master_elements_excl_root": 765,
+      "master_elements_after_title_desc_strip": 763,
+      "inlined_elements": 763,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1537,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(312 684) scale(0.708536585)",
+      "uniform_scale": 0.708536585,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     }
+    }
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "alpha_all_255": true,
+    "coins": {
+     "NORMATIVE": {
+      "master_elements_excl_root": 772,
+      "master_elements_after_title_desc_strip": 770,
+      "inlined_elements": 770,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1563,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(211.562 481.123) scale(0.437899692)",
+      "uniform_scale": 0.437899692,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "NON-NORMATIVE": {
+      "master_elements_excl_root": 771,
+      "master_elements_after_title_desc_strip": 769,
+      "inlined_elements": 769,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1558,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(635.361 481.123) scale(0.437899692)",
+      "uniform_scale": 0.437899692,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "METACOGNITIVE": {
+      "master_elements_excl_root": 773,
+      "master_elements_after_title_desc_strip": 771,
+      "inlined_elements": 771,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1562,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(211.562 904.922) scale(0.437899692)",
+      "uniform_scale": 0.437899692,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "CRITICAL": {
+      "master_elements_excl_root": 765,
+      "master_elements_after_title_desc_strip": 763,
+      "inlined_elements": 763,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1537,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(635.361 904.922) scale(0.437899692)",
+      "uniform_scale": 0.437899692,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     }
+    }
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "alpha_all_255": true,
+    "coins": {
+     "NORMATIVE": {
+      "master_elements_excl_root": 772,
+      "master_elements_after_title_desc_strip": 770,
+      "inlined_elements": 770,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1563,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(110.123 481.123) scale(0.561605269)",
+      "uniform_scale": 0.561605269,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "NON-NORMATIVE": {
+      "master_elements_excl_root": 771,
+      "master_elements_after_title_desc_strip": 769,
+      "inlined_elements": 769,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1558,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(635.361 481.123) scale(0.561605269)",
+      "uniform_scale": 0.561605269,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "METACOGNITIVE": {
+      "master_elements_excl_root": 773,
+      "master_elements_after_title_desc_strip": 771,
+      "inlined_elements": 771,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1562,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(110.123 1006.361) scale(0.561605269)",
+      "uniform_scale": 0.561605269,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     },
+     "CRITICAL": {
+      "master_elements_excl_root": 765,
+      "master_elements_after_title_desc_strip": 763,
+      "inlined_elements": 763,
+      "tag_sequence_equal": true,
+      "attribute_values_equal": true,
+      "attributes_compared": 1537,
+      "text_and_tails_equal": true,
+      "bytes_equal_to_stripped_master": true,
+      "transform": "translate(635.361 1006.361) scale(0.561605269)",
+      "uniform_scale": 0.561605269,
+      "clip_mask_filter_on_coin_or_ancestors": [],
+      "cell_inside_canvas": true,
+      "text_image": 0
+     }
+    }
+   }
+  },
+  "4_ids_and_references": {
+   "NORMATIVE": {
+    "pass_": true,
+    "ids": 63,
+    "unique": true,
+    "duplicates": [],
+    "references": 36,
+    "unresolved": [],
+    "coins": {
+     "NORMATIVE": {
+      "prefix": null,
+      "ids": 55,
+      "references": 36,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": null
+     }
+    }
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "ids": 62,
+    "unique": true,
+    "duplicates": [],
+    "references": 34,
+    "unresolved": [],
+    "coins": {
+     "NON-NORMATIVE": {
+      "prefix": null,
+      "ids": 54,
+      "references": 34,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": null
+     }
+    }
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "ids": 64,
+    "unique": true,
+    "duplicates": [],
+    "references": 37,
+    "unresolved": [],
+    "coins": {
+     "CRITICAL": {
+      "prefix": null,
+      "ids": 56,
+      "references": 37,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": null
+     }
+    }
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "ids": 227,
+    "unique": true,
+    "duplicates": [],
+    "references": 141,
+    "unresolved": [],
+    "coins": {
+     "NORMATIVE": {
+      "prefix": "n-",
+      "ids": 55,
+      "references": 36,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       55,
+       36
+      ]
+     },
+     "NON-NORMATIVE": {
+      "prefix": "nn-",
+      "ids": 54,
+      "references": 34,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       54,
+       34
+      ]
+     },
+     "METACOGNITIVE": {
+      "prefix": "m-",
+      "ids": 54,
+      "references": 34,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       54,
+       34
+      ]
+     },
+     "CRITICAL": {
+      "prefix": "c-",
+      "ids": 56,
+      "references": 37,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       56,
+       37
+      ]
+     }
+    }
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "ids": 227,
+    "unique": true,
+    "duplicates": [],
+    "references": 141,
+    "unresolved": [],
+    "coins": {
+     "NORMATIVE": {
+      "prefix": "n-",
+      "ids": 55,
+      "references": 36,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       55,
+       36
+      ]
+     },
+     "NON-NORMATIVE": {
+      "prefix": "nn-",
+      "ids": 54,
+      "references": 34,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       54,
+       34
+      ]
+     },
+     "METACOGNITIVE": {
+      "prefix": "m-",
+      "ids": 54,
+      "references": 34,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       54,
+       34
+      ]
+     },
+     "CRITICAL": {
+      "prefix": "c-",
+      "ids": 56,
+      "references": 37,
+      "all_carry_prefix": true,
+      "resolve_inside_own_coin": true,
+      "spec_ids_refs": [
+       56,
+       37
+      ]
+     }
+    }
+   }
+  },
+  "5_per_coin_render": {
+   "NORMATIVE": {
+    "pass_": true,
+    "single_coin_level": 0,
+    "coins": {
+     "NORMATIVE": [
+      0,
+      0.0,
+      0
+     ]
+    }
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "single_coin_level": 0,
+    "coins": {
+     "NON-NORMATIVE": [
+      0,
+      0.0,
+      0
+     ]
+    }
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "single_coin_level": 0,
+    "coins": {
+     "CRITICAL": [
+      0,
+      0.0,
+      0
+     ]
+    }
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "single_coin_level": 0,
+    "coins": {
+     "NORMATIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "NON-NORMATIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "METACOGNITIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "CRITICAL": [
+      0,
+      0.0,
+      0
+     ]
+    }
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "single_coin_level": 0,
+    "coins": {
+     "NORMATIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "NON-NORMATIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "METACOGNITIVE": [
+      0,
+      0.0,
+      0
+     ],
+     "CRITICAL": [
+      0,
+      0.0,
+      0
+     ]
+    }
+   }
+  },
+  "6_geometry": {
+   "NORMATIVE": {
+    "pass_": true,
+    "values_compared": 46,
+    "max_deviation": 0.000477,
+    "max_deviation_positions": 0.0,
+    "max_deviation_advances_vs_spec_3dp": 0.000477,
+    "fails": [],
+    "path_data_at_spec_x_and_baseline": true
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "values_compared": 42,
+    "max_deviation": 0.000359,
+    "max_deviation_positions": 0.0,
+    "max_deviation_advances_vs_spec_3dp": 0.000359,
+    "fails": [],
+    "path_data_at_spec_x_and_baseline": true
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "values_compared": 46,
+    "max_deviation": 0.000492,
+    "max_deviation_positions": 0.0,
+    "max_deviation_advances_vs_spec_3dp": 0.000492,
+    "fails": [],
+    "path_data_at_spec_x_and_baseline": true
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "values_compared": 55,
+    "max_deviation": 0.000344,
+    "max_deviation_positions": 0.0,
+    "max_deviation_advances_vs_spec_3dp": 0.000344,
+    "fails": [],
+    "path_data_at_spec_x_and_baseline": true
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "values_compared": 55,
+    "max_deviation": 0.000344,
+    "max_deviation_positions": 0.0,
+    "max_deviation_advances_vs_spec_3dp": 0.000344,
+    "fails": [],
+    "path_data_at_spec_x_and_baseline": true
+   }
+  },
+  "9_deck_alignment": {
+   "NORMATIVE": {
+    "pass_": true,
+    "row1": 1328.721,
+    "row2": 1501.443,
+    "div": 1674.164,
+    "line1": 1803.635,
+    "spec": {
+     "row1": 1328.721,
+     "row2": 1501.443,
+     "div": 1674.164,
+     "line1": 1803.635
+    }
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "row1": 1328.721,
+    "row2": 1501.443,
+    "div": 1674.164,
+    "line1": 1803.635,
+    "spec": {
+     "row1": 1328.721,
+     "row2": 1501.443,
+     "div": 1674.164,
+     "line1": 1803.635
+    }
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "row1": 1328.721,
+    "row2": 1501.443,
+    "div": 1674.164,
+    "line1": 1803.635,
+    "spec": {
+     "row1": 1328.721,
+     "row2": 1501.443,
+     "div": 1674.164,
+     "line1": 1803.635
+    }
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "row1": 1328.721,
+    "row2": 1501.443,
+    "div": 1674.164,
+    "line1": 1803.635,
+    "spec": {
+     "row1": 1328.721,
+     "row2": 1501.443,
+     "div": 1674.164,
+     "line1": 1803.635
+    }
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": null,
+    "not_applicable": true,
+    "note": "check 9 does not apply: not on the deck grid by design (§5: rows 202.877 px lower); its four row positions are compared with §5 under 6_geometry",
+    "row1": 1531.598,
+    "row2": 1704.32,
+    "div": 1877.041,
+    "line1": 2006.512
+   }
+  },
+  "7_bands": {
+   "NORMATIVE": {
+    "pass_": true,
+    "ink_px_y_0_450": 0,
+    "ink_px_y_2360_2622": 0,
+    "first_ink_row": 684,
+    "last_ink_row": 1955,
+    "clearance_below_clock_band": 234,
+    "clearance_above_bottom_band": 404
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "ink_px_y_0_450": 0,
+    "ink_px_y_2360_2622": 0,
+    "first_ink_row": 684,
+    "last_ink_row": 1885,
+    "clearance_below_clock_band": 234,
+    "clearance_above_bottom_band": 474
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "ink_px_y_0_450": 0,
+    "ink_px_y_2360_2622": 0,
+    "first_ink_row": 684,
+    "last_ink_row": 1944,
+    "clearance_below_clock_band": 234,
+    "clearance_above_bottom_band": 415
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "ink_px_y_0_450": 0,
+    "ink_px_y_2360_2622": 0,
+    "first_ink_row": 481,
+    "last_ink_row": 1955,
+    "clearance_below_clock_band": 31,
+    "clearance_above_bottom_band": 404
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "ink_px_y_0_450": 0,
+    "ink_px_y_2360_2622": 0,
+    "first_ink_row": 481,
+    "last_ink_row": 2158,
+    "clearance_below_clock_band": 31,
+    "clearance_above_bottom_band": 201
+   }
+  },
+  "8_overlap_containment": {
+   "NORMATIVE": {
+    "pass_": true,
+    "text_in_coin_box": [],
+    "text_meets_text": [],
+    "elements_meet": [],
+    "formula_text_inside_box_margins_px": [
+     {
+      "string": "I : (x, y) → (x, y)",
+      "left": 48.95,
+      "right": 50.3,
+      "top": 29.62,
+      "bottom": 21.86
+     },
+     {
+      "string": "∀g. I ∘ g = g",
+      "left": 43.91,
+      "right": 48.33,
+      "top": 31.34,
+      "bottom": 21.86
+     }
+    ],
+    "all_ink_in_canvas_geometry": true,
+    "png_ink_row_runs": 7,
+    "predicted_elements": 7,
+    "runs_inside_predictions": true,
+    "png_ground_gaps_px": [
+     63,
+     64,
+     64,
+     65,
+     24,
+     13
+    ],
+    "geometry_gaps_px": [
+     63.72,
+     64.72,
+     64.82,
+     65.51,
+     24.99,
+     13.74
+    ],
+    "ink_between_grid_columns": [],
+    "ink_on_canvas_edge": 0,
+    "first_last_ink_col": [
+     180,
+     1024
+    ],
+    "coin_cells_render_equal_to_solo_coin": "see check 5 (0 difference inside every cell means no other ink there)"
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "text_in_coin_box": [],
+    "text_meets_text": [],
+    "elements_meet": [],
+    "formula_text_inside_box_margins_px": [
+     {
+      "string": "σᵥ : (x, y) → (−x, y)",
+      "left": 46.12,
+      "right": 49.05,
+      "top": 29.62,
+      "bottom": 21.86
+     },
+     {
+      "string": "det(σᵥ) = −1",
+      "left": 46.23,
+      "right": 48.61,
+      "top": 29.56,
+      "bottom": 26.73
+     }
+    ],
+    "all_ink_in_canvas_geometry": true,
+    "png_ink_row_runs": 6,
+    "predicted_elements": 6,
+    "runs_inside_predictions": true,
+    "png_ground_gaps_px": [
+     63,
+     64,
+     64,
+     65,
+     24
+    ],
+    "geometry_gaps_px": [
+     63.72,
+     64.72,
+     64.82,
+     65.51,
+     24.99
+    ],
+    "ink_between_grid_columns": [],
+    "ink_on_canvas_edge": 0,
+    "first_last_ink_col": [
+     136,
+     1068
+    ],
+    "coin_cells_render_equal_to_solo_coin": "see check 5 (0 difference inside every cell means no other ink there)"
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "text_in_coin_box": [],
+    "text_meets_text": [],
+    "elements_meet": [],
+    "formula_text_inside_box_margins_px": [
+     {
+      "string": "C₂ : (x, y) → (−x, −y)",
+      "left": 46.51,
+      "right": 48.71,
+      "top": 29.62,
+      "bottom": 21.86
+     },
+     {
+      "string": "σᵥ ∘ σₕ = C₂",
+      "left": 46.12,
+      "right": 48.17,
+      "top": 30.58,
+      "bottom": 33.55
+     }
+    ],
+    "all_ink_in_canvas_geometry": true,
+    "png_ink_row_runs": 7,
+    "predicted_elements": 7,
+    "runs_inside_predictions": true,
+    "png_ground_gaps_px": [
+     63,
+     64,
+     64,
+     65,
+     24,
+     17
+    ],
+    "geometry_gaps_px": [
+     63.72,
+     64.72,
+     64.82,
+     65.51,
+     24.99,
+     17.57
+    ],
+    "ink_between_grid_columns": [],
+    "ink_on_canvas_edge": 0,
+    "first_last_ink_col": [
+     191,
+     1013
+    ],
+    "coin_cells_render_equal_to_solo_coin": "see check 5 (0 difference inside every cell means no other ink there)"
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "text_in_coin_box": [],
+    "text_meets_text": [],
+    "elements_meet": [],
+    "formula_text_inside_box_margins_px": [
+     {
+      "string": "V₄ = {I, σᵥ, σₕ, C₂}",
+      "left": 43.91,
+      "right": 51.72,
+      "top": 29.56,
+      "bottom": 24.92
+     },
+     {
+      "string": "∀g ∈ V₄. g ∘ g = I",
+      "left": 43.91,
+      "right": 50.14,
+      "top": 31.26,
+      "bottom": 21.86
+     }
+    ],
+    "all_ink_in_canvas_geometry": true,
+    "png_ink_row_runs": 8,
+    "predicted_elements": 8,
+    "runs_inside_predictions": true,
+    "png_ground_gaps_px": [
+     65,
+     64,
+     64,
+     64,
+     65,
+     17,
+     13
+    ],
+    "geometry_gaps_px": [
+     64.72,
+     64.72,
+     64.72,
+     64.82,
+     65.51,
+     17.57,
+     13.29
+    ],
+    "ink_between_grid_columns": [
+     0,
+     0
+    ],
+    "ink_on_canvas_edge": 0,
+    "first_last_ink_col": [
+     80,
+     1120
+    ],
+    "coin_cells_render_equal_to_solo_coin": "see check 5 (0 difference inside every cell means no other ink there)"
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "text_in_coin_box": [],
+    "text_meets_text": [],
+    "elements_meet": [],
+    "formula_text_inside_box_margins_px": [
+     {
+      "string": "V₄ = {I, σᵥ, σₕ, C₂}",
+      "left": 43.91,
+      "right": 51.72,
+      "top": 29.56,
+      "bottom": 24.92
+     },
+     {
+      "string": "∀g ∈ V₄. g ∘ g = I",
+      "left": 43.91,
+      "right": 50.14,
+      "top": 31.26,
+      "bottom": 21.86
+     }
+    ],
+    "all_ink_in_canvas_geometry": true,
+    "png_ink_row_runs": 8,
+    "predicted_elements": 8,
+    "runs_inside_predictions": true,
+    "png_ground_gaps_px": [
+     64,
+     64,
+     64,
+     64,
+     65,
+     17,
+     13
+    ],
+    "geometry_gaps_px": [
+     64.72,
+     64.72,
+     64.72,
+     64.82,
+     65.51,
+     17.57,
+     13.29
+    ],
+    "ink_between_grid_columns": [
+     0,
+     0
+    ],
+    "ink_on_canvas_edge": 0,
+    "first_last_ink_col": [
+     80,
+     1120
+    ],
+    "coin_cells_render_equal_to_solo_coin": "see check 5 (0 difference inside every cell means no other ink there)"
+   }
+  },
+  "10_png_tags": {
+   "NORMATIVE": {
+    "pass_": true,
+    "png_sha16": "b8e04fd9ad63be7b",
+    "tool": "sRGB True gAMA True cHRM True pHYs True dpi 300.0"
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "png_sha16": "1ff196ef5092f3ae",
+    "tool": "sRGB True gAMA True cHRM True pHYs True dpi 300.0"
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "png_sha16": "9762a175f02cb364",
+    "tool": "sRGB True gAMA True cHRM True pHYs True dpi 300.0"
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "png_sha16": "9da7baacc29fdd0a",
+    "tool": "sRGB True gAMA True cHRM True pHYs True dpi 300.0"
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "png_sha16": "c5026f044c48c059",
+    "tool": "sRGB True gAMA True cHRM True pHYs True dpi 300.0"
+   }
+  },
+  "11_regression": {
+   "NORMATIVE": {
+    "pass_": true,
+    "sigma_h_row_16_sep": true,
+    "sigma_h_row_build7": true,
+    "motto_cogito": true,
+    "forall_row": true,
+    "m_def_row": true,
+    "divider_ground": true
+   },
+   "NON-NORMATIVE": {
+    "pass_": true,
+    "sigma_h_row_16_sep": true,
+    "sigma_h_row_build7": true,
+    "motto_cogito": true,
+    "forall_row": true,
+    "m_def_row": true,
+    "divider_ground": true
+   },
+   "CRITICAL": {
+    "pass_": true,
+    "sigma_h_row_16_sep": true,
+    "sigma_h_row_build7": true,
+    "motto_cogito": true,
+    "forall_row": true,
+    "m_def_row": true,
+    "divider_ground": true
+   },
+   "ALL-FOUR-flashcard": {
+    "pass_": true,
+    "sigma_h_row_16_sep": true,
+    "sigma_h_row_build7": true,
+    "motto_cogito": true,
+    "forall_row": true,
+    "m_def_row": true,
+    "divider_ground": true
+   },
+   "ALL-FOUR-lockscreen": {
+    "pass_": true,
+    "sigma_h_row_16_sep": true,
+    "sigma_h_row_build7": true,
+    "motto_cogito": true,
+    "forall_row": true,
+    "m_def_row": true,
+    "divider_ground": true
+   }
+  }
+ },
+ "glyph_coverage": {
+  "font_sha16": "7e69e81478e233b8",
+  "distinct_code_points_all_five": 49,
+  "missing": [],
+  "code_points": [
+   "U+0020",
+   "U+0028",
+   "U+0029",
+   "U+002C",
+   "U+002E",
+   "U+0031",
+   "U+003A",
+   "U+003B",
+   "U+003D",
+   "U+0043",
+   "U+0046",
+   "U+0049",
+   "U+0056",
+   "U+0061",
+   "U+0062",
+   "U+0063",
+   "U+0064",
+   "U+0065",
+   "U+0066",
+   "U+0067",
+   "U+0068",
+   "U+0069",
+   "U+006A",
+   "U+006B",
+   "U+006C",
+   "U+006D",
+   "U+006E",
+   "U+006F",
+   "U+0070",
+   "U+0072",
+   "U+0073",
+   "U+0074",
+   "U+0075",
+   "U+0076",
+   "U+0077",
+   "U+0078",
+   "U+0079",
+   "U+007B",
+   "U+007D",
+   "U+03C3",
+   "U+1D65",
+   "U+2082",
+   "U+2084",
+   "U+2095",
+   "U+2192",
+   "U+2200",
+   "U+2208",
+   "U+2212",
+   "U+2218"
+  ]
+ },
+ "per_coin_render": {
+  "NORMATIVE": {
+   "NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     304,
+     676,
+     901,
+     1273
+    ],
+    "solo_png_sha16": "94dad84ed6ad7e4b"
+   }
+  },
+  "NON-NORMATIVE": {
+   "NON-NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     304,
+     676,
+     901,
+     1273
+    ],
+    "solo_png_sha16": "64eb73ded0fb8c46"
+   }
+  },
+  "CRITICAL": {
+   "CRITICAL": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     304,
+     676,
+     901,
+     1273
+    ],
+    "solo_png_sha16": "4714af6994d05bd5"
+   }
+  },
+  "ALL-FOUR-flashcard": {
+   "NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     203,
+     473,
+     579,
+     849
+    ],
+    "solo_png_sha16": "fe3c08de892c58e0"
+   },
+   "NON-NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     627,
+     473,
+     1003,
+     849
+    ],
+    "solo_png_sha16": "b75ec4c4a62e3d09"
+   },
+   "METACOGNITIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     203,
+     896,
+     579,
+     1272
+    ],
+    "solo_png_sha16": "d464b2bfd249cbb2"
+   },
+   "CRITICAL": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     627,
+     896,
+     1003,
+     1272
+    ],
+    "solo_png_sha16": "37740a52ce9bb99a"
+   }
+  },
+  "ALL-FOUR-lockscreen": {
+   "NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     102,
+     473,
+     579,
+     950
+    ],
+    "solo_png_sha16": "bc1c0e189ad6093e"
+   },
+   "NON-NORMATIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     627,
+     473,
+     1104,
+     950
+    ],
+    "solo_png_sha16": "f8cd5e312038db7f"
+   },
+   "METACOGNITIVE": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     102,
+     998,
+     579,
+     1475
+    ],
+    "solo_png_sha16": "0a37e95de5f9330c"
+   },
+   "CRITICAL": {
+    "max": 0,
+    "mean": 0.0,
+    "px_differing": 0,
+    "crop": [
+     627,
+     998,
+     1104,
+     1475
+    ],
+    "solo_png_sha16": "c79b6081421e92ca"
+   }
+  }
+ },
+ "regression_gates": {
+  "sigma_h_row": {
+   "pass": true,
+   "16_sep_sigma_h_layer_bytes": 4416,
+   "16_sep_identical": true,
+   "build7_operator_layer_bytes": 4416,
+   "build7_identical": true,
+   "w": 702,
+   "box_x": 252,
+   "text_x": 295.625,
+   "advance": 613.673
+  },
+  "motto_and_rows": {
+   "pass": true,
+   "cogito_layer_bytes": 22890,
+   "cogito_identical": true,
+   "forall_layer_bytes": 3669,
+   "forall_identical": true,
+   "m_def_layer_bytes": 5855,
+   "m_def_identical": true,
+   "note": "rects from the box rule (width = advance + 88 to the nearest even px, x = 603 − w/2) and glyphs from run() at the 16 Sep master's own text x; the 16 Sep text x values were fitted to the Claude Design reference, so the rule gives different x for these four lines (see rule_x)",
+   "lines": [
+    {
+     "text": "I metacognize; therefore,",
+     "advance": 833.155,
+     "x_in_master": 185.875,
+     "rule_x": 186.375
+    },
+    {
+     "text": "I am again and again.",
+     "advance": 707.838,
+     "x_in_master": 248.375,
+     "rule_x": 249.125
+    }
+   ],
+   "rows": [
+    {
+     "text": "∀n. M(Iₙ) ⊢ Iₙ₊₁",
+     "w": 572,
+     "box_x": 317,
+     "text_x_in_master": 360,
+     "rule_text_x": 360.625,
+     "advance": 484.561
+    },
+    {
+     "text": "M := λx.Think(Think(x))",
+     "w": 858,
+     "box_x": 174,
+     "text_x_in_master": 217.125,
+     "rule_text_x": 217.625,
+     "advance": 770.681
+    }
+   ]
+  },
+  "template_layers": {
+   "pass": true,
+   "divider_1_and_ground_identical_16_sep_vs_build7": true
+  }
+ },
+ "checks_counted": 54,
+ "checks_not_applicable": 1,
+ "files": {
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NORMATIVE-flashcard-MASTER.svg": "26c5648afbf9d3f8",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NON-NORMATIVE-flashcard-MASTER.svg": "06c8b13bc205a124",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-CRITICAL-flashcard-MASTER.svg": "7ef95fb6e0aee46e",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-flashcard-MASTER.svg": "0b83fba14b3c08d6",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-MASTER.svg": "d551d3c339cdd915",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NORMATIVE-flashcard.png": "b8e04fd9ad63be7b",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-NON-NORMATIVE-flashcard.png": "1ff196ef5092f3ae",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-CRITICAL-flashcard.png": "9762a175f02cb364",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-flashcard.png": "9da7baacc29fdd0a",
+  "dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen.png": "c5026f044c48c059",
+  "proofs/TETRASEMAPHORE-J4-FIVE-SCREENS-preview.png": "d7de5512907a52d5",
+  "work/layout_report.json": "1a9760c6eeb3975e",
+  "build-five.js": "af3ab4e85e5b1c1c",
+  "verify-five.py": "9655a55f827ea1eb"
+ },
+ "all_pass": true
+}

@@ -1,0 +1,160 @@
+=== A. every master against build 4, allowed differences only
+PASS notation NORMATIVE (dd09d1ef6095fbfc vs build 4 43d28fb463bbfcd3): equal after the allowed differences 735669 bytes
+PASS notation NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS notation NORMATIVE: no fleck step at 0.22 remains 
+PASS notation NON-NORMATIVE (f19256894cc29343 vs build 4 90bed40bf62098a3): equal after the allowed differences 693943 bytes
+PASS notation NON-NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS notation NON-NORMATIVE: no fleck step at 0.22 remains 
+PASS notation METACOGNITIVE (9c55197b5d58cf5f vs build 4 760b8058524cbc6f): equal after the allowed differences 694828 bytes
+PASS notation METACOGNITIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS notation METACOGNITIVE: no fleck step at 0.22 remains 
+PASS notation CRITICAL (e8dc6ed29d30655c vs build 4 bda63a306c6450dc): equal after the allowed differences 731826 bytes
+PASS notation CRITICAL: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS notation CRITICAL: no fleck step at 0.22 remains 
+PASS owl NORMATIVE (6f5a11bf305cf120 vs build 4 9540552ed84e00cf): equal after the allowed differences 804106 bytes
+PASS owl NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS owl NORMATIVE: no fleck step at 0.22 remains 
+PASS owl NON-NORMATIVE (fae14f25042f43f1 vs build 4 8799b25060aa3735): equal after the allowed differences 762172 bytes
+PASS owl NON-NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS owl NON-NORMATIVE: no fleck step at 0.22 remains 
+PASS owl METACOGNITIVE (68a6746673f645ba vs build 4 c616c0375fddfd8e): equal after the allowed differences 763047 bytes
+PASS owl METACOGNITIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS owl METACOGNITIVE: no fleck step at 0.22 remains 
+PASS owl CRITICAL (f5aef94a829ee50d vs build 4 568023e7ee7b09ee): equal after the allowed differences 800686 bytes
+PASS owl CRITICAL: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS owl CRITICAL: no fleck step at 0.22 remains 
+PASS layered NORMATIVE (e721a06135882bdb vs build 4 d947161c314cff34): equal after the allowed differences 804123 bytes
+PASS layered NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS layered NORMATIVE: no fleck step at 0.22 remains 
+PASS layered NON-NORMATIVE (63dfc6d22a3dc700 vs build 4 8f5e2b6db2cff7d4): equal after the allowed differences 762189 bytes
+PASS layered NON-NORMATIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS layered NON-NORMATIVE: no fleck step at 0.22 remains 
+PASS layered METACOGNITIVE (fff1eb7ed22eb17c vs build 4 e11647a0b8c1b843): equal after the allowed differences 763064 bytes
+PASS layered METACOGNITIVE: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS layered METACOGNITIVE: no fleck step at 0.22 remains 
+PASS layered CRITICAL (cb647435d7bd7332 vs build 4 d52c54a4312f00ae): equal after the allowed differences 800703 bytes
+PASS layered CRITICAL: the allowed differences occur exactly as expected (3 fleck steps, 1 desc, 2 rails labels) {'fleck': 3, 'desc': 1, 'rails': 2}
+PASS layered CRITICAL: no fleck step at 0.22 remains 
+
+=== B. CRITICAL's Spanish glyphs against Science's reference
+PASS reference file on disk is 9e8f7d33137c8ecc 9e8f7d33137c8ecc
+PASS CRITICAL: notation, owl and layered base carry the same Spanish glyph group 
+PASS CRITICAL es: eight paths (seven letters + the accent) 8 / 8
+PASS CRITICAL es letter 0: outline identical to the reference, transform within 0.02 mm 0.0001 mm
+PASS CRITICAL es letter 1: outline identical to the reference, transform within 0.02 mm 0.0001 mm
+PASS CRITICAL es letter 2: outline identical to the reference, transform within 0.02 mm 0.0001 mm
+PASS CRITICAL es letter 3: outline identical to the reference, transform within 0.02 mm 0.0001 mm
+PASS CRITICAL es letter 4: outline identical to the reference, transform within 0.02 mm 0.0000 mm
+PASS CRITICAL es letter 5: outline identical to the reference, transform within 0.02 mm 0.0000 mm
+PASS CRITICAL es letter 6: outline identical to the reference, transform within 0.02 mm 0.0000 mm
+PASS CRITICAL es letter 0: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9037
+PASS CRITICAL es letter 1: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9044
+PASS CRITICAL es letter 2: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9040
+PASS CRITICAL es letter 3: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9042
+PASS CRITICAL es letter 4: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9035
+PASS CRITICAL es letter 5: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9038
+PASS CRITICAL es letter 6: 5.904 units further out than build 4 on the same radial, same rotation dr 5.9038
+PASS CRITICAL es letter 2 (the I): its accent sub-contour has left the letter (build 4 had it) 
+PASS CRITICAL es accent: id legend-accent-es, round-joined stroke #DEC875, width 1.6753 
+PASS CRITICAL es accent: outline identical to the reference M-4.017-20.727L0.607-26.892L7.217-26.892L0.561-20.727L-4.017-20.727Z
+PASS CRITICAL es accent: transform = the I's transform then translate(0 -2.2338), within 0.02 mm of the reference [371.068, 761.025, 6.329, 0.0, -2.2338]
+worst transform difference against the reference: 0.0001 mm
+
+=== C. the rings
+PASS ring none: differs from the build-4 ring in exactly two lines (desc, fleck slope) 2 lines; f21db7ab012500c8 vs 901fd319c2b7e30a
+PASS ring 21-2: differs from the build-4 ring in exactly two lines (desc, fleck slope) 2 lines; 6086dba12965b210 vs 45dafb97a8a077a1
+PASS ring 22-1: differs from the build-4 ring in exactly two lines (desc, fleck slope) 2 lines; e0a648d4451dd778 vs 06454b6df0e80ef4
+PASS knobs file: finish7-knobs-noflecks.txt = finish7-knobs.txt + --fleckOp 0 
+
+=== D. the builder's report
+PASS report NORMATIVE en: facts as in build 4 
+PASS report NORMATIVE es: facts as in build 4 
+PASS report NON-NORMATIVE en: facts as in build 4 
+PASS report NON-NORMATIVE es: facts as in build 4 
+PASS report CRITICAL en: facts as in build 4 
+PASS report CRITICAL es: 0.769 mm to each rail (ink, accent and stroke included), accent 0.591 mm from the letter 0.769 / 0.769 / 0.591
+PASS report CRITICAL es: radial shift 5.904 units = 0.74 mm; at 109.9 mm the rail gaps are 0.82 mm 
+PASS report METACOGNITIVE en: facts as in build 4 
+PASS report METACOGNITIVE es: facts as in build 4 
+
+=== E. layers, words, guard, exports
+PASS notation NORMATIVE en: shown 
+PASS notation NORMATIVE en: one outline per letter of NORMATIVE 9 paths
+PASS notation NORMATIVE en: no depth effect in the plate layer 
+PASS notation NORMATIVE es: hidden 
+PASS notation NORMATIVE es: one outline per letter of NORMATIVO 9 paths
+PASS notation NORMATIVE es: no depth effect in the plate layer 
+PASS notation NORMATIVE: no raster, live text or font reference 
+PASS notation NORMATIVE: NO NORMATIVO nowhere 
+PASS notation NON-NORMATIVE en: shown 
+PASS notation NON-NORMATIVE en: one outline per letter of NON-NORMATIVE 13 paths
+PASS notation NON-NORMATIVE en: no depth effect in the plate layer 
+PASS notation NON-NORMATIVE es: hidden 
+PASS notation NON-NORMATIVE es: one outline per letter of INFORMATIVO 11 paths
+PASS notation NON-NORMATIVE es: no depth effect in the plate layer 
+PASS notation NON-NORMATIVE: no raster, live text or font reference 
+PASS notation NON-NORMATIVE: NO NORMATIVO nowhere 
+PASS notation METACOGNITIVE en: shown 
+PASS notation METACOGNITIVE en: one outline per letter of METACOGNITIVE 13 paths
+PASS notation METACOGNITIVE en: no depth effect in the plate layer 
+PASS notation METACOGNITIVE es: hidden 
+PASS notation METACOGNITIVE es: one outline per letter of METACOGNITIVO 13 paths
+PASS notation METACOGNITIVE es: no depth effect in the plate layer 
+PASS notation METACOGNITIVE: no raster, live text or font reference 
+PASS notation METACOGNITIVE: NO NORMATIVO nowhere 
+PASS notation CRITICAL en: shown 
+PASS notation CRITICAL en: one outline per letter of CRITICAL 8 paths
+PASS notation CRITICAL en: no depth effect in the plate layer 
+PASS notation CRITICAL es: hidden 
+PASS notation CRITICAL es: one outline per letter of CRÍTICO plus the accent 8 paths
+PASS notation CRITICAL es: no depth effect in the plate layer 
+PASS notation CRITICAL: no raster, live text or font reference 
+PASS notation CRITICAL: NO NORMATIVO nowhere 
+PASS owl NORMATIVE en: shown 
+PASS owl NORMATIVE en: one outline per letter of NORMATIVE 9 paths
+PASS owl NORMATIVE en: no depth effect in the plate layer 
+PASS owl NORMATIVE es: hidden 
+PASS owl NORMATIVE es: one outline per letter of NORMATIVO 9 paths
+PASS owl NORMATIVE es: no depth effect in the plate layer 
+PASS owl NORMATIVE: no raster, live text or font reference 
+PASS owl NORMATIVE: NO NORMATIVO nowhere 
+PASS owl NON-NORMATIVE en: shown 
+PASS owl NON-NORMATIVE en: one outline per letter of NON-NORMATIVE 13 paths
+PASS owl NON-NORMATIVE en: no depth effect in the plate layer 
+PASS owl NON-NORMATIVE es: hidden 
+PASS owl NON-NORMATIVE es: one outline per letter of INFORMATIVO 11 paths
+PASS owl NON-NORMATIVE es: no depth effect in the plate layer 
+PASS owl NON-NORMATIVE: no raster, live text or font reference 
+PASS owl NON-NORMATIVE: NO NORMATIVO nowhere 
+PASS owl METACOGNITIVE en: shown 
+PASS owl METACOGNITIVE en: one outline per letter of METACOGNITIVE 13 paths
+PASS owl METACOGNITIVE en: no depth effect in the plate layer 
+PASS owl METACOGNITIVE es: hidden 
+PASS owl METACOGNITIVE es: one outline per letter of METACOGNITIVO 13 paths
+PASS owl METACOGNITIVE es: no depth effect in the plate layer 
+PASS owl METACOGNITIVE: no raster, live text or font reference 
+PASS owl METACOGNITIVE: NO NORMATIVO nowhere 
+PASS owl CRITICAL en: shown 
+PASS owl CRITICAL en: one outline per letter of CRITICAL 8 paths
+PASS owl CRITICAL en: no depth effect in the plate layer 
+PASS owl CRITICAL es: hidden 
+PASS owl CRITICAL es: one outline per letter of CRÍTICO plus the accent 8 paths
+PASS owl CRITICAL es: no depth effect in the plate layer 
+PASS owl CRITICAL: no raster, live text or font reference 
+PASS owl CRITICAL: NO NORMATIVO nowhere 
+PASS README.md (final-masters-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS MANIFEST.json (final-masters-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS README.md (owl-finals-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS MANIFEST.json (owl-finals-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS states-config-layered.json (layered): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS states-config-owl-layered.json (owl-finals-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS approved master NORMATIVE untouched (d9d6336b0c9450ac) 
+PASS approved master NON-NORMATIVE untouched (e1d83bb7e4b6017d) 
+PASS approved master CRITICAL untouched (055655372b21da5c) 
+PASS approved master METACOGNITIVE untouched (3a8a7459bb1782d1) 
+PASS guard d4054fa6e02e66e4 untouched 
+PASS notation exports: 40 PNGs (4 states x 2 languages x 5 sizes) 40
+PASS owl exports: 40 PNGs 40
+PASS scan cards: 8 8
+
+148 checks: ALL PASS

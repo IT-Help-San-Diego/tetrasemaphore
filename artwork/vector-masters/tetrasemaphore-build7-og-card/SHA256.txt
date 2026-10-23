@@ -1,0 +1,9 @@
+0660fd91c2999023 og-card-MASTER.svg
+0cf08ac9028fc22d og-card.png
+a175dc759f3a2fd9 og-card.jpg
+5b1af9480016f6d5 proofs/og-card-preview.png
+addb1e5a77834cc0 work/build-og-card.js
+f79ebe66dfa896ce work/verify-og-card.py
+be7ad7a92cdb3889 work/layout_report.json
+646a741e36dcb86a work/verify_report.json
+97c6995344aa3a2d README.md

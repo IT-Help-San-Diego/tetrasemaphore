@@ -1,0 +1,155 @@
+=== A. every master against build 5, allowed differences only
+PASS notation NORMATIVE (0f1498c8755fa563 vs build 5 dd09d1ef6095fbfc): equal after the allowed differences 735675 bytes
+PASS notation NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS notation NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS notation NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'glyph-placement', 'symmetry-marks']
+PASS notation NON-NORMATIVE (153e5aae141ce46e vs build 5 f19256894cc29343): equal after the allowed differences 693949 bytes
+PASS notation NON-NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS notation NON-NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS notation NON-NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'glyph-placement', 'symmetry-marks']
+PASS notation METACOGNITIVE (79fd3f8291b39900 vs build 5 9c55197b5d58cf5f): equal after the allowed differences 694834 bytes
+PASS notation METACOGNITIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS notation METACOGNITIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS notation METACOGNITIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'glyph-placement', 'symmetry-marks']
+PASS notation CRITICAL (e31ec0a46ab97939 vs build 5 e8dc6ed29d30655c): equal after the allowed differences 735736 bytes
+PASS notation CRITICAL: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS notation CRITICAL: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS notation CRITICAL: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'glyph-placement']
+PASS owl NORMATIVE (d22e4fb23faf378b vs build 5 6f5a11bf305cf120): equal after the allowed differences 804112 bytes
+PASS owl NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS owl NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS owl NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS owl NON-NORMATIVE (862817cecc3b008e vs build 5 fae14f25042f43f1): equal after the allowed differences 762178 bytes
+PASS owl NON-NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS owl NON-NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS owl NON-NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS owl METACOGNITIVE (713abfb6a54e6282 vs build 5 68a6746673f645ba): equal after the allowed differences 763053 bytes
+PASS owl METACOGNITIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS owl METACOGNITIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS owl METACOGNITIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS owl CRITICAL (5c332c30c5a6aab3 vs build 5 f5aef94a829ee50d): equal after the allowed differences 804596 bytes
+PASS owl CRITICAL: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS owl CRITICAL: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS owl CRITICAL: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS layered NORMATIVE (b00c2f3cd58b011f vs build 5 e721a06135882bdb): equal after the allowed differences 804129 bytes
+PASS layered NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS layered NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS layered NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS layered NON-NORMATIVE (852920b55ea19371 vs build 5 63dfc6d22a3dc700): equal after the allowed differences 762195 bytes
+PASS layered NON-NORMATIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS layered NON-NORMATIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS layered NON-NORMATIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS layered METACOGNITIVE (4f0c153ee6d14dca vs build 5 fff1eb7ed22eb17c): equal after the allowed differences 763070 bytes
+PASS layered METACOGNITIVE: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS layered METACOGNITIVE: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS layered METACOGNITIVE: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+PASS layered CRITICAL (a9175a311b37520f vs build 5 cb647435d7bd7332): equal after the allowed differences 804613 bytes
+PASS layered CRITICAL: the allowed differences occur exactly as expected (3 lit layers, 1 desc sentence, 2 rails labels) {'lit': 3, 'desc': 1, 'rails': 2}
+PASS layered CRITICAL: lit layer: 65 levels, clipped to the ink, highlight gold, strips only 65 levels
+PASS layered CRITICAL: layer order field, rings, geometry, finish, LIT EDGE, then the legends and the mark ['field', 'finalA5-rings', 'finalA5-geometry', 'finalA5-finish', 'finalA5-litedge', 'legend-plaque-en', 'legend-text-en', 'legend-plaque-es', 'legend-text-es', 'owl-placement']
+
+=== B. the lit layer against Science's alpha reference (uncut ring, layer alone, 1298 px)
+PASS alpha reference on disk is c73e53800548c001 c73e53800548c001
+PASS lit layer vs reference at 1298 px: mean |da| <= 0.01 over the gold 0.0060
+PASS lit layer vs reference at 1298 px: 99th percentile <= 0.15 0.114 (max 0.247)
+PASS lit layer: nothing outside the ink 0.000
+
+=== C. the rings
+PASS ring none: = the build-5 ring plus the lit layer and one desc sentence 91d1a01b8e1392c0 vs f21db7ab012500c8; {'lit': 1, 'desc': 1, 'rails': 0}
+PASS ring 21-2: = the build-5 ring plus the lit layer and one desc sentence 9af6030e1fe28c27 vs 6086dba12965b210; {'lit': 1, 'desc': 1, 'rails': 0}
+PASS ring 22-1: = the build-5 ring plus the lit layer and one desc sentence b809ccf6c6784407 vs e0a648d4451dd778; {'lit': 1, 'desc': 1, 'rails': 0}
+PASS ring_build.js without --litEdge still reproduces the build-5 uncut ring byte for byte 
+
+=== D. the builder's report
+PASS report NORMATIVE en: facts as in build 5 
+PASS report NORMATIVE es: facts as in build 5 
+PASS report NORMATIVE: owl-placement is root child 12 12
+PASS report NON-NORMATIVE en: facts as in build 5 
+PASS report NON-NORMATIVE es: facts as in build 5 
+PASS report NON-NORMATIVE: owl-placement is root child 12 12
+PASS report CRITICAL en: facts as in build 5 
+PASS report CRITICAL es: facts as in build 5 
+PASS report CRITICAL: owl-placement is root child 12 12
+PASS report METACOGNITIVE en: facts as in build 5 
+PASS report METACOGNITIVE es: facts as in build 5 
+PASS report METACOGNITIVE: owl-placement is root child 12 12
+
+=== E. layers, words, guard, exports
+PASS notation NORMATIVE en: shown 
+PASS notation NORMATIVE en: one outline per letter of NORMATIVE 9 paths
+PASS notation NORMATIVE en: no depth effect in the plate layer 
+PASS notation NORMATIVE es: hidden 
+PASS notation NORMATIVE es: one outline per letter of NORMATIVO 9 paths
+PASS notation NORMATIVE es: no depth effect in the plate layer 
+PASS notation NORMATIVE: no raster, live text or font reference 
+PASS notation NORMATIVE: NO NORMATIVO nowhere 
+PASS notation NON-NORMATIVE en: shown 
+PASS notation NON-NORMATIVE en: one outline per letter of NON-NORMATIVE 13 paths
+PASS notation NON-NORMATIVE en: no depth effect in the plate layer 
+PASS notation NON-NORMATIVE es: hidden 
+PASS notation NON-NORMATIVE es: one outline per letter of INFORMATIVO 11 paths
+PASS notation NON-NORMATIVE es: no depth effect in the plate layer 
+PASS notation NON-NORMATIVE: no raster, live text or font reference 
+PASS notation NON-NORMATIVE: NO NORMATIVO nowhere 
+PASS notation METACOGNITIVE en: shown 
+PASS notation METACOGNITIVE en: one outline per letter of METACOGNITIVE 13 paths
+PASS notation METACOGNITIVE en: no depth effect in the plate layer 
+PASS notation METACOGNITIVE es: hidden 
+PASS notation METACOGNITIVE es: one outline per letter of METACOGNITIVO 13 paths
+PASS notation METACOGNITIVE es: no depth effect in the plate layer 
+PASS notation METACOGNITIVE: no raster, live text or font reference 
+PASS notation METACOGNITIVE: NO NORMATIVO nowhere 
+PASS notation CRITICAL en: shown 
+PASS notation CRITICAL en: one outline per letter of CRITICAL 8 paths
+PASS notation CRITICAL en: no depth effect in the plate layer 
+PASS notation CRITICAL es: hidden 
+PASS notation CRITICAL es: one outline per letter of CRÍTICO plus the accent 8 paths
+PASS notation CRITICAL es: no depth effect in the plate layer 
+PASS notation CRITICAL: no raster, live text or font reference 
+PASS notation CRITICAL: NO NORMATIVO nowhere 
+PASS owl NORMATIVE en: shown 
+PASS owl NORMATIVE en: one outline per letter of NORMATIVE 9 paths
+PASS owl NORMATIVE en: no depth effect in the plate layer 
+PASS owl NORMATIVE es: hidden 
+PASS owl NORMATIVE es: one outline per letter of NORMATIVO 9 paths
+PASS owl NORMATIVE es: no depth effect in the plate layer 
+PASS owl NORMATIVE: no raster, live text or font reference 
+PASS owl NORMATIVE: NO NORMATIVO nowhere 
+PASS owl NON-NORMATIVE en: shown 
+PASS owl NON-NORMATIVE en: one outline per letter of NON-NORMATIVE 13 paths
+PASS owl NON-NORMATIVE en: no depth effect in the plate layer 
+PASS owl NON-NORMATIVE es: hidden 
+PASS owl NON-NORMATIVE es: one outline per letter of INFORMATIVO 11 paths
+PASS owl NON-NORMATIVE es: no depth effect in the plate layer 
+PASS owl NON-NORMATIVE: no raster, live text or font reference 
+PASS owl NON-NORMATIVE: NO NORMATIVO nowhere 
+PASS owl METACOGNITIVE en: shown 
+PASS owl METACOGNITIVE en: one outline per letter of METACOGNITIVE 13 paths
+PASS owl METACOGNITIVE en: no depth effect in the plate layer 
+PASS owl METACOGNITIVE es: hidden 
+PASS owl METACOGNITIVE es: one outline per letter of METACOGNITIVO 13 paths
+PASS owl METACOGNITIVE es: no depth effect in the plate layer 
+PASS owl METACOGNITIVE: no raster, live text or font reference 
+PASS owl METACOGNITIVE: NO NORMATIVO nowhere 
+PASS owl CRITICAL en: shown 
+PASS owl CRITICAL en: one outline per letter of CRITICAL 8 paths
+PASS owl CRITICAL en: no depth effect in the plate layer 
+PASS owl CRITICAL es: hidden 
+PASS owl CRITICAL es: one outline per letter of CRÍTICO plus the accent 8 paths
+PASS owl CRITICAL es: no depth effect in the plate layer 
+PASS owl CRITICAL: no raster, live text or font reference 
+PASS owl CRITICAL: NO NORMATIVO nowhere 
+PASS README.md (final-masters-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS README.md (owl-finals-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS states-config-layered.json (layered): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS states-config-owl-layered.json (owl-finals-2026-10-05): no unaccented semaforo / CRITICO as the Spanish word (the reference file name aside) 
+PASS approved master NORMATIVE untouched (d9d6336b0c9450ac) 
+PASS approved master NON-NORMATIVE untouched (e1d83bb7e4b6017d) 
+PASS approved master CRITICAL untouched (055655372b21da5c) 
+PASS approved master METACOGNITIVE untouched (3a8a7459bb1782d1) 
+PASS guard d4054fa6e02e66e4 untouched 
+PASS notation exports: 40 PNGs (4 states x 2 languages x 5 sizes) 40
+PASS owl exports: 40 PNGs 40
+PASS scan cards: 8 8
+
+144 checks: ALL PASS

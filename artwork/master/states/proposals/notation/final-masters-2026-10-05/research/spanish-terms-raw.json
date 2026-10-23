@@ -1,0 +1,734 @@
+{
+ "verdict": {
+  "words": [
+   {
+    "plaque_word": "NORMATIVO",
+    "established": "yes",
+    "why": "It is a headword in the academies' dictionary with exactly the standards meaning (\"que fija la norma\"). Standards bodies in Spain (UNE), Mexico (NMX-Z-013) and Mercosur (AMN), and the Spanish W3C WCAG 2.0, all use it for the binding parts of a standard. Philosophy uses it the same way (\"ética normativa\"). I re-read every one of these on the page.",
+    "spelling_on_plaque": "NORMATIVO. No accent, masculine singular. Do not use NORMATIVA alone: the dictionary lists the feminine as a noun meaning a body of rules.",
+    "competing_forms": "None for this sense. (OBLIGATORIO / PRECEPTIVO are near-synonyms in the dictionary but are not the standards-writing term.)",
+    "regions": "Confirmed in sources from Spain, Mexico, Colombia, Argentina/Mercosur. No regional variation found.",
+    "best_sources": [
+     {
+      "quote_es": "1. adj. Que fija la norma. 2. adj. Perteneciente o relativo a la norma.",
+      "source": "normativo, va | Diccionario de la lengua española (RAE-ASALE) 23.8.1",
+      "url": "https://dle.rae.es/normativo",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "3.2.1 elemento normativo: aquel que describe el campo de aplicación de la norma y que fija las disposiciones",
+      "source": "NMX-Z-013-SCFI-2015, Guía para la estructuración y redacción de Normas (Secretaría de Economía, México)",
+      "url": "http://www.economia-nmx.gob.mx/normas/nmx/2010/nmx-z-013-scfi-2015.pdf",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "El anexo C es un anexo normativo que recoge los medios necesarios para determinar la conformidad con los requisitos individuales.",
+      "source": "Norma UNE-EN 301549:2020 (UNE, Spain)",
+      "url": "https://administracionelectronica.gob.es/PAe/accesibilidad/une-en-301549-2020.pdf",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "normativo: Necesario para lograr conformidad.",
+      "source": "WCAG 2.0 en español, traducción Fundación Sidar, glosario",
+      "url": "http://www.sidar.org/traducciones/wcag20/es/",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "La ética suele dividirse en tres subdisciplinas: la ética normativa, la ética descriptiva y la filosofía moral o metaética.",
+      "source": "Jacorzynski y Sánchez Jiménez, Desacatos 41 (CIESAS, México, 2013)",
+      "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1607-050X2013000100001",
+      "confirmed_word_for_word": true
+     }
+    ]
+   },
+   {
+    "plaque_word": "NO NORMATIVO",
+    "established": "yes with a note",
+    "why": "The phrase exists and is not invented: it is the plain opposite of 'normativo' in law, philosophy and the W3C tradition, always two words with no hyphen. The note: the standards bodies I could read (UNE, NMX, AMN) never use it. Their label for the non-binding parts is INFORMATIVO, and W3C's Spanish glossary gives 'no normativo' only as a synonym of 'informativo'. So NO NORMATIVO is correct Spanish and keeps the visible pairing with NORMATIVO, but a standards writer would expect INFORMATIVO on an annex. Which one goes on the plaque is Carey's choice between two real forms.",
+    "spelling_on_plaque": "NO NORMATIVO: two words, no hyphen, no accent, masculine singular. The Diccionario panhispánico de dudas rules this directly. NO-NORMATIVO and NONORMATIVO are wrong.",
+    "competing_forms": "INFORMATIVO is the official standards label (UNE, NMX-Z-013, AMN, and the headword in the Spanish WCAG 2.0 glossary). It matches the project's own table ('Informative / Advisory'). It loses the visible NORMATIVO / NO NORMATIVO pairing.",
+    "regions": "'No normativo' confirmed in texts from Spain, Mexico, Argentina and Colombia. 'Informativo' confirmed in Spain, Mexico and Mercosur standards. No regional split found.",
+    "best_sources": [
+     {
+      "quote_es": "Su actitud no beligerante le granjeó las simpatías de todos [...]. Se escribe separado y sin guion intermedio.",
+      "source": "no, apartado 4 | Diccionario panhispánico de dudas (RAE-ASALE), 2.ª edición",
+      "url": "https://www.rae.es/dpd/no",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "Nota 2: El contenido identificado como \"informativo\" o \"no normativo\" no se considera obligatorio para la conformidad.",
+      "source": "WCAG 2.0 en español, traducción Fundación Sidar, glosario, entrada 'normativo'",
+      "url": "http://www.sidar.org/traducciones/wcag20/es/",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "un sistema primario de enunciados normativos y no normativos",
+      "source": "Ferreyra, Cuestiones Constitucionales 29 (UNAM, 2013)",
+      "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-91932013000200005",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "igualmente estético o inmediato, pero no normativo",
+      "source": "Carrasco Barranco, 'Belleza', Enciclopedia de la Sociedad Española de Filosofía Analítica",
+      "url": "http://www.sefaweb.es/belleza/",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "La característica informativa de un apéndice (en oposición al normativo (ver 6.3.8)) debe ser declarada en forma clara",
+      "source": "NMX-Z-013-SCFI-2015, apartado 6.4.1.1 (shows INFORMATIVO as the official opposite)",
+      "url": "http://www.economia-nmx.gob.mx/normas/nmx/2010/nmx-z-013-scfi-2015.pdf",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "El capítulo 4 es informativo y no contiene requisitos que precisen comprobación.",
+      "source": "Norma UNE-EN 301549:2020, Anexo C (zero occurrences of 'no normativo' in my full-text read)",
+      "url": "https://administracionelectronica.gob.es/PAe/accesibilidad/une-en-301549-2020.pdf",
+      "confirmed_word_for_word": true
+     }
+    ]
+   },
+   {
+    "plaque_word": "CRÍTICO",
+    "established": "yes with a note",
+    "why": "CRÍTICO is the exact, established Spanish counterpart of English 'critical', with the same range of meanings and the same Greek root (krinein): judging ('pensamiento crítico', 'Teoría Crítica') and grave/decisive ('estado crítico', 'periodo crítico'). The note: no Spanish dictionary sense or standards text uses it to mean 'inverts the standard' or 'MUST NOT'. That meaning is the project's own, in Spanish exactly as in English, so the translation is faithful but the plaque sense is not something Spanish already has. Standing alone, a Spanish reader will most likely read it as 'grave condition' (the dictionary's own example is 'Estado crítico del herido') or 'given to criticism'.",
+    "spelling_on_plaque": "CRÍTICO, with the accent on the first I. The accent is obligatory in capitals; CRITICO is a spelling error. Masculine singular.",
+    "competing_forms": "None that is an established one-word equivalent. Spanish RFC 2119 translations render MUST NOT as NO DEBE, not with any adjective. PROHIBIDO would say 'forbidden' but is not a translation of CRITICAL.",
+    "regions": "Confirmed in Spain (dictionary, nursing journal), Mexico, Colombia, Costa Rica. Same senses everywhere.",
+    "best_sources": [
+     {
+      "quote_es": "1. adj. Perteneciente o relativo a la crítica. Opinión crítica. [...] 3. adj. Muy difícil o de mucha gravedad. Situación crítica de la economía. Estado crítico del herido.",
+      "source": "crítico, ca | Diccionario de la lengua española (RAE-ASALE) 23.8.1",
+      "url": "https://dle.rae.es/crítico",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "Las letras mayúsculas, tanto si se trata de iniciales como si se integran en una palabra escrita enteramente en mayúsculas, deben llevar tilde si así les corresponde según las reglas de acentuación: Ángel; PROHIBIDO PISAR EL CÉSPED.",
+      "source": "tilde | Diccionario panhispánico de dudas (RAE-ASALE)",
+      "url": "https://www.rae.es/dpd/tilde",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "Así pues, el empleo de la mayúscula no exime de poner la tilde cuando así lo exijan las reglas de acentuación gráfica: CÓRDOBA, Álvaro.",
+      "source": "La mayúscula y los signos diacríticos | Ortografía de la lengua española (RAE-ASALE), § 3.3",
+      "url": "https://www.rae.es/ortograf%C3%ADa/la-may%C3%BAscula-y-los-signos-diacr%C3%ADticos",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "a partir del verbo krinein devienen una crítica \"subjetiva\" y una crisis \"objetiva\"",
+      "source": "Brinkman-Clark, Historia y Grafía 44 (Universidad Iberoamericana, México, 2015)",
+      "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-09272015000100047",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "2. NO DEBE   Esta frase, o la frase \"NO DEBERÁ\", significa que la definición es una prohibición insoslayable de la especificación.",
+      "source": "RFC 2119 en español (rfc-es.org) — no 'crítico' anywhere in the text",
+      "url": "https://www.rfc-es.org/rfc/rfc2119-es.txt",
+      "confirmed_word_for_word": true
+     }
+    ]
+   },
+   {
+    "plaque_word": "METACOGNITIVO",
+    "established": "yes with a note",
+    "why": "It is the standard form in Spanish-language psychology and education for Flavell's concept, confirmed in papers from Chile, Spain and Colombia, and it outnumbers the older variant on Dialnet by 3.277 documents to 19. The note: it is not an entry in the academies' dictionary (nor are metacognición or metacognoscitivo), so its standing rests on scholarly use, not on a dictionary ruling. It is regularly formed from two dictionary entries (meta- 'acerca de' + cognitivo) and appears on an ASALE page in a talk title. The project's sense ('the observer audits the frame') is a little wider than the psychology sense ('thinking about one's own thinking'), in Spanish as in English.",
+    "spelling_on_plaque": "METACOGNITIVO: one solid word, no hyphen, no space, no accent, masculine singular. Prefixes are written joined to the word.",
+    "competing_forms": "METACOGNOSCITIVO is a real but rare older variant, still seen in some Mexican writing. The 2017 UNAM-journal article that uses it also uses 'metacognitivas' in the same text. Not in the dictionary either. No reason to prefer it.",
+    "regions": "Confirmed in Chile, Spain, Colombia, Mexico, and Argentina (talk title on the ASALE page). The minority variant showed up only in the Mexican article.",
+    "best_sources": [
+     {
+      "quote_es": "La palabra «metacognitivo» no está en el Diccionario.",
+      "source": "Diccionario de la lengua española (RAE-ASALE) 23.8.1, consulta 'metacognitivo'",
+      "url": "https://dle.rae.es/metacognitivo",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "1. elem. compos. Significa 'junto a', 'después de', 'entre', 'con' o 'acerca de'. Metacentro, metatórax, metalengua.",
+      "source": "meta- | Diccionario de la lengua española (RAE-ASALE)",
+      "url": "https://dle.rae.es/meta-",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "uno de naturaleza declarativa (conocimiento metacognitivo) y otro de carácter procedimental (control metacognitivo",
+      "source": "Osses Bustingorry y Jaramillo Mora, Estudios Pedagógicos 34(1), Chile, 2008",
+      "url": "https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-07052008000100011",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "El conocimiento metacognitivo que posee un individuo le permite sentirse más motivado",
+      "source": "FEM: Revista de la Fundación Educación Médica 16(1), Universidad de Zaragoza / Barcelona, 2013",
+      "url": "https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S2014-98322013000100005",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "3.277 documentos encontrados",
+      "source": "Dialnet, búsqueda 'metacognitivo' (same search for 'metacognoscitivo': \"19 documentos encontrados\"), read 2026-10-04",
+      "url": "https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=metacognitivo",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "«La incorporación de IA en la producción de textos en lectura fácil: un desafío metacognitivo»",
+      "source": "Programa de la III Convención de la Red Panhispánica de Lenguaje Claro y Accesible | ASALE",
+      "url": "https://www.asale.org/noticia/programa-de-la-iii-convencion-de-la-red-panhispanica-de-lenguaje-claro-y-accesible",
+      "confirmed_word_for_word": true
+     },
+     {
+      "quote_es": "Los prefijos se escriben unidos a la palabra que acompañan (antivirus, supermodelo, anteayer, exmarido, vicepresidente, sobrealimentar, contraoferta, precandidato)",
+      "source": "prefijos: claves para una buena redacción | FundéuRAE",
+      "url": "https://www.fundeu.es/recomendacion/prefijos-claves-para-una-buena-redaccion-817/",
+      "confirmed_word_for_word": true
+     }
+    ]
+   }
+  ],
+  "quotes_checked": 52,
+  "quotes_confirmed": 52,
+  "quotes_altered_or_not_found": [
+   "No quotation was altered or missing: all 52 were found on the pages as quoted. Minor notes follow on things around the quotes.",
+   "DLE 'crítico' and DLE 'no': the sweep's quotes are faithful but selective (the crítico quote skips sense 2 'relativo a la crisis'; the 'no' quote drops the last example, 'No muy lejos de allí').",
+   "AMN Directivas definition 3.10: wording confirmed, but the PDF is a two-column Spanish/Portuguese layout, so the Spanish sentence is interleaved with Portuguese in the extracted text.",
+   "COUNT NOT REPRODUCED - NMX-Z-013: the sweep reported 120 hits for 'normativ' and 43 for 'informativ'. My full-text read gave 62 and 42. The figure that matters, 0 hits for 'no normativ', I did reproduce.",
+   "COUNT NOT REPRODUCED - UNE-EN 301549: the sweep said 30 '(Informativo)' labels. I counted 8 '(Informativo)' and 2 '(Normativo)' in my extraction. I did reproduce 44 hits for 'informativ-' and 0 for 'no normativo/a', 'no es normativ-', 'no son normativ-'.",
+   "Sweep 2 claim 'the Mexican standard sets normativo against informativo (en oposición al normativo)': confirmed, the phrase is in 6.4.1.1 and mirrored in the normative-annex clause ('en oposición al informativo').",
+   "Sweep 3 said it could not tell whether the Mexican 2017 article (Berridi) also uses 'metacognitivo'. It does: I found 'capacidades metacognitivas' in the body, alongside three 'metacognoscitiv-' forms.",
+   "Sweep 2 could not confirm the sentence 'Esta sección no es normativa' in the Colombian MOTA specification. I found it twice in the file (sections 1 and 2).",
+   "Sweep 1 read only the opening of the Fundéu 'no + sustantivo' page. I read the body: it says the construction 'se ha censurado en ocasiones por considerarse anglicismo' and then rejects that objection, citing the Nueva gramática.",
+   "Small attribution points: the Osses/Jaramillo authors are at Universidad de La Frontera (Temuco); the journal is published by Universidad Austral de Chile. The Index de Enfermería article (Granada journal) appears to be by an author based in Chile, so it is weaker as evidence of usage 'in Spain'.",
+   "Method note: three DPD/PDF quotes (DPD 'tilde', DPD 'concordancia', the Universidad de Flores article) were confirmed through the scraper's direct-quote extraction of the opened page, not by my own reading of the raw text. The three standards PDFs (UNE, NMX, AMN) were read as text streamed from the PDF, nothing saved to disk."
+  ],
+  "unverified": [
+   "Whether the Diccionario panhispánico de dudas states a preference between cognitivo and cognoscitivo: rae.es/dpd/cognitivo and /cognoscitivo returned server error 522 again today.",
+   "The Diccionario histórico page (rae.es/dhle/cafeses) said to use 'no normativo': error 522 again, not read.",
+   "Any RAE, ASALE or FundéuRAE note specifically about 'metacognitivo', 'metacognición' or the phrase 'no normativo'. None found by the sweeps; I did not search further.",
+   "An official Spanish text of the ISO/IEC Directives Part 2, UNE's own drafting guide, and the drafting rules of ICONTEC, INN, INACAL, INEN and IRAM. None was opened by anyone. The 'standards bodies say INFORMATIVO' finding rests on Spain, Mexico and Mercosur only.",
+   "Any standards body using 'no normativo' as an official label on an annex or section. None found; the W3C translations use it only as a stated synonym.",
+   "The hyphenated spelling 'no-normativo' in philosophy papers: seen only in a search snippet by a sweep, pages blocked, not checked by me.",
+   "Prevalence of metacognitivo over metacognoscitivo rests on one index (Dialnet, 3.277 vs 19), whose search folds word forms together. Treat it as an order of magnitude.",
+   "Other dictionaries (Diccionario de americanismos, María Moliner, Diccionario del español de México, medical or psychology term dictionaries) were not consulted for metacognitivo.",
+   "Any Spanish source, dictionary or scholarly, that uses 'crítico' to mean 'inverts or prohibits the standard'. None found.",
+   "An explicit academy rule on which gender an adjective takes when it stands alone as a label with no noun. Only the general agreement rule and the dictionary's masculine citation form were found."
+  ],
+  "for_a_native_expert": [
+   "NO NORMATIVO or INFORMATIVO on the second plaque: both are real. Which one would a Spanish-speaking standards editor or philosopher of norms expect to see next to NORMATIVO on an object like this?",
+   "How CRÍTICO reads alone on a medallion beside NORMATIVO: as 'grave condition', as 'given to criticism', or as the intended 'opposes the norm'? This is a question of first impression that sources cannot settle.",
+   "Whether METACOGNITIVO, a psychology term, reads naturally to a philosopher for 'the observer audits the frame', or whether it sounds narrowly like classroom learning strategies.",
+   "Whether four bare masculine adjectives with no noun (implied 'estado') feel natural as labels, or whether a reader expects a noun or a different gender.",
+   "Whether any country's readers would find METACOGNOSCITIVO more correct (the sources say no, but only the Mexican variant was seen in live use)."
+  ],
+  "plain_summary": "I re-opened every quoted page: all 52 quotations are there as quoted, and nothing had to be dropped. Two word counts from the standards sweep did not reproduce, but the count that matters did: \"no normativo\" appears zero times in the Spanish and Mexican standards.\n\nAll four Spanish words already exist, and nothing needs to be invented. The spellings proposed are right.\n\n- **NORMATIVO**: established. It is in the academies' dictionary with the standards meaning, and Spain, Mexico and Mercosur standards bodies use it.\n- **NO NORMATIVO**: established, with a note. It is correct Spanish, two words with no hyphen, and is used in law, philosophy and the Spanish W3C text. But the standards bodies' own label for the non-binding parts is INFORMATIVO, which also matches your table (\"Informative / Advisory\").\n- **CRÍTICO**: established as the exact counterpart of \"critical\", with a note. The accent is obligatory in capitals. No Spanish source uses it to mean \"inverts the standard\"; that meaning is the project's own, in Spanish as in English. Alone, it will most likely read as \"grave\" or \"given to criticism\".\n- **METACOGNITIVO**: established in scholarship, with a note. It is not in the academies' dictionary, but it is the normal term in psychology and education and outnumbers the older \"metacognoscitivo\" by 3.277 to 19 on Dialnet. One solid word, no accent.\n\nMasculine singular is the right form for all four, and they hold across Spain and Latin America in the sources read.\n\nDecision for you: NO NORMATIVO or INFORMATIVO on the second plaque. NO NORMATIVO keeps the visible pairing with NORMATIVO, as the English does; INFORMATIVO is what a standards writer expects. I would keep NO NORMATIVO for the pairing, and a native-speaking reader is the right person to confirm that and to say how CRÍTICO reads on its own.\n\nNot checked: the academies' usage-dictionary pages on cognitivo/cognoscitivo were down again, and no official Spanish ISO drafting rules or Colombian, Chilean, Peruvian or Argentine national rules were opened."
+ },
+ "sweeps": [
+  {
+   "findings": [
+    {
+     "word": "normativo",
+     "claim": "NORMATIVO is a full entry in the academies' dictionary (headword 'normativo, va'), as an adjective, with the standards sense: 'that sets the norm'. Synonyms listed include reglamentario and preceptivo.",
+     "quote_es": "1. adj. Que fija la norma. 2. adj. Perteneciente o relativo a la norma.",
+     "source": "normativo, va | Diccionario de la lengua española (RAE-ASALE), versión electrónica 23.8.1",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/normativo",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "CRÍTICO is a full entry (headword 'crítico, ca'), written with an accent on the first i. Its adjective senses are 'relating to criticism', 'relating to crisis', 'very difficult or grave', and a physics sense of a threshold value. None of the senses says 'forbidden' or 'inverts the standard'; a Spanish reader will most likely read it as 'grave/critical state' or 'given to criticism'.",
+     "quote_es": "1. adj. Perteneciente o relativo a la crítica. Opinión crítica. 3. adj. Muy difícil o de mucha gravedad. Situación crítica de la economía. Estado crítico del herido.",
+     "source": "crítico, ca | Diccionario de la lengua española (RAE-ASALE), versión electrónica 23.8.1",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/crítico",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "The adjective metacognitivo is NOT an entry in the academies' dictionary. The page returns only a 'not in the Dictionary' notice, with no suggested alternatives.",
+     "quote_es": "La palabra «metacognitivo» no está en el Diccionario.",
+     "source": "Diccionario de la lengua española (RAE-ASALE), versión electrónica 23.8.1 - consulta 'metacognitivo'",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/metacognitivo",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "The noun metacognición is not an entry either.",
+     "quote_es": "La palabra «metacognición» no está en el Diccionario.",
+     "source": "Diccionario de la lengua española (RAE-ASALE), versión electrónica 23.8.1 - consulta 'metacognición'",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/metacognición",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "The variant metacognoscitivo is not an entry either, so the dictionary does not prefer it over metacognitivo.",
+     "quote_es": "La palabra «metacognoscitivo» no está en el Diccionario.",
+     "source": "Diccionario de la lengua española (RAE-ASALE), versión electrónica 23.8.1 - consulta 'metacognoscitivo'",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/metacognoscitivo",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "Both building blocks of metacognitivo are dictionary entries: the combining element meta- (one of its meanings is 'about', as in metalengua) and the adjective cognitivo, va. The word is therefore regularly formed even though it is not itself listed.",
+     "quote_es": "1. elem. compos. Significa 'junto a', 'después de', 'entre', 'con' o 'acerca de'. Metacentro, metatórax, metalengua.",
+     "source": "meta- | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/meta-",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "cognitivo, va is an entry, derived from cognición, meaning 'relating to knowledge'.",
+     "quote_es": "De cognición. 1. adj. Perteneciente o relativo al conocimiento.",
+     "source": "cognitivo, va | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/cognitivo",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "cognoscitivo, va is a separate entry with a narrower meaning ('able to know'), not marked as the preferred form of cognitivo. This gives no dictionary reason to build the plaque word on cognoscitivo.",
+     "quote_es": "Del lat. cognoscĕre 'conocer'. 1. adj. Que es capaz de conocer. Potencia cognoscitiva.",
+     "source": "cognoscitivo, va | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/cognoscitivo",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "The word is in real use inside the academies' own institutional pages: an ASALE news page listing the programme of the III Convención de la Red Panhispánica de Lenguaje Claro y Accesible carries a talk title that uses 'metacognitivo' as an ordinary adjective. This is attested use on an academy site, not a normative ruling.",
+     "quote_es": "«La incorporación de IA en la producción de textos en lectura fácil: un desafío metacognitivo»",
+     "source": "Programa de la III Convención de la Red Panhispánica de Lenguaje Claro y Accesible | Noticia | Asociación de Academias de la Lengua Española",
+     "source_kind": "other",
+     "url": "https://www.asale.org/noticia/programa-de-la-iii-convencion-de-la-red-panhispanica-de-lenguaje-claro-y-accesible",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "Prefixes are written joined to the base word, with no hyphen and no space. So METACOGNITIVO is one solid word, not META-COGNITIVO or META COGNITIVO.",
+     "quote_es": "Los prefijos se escriben unidos a la palabra que acompañan (antivirus, supermodelo, anteayer, exmarido, vicepresidente, sobrealimentar, contraoferta, precandidato); por tanto, no son adecuadas las grafías en las que el prefijo aparece unido con un guion (vice-ministro, anti-mafia) o separado por un espacio en blanco (vice ministro, anti mafia).",
+     "source": "prefijos: claves para una buena redacción | FundéuRAE",
+     "source_kind": "orthography authority",
+     "url": "https://www.fundeu.es/recomendacion/prefijos-claves-para-una-buena-redaccion-817/",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "The Diccionario panhispánico de dudas rules directly on 'no' before nouns and adjectives: it is written as a separate word with no hyphen. Its own example is an adjective (actitud no beligerante). So the correct form is NO NORMATIVO, two words; not NO-NORMATIVO and not NONORMATIVO.",
+     "quote_es": "Se antepone a ciertos tipos de sustantivos y adjetivos denotando la ausencia o lo contrario de lo designado por ellos: Es partidario de la no violencia; Su actitud no beligerante le granjeó las simpatías de todos [...]. Se escribe separado y sin guion intermedio.",
+     "source": "no | Diccionario panhispánico de dudas (RAE-ASALE), 2.ª edición, apartado 4",
+     "source_kind": "orthography authority",
+     "url": "https://www.rae.es/dpd/no",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "The main dictionary records this use of 'no' as a normal sense of the adverb, with an adjective example, and with no mark calling it an anglicism or incorrect.",
+     "quote_es": "3. adv. Denota la inexistencia, o lo contrario, de lo designado por la voz a la que precede o la ausencia de lo expresado por ella. La no violencia. Obras de no ficción. Actitudes no beligerantes.",
+     "source": "no | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/no",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "FundéuRAE says the 'no + noun' construction is valid and recommends writing it without a hyphen. Its page also notes the construction has sometimes been criticised as an anglicism and answers that criticism (text read in the page's own description field; the page body did not render in my reader, so I quote only the opening sentence). The Fundéu page is about nouns; the adjective case is covered by the DPD entry above.",
+     "quote_es": "Las expresiones formadas por el adverbio no seguido de un sustantivo son válidas y se recomienda escribirlas sin guion: no violencia, no renovación, no fumador.",
+     "source": "«no + sustantivo», locución adecuada: «no violencia», «no fumador» | FundéuRAE",
+     "source_kind": "orthography authority",
+     "url": "https://www.fundeu.es/recomendacion/la-expresion-no-sustantivo-es-correcta-no-violencia-no-fumador-927/",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "Capital letters must carry the written accent, including in a word written entirely in capitals. The plaque must read CRÍTICO, not CRITICO. (NORMATIVO, NO NORMATIVO and METACOGNITIVO take no accent.)",
+     "quote_es": "Las letras mayúsculas, tanto si se trata de iniciales como si se integran en una palabra escrita enteramente en mayúsculas, deben llevar tilde si así les corresponde según las reglas de acentuación: Ángel; PROHIBIDO PISAR EL CÉSPED.",
+     "source": "tilde | Diccionario panhispánico de dudas (RAE-ASALE), apartado 9 'Acentuación gráfica de mayúsculas'",
+     "source_kind": "orthography authority",
+     "url": "https://www.rae.es/dpd/tilde",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "The Ortografía de la lengua española says the same: capitals do not exempt a word from its accent.",
+     "quote_es": "Así pues, el empleo de la mayúscula no exime de poner la tilde cuando así lo exijan las reglas de acentuación gráfica: CÓRDOBA, Álvaro.",
+     "source": "La mayúscula y los signos diacríticos | Ortografía de la lengua española (RAE-ASALE)",
+     "source_kind": "orthography authority",
+     "url": "https://www.rae.es/ortograf%C3%ADa/la-may%C3%BAscula-y-los-signos-diacr%C3%ADticos",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "FundéuRAE repeats the rule and calls the accent on capitals obligatory.",
+     "quote_es": "Las letras mayúsculas también llevan tilde si así lo requiere la palabra de acuerdo con las normas de acentuación.",
+     "source": "mayúsculas: sí se tildan | FundéuRAE",
+     "source_kind": "orthography authority",
+     "url": "https://www.fundeu.es/recomendacion/mayusculas-si-se-tildan-435/",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "Gender and number: a Spanish adjective agrees with the noun it modifies. The noun the plaques imply, estado, is masculine in the dictionary ('1. m.'), so masculine singular (NORMATIVO, NO NORMATIVO, CRÍTICO, METACOGNITIVO) is the matching form. The dictionary also cites adjectives by their masculine form (normativo, va; crítico, ca). Note that NORMATIVA alone would be read as the feminine noun 'body of rules', a different meaning.",
+     "quote_es": "Concordancia nominal (coincidencia de género y número). Es la que establece el sustantivo con el determinante y los adjetivos o los participios que lo modifican: la blanca paloma; esos libros viejos y estropeados [...]",
+     "source": "concordancia | Diccionario panhispánico de dudas (RAE-ASALE)",
+     "source_kind": "orthography authority",
+     "url": "https://www.rae.es/dpd/concordancia",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "estado is a masculine noun, and the dictionary itself gives 'Estado crítico' as an example phrase under crítico (see that entry).",
+     "quote_es": "1. m. Situación en que se encuentra alguien o algo, y en especial cada uno de sus sucesivos modos de ser o estar.",
+     "source": "estado | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/estado",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "The feminine form normativa is listed in the same entry as a noun meaning a set of rules, which is why the masculine adjective is the safer label.",
+     "quote_es": "3. f. Conjunto de normas aplicables a una determinada materia o actividad.",
+     "source": "normativo, va | Diccionario de la lengua española (RAE-ASALE)",
+     "source_kind": "dictionary",
+     "url": "https://dle.rae.es/normativo",
+     "opened_page": true
+    }
+   ],
+   "could_not_find": [
+    "Any RAE, ASALE or FundéuRAE note, recommendation or ruling specifically about 'metacognitivo' or 'metacognición'. Site searches of rae.es, fundeu.es and asale.org returned only incidental uses of the word, no guidance.",
+    "A dictionary entry for metacognitivo, metacognición or metacognoscitivo in the Diccionario de la lengua española: all three return 'no está en el Diccionario'. I did not check other dictionaries (that is outside this sweep).",
+    "Any RAE or Fundéu note on the specific phrase 'no normativo', or a statement calling it an anglicism. Only the general rule for 'no' + noun/adjective exists.",
+    "A search hit showed the RAE's own Diccionario histórico using the phrase 'no normativo' (entry 'cafeses', https://www.rae.es/dhle/cafeses), but the page returned a server error (522) when I tried to open it, so I do not quote it.",
+    "The Diccionario panhispánico de dudas entries for cognitivo / cognoscitivo (https://www.rae.es/dpd/cognitivo and /cognoscitivo): rae.es returned server error 522 on every attempt, so I could not confirm whether the DPD states a preference between the two.",
+    "An explicit academy rule about which gender an adjective takes when it stands alone as a label with no noun written. I found only the general agreement rule and the dictionary's citation form (masculine first).",
+    "Any dictionary sense of crítico that matches the project's meaning 'this inverts the standard / MUST NOT'. The DLE senses are criticism, crisis, gravity, opportune moment, fault-finding, and a physics threshold.",
+    "The full body text of the Fundéu 'no + sustantivo' page did not render; I read only its opening passage from the page's description field. I did not open the full Ortografía 2010 chapter on prefixes directly; the prefix rule is quoted from FundéuRAE's summary of it."
+   ],
+   "plain_summary": "Three of the four plaques are settled by the academies' own sources; the fourth is correctly formed but not in the dictionary.\n\n- **NORMATIVO**: a dictionary entry with exactly the standards meaning (\"que fija la norma\"). Use as is.\n- **NO NORMATIVO**: the Diccionario panhispánico de dudas rules that \"no\" before an adjective is written as a separate word with no hyphen. Two words is correct; NO-NORMATIVO and NONORMATIVO are not. The main dictionary lists this use of \"no\" without marking it as an anglicism.\n- **CRÍTICO**: a dictionary entry, and the accent is obligatory in capitals (DPD, the Ortografía and FundéuRAE all say so). The spelling is right, but the meaning needs a decision: the dictionary senses are \"relating to criticism\" and \"very grave\" (its own example is \"estado crítico del herido\"). None means \"forbidden\" or \"inverts the standard\", so a Spanish reader may read it as \"serious condition\".\n- **METACOGNITIVO**: not in the Diccionario de la lengua española, and neither are metacognición or metacognoscitivo. Its parts are both entries (meta- \"acerca de\" and cognitivo, va), prefixes are written joined, and the word appears in a talk title on an ASALE page. So it is one solid word, regularly formed, with no accent; whether it is the established term in psychology and philosophy is for the other two sweeps to confirm.\n\nMasculine singular is the right form: adjectives agree with their noun, \"estado\" is masculine, and \"normativa\" alone would read as the noun \"body of rules\".\n\nI found no RAE or Fundéu note about \"metacognitivo\" or about the phrase \"no normativo\". rae.es went down partway through (error 522), so I could not open the DPD entries for cognitivo/cognoscitivo or the Diccionario histórico page that appears to use \"no normativo\"."
+  },
+  {
+   "findings": [
+    {
+     "word": "normativo",
+     "claim": "Mercosur's standards body (AMN: Argentina, Brazil, Paraguay, Uruguay) uses 'elementos normativos' as a defined term in its drafting rules, which are adapted from the ISO/IEC Directives Part 2. Its typical-structure table lists 'Anexo normativo' and 'Anexo informativo' as the two annex types.",
+     "quote_es": "elementos normativos\n\nelementos que describen el objeto del documento, los cuales establecen disposiciones",
+     "source": "Directivas AMN, Parte 2 (Asociación Mercosur de Normalización, 2007), definition 3.10; bilingual Spanish/Portuguese PDF, 84 pages",
+     "source_kind": "standards body",
+     "url": "https://www.amn.org.br/Content/Documentos/ptDiretiva-AMN-2-2007.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "In the same AMN rules the opposite of 'normativo' is 'informativo', not 'no normativo'. Elements are classed by their 'carácter normativo/informativo'. The portion of the text returned to me contained no instance of 'no normativo' (extraction-based, not a full-text count).",
+     "quote_es": "a Negritas = elemento requerido; normal = elemento normativo; itálico = elemento informativo.",
+     "source": "Directivas AMN, Parte 2 (Asociación Mercosur de Normalización, 2007), footnote to Tabla 2",
+     "source_kind": "standards body",
+     "url": "https://www.amn.org.br/Content/Documentos/ptDiretiva-AMN-2-2007.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "Mexico's official standard on how to write standards defines 'elemento normativo' and 'elemento informativo' as the two classes. In the extracted text of the 76-page PDF I counted 120 hits for 'normativ', 43 for 'informativ' and 0 for 'no normativ'.",
+     "quote_es": "3.2.1 elemento normativo\n\naquel que describe el campo de aplicación de la norma y que fija las disposiciones",
+     "source": "NMX-Z-013-SCFI-2015, Guía para la estructuración y redacción de Normas (Secretaría de Economía, México)",
+     "source_kind": "standards body",
+     "url": "http://www.economia-nmx.gob.mx/normas/nmx/2010/nmx-z-013-scfi-2015.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "The Mexican standard sets 'normativo' against 'informativo' explicitly ('en oposición al normativo'). It never uses 'no normativo'. Mexico says 'apéndice' where Spain and Mercosur say 'anexo'.",
+     "quote_es": "Los apéndices informativos proporcionan información adicional destinada a ayudar a la comprensión o uso de la norma. No deben contener requisitos, excepto los descritos en 6.4.1.2.",
+     "source": "NMX-Z-013-SCFI-2015, apartado 6.4.1.1 (Secretaría de Economía, México)",
+     "source_kind": "standards body",
+     "url": "http://www.economia-nmx.gob.mx/normas/nmx/2010/nmx-z-013-scfi-2015.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "Spain's UNE uses 'normativo' for binding parts: 'anexo normativo', 'capítulos normativos', 'Anexo C (Normativo)'. Annex headings in the body of this 246-page standard are Anexo A, B, D, E '(Informativo)' and Anexo C '(Normativo)'.",
+     "quote_es": "El anexo C es un anexo normativo que recoge los medios necesarios para determinar la conformidad con los requisitos individuales. No proporciona una metodología de verificación.",
+     "source": "Norma UNE-EN 301549:2020, Requisitos de accesibilidad para productos y servicios TIC (UNE/AENOR, published free on Spain's Portal de Administración Electrónica)",
+     "source_kind": "standards body",
+     "url": "https://administracionelectronica.gob.es/PAe/accesibilidad/une-en-301549-2020.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "In the full text of UNE-EN 301549:2020 the phrases 'no normativo/a', 'no es normativ-' and 'no son normativ-' appear 0 times. 'Informativ-' appears 44 times, 30 of them as the label '(Informativo)'. UNE says 'informativo' for the non-binding parts.",
+     "quote_es": "El capítulo 4 es informativo y no contiene requisitos que precisen comprobación.",
+     "source": "Norma UNE-EN 301549:2020, Anexo C (UNE/AENOR)",
+     "source_kind": "standards body",
+     "url": "https://administracionelectronica.gob.es/PAe/accesibilidad/une-en-301549-2020.pdf",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "The Spanish translation of W3C's WCAG 2.0 that W3C lists as the Candidate Authorized Translation (Fundación Sidar) has 'normativo' as a glossary term and labels sections 'Esta sección es normativa' or 'Esta sección es informativa'.",
+     "quote_es": "normativo\n\nNecesario para lograr conformidad.",
+     "source": "Pautas de Accesibilidad para el Contenido Web (WCAG) 2.0, traducción de la Fundación Sidar, Apéndice A: Glosario",
+     "source_kind": "standards body (W3C translation)",
+     "url": "http://www.sidar.org/traducciones/wcag20/es/",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "W3C's Spanish WCAG 2.0 does use 'no normativo', as an explicit synonym of 'informativo'. This is the strongest standards-practice source for the exact form NO NORMATIVO: two words, no hyphen. The same page also has 'formatos no normativos' and 'documentos asociados que no son normativos'.",
+     "quote_es": "Nota 2: El contenido identificado como \"informativo\" o \"no normativo\" no se considera obligatorio para la conformidad.",
+     "source": "Pautas de Accesibilidad para el Contenido Web (WCAG) 2.0, traducción de la Fundación Sidar, glosario, entrada 'normativo'",
+     "source_kind": "standards body (W3C translation)",
+     "url": "http://www.sidar.org/traducciones/wcag20/es/",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "A second, independent Spanish translation of WCAG 2.0 (the unofficial one listed by W3C) makes the same choice: 'informativo' is the headword and section label, and 'no normativo' is its stated synonym.",
+     "quote_es": "Nota 2: El contenido identificado como \"informativo\" o \"no normativo\" no se considera obligatorio para la conformidad.",
+     "source": "Pautas de Accesibilidad de Contenido Web 2.0, traducción no oficial (codexexempla.org), glosario, entrada 'normativo, -a'",
+     "source_kind": "other (unofficial W3C translation)",
+     "url": "http://www.codexexempla.org/traducciones/pautas-accesibilidad-contenido-web-2.0.htm",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "A Spanish-language technical specification written in Colombia in W3C style uses 'no normativo/a' directly as the section status, set against 'normativo'.",
+     "quote_es": "Además de las secciones marcadas como \"no normativas\", todos los diagramas, ejemplos y notas en esta especificación son no normativos (excepto cuando marcados en contrario). El resto de esta especificación es normativo.",
+     "source": "MOTA - Especificación de transparencia activa (Dejusticia, Colombia), GitHub",
+     "source_kind": "other (technical specification)",
+     "url": "https://github.com/Dejusticia/mota-active-transparency-specification/blob/master/mota-active-transparency-specification.md",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "In Argentine academic writing about an IRAM standard, 'no normativo' appears as a gloss right next to 'informativo'. People understand the two as the same thing, with 'informativo' as the official label.",
+     "quote_es": "La misma apreciación compete a la evaluación de riesgos cuya realización es obligatoria en todo el ámbito de la Unión Europea, en tanto que en la Norma IRAM 3801 constituye un anexo informativo no normativo.",
+     "source": "Claudio San Juan, 'Panorama de los sistemas de gestión de la seguridad y la salud en el trabajo en la República Argentina', Universidad de Flores (repositorio institucional)",
+     "source_kind": "university text",
+     "url": "https://repositorio.uflo.edu.ar/bitstreams/e989b8d2-b0a7-466e-8c62-ab2ce22688e5/download",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Context only, about the project table that pairs CRITICAL with MUST NOT: the Spanish translation of RFC 2119 renders MUST / MUST NOT as DEBE / NO DEBE. It does not use the word 'crítico', and it has no normative/informative vocabulary.",
+     "quote_es": "2. NO DEBE   Esta frase, o la frase \"NO DEBERÁ\", significa que la definición es una prohibición insoslayable de la especificación.",
+     "source": "RFC 2119 en español, 'Palabras clave a utilizar en RFC para Indicar Niveles de Requerimiento' (rfc-es.org, trad. José M. Caínzos)",
+     "source_kind": "other (volunteer translation of IETF standard)",
+     "url": "https://www.rfc-es.org/rfc/rfc2119-es.txt",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "The Spanish RFC 2119 keyword set is not fully fixed. rfc-es.org uses OBLIGATORIO and RECOMENDADO; Conventional Commits in Spanish uses REQUERIDO and RECOMIENDA. DEBE / NO DEBE is the same in all three sources I opened (rfc-es.org, Conventional Commits, MOTA).",
+     "quote_es": "Las palabras clave “DEBE” (“MUST”), “NO DEBE” (“MUST NOT”), “REQUERIDO” (“REQUIRED”), “DEBERÁ” (“SHALL”), “NO DEBERÁ” (“SHALL NOT”), “DEBERÍA” (“SHOULD”), “NO DEBERÍA” (“SHOULD NOT”), “RECOMIENDA” (“RECOMMENDS”), “PUEDE” (“MAY”) y “OPCIONAL” (“OPTIONAL”) en este documento se deben interpretar como se describe en RFC 2119.",
+     "source": "Commits Convencionales 1.0.0 (Spanish version of the Conventional Commits specification)",
+     "source_kind": "other (technical specification)",
+     "url": "https://www.conventionalcommits.org/es/v1.0.0/",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "INFORMATIVO is the established alternative to NO NORMATIVO. In W3C's Spanish glossary it is the headword for the non-binding status, and in UNE, AMN and NMX it is the only term used.",
+     "quote_es": "informativo\n\nCon propósito de información y que no es un requisito para lograr conformidad.",
+     "source": "Pautas de Accesibilidad para el Contenido Web (WCAG) 2.0, traducción de la Fundación Sidar, glosario, entrada 'informativo'",
+     "source_kind": "standards body (W3C translation)",
+     "url": "http://www.sidar.org/traducciones/wcag20/es/",
+     "opened_page": true
+    },
+    {
+     "word": "orthography",
+     "claim": "Where 'no normativo' appears in these sources it is always two separate words with no hyphen, and it agrees in gender and number (no normativo, no normativas, no normativos). That matches the proposed plaque NO NORMATIVO.",
+     "quote_es": "Este documento también está disponible en formatos no normativos en Versiones alternativas de las Pautas de Accesibilidad para el Contenido Web 2.0.",
+     "source": "Pautas de Accesibilidad para el Contenido Web (WCAG) 2.0, traducción de la Fundación Sidar, estado del documento",
+     "source_kind": "standards body (W3C translation)",
+     "url": "http://www.sidar.org/traducciones/wcag20/es/",
+     "opened_page": true
+    }
+   ],
+   "could_not_find": [
+    "An official Spanish text of the ISO/IEC Directives Part 2 on iso.org. I only saw Scribd copies in search results and did not open them, so I quote nothing from them. AMN (Mercosur) and NMX-Z-013 (Mexico) are adaptations of those Directives and stand in for them here.",
+    "UNE's own drafting guide (IT 34.00, 'Guía para la redacción de documentos normativos UNE'). It showed up only on Scribd and I did not open it. UNE practice is shown through one real UNE standard (UNE-EN 301549:2020) instead.",
+    "ISO's Online Browsing Platform in Spanish (ISO 9000:2015 es). The page did not render through the scraper, so there are no quotes from ISO's own Spanish standards.",
+    "An authorized Spanish translation of WCAG 2.1 or 2.2. W3C's translations page lists none (only a 'planned unofficial' one for 2.1), and the URLs I guessed returned 404. WCAG 2.0 is the only W3C Spanish text I could check.",
+    "The exact sentence 'Esta sección no es normativa' in a W3C translation. I found it only as a search snippet for the Colombian MOTA specification, and the page extraction did not return that sentence, so I do not quote it and have no count for it. The Spanish WCAG 2.0 labels sections 'Esta sección es normativa' / 'Esta sección es informativa'.",
+    "Drafting rules from ICONTEC (Colombia), INN (Chile), INACAL (Peru), INEN (Ecuador) or IRAM (Argentina) directly. INEN and others appeared only on Scribd or Studocu and were not opened. A Central American guide (leybook.com) opened but the text extraction failed, so nothing is quoted from it. IRAM is covered only indirectly, through AMN (of which it is a member) and one Argentine university article.",
+    "Any standards body using 'no normativo' as an official label on an annex or section. None of the bodies I could open does this; all use 'informativo'.",
+    "Whole-document counts for the AMN Directives and the two WCAG 2.0 translations. Those quotes came from a quote-extraction pass over the opened pages, not a full-text search. For NMX-Z-013 the counts are on the extracted text of all 76 pages; for UNE-EN 301549 they are on the full text of all 246 pages."
+   ],
+   "plain_summary": "NORMATIVO is the established word in every standards source I could open. NO NORMATIVO is real and correctly spelled, but the standards bodies' own label for the non-binding parts is INFORMATIVO.\n\n**Normativo.** Spain (UNE), Mercosur (AMN) and Mexico (NMX-Z-013) all use it for the binding parts of a standard: \"elementos normativos\", \"anexo normativo\", \"Anexo C (Normativo)\", \"referencias normativas\". The Spanish W3C WCAG 2.0 does the same (\"Esta sección es normativa\").\n\n**No normativo.** The three standards bodies never use it:\n- **UNE-EN 301549:2020 (Spain):** 0 occurrences of \"no normativo/a\" in the full text, against 44 of \"informativ-\".\n- **NMX-Z-013 (Mexico):** 0 occurrences of \"no normativ\", against 43 of \"informativ\" and 120 of \"normativ\".\n- **AMN (Mercosur):** elements are classed by \"carácter normativo/informativo\"; no \"no normativo\" in the text I saw.\n\nIt does exist in Spanish standards language in the W3C tradition. Both Spanish translations of WCAG 2.0 say, in the glossary: «El contenido identificado como \"informativo\" o \"no normativo\" no se considera obligatorio para la conformidad». A Colombian specification written in W3C style uses \"no normativas / no normativos\" as the section status. An Argentine university article glosses an IRAM annex as \"anexo informativo no normativo\".\n\n**What this means for the plaque.** NO NORMATIVO is understood, and where it appears it is written as two words with no hyphen. It keeps the visible pairing with NORMATIVO, as the English NON-NORMATIVE does. INFORMATIVO is what a Spanish-speaking standards writer would expect on an annex, and it matches the project's own table (\"Informative / Advisory\"). That choice is Carey's; both forms exist and neither is invented.\n\n**RFC 2119 context.** MUST / MUST NOT is DEBE / NO DEBE in all three Spanish sources I opened. The secondary keywords vary (OBLIGATORIO vs REQUERIDO, RECOMENDADO vs RECOMIENDA). None of this bears on the word \"crítico\", which this sweep did not find in standards usage. This sweep did not cover \"metacognitivo\" or the philosophical sense of \"crítico\".\n\n**Main gaps.** I could not open an official Spanish text of the ISO/IEC Directives Part 2, UNE's own drafting guide, or any ICONTEC, INN, INACAL or IRAM drafting rules. W3C lists no authorized Spanish WCAG 2.1 or 2.2."
+  },
+  {
+   "findings": [
+    {
+     "word": "metacognitivo",
+     "claim": "Chile, 2008. A widely cited education paper uses 'metacognición' (Flavell's term) and the adjective 'metacognitivo' as the ordinary technical words; its keywords include 'conocimiento metacognitivo' and 'estrategias metacognitivas'.",
+     "quote_es": "uno de naturaleza declarativa (conocimiento metacognitivo) y otro de carácter procedimental (control metacognitivo",
+     "source": "Osses Bustingorry y Jaramillo Mora, 'Metacognición: un camino para aprender a aprender', Estudios Pedagógicos (Valdivia) 34(1), Universidad Austral de Chile, 2008",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-07052008000100011",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "Spain, 2013. A University of Zaragoza medical-education paper uses 'conocimiento metacognitivo' and 'metacognición' as standard terms.",
+     "quote_es": "El conocimiento metacognitivo que posee un individuo le permite sentirse más motivado",
+     "source": "'Influencia de los estilos de aprendizaje y la metacognición en el rendimiento académico de los estudiantes de fisiología', FEM: Revista de la Fundación Educación Médica 16(1), Barcelona, 2013",
+     "source_kind": "peer-reviewed",
+     "url": "https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S2014-98322013000100005",
+     "opened_page": true
+    },
+    {
+     "word": "metacognitivo",
+     "claim": "Colombia, 2011. A Bogotá journal article attributes the concept 'metacognición' to Flavell (1976) under that exact Spanish name. A second Colombian paper (Psicología desde el Caribe, Barranquilla, 2008) is titled 'Procesos metacognitivos de estudiantes con diferentes estilos de aprendizaje' and contains no 'metacognoscitiv-' form at all.",
+     "quote_es": "El concepto de metacognición, según Flavell (1976) y Brown (1987), tiene dos significados",
+     "source": "Paz Penagos, '¿Cómo desarrollar la metacognición en la educación superior mediante la resolución de problemas?', Ingeniería e Investigación 31(1), Bogotá, 2011",
+     "source_kind": "peer-reviewed",
+     "url": "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-56092011000100022",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "Mexico, 2017. The older variant 'metacognoscitivo' is still in live use in some Mexican scholarship (this UNAM journal article uses 'metacognoscitivo' and 'metacognoscitivamente' three times). It is a real variant, not an error, but a minority one.",
+     "quote_es": "el monitoreo y el control metacognoscitivo",
+     "source": "Berridi Ramírez y Martínez Guerrero, 'Estrategias de autorregulación en contextos virtuales de aprendizaje', Perfiles Educativos 39(156), UNAM, 2017",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-26982017000200089",
+     "opened_page": true
+    },
+    {
+     "word": "alternative form",
+     "claim": "How common each form is: on Dialnet (the Spanish-language scholarly index run from Universidad de La Rioja, Spain), searched 2026-10-04, 'metacognitivo' returned 3.277 documents and 'metacognoscitivo' returned 19 (the feminine forms gave 3.276 and 19; 'metacognición' 2.110; 'metacognoscición' returned no count). Roughly 170 to 1 in favour of 'metacognitivo'. The search engine appears to fold masculine/feminine together, so read these as orders of magnitude.",
+     "quote_es": "3.277 documentos encontrados",
+     "source": "Dialnet, búsqueda de documentos: 'metacognitivo' (compare the same search for 'metacognoscitivo': \"19 documentos encontrados\")",
+     "source_kind": "other",
+     "url": "https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=metacognitivo",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "Mexico/Argentina, 2013 (law). 'Normativos y no normativos' is used as a fixed pair for kinds of statements in constitutional theory; the phrase occurs five times in this article by a Universidad de Buenos Aires professor in UNAM's journal. This is the sense closest to the project's (norm-stating versus not norm-stating).",
+     "quote_es": "un sistema primario de enunciados normativos y no normativos",
+     "source": "Ferreyra, 'Discurso sobre el derecho constitucional: Colores primarios', Cuestiones Constitucionales 29, UNAM Instituto de Investigaciones Jurídicas, 2013",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-91932013000200005",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "Argentina, 2006 (psychology). 'Sucesos normativos y no normativos' is an established pair in life-span psychology; the same text also has the feminine 'situaciones no normativas'. Note the sense here is 'expected for one's age' versus 'unexpected', not 'binding' versus 'non-binding'.",
+     "quote_es": "la distinción entre sucesos normativos y no normativos",
+     "source": "Mikulic, Muiños y Crespi, '\"Transiciones ecológicas\": estudio del afrontamiento de las crisis vitales…', Anuario de Investigaciones v.13, Buenos Aires, 2006",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.ar/scielo.php?script=sci_arttext&pid=S1851-16862006000100017",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "Colombia, 2002 (psychiatry). Same pair, same written form (two words, no hyphen).",
+     "quote_es": "los cambios normativos y no normativos en los ámbitos emocional, cognitivo y conductual",
+     "source": "Gómez y Segura, 'Estrés en pacientes gerontopsiquiátricos', Revista Colombiana de Psiquiatría 31(1), Bogotá, 2002",
+     "source_kind": "peer-reviewed",
+     "url": "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0034-74502002000100005",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "Spain, 2021 (philosophy encyclopedia). 'No normativos' is used as a plain technical adjective opposed to 'normativo' in the Spanish Society for Analytic Philosophy's encyclopedia.",
+     "quote_es": "Diferentes factores no normativos pueden producir regularidades estadísticas.",
+     "source": "Viciana, 'Normas sociales', Enciclopedia de la Sociedad Española de Filosofía Analítica, 2021",
+     "source_kind": "university text",
+     "url": "http://www.sefaweb.es/normas-sociales/",
+     "opened_page": true
+    },
+    {
+     "word": "no normativo",
+     "claim": "Spain, 2019 (philosophy encyclopedia). The exact masculine singular 'no normativo' appears, describing a kind of judgment in Kant; written as two words, no hyphen.",
+     "quote_es": "igualmente estético o inmediato, pero no normativo",
+     "source": "Carrasco Barranco, 'Belleza', Enciclopedia de la Sociedad Española de Filosofía Analítica, 2019",
+     "source_kind": "university text",
+     "url": "http://www.sefaweb.es/belleza/",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "Mexico, 2013 (ethics). 'Ética normativa' is the standard name of a branch of ethics, set beside 'ética descriptiva' and 'metaética'.",
+     "quote_es": "la ética normativa, la ética descriptiva y la filosofía moral o metaética",
+     "source": "Jacorzynski y Sánchez Jiménez, 'Ética y antropología: un nuevo reto para el siglo XXI', Desacatos 41, CIESAS, Ciudad de México, 2013",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1607-050X2013000100001",
+     "opened_page": true
+    },
+    {
+     "word": "normativo",
+     "claim": "Colombia, 2023 (law and ethics). 'Ética normativa' defined as the part that says what we ought to do; the same footnote also uses 'enunciados no normativos' and 'lenguaje normativo'.",
+     "quote_es": "la ética normativa se refiere a la elaboración y fundamentación de enunciados éticos",
+     "source": "'Ética profesional y Derecho: una investigación documental para comprender su alcance', Díkaion 32(1), Chía (Universidad de La Sabana), 2023",
+     "source_kind": "peer-reviewed",
+     "url": "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-89422023000103219",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Costa Rica, 2014 (education). 'Pensamiento crítico' is the standard term for critical thinking; the author traces 'crítica' to Greek κρίσις, meaning to judge or decide.",
+     "quote_es": "implica establecer un juicio o tomar una decisión",
+     "source": "Morales Zúñiga, 'El pensamiento crítico en la teoría educativa contemporánea', Actualidades Investigativas en Educación 14(2), Universidad de Costa Rica, 2014",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S1409-47032014000200022",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Colombia, 2003 (social sciences). 'Teoría Crítica' is the standard Spanish name for Critical Theory (Frankfurt School), and the article treats 'Pensamiento Crítico' and 'Enfoque Crítico' as established terms.",
+     "quote_es": "la primera concepción de la Teoría Crítica (TC) como una síntesis de teoría y filosofía",
+     "source": "Cebotarev, 'El Enfoque Crítico: una revisión de su historia, naturaleza y algunas aplicaciones', Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud 1(1), Manizales, 2003",
+     "source_kind": "peer-reviewed",
+     "url": "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1692-715X2003000100002",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Mexico, 2015 (history of concepts). Spanish scholarship states outright that 'crítica' (judgment) and 'crisis' (decisive moment) come from the same Greek verb, krinein, to separate, judge, decide. So the Spanish word carries both senses for the same historical reason the English one does.",
+     "quote_es": "a partir del verbo krinein devienen una crítica \"subjetiva\" y una crisis \"objetiva\"",
+     "source": "Brinkman-Clark, 'La crisis de la crítica…', Historia y Grafía 44, Universidad Iberoamericana, México, 2015",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-09272015000100047",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Mexico, 2017 (medicine). 'Crítico' in the sense 'grave, at a decisive point' is fully established: 'paciente crítico', 'estado crítico', 'medicina crítica' (the journal itself is called Medicina Crítica). A Bolivian article (Cuadernos Hospital de Clínicas 63(1), La Paz, 2022) is titled 'Los enfermos en estado crítico y las medidas de soporte vital…'.",
+     "quote_es": "la rama que se ocupa del paciente en estado crítico",
+     "source": "Aguilar García y Martínez Torres, 'La realidad de la Unidad de Cuidados Intensivos', Medicina Crítica 31(3), Colegio Mexicano de Medicina Crítica, 2017",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2448-89092017000300171",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Mexico, 2014 (education/linguistics). 'Periodo crítico' (critical period, a decisive window) is the standard Spanish term in language-acquisition research.",
+     "quote_es": "su hipótesis del periodo crítico que se presenta cuando los niños llegan a la pubertad",
+     "source": "Rueda Cataño y Wilburn Dieste, 'Enfoques teóricos para la adquisición de una segunda lengua…', Perfiles Educativos 36(143), UNAM, 2014",
+     "source_kind": "peer-reviewed",
+     "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-26982014000100018",
+     "opened_page": true
+    },
+    {
+     "word": "crítico",
+     "claim": "Spain (journal published in Granada), 2019 (nursing education). 'Pensamiento crítico' used as the settled term, with a history of the concept.",
+     "quote_es": "En el ámbito de la enfermería el pensamiento crítico es fundamental",
+     "source": "Estrada Zapata, 'Pensamiento crítico: concepto y su importancia en la educación en Enfermería', Index de Enfermería 28(4), Granada, 2019",
+     "source_kind": "peer-reviewed",
+     "url": "https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962019000300009",
+     "opened_page": true
+    }
+   ],
+   "could_not_find": [
+    "A scholarly source that itself compares 'metacognitivo' with 'metacognoscitivo' and says which is preferred. The only evidence I have on prevalence is the Dialnet count (3.277 vs 19) plus usage in the articles I read.",
+    "SciELO-wide hit counts: the SciELO search page returned no readable result count, so the prevalence figure rests on Dialnet alone.",
+    "Whether the Mexican 2017 article (Berridi) also uses 'metacognitivo' alongside 'metacognoscitivo': my second read of that page was blocked, so I only confirmed the three 'metacognoscitiv-' occurrences.",
+    "The hyphenated spelling 'no-normativo': I saw it only in a search snippet for a PhilArchive paper ('La metaética puesta a punto'); both that PDF and the CSIC copy returned a bot-check page, so I could not open or quote them. Every source I did open writes 'no normativo' as two words without a hyphen.",
+    "Any encyclopedia entry headed 'normativo / no normativo' as a defined pair. The SEFA encyclopedia uses the words in running text but has no entry of its own for the pair.",
+    "Any Spanish scholarly use of 'crítico' meaning 'inverts or prohibits the standard' (the project's MUST NOT sense). The senses I found are (1) judging/critique and (2) grave/decisive. The standards-document vocabulary (normativo / informativo, RFC 2119 keywords in Spanish) was not part of this sweep.",
+    "The Chilean 2026 article said in a search snippet to explain 'Krinein significa juzgar o discernir': the page opened but the sentence was not returned to me, so I did not quote it.",
+    "Dialnet phrase counts for 'no normativo' and 'pensamiento crítico': the phrase search appeared to ignore the quotation marks (it returned about 98.000 for every variant), so I discarded those numbers."
+   ],
+   "plain_summary": "All four Spanish words already exist in Spanish-language scholarship, in the forms proposed, across Spain, Mexico, Colombia, Argentina, Chile and Costa Rica. Nothing needs to be invented.\n\nMETACOGNITIVO: this is the standard form today. Papers from Chile (2008), Spain (2013) and Colombia (2008, 2011) all use 'metacognición' and 'metacognitivo' for Flavell's concept. The older variant 'metacognoscitivo' is real and still appears, mainly in Mexican writing (one 2017 UNAM-journal article uses it throughout), but it is rare: Dialnet returns 3.277 documents for 'metacognitivo' against 19 for 'metacognoscitivo'. Use METACOGNITIVO.\n\nNORMATIVO / NO NORMATIVO: 'no normativo' is an established partner word of 'normativo', written as two words with no hyphen in every source I opened. It appears as a fixed pair in law ('enunciados normativos y no normativos', Mexico/Argentina 2013), in psychology ('sucesos normativos y no normativos', Argentina 2006; Colombia 2002) and in a Spanish philosophy encyclopedia (2019, 2021). 'Ética normativa' is the standard name of a branch of ethics (Mexico 2013, Colombia 2023). One thing to know: in psychology the pair means 'expected' versus 'unexpected' life events, while in law and philosophy it means 'norm-stating' versus 'not norm-stating'. The second meaning is the one the project wants, and it is well attested.\n\nCRÍTICO: correct and standard in 'pensamiento crítico' and 'teoría crítica' (Costa Rica 2014, Colombia 2003, Spain 2019). It also carries the 'grave / decisive moment' sense just as English does: 'estado crítico', 'paciente crítico', 'periodo crítico' (Mexico 2014, 2017; Bolivia 2022). A Mexican history-of-concepts article (2015) explains why: 'crítica' and 'crisis' both descend from Greek krinein. I found no Spanish source using 'crítico' to mean 'inverts the standard'; that meaning is the project's own, in Spanish as in English.\n\nSpelling: CRÍTICO keeps its accent (on capitals too, as the sources print 'Teoría Crítica'); NO NORMATIVO is two words; METACOGNITIVO is one word, no hyphen.\n\nLimits: quotations are deliberately short fragments, each read on the opened page. Two philosophy PDFs (CSIC, PhilArchive) were blocked, so the hyphenated 'no-normativo' variant is unverified. Prevalence rests on one index (Dialnet). Some pages were read with a small fetch script kept at /private/tmp/claude-501/-Users-careybalboa-Downloads/c67bb5e1-a994-4097-8864-d188ab535978/scratchpad/f.py; nothing else was written or downloaded apart from two blocked PDF attempts that returned only a bot-check page."
+  }
+ ]
+}

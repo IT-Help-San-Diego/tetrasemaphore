@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 1401 1401" width="1401" height="1401"><rect width="1401" height="1401" fill="#1A1020"/><g id="glyph-placement" inkscape:label="4a glyph placement: C2 in outline triangles, half-turn pair, gold on Fix(C2); token STIX Two Math C 0.30 + two.ssty 0.21 at 201,-63 (subscript 0.70, dropped 210); k 0.74464 at (394.483,828.800) = 85 % of the largest fit, 1.86 mm to all three inner stroke edges; triangle as filed by Science (34b11a52df9b82aa, stroke 21.7); C 10.96 mm tall; thin line of the 2 0.527 mm (analytic cross-stroke width at the diagonal root); group scale 0.575388; Fix dot R 21.9 = 3.16 mm; Carey 2026-09-30/10-01: span A, triangles as filed, C2 at 85 %, upright C, Fix gold = the lettering champagne">
+<defs>
+<g id="tokC" transform="scale(1 -1)"><g transform="scale(0.300000)"><path d="M608 149C552 88 485 52 393 52C252 52 154 138 154 338C154 516 235 626 379 626C482 626 553 571 575 440H609V669H579C567 649 561 633 545 633C520 633 483 669 378 669C186 669 50 546 50 328C50 133 158 -11 364 -11C495 -11 578 47 632 128Z"/></g><g transform="translate(201.000 -63.000) scale(0.210000)"><path d="M489 174H454C428 109 416 87 359 87H229L151 83V90L276 211C387 320 457 393 457 491C457 604 372 671 253 671C150 671 79 614 46 521L73 508C110 573 156 600 228 600C306 600 352 549 352 478C352 365 299 305 187 193L45 49V0H455Z"/></g></g>
+<g id="tri"><polygon points="250.50,755.86 657.26,990.70 657.25,521.02" fill="none" stroke="#E25C60" stroke-width="21.7"/></g>
+<g id="kno"><g transform="translate(394.483 828.800) scale(0.74464)"><use xlink:href="#tokC"/></g></g>
+</defs>
+<circle id="glyph-fix" inkscape:label="4b Fix(C2): the centre point, gold" cx="700.5" cy="700.5" r="21.9" fill="#E8C46A"/>
+<g fill="#E25C60"><use xlink:href="#tri"/><use xlink:href="#tri" transform="rotate(180 700.5 700.5)"/></g>
+<g fill="#E25C60"><use xlink:href="#kno"/><use xlink:href="#kno" transform="rotate(180 700.5 700.5)"/></g>
+</g></svg>

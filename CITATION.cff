@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you reference the Tetrasemaphore, please cite this release. The Tetrasemaphore continues the Owl Semaphore Badge System (concept DOI 10.5281/zenodo.19473697), which stays published and citable under its own name."
+title: "The Tetrasemaphore"
+type: software
+version: "1.0.0"
+date-released: "2026-10-22"
+doi: "10.5281/zenodo.23575816"
+url: "https://tetrasemaphore.systems/"
+repository-code: "https://github.com/IT-Help-San-Diego/tetrasemaphore"
+license:
+  - "CC-BY-4.0"
+  - "Apache-2.0"
+authors:
+  - family-names: "Balboa"
+    given-names: "Carey James"
+    orcid: "https://orcid.org/0009-0000-5237-9065"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23575816"
+    description: "The Tetrasemaphore 1.0.0 version DOI on Zenodo."
+  - type: doi
+    value: "10.5281/zenodo.23575814"
+    description: "The Tetrasemaphore concept DOI on Zenodo (resolves to the latest version)."
+  - type: doi
+    value: "10.5281/zenodo.19473697"
+    description: "Predecessor work: Owl Semaphore Badge System concept DOI."
+  - type: doi
+    value: "10.5281/zenodo.21524422"
+    description: "Predecessor work: Owl Semaphore Badge System v3.0.1."
+keywords:
+  - "Tetrasemaphore"
+  - "Owl Semaphore"
+  - "visual epistemic notation"
+  - "Klein four-group"
+  - "V4"
+  - "group theory"
+  - "mathematical notation"
+  - "classification system"
+  - "epistemology"
+  - "metacognition"
+  - "accessibility"

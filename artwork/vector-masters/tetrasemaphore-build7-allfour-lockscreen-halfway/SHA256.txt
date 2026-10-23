@@ -1,0 +1,9 @@
+c102093af228eb72 dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway-MASTER.svg
+98539d7457697edb dose-01-iphone-17-pro-1206x2622-TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway.png
+c4723f982adf7bc6 proofs/TETRASEMAPHORE-ALL-FOUR-lockscreen-halfway-preview.png
+df04b2ee0c4c7cb6 work/build-lock-rev6.js
+0d8fc51b92cae941 work/verify-lock-rev6.py
+a12bd752de955a0c work/layout_report.json
+3b6c7a19bff0a5ad work/verify_report.json
+645fbdab25c36d57 work/spec-rev6/FINISH-TODAY-update-19.md
+5596f22fa2e22011 README.md

@@ -1,0 +1,236 @@
+=== 1. source checks on TetrasemaphoreAlgebra.lean ===
+  self-test: the eight source patterns fire on a probe and leave an honest line
+  alone; the scanner blanks a string literal's inside, does not blank a
+  declaration behind a doc comment, and keeps a character literal and a raw
+  string from hiding the line after them.
+  theorems declared: 118 ; '#print axioms' lines: 118
+OK: no sorry, no compiler-trusted decision, no axiom or opaque
+    declaration, no unsafe, no extern, no import, no set_option, no command
+    outside the allowlist at the start of a line and none of the refused
+    commands anywhere on one, and every theorem prints its own axioms.  The
+    same checks were run over a copy with the line breaks collapsed.
+
+=== 2. elaboration under every toolchain that is installed ===
+  [ok] Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
+          <elan root>/toolchains/leanprover--lean4---v4.33.0/bin/lean
+  [ok] Lean (version 4.32.2, arm64-apple-darwin24.6.0, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)
+          <elan root>/toolchains/leanprover--lean4---v4.32.2/bin/lean
+  [ok] Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+          <elan root>/toolchains/leanprover--lean4---v4.33.1/bin/lean
+
+=== 3. audit of the compiled module ===
+  (read from the .olean by a wrapper this script writes, with module
+   initializers off; not from anything the file printed about itself)
+  [4.33.0] constants audited: 671 ; theorems: 164 (source declares 118) ;
+         kernel re-added 642 declarations into a fresh Init environment, 0 rejected
+         names Lean calls internal: 345 auxiliaries of a listed declaration,
+         0 belonging to none ; private declarations: 0 ; declaration
+         heads outside this file's own set: 0 of 360 read
+  [4.32.2] constants audited: 671 ; theorems: 164 (source declares 118) ;
+         kernel re-added 642 declarations into a fresh Init environment, 0 rejected
+         names Lean calls internal: 345 auxiliaries of a listed declaration,
+         0 belonging to none ; private declarations: 0 ; declaration
+         heads outside this file's own set: 0 of 360 read
+  [4.33.1] constants audited: 671 ; theorems: 164 (source declares 118) ;
+         kernel re-added 642 declarations into a fresh Init environment, 0 rejected
+         names Lean calls internal: 345 auxiliaries of a listed declaration,
+         0 belonging to none ; private declarations: 0 ; declaration
+         heads outside this file's own set: 0 of 360 read
+  README names checked: 116 ; all resolve: yes
+
+=== 4. the file's own footprint, checked against the audit ===
+  the file's 118 printed axiom lines agree with the compiled module.
+
+=== 5. the statements listing ===
+  STATEMENTS.md matches the listing regenerated from the compiled module
+  (164 theorems, 135 definitions, 345 generated auxiliaries).
+=== 6. axiom footprint (from the compiled module) ===
+  Fml.allF.inj                                  no axioms
+  Fml.allF.injEq                                propext
+  Fml.allF.sizeOf_spec                          no axioms
+  Fml.andF.inj                                  no axioms
+  Fml.andF.injEq                                propext
+  Fml.andF.sizeOf_spec                          no axioms
+  Fml.brecOn.eq                                 no axioms
+  Fml.detT.inj                                  no axioms
+  Fml.detT.injEq                                propext
+  Fml.detT.sizeOf_spec                          no axioms
+  Fml.eqT.inj                                   no axioms
+  Fml.eqT.injEq                                 propext
+  Fml.eqT.sizeOf_spec                           no axioms
+  Fml.holds.eq_def                              no axioms
+  Fml.neg.inj                                   no axioms
+  Fml.neg.injEq                                 propext
+  Fml.neg.sizeOf_spec                           no axioms
+  Fml.orF.inj                                   no axioms
+  Fml.orF.injEq                                 propext
+  Fml.orF.sizeOf_spec                           no axioms
+  Move.C2.sizeOf_spec                           no axioms
+  Move.I.sizeOf_spec                            no axioms
+  Move.act_C2                                   no axioms
+  Move.act_I                                    no axioms
+  Move.act_mul                                  propext
+  Move.act_sh                                   no axioms
+  Move.act_sv                                   no axioms
+  Move.ofNat_ctorIdx                            no axioms
+  Move.sh.sizeOf_spec                           no axioms
+  Move.sv.sizeOf_spec                           no axioms
+  MoveSet.mk.inj                                no axioms
+  MoveSet.mk.injEq                              propext
+  MoveSet.mk.sizeOf_spec                        no axioms
+  R90_left_inv                                  propext
+  R90_right_inv                                 propext
+  S0_MoveSet_ext                                no axioms
+  S0_MoveSet_ext_iff                            no axioms
+  S0_allSubs_exactly_once                       no axioms
+  S0_allSubs_nodup                              no axioms
+  S0_invariant_iff_eq                           propext,Quot.sound
+  S0_subgroup_has_inverses                      no axioms
+  S1_five_iff_subgroup                          propext
+  S1_flag_true                                  propext,Classical.choice,Quot.sound
+  S1_no_three_element_symmetry                  propext
+  S1_one_of_five                                propext,Classical.choice,Quot.sound
+  S1_symSet_closed                              propext,Classical.choice,Quot.sound
+  S1_symSet_isSubgroup                          propext,Classical.choice,Quot.sound
+  S1_symSet_mem                                 propext,Classical.choice,Quot.sound
+  S2_invariant_ofList                           propext,Quot.sound
+  S2_markAll_invariant                          propext,Quot.sound
+  S2_mark_C2_exact                              propext,Quot.sound
+  S2_mark_C2_exact_via_general                  propext,Quot.sound
+  S2_mark_eq_build                              propext,Quot.sound
+  S2_mark_invariant_self                        propext,Quot.sound
+  S2_mark_sh_exact                              propext,Quot.sound
+  S2_mark_sh_exact_via_general                  propext,Quot.sound
+  S2_mark_sv_exact                              propext,Quot.sound
+  S2_mark_sv_exact_via_general                  propext,Quot.sound
+  S2_mem_mark                                   propext,Quot.sound
+  S2_not_invariant_of_region                    no axioms
+  S2_quadrant_mark_exact                        propext,Quot.sound
+  S2_realizes_stab                              propext,Quot.sound
+  S2_seed_asymmetric                            propext,Quot.sound
+  S2_seed_in_quadrant                           no axioms
+  S2_seed_off_axes                              no axioms
+  S2_seed_subset                                propext,Quot.sound
+  S2_stab_is_symSet                             propext,Classical.choice,Quot.sound
+  S3_fml_swapVH                                 propext,Quot.sound
+  S3_language_separates_I_from_sv               no axioms
+  S3_language_separates_turn_from_mirror        no axioms
+  S3_no_formula_separates_mirrors               propext,Quot.sound
+  S3_swapVC_involution                          no axioms
+  S3_tm_swapVH                                  propext
+  S4_act_injective                              no axioms
+  S4_act_matrix                                 propext,Quot.sound
+  S4_classification                             propext,Classical.choice,Quot.sound
+  S4_comp_act                                   propext
+  S4_comp_assoc                                 no axioms
+  S4_comp_id                                    no axioms
+  S4_comp_inv                                   no axioms
+  S4_corner_maps                                propext,Classical.choice,Quot.sound
+  S4_corner_onto                                propext,Classical.choice,Quot.sound
+  S4_eight_are_all                              propext,Classical.choice,Quot.sound
+  S4_entries                                    propext,Classical.choice,Quot.sound
+  S4_id_comp                                    no axioms
+  S4_inv_comp                                   no axioms
+  S4_matAct_add                                 propext,Quot.sound
+  S4_matAct_smul                                propext
+  S4_unique_of_act                              no axioms
+  Sq.act_inv                                    propext
+  Sq.id.sizeOf_spec                             no axioms
+  Sq.mirA.sizeOf_spec                           no axioms
+  Sq.mirD.sizeOf_spec                           no axioms
+  Sq.mirH.sizeOf_spec                           no axioms
+  Sq.mirV.sizeOf_spec                           no axioms
+  Sq.ofMove_act                                 no axioms
+  Sq.ofNat_ctorIdx                              no axioms
+  Sq.rot180.sizeOf_spec                         no axioms
+  Sq.rot270.sizeOf_spec                         no axioms
+  Sq.rot90.sizeOf_spec                          no axioms
+  T10_det_table                                 no axioms
+  T10_stab_I                                    no axioms
+  T10_stab_distinct                             no axioms
+  T10_stab_is_pair                              no axioms
+  T10_stab_subgroup                             no axioms
+  T10_subI_unused                               no axioms
+  T1_all_distinct                               no axioms
+  T1_all_length                                 no axioms
+  T1_mem_all                                    propext
+  T1_mul_assoc                                  no axioms
+  T1_mul_comm                                   no axioms
+  T1_mul_one                                    no axioms
+  T1_one_mul                                    no axioms
+  T1_self_inverse                               no axioms
+  T2_faithful                                   no axioms
+  T2_probe_injective                            no axioms
+  T3_act_matrix                                 propext,Quot.sound
+  T3_det_eq_ad_sub_bc                           no axioms
+  T3_det_kernel                                 no axioms
+  T3_det_mirrors                                no axioms
+  T3_det_mul                                    no axioms
+  T4_fix_C2                                     propext,Classical.choice,Quot.sound
+  T4_fix_I                                      no axioms
+  T4_fix_sh                                     propext,Classical.choice,Quot.sound
+  T4_fix_sv                                     propext,Classical.choice,Quot.sound
+  T4_mirrors_differ                             no axioms
+  T5_C2_commutes                                no axioms
+  T5_C2_conj_fixed                              propext
+  T5_C2_never_sh                                propext
+  T5_C2_never_sv                                propext
+  T5_R90_conj_C2                                propext
+  T5_R90_conj_sh                                propext
+  T5_eight_distinct                             no axioms
+  T5_rot270_eq_R90inv                           no axioms
+  T5_rot90_eq_R90                               no axioms
+  T6_swapVC_breaks_det                          no axioms
+  T6_swapVC_hom                                 no axioms
+  T6_swapVH_det                                 no axioms
+  T6_swapVH_hom                                 no axioms
+  T6_swapVH_involution                          no axioms
+  T6_three_interchangeable                      no axioms
+  T7_both_mirrors                               propext
+  T7_invariant_I                                no axioms
+  T7_invariant_mul                              propext
+  T7_mirror_and_turn                            propext
+  T7_turn_and_mirror                            propext
+  T8_enum_complete                              propext
+  T8_five_are                                   no axioms
+  T8_five_count                                 no axioms
+  T8_five_list                                  no axioms
+  T8_isSubgroup_iff                             no axioms
+  T8_no_three_element                           no axioms
+  T8_sixteen                                    no axioms
+  T9_build                                      propext
+  T9_build_any                                  propext
+  Tm.brecOn.eq                                  no axioms
+  Tm.eval.eq_def                                no axioms
+  Tm.mulT.inj                                   no axioms
+  Tm.mulT.injEq                                 propext
+  Tm.mulT.sizeOf_spec                           no axioms
+  Tm.one.sizeOf_spec                            no axioms
+  Tm.var.inj                                    no axioms
+  Tm.var.injEq                                  propext
+  Tm.var.sizeOf_spec                            no axioms
+
+=== 7. summary ===
+  theorems depending on no axioms at all : 61
+  theorems depending on standard axioms  : 57
+  theorems audited in the compiled module: 118  (source declares: 118)
+  (the standard three are propext, Classical.choice and Quot.sound, which
+   come in through simp, omega and the classical symmetry set in S1; none
+   of them is specific to this file)
+
+  toolchains run (3 of 3 listed, source: listed):
+    Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
+    Lean (version 4.32.2, arm64-apple-darwin24.6.0, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release)
+    Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+  (the version, commit and platform strings above are this machine's.  On
+   another platform the target triple differs; on another build of the same
+   release the commit does not.  Compare the counts and the verdict, not
+   those lines.)
+
+OK: TetrasemaphoreAlgebra.lean checks green under all 3 listed toolchains, with no sorry,
+    no added axiom, no command outside the allowlist and none of the
+    refused commands anywhere on a line, no declaration hidden from the
+    listing under an internal name, no OfNat instance of its own, every
+    declaration re-checked by the kernel in a fresh Init-only
+    environment, and a footprint read from the compiled module rather
+    than from the file's own output.

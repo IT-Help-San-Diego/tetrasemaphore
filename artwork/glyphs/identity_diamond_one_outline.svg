@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 1401 1401" width="1401" height="1401"><rect width="1401" height="1401" fill="#1A1020"/><g id="glyph-placement" inkscape:label="4a glyph placement: I as the diamond — ONE outline through the four vertices plus the shared line (M L T R B Z M L R; L 465.65,700.5  T 700.5,293.73  R 935.35,700.5  B 700.5,1107.27), stroke 21.7, sharp (miter) joins, so each side vertex is a single point; an upright I in each half (the lower one the mirror image of the upper); STIX Two Math I 0.30, k 1.09176 at (642.200,663.868); Fix(I) is every point so the whole glyph carries the Fix gold; Carey design (Sep 17: I twice), outline per Science build sheet 2026-10-05 section 3">
+<defs>
+<g id="tokI" transform="scale(1 -1)"><g transform="scale(0.300000)"><path d="M133 131C133 45 124 30 34 30V0H322V30C233 30 224 45 224 131V525C224 603 227 627 322 627V657H34V627C129 627 133 603 133 525Z"/></g></g>
+<g id="outline"><path d="M465.65 700.5L700.5 293.73L935.35 700.5L700.5 1107.27ZM465.65 700.5L935.35 700.5" fill="none" stroke="#C7B469" stroke-width="21.7" stroke-linejoin="miter"/></g>
+<g id="kno"><g transform="translate(642.200 663.868) scale(1.09176)"><use xlink:href="#tokI"/></g></g>
+</defs>
+<g fill="#C7B469"><use xlink:href="#outline"/><use xlink:href="#kno"/><use xlink:href="#kno" transform="translate(0 1401) scale(1 -1)"/></g>
+</g></svg>

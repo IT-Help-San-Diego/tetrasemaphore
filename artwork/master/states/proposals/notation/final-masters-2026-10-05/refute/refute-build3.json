@@ -1,0 +1,1519 @@
+{
+ "header": {
+  "what": "Independent refuters on BUILD 3 of the Tetrasemaphore masters and the owl final four (workflow wf_549f5ab6-fa3, 2026-10-05): five refuters, each with its own lens and its own measurement code (stamp; build 3 against build 2; Spanish; owl set; reproducibility and records), a second agent re-measuring every finding above note level, then a completeness critic. 11 agents, 0 errors.",
+  "examined": "The FIRST PASS of build 3: notation d5532ebfafc62f21 / bfb5652ef417c38b / f63747e84d9a6872 / a8fc0bf8802a0e36 (NORMATIVE / NON-NORMATIVE / METACOGNITIVE / CRITICAL), owl f5df2248f73935a1 / 47e876c797c38e4c / 7fad8d5c590f8a65 / ad2cf6051c7357d1, bases c7a3aed8889c41d2 / 49eb2a8b2ba9290b / bde8beb204270023 / 36c4e05cdc90d05b. Copies in build3-first-pass-as-refuted/.",
+  "delivered": "After the refuters, two hidden layer labels were corrected in the generator and the set rebuilt: notation 43d28fb463bbfcd3 / bfe8267ac6992f46 / 760b8058524cbc6f / bda63a306c6450dc, owl 9540552ed84e00cf / 8b6c4eee9168fb8c / c616c0375fddfd8e / 568023e7ee7b09ee, bases d947161c314cff34 / 9126ca72859045d0 / e11647a0b8c1b843 / d52c54a4312f00ae. labels-only-diff.py proves the delivered SVGs equal the examined ones once layer-label text is blanked, and that every coin PNG is byte-identical; so the measurements below hold for the delivered files.",
+  "totals": {
+   "checks": 122,
+   "checks_passed": 112,
+   "findings_by_severity": {
+    "low": 11,
+    "note": 21,
+    "medium": 1
+   },
+   "findings_re_measured": 12,
+   "findings_reproduced": 12
+  },
+  "verdicts": {
+   "stamp": "not_refuted",
+   "diff": "not_refuted",
+   "spanish": "partly_refuted",
+   "owl": "not_refuted",
+   "repro": "partly_refuted"
+  },
+  "outcome": "No wrong artwork and no wrong word in any deliverable. Findings were about records and wording; what was done about each is in README.md under \"What the refuters found\"."
+ },
+ "results": [
+  {
+   "key": "stamp",
+   "refuter": {
+    "verdict": "not_refuted",
+    "checks": [
+     {
+      "claim": "1. Floor, seams and plate carry the field tint; nothing else in the plaque layer has a filter, gradient, clip-path, stroke or opacity (rails subgroup excepted)",
+      "method": "Own XML audit (audit_struct.py) of all 8 masters, both languages: child list, fills, forbidden attributes, duplicate ids, dangling or unused defs",
+      "result": "16 of 16 plaque layers hold exactly floor, seams, plate, legend-rails. All three fills equal the coin tint (#181403 / #001817 / #17121D / #1F100E). 0 forbidden attributes, 0 duplicate ids, 0 dangling refs, 0 unused defs. Field circle fill equals the tint on all 8.",
+      "pass": true
+     },
+     {
+      "claim": "1. The rails subgroup is the ring's own finish, clipped to the window sector",
+      "method": "Compared the window copies of the grain filter, band filter and three gradients with the main ring's (ids normalised); compared window geometry with the cut-ring files in finish/; rendered the clip path flat",
+      "result": "Filters and gradients identical to the main ring's. Geometry equals finish/proposals/seam-fix/...LEGEND-keys22-1 (4-key) and keys21-2 (6-key). Clip covers r 306.0-390.0 and runs 1.5 deg past each window end (58.5-121.5 and 43.5-136.5 deg). en and es rails identical apart from ids.",
+      "pass": true
+     },
+     {
+      "claim": "2. Each legend-text layer holds only flat letter outlines in #DEC875",
+      "method": "XML audit; matched each outline's extents to DejaVu Sans Bold 2.34 with fontTools (fontcheck.py)",
+      "result": "Each text layer is one group, fill #DEC875, with 9/9, 13/11, 13/13, 8/7 paths (en/es) carrying only transform and d. No filter, stroke, opacity or clip. Every outline matches its font glyph to 0.000 units; words read NORMATIVE, NORMATIVO, NON-NORMATIVE, INFORMATIVO, METACOGNITIVE, METACOGNITIVO, CRITICAL, CRÍTICO.",
+      "pass": true
+     },
+     {
+      "claim": "3. Between the rails and away from letters the window is exactly the field tint (resvg, 2460 px)",
+      "method": "Own resvg renders of all 8 masters, en and es, letters hidden and shown; zone = channel inside the clip sector where a flat render of the cut ring has zero coverage (floor.py)",
+      "result": "6-key windows: 0 of 295,064 px off tint. 4-key windows: 1 of 196,677 px off by 1 level; with the 1.5 deg end margins included, 3 px off, max 11 levels, all single pixels on the outer rail's edge at 59.0-60.0 deg. Alpha 255 everywhere. Same numbers for notation and owl, en and es.",
+      "pass": true
+     },
+     {
+      "claim": "3. Same at the 1214 px print size and at 4920 px (resvg)",
+      "method": "Own renders at 1214 and 4920 px, same zone test (floor1214.py, a4920.py)",
+      "result": "1214 px: 0 px off tint on every coin and language. 4920 px: 0 px off in the 6-key windows (about 0.9 M px each); 9 px off, max 11 levels, in the 4-key windows (about 0.6 M px each).",
+      "pass": true
+     },
+     {
+      "claim": "3. Same in the second renderer (Inkscape 1.4.4)",
+      "method": "Inkscape exports of every whole window at 6 px/unit and of all 32 window ends at 12 px/unit, letters hidden and shown, both editions and languages (inkwin.py, inkfloor.py)",
+      "result": "Open plate: at most 42 of 814,359 px differ, by 1 level; 0 px differ by more than 1. Ends: 332 of 17.0 M px differ, max 1 level.",
+      "pass": true
+     },
+     {
+      "claim": "3. No shadow or bevel in the rendered letters",
+      "method": "Compared every plate pixel with tint + a x (#DEC875 - tint), a from a letters-only render; checked letter cores",
+      "result": "resvg 2460 and 1214: max error 1.0 level, 0 px over 2; letter cores exactly #DEC875 (0 of 28,416-64,675 px off). Inkscape: max error 1.0, cores exact. No pixel darker than the tint beside any letter.",
+      "pass": true
+     },
+     {
+      "claim": "3. No sliver of a hidden meander key in the window, at its ends or along the rails",
+      "method": "Rendered a reference of the cut ring alone on the field (uncut ring, floor, seams and plate removed) and compared it with the master inside the clip sector; compared flat cut and uncut geometry at 100 px/unit at all 8 window corners (compare.py, fillet.py)",
+      "result": "Open area: 0 px differ (6-key); 3 px, max 11 levels (4-key). Rail-edge pixels facing the word: max 1 level at 2460 and 1214 px. Uncut-only ink outside the floor: at most 0.004 square units (0.00006 mm2), under 0.001 units thick; no sliver.",
+      "pass": true
+     },
+     {
+      "claim": "3. The rails beside the word look like the rails everywhere else",
+      "method": "Compared window rails with the cut-ring reference and with the legend-hidden render, by distance from removed keys; tested along the clip boundary; measured the edge profile (rails.py, clipedge.py, fringe.py)",
+      "result": "Rail body equals the cut ring alone to 2 levels (2460 px), 9 (1214 px). Six units or more from a removed key it equals the uncut ring's rail to 2 levels. Along the clip boundary the body differs by at most 6 levels (2460) or 16 (1214): no seam through the end walls. The rails' far edges and everything in the 1.5 deg end margins are drawn twice: that one-pixel fringe is about 20 levels brighter on average, max 40 at 2460 px and 56 at 1214 px. Not visible at normal size.",
+      "pass": true
+     },
+     {
+      "claim": "3. Close-ups of both ends of every window, English and Spanish, both renderers",
+      "method": "Viewed Inkscape close-ups at 12 px/unit of all 32 ends (8 masters x 2 languages x 2 ends) and resvg 4920 px crops of 16 ends (notation en, owl es)",
+      "result": "No brown, no shadow, no lighter patch, no hairline in any tile viewed. Each window ends at the ring's own rounded wall; the wall face sits 0.92-0.95 deg (about 0.70-0.72 mm) beyond the nominal window end.",
+      "pass": true
+     },
+     {
+      "claim": "4. With all four legend layers hidden the whole 24-key meander shows, with no trace of the stamp",
+      "method": "Rendered legend-hidden against a copy with the legend groups deleted (resvg whole coin, Inkscape windows); sampled the flat uncut geometry around circles; rotated it in 15 deg steps; byte-compared the ring groups with the sealed uncut ring file (keys24.py)",
+      "result": "Hidden vs deleted: 0 differing px in resvg (4 notation coins, whole image) and in Inkscape (4 windows). Owl hidden equals notation hidden in the ring band: 0 px. Ink runs per turn 24, 72, 96, 72, 24 at r 325-370. Self-overlap under each of the 23 steps: 0.9956-0.9971 (cut ring: 0.89-0.90). Geometry and finish groups are byte-identical to finish/proposals/uncut/...UNCUT-seamfix on all 8 masters.",
+      "pass": true
+     },
+     {
+      "claim": "5. Build 3 did what section 15 asks, and anything beyond it is stated in the notation README",
+      "method": "Element-level and byte-level diff of build 2 against build 3, all four notation coins (diff23.py, diff23b.py)",
+      "result": "Per language: plate and seams fill #221B12 -> tint; removed 3 clipped edge strokes, legend-cast-shadow, legend-bevel, 5 filters, 2 gradients, 2 clip paths. Floor, plate and seam path data, the whole rails subtree and every letter outline are build-2 bytes, except INFORMATIVO replacing NO NORMATIVO. Outside the four legend layers the files are byte-identical. The README states the gradients and clip paths. It does not mention that the four layer labels were reworded.",
+      "pass": true
+     },
+     {
+      "claim": "Owl edition carries the same stamp",
+      "method": "Byte comparison of the four legend layers, owl against notation; pixel comparison of renders in the ring band r 292-403",
+      "result": "Legend layers byte-identical on all four states. Renders identical in the ring band (0 differing px; en, letters hidden, legend hidden).",
+      "pass": true
+     },
+     {
+      "claim": "Build 3 changes nothing outside the plate",
+      "method": "Pixel diff of my 2460 px renders of build 3 and build 2 (English)",
+      "result": "0 differing px outside the floor mask and 0 on the rails' full-ink pixels, on all four coins. All change is inside the floor.",
+      "pass": true
+     },
+     {
+      "claim": "Shipped PNG exports show the same stamp",
+      "method": "Pixel-compared shipped 2460 and 1214 px PNGs with my renders; ran the open-plate tint test on all 80 shipped PNGs (5 sizes, 2 languages, 2 editions)",
+      "result": "32 of 32 compared files identical to my renders. Across 80 files: 40 of 5,345,000 open-plate px off tint, 0-3 per file, max 11 levels, alpha 255.",
+      "pass": true
+     },
+     {
+      "claim": "README: letters 11.04-11.09 to 1 on the plate",
+      "method": "WCAG contrast of #DEC875 on each tint",
+      "result": "11.07, 11.04, 11.07, 11.09 to 1 (10.23 on the old brown).",
+      "pass": true
+     },
+     {
+      "claim": "Files match their records",
+      "method": "sha256 of every path listed in both MANIFEST.json files",
+      "result": "Notation: 95 of 95 match. Owl: 70 of 70 match. README sha16s match the 8 masters.",
+      "pass": true
+     },
+     {
+      "claim": "README spacing rule: 4.812 deg of plate each side of the word; NORMATIVO 2.76 deg; tracking values",
+      "method": "Rebuilt each word's advance box from font advances and the letters' positions",
+      "result": "Tracked advance box leaves 4.812-4.814 deg each side for six words, 3.417 deg for NORMATIVE and 2.758 deg for NORMATIVO. Letter steps match the labelled tracking (1.0, 1.0, 1.0526, 1.2796, 1.1, 1.0805, 1.2578, 1.4141). The rule holds for the advance box, not for the ink.",
+      "pass": true
+     },
+     {
+      "claim": "6. Clearance from the letters to each rail, every word",
+      "method": "Vector measurement from the letter outlines, densely sampled (letters_vec.py); rails at r 317.078 and 377.469; channel 7.57 mm wide",
+      "result": "Inner / outer rail, mm: NORMATIVE 1.52 / 1.51; NORMATIVO 1.52 / 1.51; NON-NORMATIVE 1.52 / 1.51; INFORMATIVO 1.52 / 1.51; METACOGNITIVE 1.52 / 1.51; METACOGNITIVO 1.52 / 1.51; CRITICAL 1.53 / 1.51; CRÍTICO 0.41 / 1.51 (the accent on Í; its other letters 1.52-1.60). No letter touches or overlaps ring ink. Owl identical.",
+      "pass": true
+     },
+     {
+      "claim": "6. Empty plate at each end of the word; are left and right equal?",
+      "method": "Same vector measurement, along the mid-radius arc (0.7597 mm per degree); wall faces located on a flat render of the cut ring (walls.py)",
+      "result": "Letter to visible wall face, left / right, mm: NORMATIVE 3.76 / 3.71; NORMATIVO 3.26 / 3.09; NON-NORMATIVE 4.96 / 4.88; INFORMATIVO 5.21 / 5.36; METACOGNITIVE 5.10 / 4.98; METACOGNITIVO 5.04 / 4.86; CRITICAL 5.24 / 5.06; CRÍTICO 5.58 / 5.71. To the nominal window end subtract 0.72 (left) and 0.70 (right). Not equal: the two ends differ by 0.05 to 0.19 mm.",
+      "pass": false
+     }
+    ],
+    "findings": [
+     {
+      "severity": "low",
+      "title": "Word ends are equal by rule, not by ink",
+      "detail": "Each word is centred on its tracked advance box, so the visible empty plate differs left to right by 0.05-0.19 mm. The README's '4.812 deg of plate left each side of the word' is true only for that box; the ink leaves more, and unequal amounts. About 2-4 px at 2460 px; hard to see, but not equal.",
+      "evidence": "Left minus right, letter to wall face, mm: NORMATIVE +0.05, NORMATIVO +0.17, NON-NORMATIVE +0.07, INFORMATIVO -0.15, METACOGNITIVE +0.12, METACOGNITIVO +0.19, CRITICAL +0.18, CRÍTICO -0.12. Advance-box gaps 4.812-4.814 deg both sides (letters_vec.json, fontcheck.py).",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820.svg",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "CRÍTICO's accent sits 0.41 mm from the inner rail",
+      "detail": "Every other letter in the set clears the rails by 1.51-1.60 mm. The accent on Í clears the inner rail by 0.41 mm (4.9 px at 1214 px, 9.9 px at 2460 px). It does not touch, but it is the tightest spot in any stamp and is under the project's 0.60 mm print floor for thin features. Same outline as build 2. Both editions.",
+      "evidence": "Vector measurement: Í ink reaches r 320.38 against the rail edge at r 317.078 = 0.414 mm (letters_vec.json). Visible in view/words-CRITICAL-2460.png and view/words-CRITICAL-1214.png.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg",
+       "master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-CRITICAL-owl-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Rail edges in the window sector are drawn twice",
+      "detail": "The window rails are drawn over the uncut ring's identical rails. Where no floor lies between them (the rails' far edges across the whole clip sector, and every edge in the 1.5 deg margin at each end) the antialiased edge pixel is composited twice and comes out brighter than on the rest of the ring. One pixel wide, about 0.17 px of extra edge; rail bodies are identical. Inherited from build 2 (rails bytes unchanged). Not visible at normal size.",
+      "evidence": "Fringe pixel against the legend-hidden render: mean +20 levels, max 34-40 at 2460 px; against the cut ring alone: max 52 at 2460 px, 56 at 1214 px. Rail body: max 2 levels. Edge profile at r 307.5 and 387.0 in fringe.py; crop view/fringe-outer-1214.png.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-METACOGNITIVE-notation-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Letter spacing is unkerned, so some pairs sit much closer than others",
+      "detail": "Spacing comes from advance widths times tracking, with no kerning. In NORMATIVE the pairs T-I, I-V, V-E are about half as far apart as N-O, O-R. Unchanged from build 2; a matter of taste, but a careful eye will see it at 2460 px.",
+      "evidence": "Closest distance between neighbouring letters, mm: NORMATIVE 0.37-1.16 (V-E 0.37, I-V 0.41, T-I 0.43, N-O 0.83); NORMATIVO 0.41-1.16; NON-NORMATIVE 0.58-1.37; METACOGNITIVE 0.72-1.57; METACOGNITIVO 0.64-1.49; INFORMATIVO 1.27-2.49; CRITICAL 1.20-1.94; CRÍTICO 1.67-2.62 (letters_gap.py).",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Two small wording gaps in the record",
+      "detail": "(a) The README lists what build 3 removed but not that the inkscape:label text of all four legend layers was rewritten (metadata only, no effect on rendering). (b) The rails label calls its source 'the approved cut ring MASTER-meander-v3.1C-finalA-LEGEND-keys..-slot820.svg'; the geometry equals the seam-fix copy in finish/proposals/seam-fix/, not the file of that name in finish/. The MANIFEST lists the seam-fix path, so the record is right and the label is loose. Both inherited or cosmetic.",
+      "evidence": "diff23b.py: 'label changed: True' on 16 of 16 layers. cutring_src2.py: window geometry == seam-fix cut ring True; == finish/ root cut ring False.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-slot820.svg",
+       "finish/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Four-key windows: three stray edge pixels",
+      "detail": "On NORMATIVE and CRITICAL (both editions, both languages) three single pixels on the outer rail's inner edge at 59.0-60.0 deg are up to 11 levels off the tint at 2460 px (9 px at 4920 px, 1 px at 512 and 1298 px, none at 1024 or 1214 px). They come from a sub-0.001-unit difference between the cut and uncut rail paths, not from a hidden key. Invisible.",
+      "evidence": "locate.py: px (1812,2200), (1807,2203), (1795,2210); uncut coverage 16/255 where the cut ring has 0. fillet.py at 100 px/unit: uncut-only area 0.0039 square units.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820.svg",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg"
+      ]
+     }
+    ],
+    "not_tested": [
+     "Other renderers (Chrome, Safari, CairoSVG, librsvg): only resvg-js 2.6.2 and Inkscape 1.4.4 were used.",
+     "Print on cloth: whether the 0.41 mm gap above CRÍTICO's accent or the 0.37 mm letter gaps in NORMATIVE survive DTG printing.",
+     "Inkscape whole-coin renders at 2460 px: Inkscape was used for whole windows at 6 px/unit and window ends at 12 px/unit only.",
+     "resvg 4920 px close-up sheets for notation-es and owl-en were pixel-checked but not looked at; notation-en and owl-es were viewed.",
+     "The lane's own check scripts were not run; its figure of 169,116 / 258,114 plate pixels with none differing was not reproduced (my zone is larger: 196,677 / 295,064 px).",
+     "The classic/ owl packaging, the sealed approved coins, the scan cards, the centre marks and symmetry marks, and sections 5, 6, 8, 9 and 14 beyond the stamp: outside this lens.",
+     "Whether the seam-fix cut ring itself carries Carey's approval: a provenance question, not measurable from the files."
+    ],
+    "scratch_files": [
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/audit_struct.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/audit_struct.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/letters_vec.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/letters_vec.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/letters_gap.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/fontcheck.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/floor.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/floor.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/floor1214.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/a4920.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/compare.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/compare.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/inkfloor.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/inkwin.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/shipped_all.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/rails.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/clipedge.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/fringe.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/fillet.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/walls.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/keys24.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/diff23.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/diff23b.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/cutring_src2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/ink-sheet-notation-en.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/ink-sheet-notation-es.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/ink-sheet-owl-en.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/ink-sheet-owl-es.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/resvg-sheet-notation-en.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/resvg-sheet-owl-es.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/words-CRITICAL-2460.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/words-CRITICAL-1214.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/words-NORMATIVE-2460.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/fringe-outer-1214.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/view/none-windows.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/svg",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/stamp/ink"
+    ]
+   },
+   "verify": {
+    "results": [
+     {
+      "title": "Word ends are equal by rule, not by ink",
+      "reproduced": true,
+      "measured": "Own vector measurement (letter outlines flattened, font advances from 05-DejaVuSans-Bold.ttf), cross-checked on my own resvg renders at 2460 px (all 8 notation renders pixel-identical to the shipped PNGs). Owl edition gives identical numbers.\n\nAdvance box, plate left each side (deg, L/R): NORMATIVE 3.417/3.417, NORMATIVO 2.758/2.758, NON-NORMATIVE 4.812/4.812, INFORMATIVO 4.813/4.814, METACOGNITIVE 4.812/4.812, METACOGNITIVO 4.813/4.813, CRITICAL 4.812/4.812, CRITICO 4.813/4.813. Equal left to right on every word.\n\nInk to plate edge (deg, L/R): NORMATIVE 4.007/3.973, NORMATIVO 3.348/3.151, NON-NORMATIVE 5.576/5.511, INFORMATIVO 5.909/6.145, METACOGNITIVE 5.764/5.638, METACOGNITIVO 5.688/5.476, CRITICAL 5.950/5.746, CRITICO 6.403/6.595. More than the box, and unequal.\n\nLeft minus right, letter ink to gold wall face, angle taken at mid-radius (mm; vector / render): NORMATIVE +0.043/+0.046, NORMATIVO +0.167/+0.179, NON-NORMATIVE +0.067/+0.068, INFORMATIVO -0.162/-0.160, METACOGNITIVE +0.113/+0.112, METACOGNITIVO +0.178/+0.187, CRITICAL +0.172/+0.175, CRITICO -0.129/-0.131. That is 1.0-4.3 px at 2460 px. All eight agree with the first agent within 0.012 mm.\n\nSame thing as true nearest distance from the end letter to the gold wall (mm, L / R / L-R): NORMATIVE 3.578/3.530/+0.048, NORMATIVO 3.103/3.075/+0.028, NON-NORMATIVE 4.711/4.629/+0.083, INFORMATIVO 4.949/5.316/-0.367, METACOGNITIVE 4.848/4.715/+0.133, METACOGNITIVO 4.793/4.818/-0.025, CRITICAL 5.192/5.213/-0.021, CRITICO 5.530/5.652/-0.122.",
+      "comment": "Finding stands: the rule equalises the advance box, the ink ends are unequal. Three corrections.\n1) The evidence line 'advance-box gaps 4.812-4.814 deg both sides' holds for six words only. NORMATIVE is 3.417 deg and NORMATIVO 2.758 deg each side (tracking floor 1.0). The README states NORMATIVO's 2.76 but not NORMATIVE's 3.42.\n2) The first agent's mm figures depend on its measure (extreme ink angle x mid-radius). By true nearest distance the spread is 0.02-0.37 mm, not 0.05-0.19: INFORMATIVO is the outlier at -0.37 mm (8.8 px at 2460; the straight I sits closer to its wall than the round O does), while METACOGNITIVO, CRITICAL and NORMATIVO come out within 0.03 mm.\n3) The visible wall is not the plate edge (60/120 or 45/135 deg) but the gold key stems beyond it: 59.079 and 120.944 deg, 44.079 and 135.944 deg (render: 59.10/120.92, 44.10/135.93). The walls themselves are 0.022 deg (0.017 mm) off symmetric; that is included above.\nScratch: /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-stamp (measure.py, measure2.py, eucl.py, raster.py; measure.json, measure2.json, raster.json)."
+     },
+     {
+      "title": "CRÍTICO's accent sits 0.41 mm from the inner rail",
+      "reproduced": true,
+      "measured": "Vector: the accent of the I-acute reaches r 320.3819 against the rail edge at r 317.078 = 3.304 units = 0.4141 mm (4.89 px at 1214, 9.91 px at 2460). On my resvg renders the dark gap between rail and accent is 5.1 px at 1214, 10.3 px at 2460, 20.1 px at 4920 (0.42-0.43 mm), with pure plate colour in the gap: it does not touch.\n\nEvery other letter, inner and outer rail: 1.509-1.619 mm (hyphen 3.82 inner / 2.89 outer). Per-word minimum 1.509-1.512 mm outer, 1.523-1.526 mm inner.\n\nThe I-acute outline and placement are identical in build 2 (superseded-build-2) and in the owl master (path data plus transform compared for all 8 words: owl equals notation on all; build 2 equals build 3 on all except INFORMATIVO, which replaced NO NORMATIVO).\n\nOther tight gaps I measured in the stamps (letter to letter, mm): NORMATIVE V-E 0.365, I-V 0.414, T-I 0.427; NORMATIVO I-V 0.414, T-I 0.427; accent to its own stem inside the I-acute 0.416.",
+      "comment": "The measurement stands; two of its framing claims do not.\n1) It is the tightest letter-to-rail clearance, but not 'the tightest spot in any stamp'. NORMATIVE's V-E gap is 0.365 mm (8.7 px at 2460), and I-V on NORMATIVE and NORMATIVO is 0.414 mm, the same as the accent gap. Those are the approved track-1.0 legends.\n2) The 0.60 mm floor in the build sheet (section 9, check 5) is defined for stroke bridges: ink whose loss would split a letter. It says nothing about gaps. The sheet's only requirement here is that 'the plaque has to fit its accent' (section 8), which it does. So 'under the 0.60 mm floor' compares a gap to a rule written for strokes.\n3) The first agent's range '1.51-1.60 mm' is 1.51-1.62 mm by my measure (V, M and N inner clearances are 1.61-1.62).\nScratch: same folder (measure2.py, accent.py; close-ups png/crop-accent-2460x3.png, png/crop-accent-1214x10.png, png/crop-VE-2460x4.png)."
+     }
+    ]
+   }
+  },
+  {
+   "key": "diff",
+   "refuter": {
+    "verdict": "not_refuted",
+    "checks": [
+     {
+      "claim": "1. With the four legend layers removed, each build-3 file is byte-identical to its build-2 file",
+      "method": "My own tag tokenizer split each SVG into root-level children; cut the byte spans of legend-plaque-en/-es and legend-text-en/-es from both builds; compared the remaining bytes and their sha256",
+      "result": "Identical on all four. NORMATIVE 273,661 bytes (93ad109f03830d4e), NON-NORMATIVE 273,897 (b9e818524b83d204), METACOGNITIVE 273,854 (1bf72625debb4c64), CRITICAL 273,240 (ae939086210424e6). Title, desc, defs, field, rings, meander, centre mark, symmetry marks all inside that remainder.",
+      "pass": true
+     },
+     {
+      "claim": "2a. Floor, plate outline and seams outline identical to build 2; only fills changed",
+      "method": "Extracted legend-floor, legend-plaque-seams, legend-plaque-fill by id for en and es on all four coins; compared the d strings and the element with its fill stripped",
+      "result": "8 of 8 language/coin pairs: floor element byte-identical (fill was already the tint); seams and plate d strings identical, everything but fill identical; fill #221B12 -> #181403 / #001817 / #17121D / #1F100E. #221B12 occurs 0 times in any build-3 master.",
+      "pass": true
+     },
+     {
+      "claim": "2b. The whole legend-rails-<lang> subgroup is byte-identical to build 2",
+      "method": "Extracted the subgroup by id, compared bytes and sha256",
+      "result": "8 of 8 identical (226,584 bytes each on the 60-120 coins, 204,785 on the 45-135 coins).",
+      "pass": true
+     },
+     {
+      "claim": "2c. Letter outlines byte-identical to build 2 for English on all four and Spanish on all but NON-NORMATIVE",
+      "method": "Compared the legend-glyphs-<lang> groups byte for byte; then identified every letter by matching its outline points against DejaVu Sans Bold 2.34 (sha16 7e69e81478e233b8) with fontTools",
+      "result": "7 of 8 groups byte-identical; only NON-NORMATIVE es differs (11 paths in both builds). Words read from the outlines: build 3 = NORMATIVE/NORMATIVO, NON-NORMATIVE/INFORMATIVO, METACOGNITIVE/METACOGNITIVO, CRITICAL/CRÍTICO (accent present); build 2 NON-NORMATIVE es = NO NORMATIVO. Largest outline mismatch against the font 0.0008 units. All letters at r 347.273-347.274, upright to within 0.0005 deg, fill #DEC875.",
+      "pass": true
+     },
+     {
+      "claim": "2d. Nothing else is in the build-3 legend layers; the old effects are gone",
+      "method": "Listed direct children of each legend layer; removed the known parts and looked at what was left; counted filters, gradients, clip paths",
+      "result": "Each plaque layer holds exactly floor, seams, plate, rails; each text layer holds exactly the glyph group; what is left over is newlines only. Per file build 2 -> build 3: legend filters 10 -> 0, legend gradients 4 -> 0, plaque/text clip paths 4 -> 0. No duplicate ids, no dangling url(#...) references, no unused defs. Spanish layers carry style=\"display:none\".",
+      "pass": true
+     },
+     {
+      "claim": "3a. Fresh 2460 px renders (resvg): every build-2 vs build-3 pixel difference is in the legend window",
+      "method": "Rendered both builds of all four coins with tools/render.js at 2460 px, English as shipped and Spanish toggled on; my own region mask (window = r 317.078-377.469 within the window angles; rail zone; centre disc r<291.745; rest of meander; outer ring; outside coin)",
+      "result": "English differing pixels: NORMATIVE 198,600 (197,460 in window), NON-NORMATIVE 297,938 (296,355), METACOGNITIVE 297,778 (296,355), CRITICAL 198,591 (197,460). Largest difference 171 levels (231 on NON-NORMATIVE Spanish, where the word changed). Centre disc 0, meander outside the window 0, outer ring and field edge 0, outside the coin 0, on all eight pairs. The remaining 1,131-1,583 pixels per coin sit on the window's own edge: centres at most 0.61 px outside it, at most 42 levels, none more than 1 px out.",
+      "pass": true
+     },
+     {
+      "claim": "3b. Delivered png/ exports of both builds show the same",
+      "method": "Ran the same region comparison on build-2 png/ against build-3 png/ (English, all five sizes); compared my fresh 2460 renders against the delivered 2460 files",
+      "result": "All 20 pairs: 0 differing pixels in centre disc, meander elsewhere, outer ring, outside coin; edge pixels at most 0.61 px from the window. My fresh renders equal the delivered 2460 files pixel for pixel: build 2 en, build 3 en, build 3 es (12 files, 0 differing). Build 2 shipped no Spanish PNGs.",
+      "pass": true
+     },
+     {
+      "claim": "3c. With the legend layers hidden the two builds render the same",
+      "method": "Hid all four legend layers in scratch copies of both builds, rendered at 2460 px, compared",
+      "result": "0 differing pixels on all four coins. The delivered no-legend proofs are byte-identical to build 2's.",
+      "pass": true
+     },
+     {
+      "claim": "4a. Survival: own move >= 0.99, other two <= 0.25; NORMATIVE >= 0.99 under all three",
+      "method": "Isolated glyph-placement + symmetry-marks, rendered at 4920 px (resvg), flipped/turned the image about the centre; alpha-weighted same-colour intersection over union. This measure reproduces Science's reference numbers to 0.003.",
+      "result": "Mark with symmetry marks, LR / TB / turn: NORMATIVE 0.9968 / 0.9999 / 0.9967; NON-NORMATIVE 0.9999 / 0.1441 / 0.1441; METACOGNITIVE 0.1789 / 0.9999 / 0.1789; CRITICAL 0.1886 / 0.1886 / 0.9998. Mark alone: 0.9965/0.9999/0.9964; 0.1249; 0.1635; 0.1886 (Science: 0.994/1.000/0.994; 0.123; 0.161; 0.187). Own-move symmetry is also exact in the vector data (mirror and rotate transforms). See the note on the other way to count.",
+      "pass": true
+     },
+     {
+      "claim": "4b. The two sigma coins are identical apart from the axis",
+      "method": "Compared path data and transforms in the two files; flattened the tokens with my own path code and measured line, air, overhang and bars in mm",
+      "result": "Sigma path d identical; token and subscript transforms identical; placement scale 0.918549 on both. Gold line 9.3307 glyph units = 1.0743 mm on both. Air between line and letters 1.9696 mm on both, both sides. Overhang 2.9187 mm at all four ends on both. Bars 4.000 x 0.900 mm; first bar 1.4999 mm beyond the line end, 1.6001 mm between bars, on both.",
+      "pass": true
+     },
+     {
+      "claim": "4c. Closest ink to the ring's inner edge is at least CRITICAL's tip distance on every coin",
+      "method": "My own vector geometry (transforms, flattened curves, exact miter tips for strokes), distance to r 291.745; cross-checked the three tight spots with Inkscape close-ups at 400-1000 px per unit",
+      "result": "CRITICAL 2.3154 mm (triangle miter tip; Inkscape 2.3156). NORMATIVE 2.3214 mm (outer bar corner; Inkscape 2.3215). NON-NORMATIVE 2.3300 mm (outer sigma; Inkscape 2.3300). METACOGNITIVE 8.583 mm (README rounds its raster figure to 8.59). All at or above 2.3154.",
+      "pass": true
+     },
+     {
+      "claim": "4d. Layers in the stated order; no raster images, live text or font references; field colours right",
+      "method": "Read root-level group ids in order; counted <image>, <text>, <tspan>, font attributes, data: URIs, <style>, foreignObject; read the field circle; searched field, glyph-placement and symmetry-marks for filter, clip-path, mask, opacity",
+      "result": "Order exactly field, finalA5-rings, finalA5-geometry, finalA5-finish, legend-plaque-en, legend-text-en, legend-plaque-es, legend-text-es, glyph-placement, symmetry-marks (CRITICAL has no symmetry-marks). 0 images, 0 text, 0 font references in all four. Field = one circle (410,410) r 403.678 in #181403 / #001817 / #17121D / #1F100E. No filters, clips, masks or opacity on field, mark or symmetry-mark layers. All four files parse as XML.",
+      "pass": true
+     },
+     {
+      "claim": "5a. The four readable-half scan cards are byte-identical to build 2's",
+      "method": "cmp and sha256 of scan-cards/ against superseded-build-2/scan-cards/",
+      "result": "All four identical (7da0f4a6b8cef249, 3b95e5f2a715e5a6, 226276a59a15bacb, a7b4ff12ee2b6567).",
+      "pass": true
+     },
+     {
+      "claim": "5b. The four whole-coin cards are renders of the build-3 masters at 2000 px",
+      "method": "Rendered each build-3 master at 2000 px with tools/render.js and compared with the delivered card",
+      "result": "All four: 0 differing pixels, and the files are byte-identical to my renders. They differ from build 2's cards (131,424-197,172 pixels), as they should.",
+      "pass": true
+     },
+     {
+      "claim": "Extra: delivered build-3 files match the masters and the manifest",
+      "method": "sha256 of every MANIFEST.json entry against disk; rendered build-3 masters at 1640, 1298, 1214, 1024, 512 px (en and es) and compared with previews and png/; alpha check on all 40 exports",
+      "result": "MANIFEST 95 of 95 entries match. Previews (4) and smaller exports (32) equal my renders, 0 differing pixels. All 40 exports fully opaque inside the coin and empty outside. Build sheet on disk is sha16 9e021adbe53cb849, as README says.",
+      "pass": true
+     },
+     {
+      "claim": "Extra: in build 3 the window holds only field tint and flat letters",
+      "method": "On my 2460 px build-3 renders (en and es), took pixels at least 1.5 px inside the window and tested each against the tint, #DEC875, and the straight blend between them",
+      "result": "All eight renders: every pixel is exactly the tint, exactly #DEC875, or an edge blend within 0.7 levels of the line between them. No brown, shadow or bevel left. Letter contrast on the tints 11.04-11.09 to 1 (computed).",
+      "pass": true
+     },
+     {
+      "claim": "Extra: the build-2 folder still holds build 2",
+      "method": "Hashed the superseded-build-2 masters; checked build 2's MANIFEST with its paths re-pointed to the superseded folders",
+      "result": "Masters 335128d15f109192, 0550b036663cf380, a2fc2582d5a7aca5, b81e23701a90671c, as recorded. 72 of 73 manifest entries match after re-pointing; the 73rd is the build tool, whose old bytes are in tools/sealed (9ecd029d3f637b44, matches). notation-config-final-masters.json is unchanged (9024cdc4e115a311).",
+      "pass": true
+     }
+    ],
+    "findings": [
+     {
+      "severity": "note",
+      "title": "About 1,100-1,600 differing pixels per coin sit on the window's edge, not strictly inside it",
+      "detail": "At 2460 px, pixels that straddle the channel edge or the window's end lines differ between builds because the plate under them changed colour. Their centres fall up to 0.61 px outside the geometric window. Nothing differs further out. The claim holds for the artwork; read strictly as 'every pixel inside the window', it is off by these edge pixels.",
+      "evidence": "Outside-window differing pixels at 2460 px: NORMATIVE 1,140, NON-NORMATIVE 1,583, METACOGNITIVE 1,423, CRITICAL 1,131; largest 42 levels; farthest 0.61 px; 0 beyond 1 px; all in the rail zone beside the window. Same on fresh renders and delivered exports.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/png/TETRASEMAPHORE-NON-NORMATIVE-en-2460.png",
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/png/TETRASEMAPHORE-NON-NORMATIVE-en-2460.png"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "The survival limit of 0.25 passes only when counted as overlap over union, not as the sheet words it",
+      "detail": "Section 2 of the build sheet defines survival as 'the share of the coloured glyph that lands on the same colour'. Counted that way (overlap divided by the mark's own ink), three coins are over 0.25 for the moves they should not survive. Counted as overlap over union, I reproduce Science's reference numbers to 0.003 and everything passes. So Science's numbers are overlap over union and the sentence describing them is loose. Not a build-3 change: the marks are byte-identical to build 2.",
+      "evidence": "Share of ink, other moves: NON-NORMATIVE 0.2518 with symmetry marks (0.2221 mark alone); METACOGNITIVE 0.3035 (0.2811); CRITICAL 0.3174. Overlap over union: 0.1441, 0.1789, 0.1886 with marks; 0.1249, 0.1635, 0.1886 mark alone (Science: 0.123, 0.161, 0.187).",
+      "files": [
+       "/Users/careybalboa/Downloads/TETRASEMAPHORE-SCIENCE-BUILD-SHEET-finals.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-METACOGNITIVE-notation-slot820.svg",
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "NORMATIVE ring layer label names the wrong centre-mark colour",
+      "detail": "The Inkscape label on the rings layer of the NORMATIVE master says the centre mark is #D5AF64. The centre mark and symmetry marks in the file are #C7B469; only the rings are #D5AF64. Label text only, no effect on the artwork. Carried over unchanged from build 2 (it is in the byte-identical remainder). The other three coins' labels are right.",
+      "evidence": "inkscape:label=\"1 NORMATIVE rings #D5AF64 (state colour; centre mark #D5AF64)\"; glyph-body fill=\"#C7B469\", outline stroke=\"#C7B469\", symmetry-marks fill=\"#C7B469\".",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NORMATIVE-notation-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Build 2's stored MANIFEST still points at the main folder",
+      "detail": "superseded-build-2/MANIFEST.json lists build 2's files at their old paths, which now hold build 3. Checked as written it shows 42 mismatches and 4 missing files. Re-pointed to the superseded folders it is intact. SUPERSEDED.md warns about the configs' paths but not the manifest's.",
+      "evidence": "As stored: 27 ok, 42 mismatch, 4 missing of 73. Re-pointed: 72 of 73 match; the last is tools/build_states_layered.py, whose build-2 bytes are tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44 (hash matches).",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/MANIFEST.json",
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/SUPERSEDED.md"
+      ]
+     }
+    ],
+    "not_tested": [
+     "Re-running the build tools (that build 2's config still reproduces build 2's bases byte for byte): the configs name project folders as output and I may not write there. I did confirm the build-3 masters' field, rings, meander and legend layers are byte-identical to the build-3 layered bases.",
+     "Spec 9.5 (bridges thinner than 0.60 mm) and 9.6 (camera test): outside this lens; the letter and mark outlines are unchanged from build 2 apart from INFORMATIVO.",
+     "The owl masters and the sealed approved coins: another lens.",
+     "Build-2 vs build-3 comparison in a second renderer: the whole-coin comparison used resvg only. Inkscape was used for the clearance close-ups.",
+     "Delivered Spanish exports of build 2: none exist, so Spanish was compared on my fresh renders only.",
+     "The four proof sheets were looked at by eye (words and captions correct) but not compared pixel by pixel with the masters.",
+     "The tracking rule behind INFORMATIVO's 1.2796 spacing: I measured where the word sits (on the mid-radius, 5.95 and 6.15 deg of ink margin to the window ends) but did not re-derive the rule."
+    ],
+    "scratch_files": [
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/svgtop.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/c1.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/c2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/c2.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/letters.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/letters.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/pixdiff.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/deliv.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/fresh-en.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/fresh-es.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/survival3.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/survival3.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/survival2.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/geom.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/clearance.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/twins.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/twins.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/view_windows.png",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/r2460",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/r2000",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/r_small",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/r1640",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/iso",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/ink",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/diff/svg"
+    ]
+   },
+   "verify": {
+    "results": [
+     {
+      "title": "NORMATIVE ring layer label names the wrong centre-mark colour",
+      "reproduced": true,
+      "measured": "File text (build-3 NORMATIVE master, sha256 d5532ebf...): the rings layer carries inkscape:label=\"1 NORMATIVE rings #D5AF64 (state colour; centre mark #D5AF64)\", once, at byte offset 56407. In the same file: glyph-body fill=\"#C7B469\", diamond outline stroke=\"#C7B469\", symmetry-marks fill=\"#C7B469\"; both ring circles stroke=\"#D5AF64\".\n\nRendered check (renderer of record, 2460 px): inside r<285 the centre mark and symmetry marks are #C7B469 (188,754 px) with 0 px of #D5AF64; the inner ring band (r 291.745-304.2) is #D5AF64 (205,648 px) with 0 px of #C7B469. Spot samples on the diamond edge, diamond vertex and all four symmetry-mark positions read #C7B469; both rings read #D5AF64.\n\nCarry-over from build 2: confirmed. The label sits at the same byte offset (56407) in build 2 (sha256 335128d1...), inside a 271,520-byte common prefix; the rings layer element is byte-identical in both builds, as is the 2,218-byte glyph + symmetry-marks tail.\n\nOther three coins: labels match the artwork. NON-NORMATIVE says centre mark #4FB5B5 and the glyph body and symmetry marks are #4FB5B5; CRITICAL #E25C60 / #E25C60; METACOGNITIVE #B498E6 / #B498E6 (render confirms each as the dominant mark colour in the centre disc). Each of those three also has a separate gold #C7B469 Fix element with its own label.",
+      "comment": "Label text only; no pixel effect. Severity low is right. Two additions the first agent did not report: (1) the same wrong label is also in build 1 and in the layered base master/states/proposals/layered/MASTER-medallion-NORMATIVE-layered-slot820.svg (7 SVGs in all under master/); it comes from the base builder's template, tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44 line 101, which writes 'centre mark {owl_hex}' — so a fix belongs in the notation build step that swaps in the #C7B469 mark, or the label will come back on the next rebuild. (2) The artwork, not the label, is what the spec asks for: build sheet line 50 gives the NORMATIVE diamond as #C7B469 and line 57 gives the NORMATIVE symmetry marks as #C7B469. Nothing under the project or Downloads was written; my renders and scripts are in /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-diff."
+     }
+    ]
+   }
+  },
+  {
+   "key": "spanish",
+   "refuter": {
+    "verdict": "partly_refuted",
+    "checks": [
+     {
+      "claim": "1. Spanish layers spell NORMATIVO / INFORMATIVO / METACOGNITIVO / CRÍTICO (outlines), notation and owl masters",
+      "method": "My script match_glyphs.py: every path in legend-glyphs-es of the 8 masters and 4 bases matched against all 5,739 mapped glyphs of 05-DejaVuSans-Bold.ttf (fontTools, sha16 7e69e81478e233b8), translation-free, by Hausdorff distance and by segment-for-segment comparison; letters sorted by angle descending (left to right at the bottom); the word is read from the matches without consulting the expected word.",
+      "result": "All 12 files read NORMATIVO (9 letters), INFORMATIVO (11), METACOGNITIVO (13), CRÍTICO (7). Worst outline error 0.0009 units (0.0001 mm); every letter matches segment for segment. Notation, owl and base carry identical Spanish letter paths. Each plain letter also fits its Greek/Cyrillic lookalikes (same outline in the font); exactly one Latin codepoint fits each.",
+      "pass": true
+     },
+     {
+      "claim": "1. CRÍTICO carries an acute accent on the first I",
+      "method": "Same matcher; plus distance of that path to the other accented I glyphs; plus transform check (translate+rotate only, no mirror, no transform on parent groups).",
+      "result": "Third letter has 2 subpaths and fits only U+00CD Í (0.001 units). Plain I is 9.58 units away, Ì 4.55, İ 2.58, Î 6.52. Accent rises to the right as read. No mirroring anywhere.",
+      "pass": true
+     },
+     {
+      "claim": "1. English layers spell NORMATIVE / NON-NORMATIVE / METACOGNITIVE / CRITICAL (outlines)",
+      "method": "Same matcher on legend-glyphs-en, 12 files.",
+      "result": "All read correctly (9, 13 incl. hyphen, 13, 8 letters). 249 letters matched in total over both languages; worst error 0.00105 units.",
+      "pass": true
+     },
+     {
+      "claim": "1. Letters stand upright along the arc, read left to right at the bottom",
+      "method": "For every letter: rotation against (angle - 90 deg), radius of its origin, document order against reading order.",
+      "result": "Rotation error at most 0.0005 deg; origins at r 347.273-347.274 (channel mid-radius 347.2735); document order equals reading order in every file.",
+      "pass": true
+     },
+     {
+      "claim": "1. Second proof: a reader returns the Spanish words from a render",
+      "method": "My own resvg renders (tools/render.js) of Spanish-toggled scratch copies of all 8 masters at 2460 and 512 px; legend band straightened by polar unwrap (ocr_read.py); tesseract 5.5.2 -l spa --psm 7.",
+      "result": "Verbatim, all 16 renders: 'NORMATIVO', 'INFORMATIVO', 'METACOGNITIVO', 'CRÍTICO'. (tesseract -l eng returns 'CRITICO': that model has no Í.)",
+      "pass": true
+     },
+     {
+      "claim": "1. Same reading by a different engine",
+      "method": "My Swift script visionread.swift (macOS Vision, accurate level, es-ES, language correction off) on the same straightened images.",
+      "result": "Verbatim, all 16: NORMATIVO, INFORMATIVO, METACOGNITIVO, CRÍTICO, confidence 1.00 each.",
+      "pass": true
+     },
+     {
+      "claim": "1. The readers really see the accent (not a dictionary guess)",
+      "method": "Control: scratch copy of Spanish CRITICAL with the accent subpath removed, rendered at 1024 px, same unwrap, both readers.",
+      "result": "Control reads 'CRITICO' (tesseract spa, Vision es-ES with and without correction). The real file reads 'CRÍTICO'.",
+      "pass": true
+     },
+     {
+      "claim": "1. Same words in the second renderer",
+      "method": "Inkscape close-ups (area 100:580:720:800, 2480 px) of 5 Spanish-toggled copies and 1 shipped master; straightened; tesseract spa + Vision.",
+      "result": "CRÍTICO (notation, owl), INFORMATIVO, NORMATIVO, METACOGNITIVO; shipped owl NON-NORMATIVE reads NON-NORMATIVE. Both readers agree.",
+      "pass": true
+     },
+     {
+      "claim": "1. English layers read from a render",
+      "method": "Masters rendered as shipped (resvg 2460 and 512 px, all 8), straightened; tesseract spa/eng and Vision en-US.",
+      "result": "Verbatim, all 16: NORMATIVE, NON-NORMATIVE, METACOGNITIVE, CRITICAL (both readers).",
+      "pass": true
+     },
+     {
+      "claim": "A machine reader also gets the word from an unstraightened image",
+      "method": "Vision on whole-coin lane exports (1024 and 512 px) and on my flat bottom crops (2460 px), no straightening.",
+      "result": "512 px: all 8 Spanish and 7 of 8 English correct. 1024 px and crops: tilted end letters misread on the six-key coins in both languages, e.g. 'METACOGNITINO' (owl es 1024), 'VON-NORMATIVE' (en 1024), 'NFORMATINO' (my crop); notation METACOGNITIVE es 1024 returned no legend ('ONINDOE'). NORMATIVO and CRÍTICO correct every time.",
+      "pass": false
+     },
+     {
+      "claim": "2. Tracks follow the rule (4.812 deg each side, never under 1.0) from the font's advance widths",
+      "method": "Sum of hmtx advances x 47.83/2048, arc on r 347.2735, track = max(1, (window - 2 x 4.812 deg) / natural span). Compared with states-config-layered.json and the owl config.",
+      "result": "Rule / config: NORMATIVE 1.000000/1.0; NORMATIVO 1.000000/1.0; NON-NORMATIVE 1.052609/1.0526; INFORMATIVO 1.279649/1.2796; METACOGNITIVE 1.100013/1.1; METACOGNITIVO 1.080526/1.0805; CRITICAL 1.257823/1.2578; CRÍTICO 1.414150/1.4141. Config values are the rule values cut to 4 decimals (never above). Widths: INFORMATIVO 7.9595 em, natural 62.811 deg. My formula also gives build 2's NO NORMATIVO: 1.13937 (config 1.1394). Owl config legends equal the notation config.",
+      "pass": true
+     },
+     {
+      "claim": "2. The files are spaced at those tracks",
+      "method": "Track measured in each file from the angles between neighbouring letter origins and their advances.",
+      "result": "Measured track equals config to 0.00005 for all 8 words in all 12 files (INFORMATIVO 1.27959-1.27962). Layer labels state the same tracks.",
+      "pass": true
+     },
+     {
+      "claim": "2. INFORMATIVO is centred on 90 deg with 4.812 deg of plate each side (by advance width)",
+      "method": "Ends of the advance box from first/last letter origin and half its tracked advance.",
+      "result": "Left gap 4.8134 deg, right gap 4.8136 deg, centre 90.0001 deg. Other words: 4.8123-4.8129 both sides; NORMATIVE 3.417, NORMATIVO 2.758 (track 1.0 floor; README says 2.76).",
+      "pass": true
+     },
+     {
+      "claim": "2. INFORMATIVO's two end gaps are equal (ink)",
+      "method": "Ink extremes from the flattened outlines in user space; repeated on my 2460 px render by thresholding letter colour in the plate (render_measure2.py).",
+      "result": "Ink 129.09 to 51.15 deg, span 77.95 deg. Gap before the I 5.91 deg, after the O 6.15 deg: unequal by 0.24 deg = 0.18 mm; ink centre 90.12 deg (0.09 mm left of centre). Vector and render agree to 0.01 deg. Other words: 0.03-0.21 deg (approved English CRITICAL 0.20).",
+      "pass": false
+     },
+     {
+      "claim": "3. NO NORMATIVO appears nowhere in the build-3 deliverables except README history",
+      "method": "text_search.py: regex over the 8 masters, 4 bases, both MANIFEST.json, both configs, both READMEs, notation-measurements.json, both layered-build.json, make_manifest.py; 298 file names; tEXt chunks of 107 PNGs; grep of every text file under the three build folders; Vision read of all proof sheets, scan cards and previews.",
+      "result": "Zero hits in any SVG, config, MANIFEST, build record or build-3 file name; PNGs carry no text chunks. Hits: notation README lines 23 and 73 (history); caption inside proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png ('now INFORMATIVO (was NO NORMATIVO)'); research/spanish-terms-raw.json x99; refute/refute-layering.json x3 (4 Oct record); refute/lane-verify-build3.py x6.",
+      "pass": true
+     },
+     {
+      "claim": "3. No leftover PROPOSED marker on Spanish layers or files",
+      "method": "Same search for PROPOSED / proposed / PROPUEST.",
+      "result": "Zero in masters, bases, configs, MANIFESTs, READMEs and build-3 file names. Only in superseded-build-1/2 (file names '-es-PROPOSED-', status 'PROPOSED wording, awaiting Carey') and 3 times in research/spanish-terms-raw.json. Build-3 status reads 'Spanish set of 2026-10-05: NORMATIVO / INFORMATIVO / CRÍTICO / METACOGNITIVO'.",
+      "pass": true
+     },
+     {
+      "claim": "4. Spanish words are spelled right everywhere in READMEs, labels and configs",
+      "method": "Regex inventory of every Spanish word form in the 10 text files and all layer labels; check for unaccented CRITICO, split or hyphenated forms, combining marks; label word against outline word.",
+      "result": "Only NORMATIVO, INFORMATIVO, METACOGNITIVO, CRÍTICO (precomposed U+00CD) and '(Normativo) / (Informativo)'. No CRITICO, no combining marks, all NFC. All 24 legend-text labels name the word their outlines spell. Neither README contains Spanish prose, so the 'el estado INFORMATIVO' rule and 'semáforo' have nothing to test.",
+      "pass": true
+     },
+     {
+      "claim": "4. README numbers about the Spanish legends hold",
+      "method": "Recomputed each.",
+      "result": "62.8 deg natural span (62.811); 2.76 deg (2.758); tracks as above; INFORMATIVO looser than 1.0526/1.1/1.0805 and tighter than 1.4141; 'eleven letters' (11 paths; build-2 NO NORMATIVO also 11); contrast 11.04-11.09 (11.04, 11.07, 11.07, 11.09); cap height 34.868 units = 4.37 mm; 47.83 units = 16.995 pt; font and sheet hashes match (7e69e814…, 9e021adb…). Sheet section 16 widths 7.96/9.68/9.43/4.51/6.90 em reproduce.",
+      "pass": true
+     },
+     {
+      "claim": "4. README statements about why INFORMATIVO are borne out by section 16 and the memo",
+      "method": "Read both READMEs line by line against section 16, the memo and research/spanish-terms-raw.json.",
+      "result": "Set, reason (usage, not algebra), reversibility and 'memo written when NO NORMATIVO was the built word' all agree with section 16. One sentence is looser than its sources (Mexico and Mercosur; see finding). No symmetry claim, no 'calque' claim in either README.",
+      "pass": false
+     },
+     {
+      "claim": "5. -es- exports show the Spanish word, -en- the English one",
+      "method": "All 80 lane exports (2 sets x 4 coins x 2 languages x 5 sizes) straightened and read with tesseract -l spa.",
+      "result": "All 40 -es- files: NORMATIVO / INFORMATIVO / METACOGNITIVO / CRÍTICO. All 40 -en- files: NORMATIVE / NON-NORMATIVE / METACOGNITIVE / CRITICAL. No file shows the other language.",
+      "pass": true
+     },
+     {
+      "claim": "5. Exports equal the masters with that language shown",
+      "method": "pixel_compare.py: lane export against my own resvg render (shipped master for -en-, Spanish-toggled copy for -es-), 2460 and 512 px, all 8 coins.",
+      "result": "32 of 32 files identical, 0 pixels differ. The en and es export of one coin differ only inside the letter band (r 320-366, inside the window); plate, rails and everything else identical.",
+      "pass": true
+     },
+     {
+      "claim": "5. Masters ship with English shown and Spanish hidden",
+      "method": "Style attributes of the four top-level legend groups in 8 masters and 4 bases; my render of each shipped master read by two readers.",
+      "result": "All 12 files: legend-plaque-es and legend-text-es carry style=\"display:none\"; the en pair carries none; exactly 2 display:none per file. Shipped renders read English. File hashes equal the READMEs.",
+      "pass": true
+     },
+     {
+      "claim": "Only the one Spanish word changed against build 2",
+      "method": "Byte comparison of the letter paths in legend-glyphs-en/es, build 3 against superseded-build-2.",
+      "result": "7 of 8 word groups byte-identical; only NON-NORMATIVE es differs (NO NORMATIVO, track 1.1394, became INFORMATIVO, 1.2796).",
+      "pass": true
+     },
+     {
+      "claim": "Owl README: English letters are the approved coins'; owl file = notation base except title and label 1",
+      "method": "Letter paths of approved master/states coins against owl legend-glyphs-en; line diff owl master against base.",
+      "result": "English letters identical (d and transform) on all four. Exactly 2 differing lines per coin: <title> and the rings label.",
+      "pass": true
+     },
+     {
+      "claim": "Files match their MANIFEST records",
+      "method": "sha256 and byte size of every entry in both MANIFEST.json (95 + 70).",
+      "result": "All 165 entries match, including all 40 -es- PNGs and the font.",
+      "pass": true
+     },
+     {
+      "claim": "Build record: CRÍTICO clears the rails by 1.605 mm (layered-build.json, both sets)",
+      "method": "Accent outline radius against the inner rail edge (317.078); repeated on my 2460 px render (accent_clearance.py).",
+      "result": "Accent top at r 320.38: 3.30 units = 0.41 mm from the inner rail (render: 3.0 units = 0.38 mm). Accent to I: 0.41 mm. Accent 0.78 mm tall. Unaccented letters clear the rails by 1.51-1.52 mm.",
+      "pass": false
+     },
+     {
+      "claim": "Proof sheets show the right Spanish words",
+      "method": "Viewed both '-spanish-and-uncut' sheets and the stamp before/after sheet; Vision read of all 27 proofs, scan cards and previews.",
+      "result": "Coins and captions read NORMATIVO, INFORMATIVO, METACOGNITIVO, CRÍTICO on both sheets. Scan cards and previews show English.",
+      "pass": true
+     }
+    ],
+    "findings": [
+     {
+      "severity": "medium",
+      "title": "Build record gives CRÍTICO 1.605 mm of rail clearance; its accent is 0.41 mm from the rail",
+      "detail": "layered-build.json records clearance_to_rails_mm 1.605 for every legend, CRÍTICO included. That is a letter-body figure passed through from the legend generator; it ignores the accent. The artwork is fine: the accent sits inside the channel and both readers see it down to 512 px. Only the record is wrong for this word. The same value was already in build 2's record. Sheet section 8 asks that the plaque fit the accent, and this is the number a reader would use to confirm it.",
+      "evidence": "Accent top r 320.38 against inner rail edge 317.078 = 3.30 units = 0.414 mm (outlines); 0.376 mm on my 2460 px resvg render. Unaccented letters: 1.51-1.52 mm.",
+      "files": [
+       "master/states/proposals/layered/layered-build.json",
+       "master/states/proposals/owl-finals-2026-10-05/layered-build.json"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "README sentence on the standards bodies is looser than its sources",
+      "detail": "Notation README line 72 says ICONTEC and the standards bodies of Spain, Mexico and Mercosur 'label annexes (Normativo) / (Informativo)'. Sources: the parenthesised label is quoted for ICONTEC (sheet section 16) and UNE (raw record). Mexico's NMX says 'apéndice', not 'anexo', and the memo quotes only prose ('La característica informativa de un apéndice…'). The memo's source list has no Mercosur quotation at all; the raw record has AMN listing 'Anexo normativo' / 'Anexo informativo' as annex types. The conclusion (these bodies use normativo / informativo) holds; the wording overstates the label form for Mexico and Mercosur.",
+      "evidence": "Memo lines 24, 34 (NMX), 25, 35 (UNE); no Mercosur line under 'Sources'. Raw record: 'Mexico says apéndice where Spain and Mercosur say anexo'.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "/Users/careybalboa/Downloads/TETRASEMAPHORE-RESEARCH-SPANISH-TERMS-MEMO.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/research/spanish-terms-raw.json"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "NO NORMATIVO survives in five places in the build-3 folder, all as history",
+      "detail": "None is on a coin, layer label, config, MANIFEST or file name. Beyond the two README mentions the claim allows: a caption drawn into a proof picture, the pre-decision research record (the MANIFEST labels it as such), an older refuter record, and the lane's own check script.",
+      "evidence": "README.md lines 23, 73; proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png caption 'Spanish layer of NON-NORMATIVE, now INFORMATIVO (was NO NORMATIVO)' (read by Vision and by eye); research/spanish-terms-raw.json x99; refute/refute-layering.json x3; refute/lane-verify-build3.py x6.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png",
+       "master/states/proposals/notation/final-masters-2026-10-05/research/spanish-terms-raw.json",
+       "master/states/proposals/notation/final-masters-2026-10-05/refute/refute-layering.json"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "INFORMATIVO is centred by advance width; its ink end gaps differ by 0.18 mm",
+      "detail": "The rule centres the advance box (4.8134 / 4.8136 deg). The ink starts with an I and ends with an O, whose side bearings differ, so the visible gaps are 5.91 deg before the word and 6.15 deg after it. This is the largest of the eight words but the same kind and size as approved English CRITICAL (0.20 deg). Not a build error; it is how the rule falls.",
+      "evidence": "Ink 129.09 to 51.15 deg from the outlines and from my 2460 px render; difference 0.24 deg = 0.18 mm at mid-radius.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-NON-NORMATIVE-notation-slot820.svg",
+       "master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-NON-NORMATIVE-owl-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "The accent on CRÍTICO is the smallest legend detail: worth a line in the print test",
+      "detail": "At 102.785 mm the accent is 0.78 mm tall, 0.41 mm above the I and 0.41 mm below the inner rail. If either gap fills on cloth the word prints as CRITICO, a misspelling. On screen it reads correctly at every export size.",
+      "evidence": "Outline: accent y -26.892 to -20.727, I top -17.410 (units). Render: gap to I 0.409 mm, to rail 0.376 mm. At 512 px the gaps are about 2 px.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MASTER-medallion-CRITICAL-notation-slot820.svg",
+       "master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-CRITICAL-owl-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Unstraightened machine reads misread the tilted end letters on the six-key coins, in both languages",
+      "detail": "Reader limit on curved text, not a spelling fault: the outlines and every straightened read are right, and the approved English legends misread the same way. Matters only if the camera test also reads the legend.",
+      "evidence": "Vision, whole coin: 'METACOGNITINO' (owl es 1024), 'ONINDOE' (notation METACOGNITIVE es 1024), 'VON-NORMATIVE' (en 1024, owl en 512). At 512 px all 8 Spanish coins read correctly.",
+      "files": []
+     },
+     {
+      "severity": "note",
+      "title": "The PROPOSED marker was dropped from all four Spanish words; Hermes's confirmation is not recorded",
+      "detail": "Build 2 marked every Spanish word 'PROPOSED wording, awaiting Carey'. Build 3 replaces that with 'Spanish set of 2026-10-05' on all four. Sheet section 16 says decided 5 Oct (Science's reading of Carey); section 8 still words the set as 'for Carey and Hermes to confirm'. The notation README discloses that INFORMATIVO reached the lane through Science's reading, and both READMEs still call the masters proposals.",
+      "evidence": "superseded-build-2 config status and layer labels against build-3 config status; sheet lines 103 and 247.",
+      "files": [
+       "master/states/proposals/layered/states-config-layered.json",
+       "master/states/proposals/owl-finals-2026-10-05/states-config-owl-layered.json"
+      ]
+     }
+    ],
+    "not_tested": [
+     "The web sources behind sheet section 16 and the memo (ICONTEC NTC texts, UNE, NMX, AMN) were not re-opened; README statements were checked only against section 16, the memo and the raw research record.",
+     "Whether the four words read naturally to a native speaker (the memo's open questions): not a measurement.",
+     "Pixel comparison of the 1024, 1214 and 1298 px exports against my own renders: those 48 files were only read by tesseract; pixel-compared sizes are 2460 and 512.",
+     "Inkscape was used on 6 close-ups (5 Spanish, 1 English), not on all 16 coin/language pairs.",
+     "Proof sheets were read by Vision and by eye, not pixel-compared against the masters.",
+     "Physical print, wash and camera tests.",
+     "The lane's own check scripts (refute/lane-*.py) were not run or copied; classic/ and superseded-build-1 were not examined beyond file names."
+    ],
+    "scratch_files": [
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/match_glyphs.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/glyph_match.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/prep_toggle.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/display_state.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/render_all.sh",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr_read.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr/tesseract_reads.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/visionread.swift",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr/vision_proofs.txt",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr/vision_wholecoin.txt",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr_inkscape.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/ocr/inkscape_reads.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/pixel_compare.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/pixel_compare.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/render_measure2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/render_measure.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/accent_clearance.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/accent_clearance.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/text_search.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/text_search.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/svg/",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/render/",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/unwrap/",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/inkscape/",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/spanish/crop/"
+    ]
+   },
+   "verify": {
+    "results": [
+     {
+      "title": "Build record gives CRÍTICO 1.605 mm of rail clearance; its accent is 0.41 mm from the rail",
+      "reproduced": true,
+      "measured": "Record: clearance_to_rails_mm is 1.605 for all 8 legends, CRÍTICO included, in layered/layered-build.json and owl-finals-2026-10-05/layered-build.json; build 2's and build 1's records carry the same value. Generator (tools/legend.js line 67): (channel - cap height)/2, passed through by build_states_layered.py line 121, so it never sees the accent. Outlines (my own parser, layered, owl and notation CRITICAL, identical in build 2): the acute's subpath spans r 320.382-326.571; 320.382 - 317.078 = 3.304 units = 0.414 mm. Renders: resvg 4920 px 0.414 mm, resvg 2460 px 0.412 mm (half-coverage edges; rail edge found at r 317.03-317.09), the lane's own es-2460 exports 0.412 mm, Inkscape close-up at 30 px/unit 0.414 mm. Unaccented letters, all words, both languages: 1.523-1.526 mm to the inner rail, 1.509-1.512 mm to the outer. Readers at 512 px (band straightened at native size, 36 px tall): tesseract spa and macOS Vision (no language correction) both read CRÍTICO on my renders and on the lane's es-512 exports, notation and owl; my no-accent control reads CRITICO on both.",
+      "comment": "Holds. Three refinements. (1) The first agent's 0.376 mm at 2460 px comes from counting the anti-alias fringe as rail; with the same last-non-field-pixel rule I get 0.369 mm, with half-coverage edges 0.412 mm. The true figure is 0.414 mm. (2) 1.605 is a design nominal, not a measured clearance for any word: it uses the generator's 0.0847 mm per print px (820 units = 103.33 mm); at 102.785 mm the same nominal is 1.597 mm, and the unaccented outlines measure 1.51-1.53 mm. (3) The right number is already on record elsewhere in the project: notation/final-masters-2026-10-05/refute/refute-layering.json, check D3, 'Accent top at r 320.382 units: 0.414 mm' (written on build 1). So only layered-build.json is wrong for this word; that makes it closer to low than medium. Sheet section 8 does say 'the plaque has to fit its accent'. Artwork is fine: accent inside the channel, 0.413 mm above the I. My files: /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-spanish (outline_r.py, render_gap.py, ocr.py and their JSON)."
+     },
+     {
+      "title": "README sentence on the standards bodies is looser than its sources",
+      "reproduced": true,
+      "measured": "README line 72 reads: 'Colombia's ICONTEC and the standards bodies of Spain, Mexico and Mercosur label annexes (Normativo) / (Informativo)'. Sources, read in full: sheet section 16 quotes the parenthesised label for ICONTEC ('ANEXO A (INFORMATIVO)', 'ANEXO B (NORMATIVO)'). Raw record gives it for UNE only (sweeps[1].findings[4]: Anexo A, B, D, E '(Informativo)', Anexo C '(Normativo)'; recount 8 and 2). A search of the raw record for '(Normativo)' / '(Informativo)' returns 8 hits, all UNE. Mexico: memo lines 24 and 34 are NMX prose ('elemento normativo'; 'La característica informativa de un apéndice (en oposición al normativo...)'); raw record says 'Mexico says apéndice where Spain and Mercosur say anexo'. Mercosur: memo mentions it at lines 9, 10 and 58 only, with no quotation under Sources (lines 20-51); raw record has AMN's table listing 'Anexo normativo' / 'Anexo informativo' and a footnote on 'elemento normativo / informativo'. Memo lines 25 and 35 (UNE) are also prose.",
+      "comment": "Holds as stated, low. The conclusion that these bodies pair normativo with informativo is supported; the parenthesised label form is sourced only for ICONTEC and UNE, and Mexico's word is apéndice, not anexo. The sentence appears only in the notation README (not the owl README). Checked against the project's own sources only; I did not open the standards themselves, so whether NMX and AMN print the parenthesised label in practice is not tested here."
+     }
+    ]
+   }
+  },
+  {
+   "key": "owl",
+   "refuter": {
+    "verdict": "not_refuted",
+    "checks": [
+     {
+      "claim": "1a. Owl block (from <g id=\"owl-placement\" to end of file) is byte-identical in the owl master, classic/ and the approved coin",
+      "method": "Read the three files per state as bytes, cut from the first '<g id=\"owl-placement\"' to EOF, compared and hashed (own script text2.py / inline)",
+      "result": "All four states identical in all three files. Block length / sha16: NORMATIVE 70673 / cb4a0f53aca8b0a7, NON-NORMATIVE 70680 / b9a51b26776d5b73, METACOGNITIVE 70627 / 81056635dae3bbd9, CRITICAL 70672 / 50ba7495877f3ca1. One owl-placement group per file. The block in master/MASTER-medallion-METACOGNITIVE-slot820.svg also equals the new METACOGNITIVE block.",
+      "pass": true
+     },
+     {
+      "claim": "1b. The four owls are one drawing",
+      "method": "In each owl block, removed the first line (the placement transform) and replaced the state's body colour with a token, then hashed the rest",
+      "result": "All four reduce to the same text (sha16 deb57d5ab2dd0386). Only differences between states: the body/eye colour (#D5AF64, #4FB5B5, #B498E6, #E25C60) and the placement matrix (NORMATIVE matrix(1 0 0 -1 0 820), NON-NORMATIVE matrix(-1 0 0 -1 820 820), METACOGNITIVE none, CRITICAL matrix(-1 0 0 1 820 0)).",
+      "pass": true
+     },
+     {
+      "claim": "1c. Moves on renders: NON-NORMATIVE = left-right mirror of NORMATIVE, METACOGNITIVE = top-bottom mirror, CRITICAL = half-turn, overlap >= 0.99",
+      "method": "resvg 2460 px. (A) owl block rendered alone, alpha >= 128, IoU after flipping the NORMATIVE array; (B) full coin renders, r < 291 units, mask = more than 24 levels from the field tint. All four moves tried against each state.",
+      "result": "(A) claimed move: NON-NORMATIVE 0.99957, METACOGNITIVE 0.99771, CRITICAL 0.99755; the three wrong moves score 0.19-0.33. (B) in the coin: 0.99957 / 0.99708 / 0.99680; wrong moves 0.20-0.34. Owl ink reaches r 278.397 units on all four.",
+      "pass": true
+     },
+     {
+      "claim": "2. Layer order, field disc, vector only, unique ids, references resolve",
+      "method": "xml.etree parse plus regex on the raw text of each owl master (structure_check.py)",
+      "result": "Root groups in order on all four: field, finalA5-rings, finalA5-geometry, finalA5-finish, legend-plaque-en, legend-text-en, legend-plaque-es, legend-text-es, owl-placement. Field = one circle cx 410 cy 410 r 403.678, fill #181403 / #001817 / #17121D / #1F100E. No image, text, tspan, use, style, font or foreignObject elements; no data: URI, no font-family, no href at all. 53 ids, 53 unique. 31 url(#) uses (25 distinct), 0 unresolved. Only style attributes: display:none on the two Spanish layers. The only font mention is a file name inside a layer label.",
+      "pass": true
+     },
+     {
+      "claim": "3a. At 2460 px, inside r < 291 units the owl coin equals the approved coin over the same tint",
+      "method": "resvg renders of the owl master and of master/states/ coin (transparent), approved composited over the tint in numpy, max channel difference over 2,394,316 px",
+      "result": "Pixels differing by more than 16 levels: 0 on all four. Largest difference: 1 level on all four (12,896-31,062 px differ by exactly 1, from compositing rounding). Where the approved coin is transparent (72.6 % of the disc) the owl coin is exactly the tint.",
+      "pass": true
+     },
+     {
+      "claim": "3b. The two coloured rings are the same as the approved coin's",
+      "method": "Compared the finalA5-rings circles as text; compared renders in the ring bands (inner 291-305 over tint; outer 392.5-405 over tint, r >= 405 direct RGBA)",
+      "result": "Circle elements identical to approved and classic on all four (r 298.01 sw 12.529; r 401.43 sw 16.602; state colour). Render: inner ring band max difference 1 level, outer ring 392.5-405 max 1 level, r >= 405 RGBA identical (0 px differ), alpha outside r > 410 is 0.",
+      "pass": true
+     },
+     {
+      "claim": "4. Each owl master equals its notation base except two non-rendering lines",
+      "method": "Line-by-line byte comparison with master/states/proposals/layered/MASTER-medallion-<STATE>-layered-slot820.svg, then character diff of the differing lines",
+      "result": "155 lines each; exactly lines 2 and 30 differ on all four. Line 2: title 'Owl Semaphore ... + owl' vs 'Tetrasemaphore ... + centre mark'. Line 30: inside inkscape:label of finalA5-rings, 'owl' vs 'centre mark'; the two circles on that line are identical. Also checked against the build-3 notation masters: the 136 lines before the centre mark differ on the same two lines only.",
+      "pass": true
+     },
+     {
+      "claim": "5. png/: 40 files, right names and sizes, opaque inside the coin, transparent outside, fresh render equals delivered",
+      "method": "Listed png/, opened each with Pillow; coin edge taken as r 409.731 units (outer edge of the outer ring), inside = r <= edge - 1 px, outside = r >= edge + 1 px. Fresh renders: English from the master as is, Spanish from my own scratch copy with the four legend groups toggled, all 5 sizes, tools/render.js",
+      "result": "Exactly the 40 expected names, no extras. All 40 have the pixel size in their name. Inside: minimum alpha 255, 0 px below 255, on all 40. Outside: maximum alpha 0 on all 40. Fresh render vs delivered: 0 px differ on all 40, and all 40 of my PNG files are byte-identical to the delivered ones. MANIFEST.json: 70 entries, all hashes and byte counts match.",
+      "pass": true
+     },
+     {
+      "claim": "6. classic/ untouched: hashes, and retired PNGs only under classic/png",
+      "method": "sha256 of the five SVGs; every entry of classic/MANIFEST.json (dated 4 Oct) hashed against the file now in classic/; find for *transparent* and *on-dark* across the project and Downloads (depth 4)",
+      "result": "NORMATIVE b668251468520bcd, NON-NORMATIVE c2fbd1c1c94d58c5, CRITICAL 33c7a07f6816d75d, METACOGNITIVE acae446801b1f002, SHIRT-MASTER 4348b3178433662c: all as claimed. All 26 hashes in classic/MANIFEST.json match. The 12 OWL-SEMAPHORE -transparent / -on-dark PNGs exist only in classic/png. File times in classic/ are all 4 Oct except NOTE.md (new, 5 Oct).",
+      "pass": true
+     },
+     {
+      "claim": "7. WCAG contrast of each owl colour on its field tint: 8.90 / 7.53 / 7.52 / 5.21",
+      "method": "WCAG 2 relative luminance from the hex values read out of the files (owl-body fill and field fill)",
+      "result": "NORMATIVE #D5AF64 on #181403 = 8.898; NON-NORMATIVE #4FB5B5 on #001817 = 7.532; METACOGNITIVE #B498E6 on #17121D = 7.517; CRITICAL #E25C60 on #1F100E = 5.211. Rounds to the spec's four numbers. Legend #DEC875 on the tints: 11.05-11.09.",
+      "pass": true
+     },
+     {
+      "claim": "8a. README: sha16 table, build sheet hash, approved masters untouched",
+      "method": "sha256 of the files; compared approved coins with seals.txt (dated 16 Sep)",
+      "result": "Owl masters f5df2248f73935a1 / 47e876c797c38e4c / ad2cf6051c7357d1 / 7fad8d5c590f8a65 as in the table. Build sheet 9e021adbe53cb849. The four master/states coins and master/MASTER-medallion-METACOGNITIVE-slot820.svg (d4054fa6e02e66e4) all match their lines in seals.txt.",
+      "pass": true
+     },
+     {
+      "claim": "8b. README: English letter outlines are the approved coins' outlines; Spanish layers read NORMATIVO, INFORMATIVO, CRÍTICO, METACOGNITIVO",
+      "method": "Text comparison of legend-glyphs groups; decoded every legend glyph by matching its outline points to DejaVu Sans Bold 2.34 glyphs (fontTools, own matcher)",
+      "result": "legend-glyphs-en equals the approved and classic legend-glyphs group on all four (after the id rename). Decoded words: en NORMATIVE, NON-NORMATIVE, METACOGNITIVE, CRITICAL; es NORMATIVO, INFORMATIVO, METACOGNITIVO, CRÍTICO (with the accent). Worst point error 0.0009 units; nearest wrong letter is 4.9 units away. Letters read left to right with tops toward the centre. 'NO NORMATIVO' appears nowhere in the folder.",
+      "pass": true
+     },
+     {
+      "claim": "8c. README: the stamp is cut in (plate = field colour, no brown plate, no shadow, no bevel)",
+      "method": "Own scratch copies with the letters hidden and each language's plate shown, resvg 2460 px, compared the plate interior (r 319-375.5, window inset 2 deg) with the tint; then on the delivered renders tested every pixel in that area against the straight line between the tint and #DEC875",
+      "result": "Letters hidden: 0 px off the tint, largest difference 0, on all four coins in both languages (172,556 or 265,006 px each). With letters: every pixel is tint, #DEC875 or a mix of the two (worst distance from that line 0.70 levels). No #221B12, cast-shadow or bevel elements in the files.",
+      "pass": true
+     },
+     {
+      "claim": "8d. README: uncut meander, 24 keys, seam fix on, a whole ring when the legend layers are hidden",
+      "method": "Compared geometry and finish layers with the uncut seam-fix ring file named in the build record; rendered the master with the four legend groups hidden and measured ring ink overlap under turns; compared with the delivered no-legend proofs",
+      "result": "Geometry and finish layers equal finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-slot820.svg on all four, and differ from the sealed uncut ring without the seam fix. Legend hidden: ring ink IoU 0.972 under a 15 deg turn, 0.999 under a half-turn (with the legend shown 0.86-0.89 and 0.74-0.83). The four proofs/...no-legend-uncut-ring-1024.png equal my fresh renders exactly (0 px differ).",
+      "pass": true
+     },
+     {
+      "claim": "8e. README: how it was built; config is the notation config plus edition and out_suffix",
+      "method": "Ran tools/build_states_layered.py with the owl config into my scratch folder; JSON diff of the two configs; checked afterwards that no project file was newer than my marker",
+      "result": "Rebuild gives the four masters byte for byte (same sha16s) and the same layered-build.json. Configs differ only in _doc, edition: owl, out_suffix: owl. resvg-js version in the renderer's package.json is 2.6.2. No project file changed.",
+      "pass": true
+     },
+     {
+      "claim": "8f. classic/NOTE.md: contents of classic/, the rebuild command, what the retired PNGs look like, shirt ring #8C4191",
+      "method": "Read the classic SVGs; ran tools/build_states_proposal.py with the NOTE's command into scratch; measured the classic PNGs",
+      "result": "Classic masters have no field group, one legend (English), plaque #221B12, no hidden layers. The NOTE's command reproduces all five classic SVGs byte for byte. transparent-2460 PNGs: 72.6 % of the pixels inside the ring's inner edge have alpha 0. on-dark-1024 PNGs: all four corner pixels are opaque #1A1020. SHIRT-MASTER rings are #8C4191.",
+      "pass": true
+     },
+     {
+      "claim": "8g. README: NORMATIVE tint note (#1A1303 from the owl's gold, 1.7 dE from #181403); print sizes",
+      "method": "Own sRGB/Lab conversion: hue of each owl colour at L* 6.3, C* 8.2; dE76; arithmetic on pixel counts",
+      "result": "#D5AF64 gives #1A1303; the other three owl colours give exactly #001817, #17121D, #1F100E. dE76 between #1A1303 and #181403 = 1.67. 1298 px at 300 dpi = 109.90 mm; 1214 px = 102.785 mm.",
+      "pass": true
+     },
+     {
+      "claim": "Second renderer agrees (not a resvg-only result)",
+      "method": "Inkscape export of the CRITICAL owl master at 1230 px compared with the resvg render scaled down",
+      "result": "Owl mask IoU in the centre disc 0.9944; alpha 255 everywhere inside r < 409 and 0 outside r > 410.5; English legend shown and Spanish hidden (0 px over 40 levels in the legend window); ring texture differs on 3.1 % of pixels by more than 16 levels, none by more than 40.",
+      "pass": true
+     },
+     {
+      "claim": "Proof sheet shows the current masters",
+      "method": "Located each coin in proofs/OWL-SEMAPHORE-FINAL-FOUR-set.png by its ring colour and compared with my 2460 px render resized to 900 px",
+      "result": "Mean difference 1.37-1.47 levels, 0.03 % of pixels over 32 levels (resampling only) on all four coins.",
+      "pass": true
+     }
+    ],
+    "findings": [
+     {
+      "severity": "low",
+      "title": "Proof sheet caption for METACOGNITIVE shows a missing-glyph box",
+      "detail": "In the set sheet the line under METACOGNITIVE reads sigma followed by an empty box, then 'the owl mirrored top to bottom'. The subscript h did not render in the caption font. NON-NORMATIVE's subscript v and CRITICAL's C2 are fine. The coins themselves are not affected; the on-white and Spanish sheets have no operator captions.",
+      "evidence": "Cropped the caption strip from the delivered PNG at full size and read it: 'σ▯ · the owl mirrored top to bottom'. Crop saved as crops/cap-OWL-SEMAPHORE-FINAL-FOUR-set.png in my scratch folder.",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/proofs/OWL-SEMAPHORE-FINAL-FOUR-set.png"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "classic/ records still point to the old location",
+      "detail": "classic/MANIFEST.json lists 19 of its 26 files at their pre-move paths (owl-finals-2026-10-05/... instead of .../classic/...), so a path-based check of that manifest reports 19 missing files although every hash matches the file now in classic/. README-classic.md has the same problem: its links ../seam-fix/ and ../layered/ now resolve one level too shallow, and its build command names the old config and output folder. NOTE.md gives the correct rebuild command (I ran it; it reproduces the files). The top README's MANIFEST lists the four classic masters correctly.",
+      "evidence": "For each classic/MANIFEST.json entry: os.path.exists on the recorded path is False for 19 entries; sha256 of the same-named file in classic/ or classic/png equals the recorded hash for all 26.",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/classic/MANIFEST.json",
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/classic/README-classic.md"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "The print-size PNGs carry no dpi tag",
+      "detail": "README calls 1298 and 1214 px the 300 dpi files. The pixel counts are right for 109.9 and 102.785 mm, but the PNGs have no pHYs chunk, so a layout or print program will place them at its own default resolution unless told 300 dpi.",
+      "evidence": "Parsed the PNG chunks of the 1298, 1214 and 2460 px NORMATIVE files: only IHDR, IDAT, IEND.",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/png/OWL-SEMAPHORE-NORMATIVE-en-1214.png",
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/png/OWL-SEMAPHORE-NORMATIVE-en-1298.png"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Tightest spots in the Spanish legends (they fit)",
+      "detail": "The accent on CRÍTICO rises to r 320.38 units, 0.41 mm from the channel's inner edge (capitals keep 1.52 mm). NORMATIVO, at the minimum tracking 1.0, leaves 2.34 and 2.54 mm of plate at the two ends of its window, against 4.1-5.0 mm on the other seven legends. Both are clear of the rails in the 2460 px render; worth a look in the camera and print tests.",
+      "evidence": "Transformed every outline point of each legend glyph into coin coordinates and took radial and angular extremes; confirmed on the render (letter pixels of CRÍTICO start at r 320.36; no letter pixel outside the channel or window on any coin).",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-CRITICAL-owl-slot820.svg",
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-NORMATIVE-owl-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Outside the centre and the coloured rings, the meander is not pixel-equal to the approved coin (declared)",
+      "detail": "Beside the legend window the new coin differs from the approved coin over the tint on 405-441 pixels by more than 16 levels at 2460 px (0.03 % of the meander band): the seam-fix corners at each window end and the next junction, plus thin lines where the old plaque shadow spilled. NORMATIVE and CRITICAL also show 1-9 scattered edge pixels per 15 deg sector around the ring. README states the seam fix and the removed shadow; this is the measured size of it.",
+      "evidence": "Difference map of owl coin vs approved-over-tint, restricted to r 305-392.5 and outside the window plus 2 deg; inspected crops at both window ends.",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/MASTER-medallion-NORMATIVE-owl-slot820.svg"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "README wording: the guard hash is not a hash of anything in master/states/",
+      "detail": "README says the approved masters in master/states/ are untouched '(guard d4054fa6e02e66e4)'. That hash is master/MASTER-medallion-METACOGNITIVE-slot820.svg, the shirt master. The statement is true (all four master/states coins match seals.txt), but the guard alone does not show it.",
+      "evidence": "seals.txt line for d4054fa6e02e66e4 names ./master/MASTER-medallion-METACOGNITIVE-slot820.svg; the four master/states hashes are d9d6336b0c9450ac, e1d83bb7e4b6017d, 3a8a7459bb1782d1, 055655372b21da5c.",
+      "files": [
+       "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/README.md"
+      ]
+     }
+    ],
+    "not_tested": [
+     "tools/export_set.py itself was not run: it writes into the project folder. I toggled the legend layers with my own code and rendered all 40 sizes; all 40 files came out byte-identical to the delivered ones.",
+     "The lane's check scripts (lane-verify-build3.py, lane-stamp-floor.py) were not run, by instruction. I confirmed only that part D and the owl rows exist, and measured the same things with my own code.",
+     "Second renderer (Inkscape) was run on CRITICAL only, at 1230 px; the other three coins were not cross-rendered.",
+     "proofs/OWL-SEMAPHORE-FINAL-FOUR-on-white.png and ...-spanish-and-uncut.png were checked by eye only (coins, words and fields look right); only the set sheet was compared numerically.",
+     "Whether README-classic.md is unchanged since 4 Oct: it is in no manifest, so only its file time (4 Oct 21:39) supports it.",
+     "Physical results: print at 300 dpi, the camera test, and whether a 1.7 dE tint difference is visible. Not testable from files.",
+     "README status lines (Science's check not done, re-seal, Printful file, succession note wording, shirt ring colour open): statements about work not yet done; I confirmed only that the succession draft file exists.",
+     "Copies of the retired owl PNGs outside the project and outside Downloads (searched the project fully and Downloads to depth 4 only)."
+    ],
+    "scratch_files": [
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/structure_check.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/text2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/diffbase.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/moves.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/claim3.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/claim3b.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/claim5.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/words2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/words.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/plate.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/winedge.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/nofield.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/misc.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/rest.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/ink.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/sheet2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/mk_es.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/mk_var.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/queue.sh",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/r",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/svg",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/crops",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/rebuild-owl",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/owl/rebuild-classic"
+    ]
+   },
+   "verify": {
+    "results": [
+     {
+      "title": "Proof sheet caption for METACOGNITIVE shows a missing-glyph box",
+      "reproduced": true,
+      "measured": "My own crop of /Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/owl-finals-2026-10-05/proofs/OWL-SEMAPHORE-FINAL-FOUR-set.png (1908x2176) at the small-caption row under each coin, enlarged 4x and 10x. The four lines read: 'I · the owl as it is'; 'σᵥ · the owl mirrored left to right' (subscript v drawn); 'σ' + hollow rectangle about 11x19 px + ' · the owl mirrored top to bottom'; 'C₂ · the owl turned half way' (subscript 2 drawn). Cause confirmed from the font tables: Helvetica Neue and the Helvetica fallback used by tools/export_set.py both have U+03C3, U+1D65 and U+2082 but not U+2095 (subscript h), so it falls to the .notdef box. On-white sheet: 0 ink pixels in the small-caption row under all four coins. Spanish-and-uncut sheet: small captions are only 'Spanish layer shown' and 'the whole meander, 24 keys'. classic/OWL-SEMAPHORE-FINAL-FOUR-set.png has no small captions either.",
+      "comment": "Agrees with the first agent in full. The box is drawn by the sheet script's caption font only; no coin file or coin PNG contains this text. The fix belongs in tools/export_set.py (the 'small' caption for METACOGNITIVE), then re-run with --sheets-only. My crops: /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-owl/mycap-set-all4.png and mycap-set-METACOGNITIVE-op.png."
+     },
+     {
+      "title": "classic/ records still point to the old location",
+      "reproduced": true,
+      "measured": "classic/MANIFEST.json has 26 entries. Recorded path missing for 19 (all begin master/states/proposals/owl-finals-2026-10-05/ without classic/: 5 SVGs, 12 PNGs, the set sheet, the config). For all 19 the same-named file in classic/ or classic/png matches the recorded sha256 and byte count. The other 7 entries (2 seam-fix rings, 4 approved masters, tools/build_states_proposal.py) exist at their recorded paths and match. So 26 of 26 hashes match a current file. README-classic.md, read from classic/: ../seam-fix/, ../layered/ and ../notation/final-masters-2026-10-05/refute/refute-build2-and-owl.json all resolve to paths that do not exist; each exists one level higher under master/states/proposals/. Its build command gives --outdir master/states/proposals/owl-finals-2026-10-05 (the parent folder, not classic/). Its --config, master/states/proposals/seam-fix/states-config-seamfix.json, still exists and is byte-identical to classic/states-config-seamfix.json (both 60ea004b30f88af3). I ran the NOTE.md command and the README-classic config, both with the output sent to scratch: each reproduces all five SVGs byte for byte (b668251468520bcd, c2fbd1c1c94d58c5, 33c7a07f6816d75d, acae446801b1f002, shirt 4348b3178433662c). Top MANIFEST.json: 70 entries, 0 missing, 0 hash mismatches; the four classic masters are listed under classic/ with matching hashes.",
+      "comment": "Core finding stands: 19 stale paths, every hash good. Three corrections to the first agent's wording. (1) The 26 matches are 19 in classic/ plus 7 at their recorded paths elsewhere, not all 26 in classic/. (2) The README-classic build command's config is not stale: that path still exists and is the same file. Only the output folder is stale; run as written it would write the classic SVGs into the parent folder beside the layered masters. (3) A third broken relative link was not listed: the refute JSON under ../notation/. Nothing under the project was written; rebuilds are in /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-owl/rebuild-note and rebuild-readme."
+     }
+    ]
+   }
+  },
+  {
+   "key": "repro",
+   "refuter": {
+    "verdict": "partly_refuted",
+    "checks": [
+     {
+      "claim": "1a. Documented command rebuilds the four notation bases byte for byte",
+      "method": "Ran tools/build_states_layered.py with layered/states-config-layered.json into scratch; cmp against the delivered bases",
+      "result": "4 of 4 identical: NORMATIVE c7a3aed8889c41d2, NON-NORMATIVE 49eb2a8b2ba9290b, CRITICAL 36c4e05cdc90d05b, METACOGNITIVE bde8beb204270023. layered-build.json identical once my scratch out-folder is replaced by the documented one.",
+      "pass": true
+     },
+     {
+      "claim": "1b. Documented command rebuilds the four owl masters byte for byte",
+      "method": "Same tool with states-config-owl-layered.json into scratch; cmp",
+      "result": "4 of 4 identical: f5df2248f73935a1, 47e876c797c38e4c, ad2cf6051c7357d1, 7fad8d5c590f8a65. layered-build.json identical after the same folder replacement.",
+      "pass": true
+     },
+     {
+      "claim": "1c. Centre-mark generator rebuilds the four notation masters byte for byte",
+      "method": "Copied notation-config-final-masters.json, changed only common.out_dir (verified by JSON compare), ran tools/build_notation.py with --work-dir; cmp",
+      "result": "4 of 4 masters identical (d5532ebfafc62f21, bfb5652ef417c38b, f63747e84d9a6872, a8fc0bf8802a0e36); 4 of 4 preview PNGs identical. notation-measurements.json: every measured value identical; only 10 path fields and 3 timing fields (skeleton_seconds) differ. Guard inside the run: GUARD PASS, 4 IDENTICAL.",
+      "pass": true
+     },
+     {
+      "claim": "1d. export_set.py reproduces every delivered PNG (notation)",
+      "method": "Copied the 4 delivered notation masters to scratch, ran export_set.py --kind notation --glyph-dir <my work dir>; byte compare with delivered png/, proofs/, scan-cards/",
+      "result": "55 of 55 files the tool writes are byte-identical (40 png, 4 no-legend proofs, 3 sheets, 8 scan cards).",
+      "pass": true
+     },
+     {
+      "claim": "1d. export_set.py reproduces every delivered PNG (owl)",
+      "method": "Same with the 4 delivered owl masters, --kind owl",
+      "result": "47 of 47 byte-identical (40 png, 4 no-legend proofs, 3 sheets).",
+      "pass": true
+     },
+     {
+      "claim": "1d. Every delivered PNG comes from a documented command (README step 3: 'every PNG')",
+      "method": "Listed delivered PNGs the tool did not write; searched the project for a script naming the file",
+      "result": "proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png (1.2 MB, listed in MANIFEST, cited in README) is written by no tool or script in the project. 1 of 56 notation PNGs cannot be regenerated.",
+      "pass": false
+     },
+     {
+      "claim": "2. Build 2's config with the current tool still gives the build-2 bases byte for byte",
+      "method": "Ran current build_states_layered.py with layered/superseded-build-2/states-config-layered.json into scratch; cmp with layered/superseded-build-2/",
+      "result": "4 of 4 identical: 2ed4d42cc1f941dd, 3b20dbefc9f244de, 390b916e035e00a2, 077a61b31796c431.",
+      "pass": true
+     },
+     {
+      "claim": "Tool docstring: a config without the new switches gives the same bytes as before",
+      "method": "diff of my build-2 rerun's layered-build.json against the recorded build-2 one",
+      "result": "True for the 4 SVGs. Not for layered-build.json: the current tool always adds two lines (\"stamp\", \"edition\"), so the report differs from build 2's even after path normalising.",
+      "pass": false
+     },
+     {
+      "claim": "3. Notation MANIFEST.json: every listed file exists, size and sha256 match",
+      "method": "Own script: stat + sha256 of each of the entries",
+      "result": "95 of 95 match, 0 missing, 0 duplicates.",
+      "pass": true
+     },
+     {
+      "claim": "3. Owl MANIFEST.json: every listed file exists, size and sha256 match",
+      "method": "Same script",
+      "result": "70 of 70 match, 0 missing, 0 duplicates.",
+      "pass": true
+     },
+     {
+      "claim": "3. Nothing a reader would expect is missing from the manifests",
+      "method": "Walked both folders for unlisted files; looked up build inputs by path",
+      "result": "In-folder unlisted files are only the ones the manifests say they skip (README, MANIFEST, make_manifest.py, refuter records, superseded folders, rest of classic/). Not listed anywhere: layered/layered-build.json (the bases' build report; the owl manifest lists its own), tools/build_states.py and master/states/states-config.json (the guard and config build_notation.py uses), tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44, and the build sheet file itself (named by hash in _doc only).",
+      "pass": true
+     },
+     {
+      "claim": "4. No sealed tool was edited",
+      "method": "sha256 of the 7 tools against the values in superseded-build-2/MANIFEST.json",
+      "result": "7 of 7 equal (legend.js 3a0711ab, compose.py 551a3e32, finish7.js 90055af2, meander3.js a95717a5, render.js f8cc0e08, ring_build.js 2d095adf, build_notation.py f3b70c3a). build_states_proposal.py also equal.",
+      "pass": true
+     },
+     {
+      "claim": "4. Previous bytes of build_states_layered.py are kept and hash to build 2's record",
+      "method": "sha256 and size of tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44",
+      "result": "9ecd029d3f637b44…, 12,182 bytes: equals build 2's manifest entry. Current tool is 2813584f2159cb27, 15,128 bytes.",
+      "pass": true
+     },
+     {
+      "claim": "4. New code paths are off unless the config asks; cut-in touches only the legend.js groups; nothing fragile",
+      "method": "Read the diff (62 changed lines); three experiments in scratch: build-2 config, stamp value mistyped ('cut_in'), switch name mistyped ('stamps')",
+      "result": "All three switches read with .get() and default off; build-2 config gives build-2 SVG bytes. cut_in() works only on the two strings sliced from legend.js output; measured: outside the legend layers build 3 = build 2 byte for byte, and the floor and window rails (not from legend.js) are also unchanged. Every new regex/removal is followed by an assert (n == 1, no filter/gradient/clip/stroke/opacity left, exactly 2 paths). Mistyped value: AssertionError, nothing written. Mistyped switch name: builds the old brown plaque without complaint (6 x #221B12 in the file); only layered-build.json's 'stamp' line shows it. out_suffix is not validated. The label-1 re.sub the owl edition relies on has no match count assert (older code).",
+      "pass": true
+     },
+     {
+      "claim": "5. build_states.py --check prints GUARD PASS and four IDENTICAL; approved hashes as stated",
+      "method": "Ran it (it builds in temp folders only); shasum of the five approved files",
+      "result": "GUARD PASS d4054fa6e02e66e4; NORMATIVE d9d6336b0c9450ac, NON-NORMATIVE e1d83bb7e4b6017d, CRITICAL 055655372b21da5c, METACOGNITIVE 3a8a7459bb1782d1, all IDENTICAL, exit 0.",
+      "pass": true
+     },
+     {
+      "claim": "6. README hashes: sheet, masters, build-2 masters, bases, configs, ring, font, sealed tool, finals CRITICAL",
+      "method": "shasum of each file on disk",
+      "result": "All match: sheet 9e021adbe53cb849; 4 masters; build 2 335128d15f109192 / 0550b036663cf380 / a2fc2582d5a7aca5 / b81e23701a90671c; 4 bases; notation config 9024cdc4e115a311 (same bytes as the build-2 copy); uncut ring 901fd319c2b7e30a; font 7e69e81478e233b8; finals CRITICAL af4373975fc5f063; sealed tool 9ecd029d3f637b44.",
+      "pass": true
+     },
+     {
+      "claim": "6. SUPERSEDED.md (both) and owl README / classic NOTE hashes",
+      "method": "shasum",
+      "result": "All match: build-2 masters and bases as above; owl f5df2248…, 47e876c7…, ad2cf605…, 7fad8d5c…; classic b6682514…, c2fbd1c1…, 33c7a07f…, acae4468…; shirt master 4348b3178433662c.",
+      "pass": true
+     },
+     {
+      "claim": "6. File names the README refers to exist",
+      "method": "Tested each path",
+      "result": "All exist except refute/refute-build3.json, which the README says is not there yet.",
+      "pass": true
+     },
+     {
+      "claim": "6. Outside the four legend layers each build-3 file equals its build-2 file; inside, floor, plate outline, rails and letters are build-2 bytes except one word",
+      "method": "Own tag-stack parser: cut the 4 legend groups out of both files and compared; compared floor element, plate and seam path data, rails group, letter group per language",
+      "result": "4 of 4 files identical outside the legend layers (about 273,700 bytes each). Floor, plate outline, seam outline, rails: identical in all 8 language layers. Letters identical in 7 of 8; the 8th is NON-NORMATIVE Spanish, 11 outlines before and after. Plate and seams fill = the coin's tint (was #221B12).",
+      "pass": true
+     },
+     {
+      "claim": "6. Removed from build 2: 3 edge strokes, shadow, bevel, 5 blur filters, 2 gradients, 2 clip paths",
+      "method": "Counted in each build-2 legend pair (rails excluded) and searched build 3 for leftovers",
+      "result": "Build 2 per language: 5 filters, 2 gradients, 2 clipPaths, 3 edge strokes, cast-shadow and bevel groups. Build 3: none; the word 'stroke' appears only inside the layer label text. 0 raster images.",
+      "pass": true
+     },
+     {
+      "claim": "6. Layers, field, hidden Spanish, same ring",
+      "method": "xml.etree root children of all 8 masters; regex on field; compared geometry+finish groups with the uncut ring file",
+      "result": "Order as stated on all 8 (CRITICAL notation has no symmetry-marks). Field r 403.678 and the four tints correct. Spanish layers carry display:none (2 per file). Geometry+finish groups of all 8 masters equal the uncut ring file's (214,768 bytes).",
+      "pass": true
+     },
+     {
+      "claim": "6. Uncut ring has all 24 keys when the legend layers are hidden",
+      "method": "Autocorrelation of the ring band (r 322-372) in the 4 delivered no-legend proofs",
+      "result": "Peaks at every 15 degrees, 24 per turn; 0.97 at 15 degrees, 0.25 at 7.5 degrees.",
+      "pass": true
+     },
+     {
+      "claim": "6. Legend numbers: font size, tracks, margins, INFORMATIVO 62.8 degrees",
+      "method": "fontTools advance widths of the font file, legend.js constants, arc on mid-radius 347.273",
+      "result": "Font size 47.830 units = 16.995 pt; cap 4.38 mm at 102.785 mm (rounds to 4.4). Rule (4.812 degrees each side, floor 1.0) gives 1.0, 1.0, 1.0526, 1.2796, 1.1000, 1.0805, 1.2578, 1.4141: all eight as stated. NORMATIVO margin 2.758 degrees. INFORMATIVO at 1.0 spans 62.81 degrees (over 60).",
+      "pass": true
+     },
+     {
+      "claim": "6. Letter contrast 11.04-11.09 to 1",
+      "method": "WCAG contrast of #DEC875 on each tint; checked the delivered 2460 px exports are flat",
+      "result": "11.072, 11.045, 11.067, 11.087. In all 16 exports the plate area holds only the tint, #DEC875 and edge mixes (0 pixels more than 2 levels off that line).",
+      "pass": true
+     },
+     {
+      "claim": "6. Symmetry marks 4.0 x 0.9 mm, 1.5 mm beyond the mark, 1.6 mm between bars",
+      "method": "Rect sizes and positions from the SVGs, times 102.785/820",
+      "result": "Bars 4.000 x 0.900 mm on all three coins; first bar 1.500 mm beyond NORMATIVE's miter tips on both axes; 1.600 mm between bars.",
+      "pass": true
+     },
+     {
+      "claim": "6. Twins: scale 0.918549, line 1.0743 mm, air 1.9696 mm, overhang 2.9187 mm, sigma 16.718 mm",
+      "method": "Flattened the glyph paths through the transform chain; measured against the gold rect",
+      "result": "Both coins: line 9.3307 units = 1.0743 mm; air 17.1062 units = 1.9696 mm both sides; overhang 25.35 units = 2.9187 mm both ends; sigma 16.718 mm. Mark heights 235.387367 and 415.315592 slot units.",
+      "pass": true
+     },
+     {
+      "claim": "6. Mark sizes: I 14.71 mm, C 10.96 mm; NORMATIVE scale 0.545353",
+      "method": "Glyph bounding boxes through the transforms",
+      "result": "I 14.710 mm; C 10.956 mm; 0.575388 x 0.9478 = 0.545353; against 0.94779 the mark top moves 0.00031 mm.",
+      "pass": true
+     },
+     {
+      "claim": "6. Closest ink to the ring: NORMATIVE 2.321, NON-NORMATIVE 2.330, CRITICAL 2.315 mm; nothing closer than CRITICAL",
+      "method": "Vector: mark rect corners, flattened sigma outline, triangle miter tips (ratio 2.0, under the miter limit); ring inner edge 291.745",
+      "result": "NORMATIVE 2.3214 (outer mark corners), NON-NORMATIVE 2.330 (outer sigma), CRITICAL 2.3154 (triangle point). CRITICAL is the closest. The generator's raster figures in notation-measurements.json (2.329 / 2.329 / 2.333) are coarser and put them in a different order.",
+      "pass": true
+     },
+     {
+      "claim": "6. Closest ink to the ring: METACOGNITIVE 8.59 mm",
+      "method": "Same vector method",
+      "result": "8.583 mm (farthest letter ink r 223.272 units). The README's 8.59 is the generator's raster 8.586 rounded; off by 0.007 mm.",
+      "pass": false
+     },
+     {
+      "claim": "6. lane-verify-build3.py makes 216 checks",
+      "method": "Counted by reading the script (not run): 4 notation coins x 28, 4 owl coins x 23, 6 text files x 2",
+      "result": "112 + 92 + 12 = 216. That they all pass was not run; my own measurements above cover its parts A, B and D and agree.",
+      "pass": true
+     },
+     {
+      "claim": "6. Stamp floor: 169,116 or 258,114 pixels per coin at 2460 px, none off the tint (lane-stamp-floor.json, 16 rows)",
+      "method": "Own code: hid the letters on scratch copies of all 8 masters in both languages, rendered at 2460 px with resvg, counted in the lane's stated region and in tighter ones",
+      "result": "Lane region (3 units and 1.5 degrees in): 169,116 (four-key) and 258,114 (six-key) pixels, 0 off the tint, alpha 255, on all 16. Half a unit and 0.25 degrees in: 192,802 / 289,996 pixels, still 0 off. Right up to the rail faces: 966 / 1,532 pixels off, every one within 0.6 px of a rail face (the rail's own edge); none at the window ends.",
+      "pass": true
+     },
+     {
+      "claim": "6. All 40 PNGs fully opaque inside the coin and empty outside (both sets)",
+      "method": "Alpha of every delivered PNG against the outer ring edge r 409.731, half a pixel of tolerance",
+      "result": "80 of 80: 0 pixels under alpha 255 inside. Outside: 0 except 15 edge pixels per 2460 px file, alpha 16 or less, within 0.72 px of the edge. Sizes 2460/1298/1214/1024/512, 8 files each per set; no dpi tag.",
+      "pass": true
+     },
+     {
+      "claim": "6. The four readable-half scan cards are byte-identical to build 2's",
+      "method": "cmp",
+      "result": "4 of 4 identical; the whole-coin cards differ, as expected.",
+      "pass": true
+     },
+     {
+      "claim": "6. Inkscape against resvg at 1024 px: about 1.35 % of pixels differ by more than 16 levels (build 2)",
+      "method": "Inkscape render of build-2 METACOGNITIVE at 1024 px against its delivered resvg PNG",
+      "result": "1.38 % (14,503 of 1,048,576), largest difference 60. Build 3 METACOGNITIVE: 1.39 %.",
+      "pass": true
+     },
+     {
+      "claim": "6. Renderer is resvg-js 2.6.2",
+      "method": "package.json of the module render.js loads",
+      "result": "2.6.2.",
+      "pass": true
+     },
+     {
+      "claim": "6. SUPERSEDED.md: build 2's configs are in the folder and re-run by pointing the output elsewhere",
+      "method": "Ran the build-2 notation config twice in scratch: once with only out_dir changed, once with the four owl_master paths also pointed at layered/superseded-build-2/",
+      "result": "Only out_dir changed: build-3 masters come out (d5532ebf…), because the config reads the main layered folder, which now holds build-3 bases. With the bases re-pointed: 4 of 4 identical to the build-2 masters (335128d1…, 0550b036…, a2fc2582…, b81e2370…).",
+      "pass": false
+     },
+     {
+      "claim": "Build-2 MANIFEST.json (now in superseded-build-2/) still matches the disk",
+      "method": "sha256 of each listed path; then looked for the hash under the superseded folders",
+      "result": "73 entries: 27 match at the listed path; 45 match only under the superseded-build-2 folders; 1 (build_states_layered.py) only in tools/sealed/. No file is lost.",
+      "pass": false
+     },
+     {
+      "claim": "Owl README: each owl file equals the notation base except title and label 1; owl block and English letters are the approved coin's bytes",
+      "method": "Line diff against the bases; compared the owl-placement block and letter outlines with classic/ and master/states/",
+      "result": "4 of 4: exactly 2 differing lines (title, label 1). Owl block = classic = approved (about 70,650 bytes each). English letters = approved. 'NO NORMATIVO' appears in none of the 12 SVGs, manifests or configs; twice in the notation README, as history.",
+      "pass": true
+     },
+     {
+      "claim": "My runs left the project untouched",
+      "method": "sha256 of all 1,379 project files before and after",
+      "result": "Identical except two Finder .DS_Store files (master/states/, master/states/proposals/), changed at 11:56:44 and not written by any command of mine.",
+      "pass": true
+     }
+    ],
+    "findings": [
+     {
+      "severity": "low",
+      "title": "One delivered proof picture cannot be regenerated",
+      "detail": "README step 3 says export_set.py makes every PNG. It makes 55 of the 56 in the notation folder. proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png is listed in the manifest and cited twice in the README, but no tool or script in the project writes it. It is a comparison sheet, not a coin.",
+      "evidence": "My export run wrote 7 of the 8 files in proofs/; a search of every .py, .js, .md and .json in the project finds the name only in README.md and MANIFEST.json.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png",
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "tools/export_set.py"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "SUPERSEDED.md's re-run instruction gives build 3, not build 2",
+      "detail": "It says build 2's configs are in the folder and to point the output elsewhere before re-running. The notation config reads its bases from the main layered folder, which now holds build-3 bases, so that instruction produces build-3 masters. Build 2 comes back only when the four owl_master paths are also pointed at layered/superseded-build-2/.",
+      "evidence": "Config bytes 9024cdc4e115a311 with only out_dir changed gave d5532ebfafc62f21 etc. (build 3). With owl_master re-pointed: 335128d15f109192, 0550b036663cf380, a2fc2582d5a7aca5, b81e23701a90671c, byte-identical to superseded-build-2/.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/SUPERSEDED.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/notation-config-final-masters.json"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "Build 2's manifest still lists the old paths",
+      "detail": "superseded-build-2/MANIFEST.json was moved without its paths being updated. 46 of its 73 entries now point at files with different bytes (the build-3 files, or the edited tool). All 46 hashes are found under the superseded folders or tools/sealed/, so nothing is lost, but the record does not verify as written and SUPERSEDED.md does not say so.",
+      "evidence": "27 match at the listed path, 45 only under superseded-build-2 folders, 1 only at tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/superseded-build-2/MANIFEST.json"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "'Same bytes as before' holds for the SVGs, not for the build report",
+      "detail": "The tool's note says a config without the new switches gives the same bytes as before. The four SVGs do. layered-build.json does not: the tool now always writes a 'stamp' and an 'edition' line.",
+      "evidence": "diff of my build-2 rerun's layered-build.json against layered/superseded-build-2/layered-build.json: two added lines besides paths.",
+      "files": [
+       "tools/build_states_layered.py",
+       "master/states/proposals/layered/superseded-build-2/layered-build.json"
+      ]
+     },
+     {
+      "severity": "low",
+      "title": "README gives METACOGNITIVE's ring clearance as 8.59 mm; the vector gives 8.583",
+      "detail": "The other three clearances in the table are vector figures to three decimals and check out. METACOGNITIVE's is the generator's raster figure (8.586) rounded up. 0.007 mm; no effect on the floor rule.",
+      "evidence": "Farthest letter ink at r 223.272 units; (291.745 - 223.272) x 102.785/820 = 8.583 mm.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "A mistyped switch name builds the old brown plaque without complaint",
+      "detail": "A wrong value for 'stamp' stops the tool. A wrong key name (for example 'stamps') is ignored, and the tool builds the build-2 style plaque and exits 0. The only sign is the 'stamp' line in layered-build.json.",
+      "evidence": "Scratch run with 'stamps': 'cut-in': exit 0, 6 x #221B12 in the NORMATIVE file, report line 'plaque with depth effects (legend.js as sealed)'.",
+      "files": [
+       "tools/build_states_layered.py"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "The renderer and font library load from a temp path",
+      "detail": "render.js and legend.js (both sealed) load resvg-js and opentype.js from /private/tmp/claude-501/…/f53c0528-…/scratchpad/meander/node_modules. Today that is a symlink to ~/.cache/dose01-toolchain/node/node_modules, made 4 Oct. If /private/tmp is cleared, every build and export command stops until the link is remade. Neither README says this.",
+      "evidence": "ls -la of the path shows the symlink; the path is hard-coded in line 1 of tools/render.js and line 2 of tools/legend.js.",
+      "files": [
+       "tools/render.js",
+       "tools/legend.js"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "A manifest-hashed file holds run timings",
+      "detail": "notation-measurements.json is hashed in the manifest but records the work folder and three skeleton_seconds timings, so a rerun never matches its hash. Every measured value in it did reproduce.",
+      "evidence": "My rerun differs from the delivered file only in 10 path fields and 3 timing fields (3.8 / 3.9, 5.2 / 5.1, 5.2 / 5.0).",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/notation-measurements.json",
+       "master/states/proposals/notation/final-masters-2026-10-05/MANIFEST.json"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "Build inputs missing from the notation manifest",
+      "detail": "Not listed: the bases' build report layered/layered-build.json (the owl manifest lists its own), tools/build_states.py and master/states/states-config.json (the guard and config the centre-mark generator uses), and the sealed previous copy of build_states_layered.py. The build sheet is named by hash in the heading only.",
+      "evidence": "Path lookup in the 95 entries.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/MANIFEST.json"
+      ]
+     },
+     {
+      "severity": "note",
+      "title": "README's stamp check is stated more broadly than the lane measured, and it still holds",
+      "detail": "README says the plate between the rails is the tint on every pixel. The lane's region stops 3 units short of each rail and 1.5 degrees short of each window end. I measured the rest: the tint holds on every pixel up to 0.6 px from the rail faces and right to the window ends, on all 16 coins.",
+      "evidence": "0 of 192,802 / 289,996 pixels off at half a unit in; 966 / 1,532 off in the full channel, all within 0.6 px of a rail face.",
+      "files": [
+       "master/states/proposals/notation/final-masters-2026-10-05/README.md",
+       "master/states/proposals/notation/final-masters-2026-10-05/refute/lane-stamp-floor.json"
+      ]
+     }
+    ],
+    "not_tested": [
+     "The lane's own scripts were not run (as instructed), so 'ALL PASS' for lane-verify-final-masters.py and 'all pass' for lane-verify-build3.py are unconfirmed as runs; I counted the 216 by reading and re-measured parts A, B and D myself.",
+     "That Science's acceptance checks passed on build 2: nothing on disk to test it against.",
+     "CRITICAL's 0.527 mm thin line: not measured independently. The generator's raster in my rerun gave 0.522 (ridge) and 0.538 (disc).",
+     "README's Inkscape close-ups of the window ends ('clean, no slivers'): I measured only resvg at 2460 px, whole coin.",
+     "Reproduction on another machine: the set sheets use the system's Helvetica Neue and the tools use Homebrew python3 and node; only this machine was tested.",
+     "How proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png was made, and whether its 'before' half is build 2.",
+     "Science's reference file with scale 0.94779: not opened; only the 0.0003 mm arithmetic was checked.",
+     "The sheet's research claims behind INFORMATIVO (ICONTEC and the others).",
+     "The four specks the sheet (section 14) says a hidden field leaves under the plaque corners, and the README line about hiding the field: not rendered."
+    ],
+    "scratch_files": [
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/check_manifest.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/structure.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/structure.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/readme_numbers.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/owl_and_records.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/cmp_exports.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/floor_check.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/floor_check.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/floor_where.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/opacity2.py",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/build_notation.log",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/export-notation.log",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/export-owl.log",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/notation-config-scratch.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/b2-notation-config-repointed.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/typo-config.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/typo-key-config.json",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/project-before.sha",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/project-after2.sha",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/bases",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/owl",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/b2bases",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/notation-out",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/b2-notation-out",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/work",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/exp-notation",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/exp-owl",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/floor",
+     "/private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/repro/ink"
+    ]
+   },
+   "verify": {
+    "results": [
+     {
+      "title": "One delivered proof picture cannot be regenerated",
+      "reproduced": true,
+      "measured": "I copied the four delivered build-3 masters to scratch and ran tools/export_set.py there (--kind notation, --glyph-dir = the work folder of my own build_notation run). It wrote 55 files: 40 of 40 in png/, 7 of 8 in proofs/, 8 of 8 in scan-cards/. All 55 are byte-identical to the delivered ones. The only delivered file it did not write is proofs/TETRASEMAPHORE-BUILD3-stamp-before-after.png. A text search of the whole project finds that name in two files only: README.md (line 13) and MANIFEST.json (line 342). No .py, .js or .sh contains it. The picture is 1860 x 2652 px, a three-panel comparison sheet (build-2 stamp, build-3 stamp, INFORMATIVO), not a coin.",
+      "comment": "The README names the file once (line 13) and refers to it in words twice more (lines 71 and 78), so 'cited twice' is close but not exact. make_manifest.py picks it up by listing proofs/*.png, which is why it is in the manifest with no maker."
+     },
+     {
+      "title": "SUPERSEDED.md's re-run instruction gives build 3, not build 2",
+      "reproduced": true,
+      "measured": "Config sha16 is 9024cdc4e115a311 (the copy in superseded-build-2/ and the one in notation/ are identical). Run A, only out_dir changed: d5532ebfafc62f21, bfb5652ef417c38b, f63747e84d9a6872, a8fc0bf8802a0e36, byte-identical to the delivered build-3 masters. Run B, the four owl_master paths also pointed at layered/superseded-build-2/: 335128d15f109192, 0550b036663cf380, a2fc2582d5a7aca5, b81e23701a90671c, byte-identical to the files in superseded-build-2/.",
+      "comment": "SUPERSEDED.md does say where the base config is, but it never says to re-point owl_master. The notation config reads its bases from master/states/proposals/layered/, which now holds the build-3 bases, so following the note as written returns build 3."
+     },
+     {
+      "title": "Build 2's manifest still lists the old paths",
+      "reproduced": true,
+      "measured": "73 entries. 27 match the bytes at the listed path. 46 do not: 45 of those hashes are found only under the superseded-build-2 folders (each at the mirrored path), and 1 only at tools/sealed/build_states_layered.py.before-cut-in-9ecd029d3f637b44. No hash is missing from the project. SUPERSEDED.md does not mention the manifest.",
+      "comment": "One correction to the wording: of the 46, 42 listed paths now hold different bytes and 4 no longer exist at all (the four proofs/TETRASEMAPHORE-<STATE>-es-PROPOSED-1024.png, which build 3 does not have under that name). The totals are as reported."
+     },
+     {
+      "title": "'Same bytes as before' holds for the SVGs, not for the build report",
+      "reproduced": true,
+      "measured": "I ran the sealed tool (9ecd029d3f637b44) and the current tool (2813584f2159cb27) on build 2's base config into the same scratch folder. Both gave the same four SVGs: 2ed4d42cc1f941dd, 3b20dbefc9f244de, 077a61b31796c431, 390b916e035e00a2, byte-identical to layered/superseded-build-2/. The two layered-build.json reports differ by exactly two added lines in the current tool's: \"stamp\": \"plaque with depth effects (legend.js as sealed)\" and \"edition\": \"notation base\". The sealed tool's report equals the delivered build-2 report apart from the config and out path lines.",
+      "comment": "Running both tools with the same config path and output folder removes the path differences, so the two added lines are the whole difference."
+     },
+     {
+      "title": "README gives METACOGNITIVE's ring clearance as 8.59 mm; the vector gives 8.583",
+      "reproduced": true,
+      "measured": "My own outline calculation (no rasteriser) puts the farthest letter ink at r 223.2724 units, at (312.772, 610.991), 115.8 deg. Ring inner edge from the file is 298.01 - 12.529/2 = 291.7455. Clearance 8.5829 mm, i.e. 8.583. An Inkscape close-up at 0.001 unit per pixel gives r 223.2723, the same 8.583. resvg at 4920 px gives 8.586 by whole pixels (the generator's figure, which my own generator run also printed) and 8.583 at the half-coverage edge. README line 51 says 8.59. The other three rows check out: NORMATIVE 2.3214, NON-NORMATIVE 2.3300, CRITICAL 2.3154 against 2.321, 2.330, 2.315.",
+      "comment": "The gap is 0.007 mm and has no effect on the floor rule; the symmetry marks and gold line on this coin are farther from the ring (12.23 and 17.21 mm). The project and Downloads are unchanged by my runs: 1,362 project files hashed before and after, identical. All my files are in /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/verify-repro."
+     }
+    ]
+   }
+  }
+ ],
+ "critic": {
+  "verdict": "Build 3 does what the sheet (sections 14-16) and the doorbell (sections 3-5) asked of the build lane, and I found no wrong artwork and no wrong word in any current deliverable. Nothing here is high severity. What is missing sits around the build: (1) the owl SVGs carry the licensed owl vector and the owl README says Hermes \"publishes them\", against the project's own licence rule; (2) no shirt file has the new stamp or the field; (3) the old owl PNGs are retired by a note only; (4) six README sentences say more than was measured.\n\nChecks I added, all in /private/tmp/claude-501/-Users-careybalboa-Downloads/4e324b64-03e2-47a8-89e5-276d2673ebfc/scratchpad/refute3/critic:\n- Both lane scripts, which only read, now run: lane-verify-build3.py prints \"216 checks: ALL PASS\"; lane-verify-final-masters.py prints \"ALL PASS\".\n- Chromium 152 and Firefox 157 draw the plate exactly in the field tint.\n- Build 3 matches the picture Carey said yes to.\n- The README's hidden-field line holds.\n- Title and desc of all 8 masters carry no Spanish word and no plate colour, so \"Replace NO NORMATIVO ... title/desc\" has nothing left to do.\n\nThe project and Downloads were not written to.",
+  "gaps": [
+   {
+    "severity": "medium",
+    "title": "Owl SVGs carry the licensed owl vector; nothing in build 3 says they must not be published as SVG",
+    "detail": "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/STATES-SPEC.md, under Licence: \"The owl paths are the licensed VectorStock vector: these SVGs stay in the private register. Public copies are the rasters\". Build 3 made 8 SVGs with those paths: the 4 owl masters and the 4 layered bases in master/states/proposals/layered/ (each has 1 owl-placement group; the bases are listed in the notation MANIFEST as build inputs). Owl README line 5 says \"Hermes moves, re-seals and publishes them\"; sheet section 14 says \"Every layer stays in each SVG for anyone\". Neither README and neither MANIFEST repeats the rule. The 4 notation masters hold no owl (0 owl-placement groups). Nobody checked this. Whether the licence allows it is Carey's to settle; I did not judge it."
+   },
+   {
+    "severity": "medium",
+    "title": "No shirt file carries build 3",
+    "detail": "The garment master (owl-finals-2026-10-05/classic/SHIRT-MASTER-medallion-METACOGNITIVE-slot820.svg, 4348b3178433662c) and the sealed shirt master (master/MASTER-medallion-METACOGNITIVE-slot820.svg, d4054fa6e02e66e4, \"in the approved front and print file\" per STATES-SPEC.md) still have the brown plate #221B12, the cast shadow, 8 filters and no field layer. Build 3's 1214 and 1298 px exports are the state coins with state-colour rings, not the shirt version (ring #8C4191). The owl README lists \"the Printful file\" as not done and the ring colour as open. Nothing says the stamp and field decisions still have to reach the shirt file."
+   },
+   {
+    "severity": "low",
+    "title": "The old owl PNGs are retired by a note only",
+    "detail": "The 12 -transparent and -on-dark files are still in owl-finals-2026-10-05/classic/png under their names. classic/MANIFEST.json lists all 12 as \"PNG export\". classic/README-classic.md still describes them as the exports, has no retired mark, and offers to publish the layered form \"instead\" through a path that no longer resolves. Only NOTE.md and the top README say retired. I found no copies elsewhere in Downloads to depth 7."
+   },
+   {
+    "severity": "low",
+    "title": "One master file name, different files, in at least seven places",
+    "detail": "MASTER-medallion-CRITICAL-notation-slot820.svg exists as build 3 (a8fc0bf8802a0e36); one folder up in notation/ (1067d1ec01ab6e83, 30 Sep, beside a README titled \"Notation-edition masters\"); in notation/finals/ (af4373975fc5f063); in finals-2026-10-04/ (543e86479c69e4cc); in superseded-build-1 and -2; and loose at the top of ~/Downloads (a14fbb9a7581e0cf, 29 Sep). The name carries no build, so only the hash tells them apart when Hermes copies."
+   },
+   {
+    "severity": "low",
+    "title": "Hidden or recoloured field: the owl README has no line, and the tint is written in 7 places",
+    "detail": "I tested the notation README's line at 2460 px. With the field layer removed, an opaque field-coloured band stays under the word (381 mm2 on the six-key coin, 279 mm2 on the four-key coin) and nothing else. With field and legend removed, 0 tint pixels remain. So the sheet's \"four specks under 0.1 mm2\" no longer describes build 3. The owl README has no such line. Neither README says that recolouring the field means changing 7 fills per file: the field circle plus floor, seams and plate in en and es."
+   },
+   {
+    "severity": "low",
+    "title": "The print PNGs carry no colour tag either",
+    "detail": "The 1214 and 1298 px files hold only IHDR, IDAT and IEND chunks: no sRGB, iCCP or gAMA, as well as no pHYs. The README mentions the missing dpi tag only. A print service will have to assume a colour space, and all four tints sit near black (L* 6.3)."
+   },
+   {
+    "severity": "note",
+    "title": "Decisions by relay: the caveat is in the READMEs only, and build 3 matches the picture Carey said yes to",
+    "detail": "Sheet section 1 marks three rows as Science's reading of Carey (owl packaging, stamp, INFORMATIVO). The SVG labels, both configs and both MANIFESTs state them as settled (\"Spanish set of 2026-10-05\"). The caveat is only in the two READMEs, which do not travel with an SVG. New check: I laid the 2460 px exports over the picture he approved (~/Downloads/TETRASEMAPHORE-SCIENCE-finals-stamp-cut-in.png, a Science composite). In the legend window build 3 differs from it by a mean of 8-11 levels, less than the rest of the ring in the same overlay (14-16, registration noise). Build 2 differs by 19-35. Build 3 is what he was shown."
+   },
+   {
+    "severity": "note",
+    "title": "Browsers draw the stamp the same way",
+    "detail": "Chromium 152 at 2460 px, on notation NON-NORMATIVE, notation CRITICAL and owl METACOGNITIVE: with letters hidden, 0 of 263,404 / 172,586 / 263,404 plate pixels are off the tint; alpha is 255 inside the coin and 0 outside; switching English to Spanish changes only the letter band; the rails against a legend-removed render differ by at most 22-26 levels (resvg: 21-28 in the same band). Firefox 157 at 820 px: 0 plate pixels off on the same three. macOS Quick Look looks right by eye. Safari was not tested. Headless Chrome from the command line would not run in this sandbox, so Chromium was driven through the browser pane."
+   },
+   {
+    "severity": "note",
+    "title": "Records that still point at build 2",
+    "detail": "(a) The auto-memory index (MEMORY.md) names 335128d1 / 0550b036 / a2fc2582 / b81e2370 as the four final masters and lists NO NORMATIVO vs INFORMATIVO as open. (b) The last lane doorbell in Downloads (TETRASEMAPHORE-DOORBELL-CLAUDE-SCIENCE-FINAL-MASTERS.md, 4 Oct) is about build 2; nothing in Downloads yet gives Science or Hermes the build-3 hashes. (c) notation-config-final-masters.json, hashed in the MANIFEST, cites sheet 6213318c73663f63 while the README says built to 9e021adbe53cb849."
+   },
+   {
+    "severity": "note",
+    "title": "Sheet lines that build 3 has overtaken (for Science)",
+    "detail": "Section 8 still says \"on plaque #221B12\". Section 14 still says \"Owl finals: do not comply yet\" and describes the four specks. Section 15's heading still says \"awaiting his yes\" while section 1 says decided. Section 2 gives METACOGNITIVE's ring clearance as 8.56 mm (README 8.59, vector 8.583). The doorbell's header cites sheet v2 (3528fd2141409826); the sheet on disk is v3 (9e021adbe53cb849)."
+   }
+  ],
+  "overclaims": [
+   {
+    "where": "notation/final-masters-2026-10-05/README.md lines 77-78",
+    "claim": "\"Renderer: resvg-js 2.6.2 (`tools/render.js`), the renderer of every picture Carey has judged\"",
+    "why": "Not measured, and the sheet says otherwise. Section 8: \"the repo's PNGs came from Inkscape\". The stamp picture he said yes to is a Science composite, whose own caption reads \"Science changed only the plate ... Not masters\". The September option-E mockup was also Science's."
+   },
+   {
+    "where": "notation README line 41; the 5a-rails label in all 8 masters; layered/states-config-layered.json _doc; notation MANIFEST role",
+    "claim": "\"`legend-rails-<lang>`, the approved cut ring for that window clipped to the window\"",
+    "why": "The file is finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys..-slot820.svg, a 30 Sep proposal that is not in seals.txt. The sealed cut ring in finish/ has different geometry (stamp refuter). Science's sheet accepts the seam fix; no approval by Carey is on record. The uncut ring is also under finish/proposals/."
+   },
+   {
+    "where": "notation README line 105",
+    "claim": "\"Each is one line in a config and can be reversed.\"",
+    "why": "The stamp is one line, in two configs. INFORMATIVO is a word and a track, in two configs. The owl packaging is not a config line at all. Reversing any of them is a new build: 8 masters, 80 PNGs, two manifests."
+   },
+   {
+    "where": "notation README line 17; superseded-build-2/SUPERSEDED.md line 4",
+    "claim": "\"Build 2 ... passed Science's acceptance checks\" / \"Science ran its acceptance checks (build sheet section 9) on these four and they passed.\"",
+    "why": "Science's doorbell reports checks 9.1 to 9.5. Check 9.6, the camera test, has not been run on any build."
+   },
+   {
+    "where": "notation README line 99",
+    "claim": "\"Close-ups of both ends of the window, resvg and Inkscape: clean, no slivers\"",
+    "why": "No close-up image or script for it is in refute/ or proofs/, so the lane's record cannot be checked. The stamp refuter's own close-ups agree by eye, and found 3 stray edge pixels (up to 11 levels) on the four-key coins."
+   },
+   {
+    "where": "superseded-build-2/SUPERSEDED.md line 1; layered/superseded-build-2/SUPERSEDED.md line 1",
+    "claim": "\"Build 2 of 2026-10-05 — superseded the same day by build 3\"",
+    "why": "Build-2 files are stamped 4 Oct 21:04-21:39 local time; build 3 is 5 Oct 11:37. True only in UTC. The owl files of the same evening are dated 2026-10-04 in classic/NOTE.md and \"built 2026-10-05\" in README-classic.md."
+   }
+  ],
+  "instructions_not_done": [
+   "Sheet section 14: \"The four specks under 0.1 mm² that a hidden field leaves under the plaque corners: one line in the README.\" Partly done: the notation README has the line, rewritten for build 3 (it is now a band, not specks); the owl README has none.",
+   "Sheet section 14 and doorbell section 3: \"Retire the owl `-transparent` and `-on-dark` exports\". Partly done: they were moved into classic/ and marked retired in NOTE.md and the top README, but the 12 files keep their names and are still listed as exports in classic/MANIFEST.json and described as the exports in classic/README-classic.md.",
+   "Sheet section 15: \"The owl edition uses the same sealed stamp, so the same change applies there.\" Done on the four layered owl coins. Not done on the garment version (SHIRT-MASTER 4348b3178433662c), which uses the same stamp and is still brown with effects; it was not asked for by name.",
+   "Doorbell section 4, heading: \"do not build until Carey says yes\". The yes on file is Science's reading of \"Okay, yeah, that looks better\" (doorbell section 5). No word from Carey to this lane is recorded; the README says so."
+  ]
+ }
+}

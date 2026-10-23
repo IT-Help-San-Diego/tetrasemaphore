@@ -1,0 +1,132 @@
+{
+ "inputs": {
+  "svg": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-og-card/og-card-MASTER.svg",
+   "sha16": "0660fd91c2999023"
+  }
+ },
+ "outputs": {
+  "png": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-og-card/og-card.png",
+   "sha16": "0cf08ac9028fc22d",
+   "bytes": 217921
+  },
+  "jpg": {
+   "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-og-card/og-card.jpg",
+   "sha16": "a175dc759f3a2fd9",
+   "bytes": 183315
+  }
+ },
+ "checks": {
+  "1_layers_and_no_live_text": {
+   "pass_": true,
+   "layers": [
+    "ground",
+    "figure",
+    "n-medallion-slot820",
+    "nn-medallion-slot820",
+    "m-medallion-slot820",
+    "c-medallion-slot820",
+    "title",
+    "formula"
+   ]
+  },
+  "1b_ids_unique_refs_resolve": {
+   "pass_": true,
+   "ids": 223,
+   "refs": 141
+  },
+  "2_png_dims_alpha_tags": {
+   "pass_": true,
+   "shape": [
+    630,
+    1200,
+    4
+   ],
+   "dpi": 300.0
+  },
+  "3_each_coin_alone_equals_composite": {
+   "pass_": true,
+   "coins": {
+    "NORMATIVE": {
+     "cell": [
+      62,
+      140,
+      283,
+      360
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "NON-NORMATIVE": {
+     "cell": [
+      347,
+      140,
+      568,
+      360
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "METACOGNITIVE": {
+     "cell": [
+      632,
+      140,
+      853,
+      360
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    },
+    "CRITICAL": {
+     "cell": [
+      917,
+      140,
+      1138,
+      360
+     ],
+     "differing_px": 0,
+     "max_level": 0
+    }
+   }
+  },
+  "4_code_points": {
+   "pass_": true
+  },
+  "5_centred_on_600_by_the_record_rule": {
+   "pass_": true,
+   "title_advance_centre": 599.965,
+   "formula_box_centre": 600.0,
+   "title_ink_centre": 597.983,
+   "formula_ink_centre": 596.092
+  },
+  "6_jpeg_close_to_png": {
+   "pass_": true,
+   "max_level": 22,
+   "mean_level": 0.7577,
+   "jpeg": "Pillow quality 95, 4:4:4, optimize"
+  },
+  "7_three_ink_bands_only": {
+   "pass_": true,
+   "bands": [
+    [
+     53,
+     96
+    ],
+    [
+     140,
+     359
+    ],
+    [
+     425,
+     532
+    ]
+   ]
+  }
+ },
+ "preview": {
+  "file": "/Users/careybalboa/Downloads/dose-01-meander-v2/vector-masters/tetrasemaphore-build7-og-card/proofs/og-card-preview.png",
+  "sha16": "5b1af9480016f6d5"
+ },
+ "all_pass": true
+}

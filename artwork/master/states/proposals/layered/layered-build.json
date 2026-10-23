@@ -1,0 +1,271 @@
+{
+ "config": "/Users/careybalboa/Downloads/dose-01-meander-v2/master/states/proposals/layered/states-config-layered.json",
+ "stamp": "cut-in",
+ "edition": "notation base",
+ "ring": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-litedge-guard-slot820.svg",
+ "ring_sha16": "29af7381e53a37a6",
+ "owl_source": "master/pre-legend/MASTER-medallion-METACOGNITIVE-slot820.svg",
+ "owl_source_sha16": "53e411c36898e6c4",
+ "states": [
+  {
+   "name": "NORMATIVE",
+   "out": "master/states/proposals/layered/MASTER-medallion-NORMATIVE-layered-slot820.svg",
+   "sha16": "ba6b89bf94983fd6",
+   "root_children": [
+    "title",
+    "desc",
+    "defs",
+    "field",
+    "finalA5-rings",
+    "finalA5-geometry",
+    "finalA5-finish",
+    "finalA5-litedge",
+    "legend-plaque-en",
+    "legend-text-en",
+    "legend-plaque-es",
+    "legend-text-es",
+    "owl-placement"
+   ],
+   "owl_index": 12,
+   "legends": [
+    {
+     "lang": "en",
+     "word": "NORMATIVE",
+     "track": 1.0,
+     "word_span_deg": 53.166,
+     "margin_each_deg": 3.417,
+     "margin_each_mm": 2.61,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.523,
+     "ink_clearance_outer_rail_mm": 1.512,
+     "ink_gap_to_window_end_deg": [
+      4.007,
+      3.973
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": false
+    },
+    {
+     "lang": "es",
+     "word": "NORMATIVO",
+     "track": 1.0,
+     "word_span_deg": 54.484,
+     "margin_each_deg": 2.758,
+     "margin_each_mm": 2.106,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.524,
+     "ink_clearance_outer_rail_mm": 1.512,
+     "ink_gap_to_window_end_deg": [
+      3.348,
+      3.151
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": true
+    }
+   ]
+  },
+  {
+   "name": "NON-NORMATIVE",
+   "out": "master/states/proposals/layered/MASTER-medallion-NON-NORMATIVE-layered-slot820.svg",
+   "sha16": "a2aba8f772f29420",
+   "root_children": [
+    "title",
+    "desc",
+    "defs",
+    "field",
+    "finalA5-rings",
+    "finalA5-geometry",
+    "finalA5-finish",
+    "finalA5-litedge",
+    "legend-plaque-en",
+    "legend-text-en",
+    "legend-plaque-es",
+    "legend-text-es",
+    "owl-placement"
+   ],
+   "owl_index": 12,
+   "legends": [
+    {
+     "lang": "en",
+     "word": "NON-NORMATIVE",
+     "track": 1.0526,
+     "word_span_deg": 80.375,
+     "margin_each_deg": 4.812,
+     "margin_each_mm": 3.676,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.524,
+     "ink_clearance_outer_rail_mm": 1.512,
+     "ink_gap_to_window_end_deg": [
+      5.576,
+      5.511
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": false
+    },
+    {
+     "lang": "es",
+     "word": "INFORMATIVO",
+     "track": 1.1,
+     "word_span_deg": 69.092,
+     "margin_each_deg": 10.454,
+     "margin_each_mm": 7.985,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.524,
+     "ink_clearance_outer_rail_mm": 1.512,
+     "ink_gap_to_window_end_deg": [
+      11.286,
+      11.183
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": true
+    }
+   ]
+  },
+  {
+   "name": "CRITICAL",
+   "out": "master/states/proposals/layered/MASTER-medallion-CRITICAL-layered-slot820.svg",
+   "sha16": "46f1faa25c89350c",
+   "root_children": [
+    "title",
+    "desc",
+    "defs",
+    "field",
+    "finalA5-rings",
+    "finalA5-geometry",
+    "finalA5-finish",
+    "finalA5-litedge",
+    "legend-plaque-en",
+    "legend-text-en",
+    "legend-plaque-es",
+    "legend-text-es",
+    "owl-placement"
+   ],
+   "owl_index": 12,
+   "legends": [
+    {
+     "lang": "en",
+     "word": "CRITICAL",
+     "track": 1.2578,
+     "word_span_deg": 50.375,
+     "margin_each_deg": 4.812,
+     "margin_each_mm": 3.676,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.526,
+     "ink_clearance_outer_rail_mm": 1.509,
+     "ink_gap_to_window_end_deg": [
+      5.95,
+      5.746
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": false
+    },
+    {
+     "lang": "es",
+     "word": "CRÍTICO",
+     "track": 1.4141,
+     "word_span_deg": 50.374,
+     "margin_each_deg": 4.813,
+     "margin_each_mm": 3.676,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 0.769,
+     "ink_clearance_outer_rail_mm": 0.769,
+     "ink_gap_to_window_end_deg": [
+      6.445,
+      6.645
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": true,
+     "radial_shift_units": 5.904,
+     "radial_shift_mm": 0.74,
+     "accent_glyph": 2,
+     "accent_lift_units": 2.2338,
+     "accent_stroke_units": 1.6753,
+     "accent_to_letter_mm": 0.591,
+     "accent_thickness_mm_nominal": 0.686,
+     "accent_height_units": 6.165
+    }
+   ]
+  },
+  {
+   "name": "METACOGNITIVE",
+   "out": "master/states/proposals/layered/MASTER-medallion-METACOGNITIVE-layered-slot820.svg",
+   "sha16": "36a0633d5ae3ca0e",
+   "root_children": [
+    "title",
+    "desc",
+    "defs",
+    "field",
+    "finalA5-rings",
+    "finalA5-geometry",
+    "finalA5-finish",
+    "finalA5-litedge",
+    "legend-plaque-en",
+    "legend-text-en",
+    "legend-plaque-es",
+    "legend-text-es",
+    "owl-placement"
+   ],
+   "owl_index": 12,
+   "legends": [
+    {
+     "lang": "en",
+     "word": "METACOGNITIVE",
+     "track": 1.1,
+     "word_span_deg": 80.375,
+     "margin_each_deg": 4.812,
+     "margin_each_mm": 3.676,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.523,
+     "ink_clearance_outer_rail_mm": 1.509,
+     "ink_gap_to_window_end_deg": [
+      5.764,
+      5.638
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": false
+    },
+    {
+     "lang": "es",
+     "word": "METACOGNITIVO",
+     "track": 1.0805,
+     "word_span_deg": 80.374,
+     "margin_each_deg": 4.813,
+     "margin_each_mm": 3.676,
+     "cap_mm": 4.4,
+     "font_size_slot": 47.83,
+     "font_size_pt": 16.99,
+     "capitals_clearance_to_rails_mm_nominal": 1.605,
+     "ink_clearance_inner_rail_mm": 1.523,
+     "ink_clearance_outer_rail_mm": 1.509,
+     "ink_gap_to_window_end_deg": [
+      5.688,
+      5.477
+     ],
+     "ink_note": "measured on the outlines at print_mm; the first gap is before the first letter, the second after the last; margin_each_* is the advance box, which is what the spacing rule centres",
+     "hidden": true
+    }
+   ]
+  }
+ ]
+}

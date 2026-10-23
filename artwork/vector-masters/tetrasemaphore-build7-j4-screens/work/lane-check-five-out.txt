@@ -1,0 +1,59 @@
+
+== NORMATIVE-flashcard  svg 26c5648afbf9d3f8  png b8e04fd9ad63be7b
+  text/image PASS | ids 63 dup PASS | refs 36 unresolved PASS []
+  coin NORMATIVE      -   byte-identical PASS ids 54 refs 36 prefixed None/None inside PASS
+  op    rect 1 stroke PASS geo dev 0.0 | paths 2 data PASS fills PASS ['#C7B469', '#E8E0D2'] adv 515.062
+  rule  rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 398.92
+  divider byte-identical PASS T -74.836 PASS
+  lines paths 3 data(code points) PASS ligature-form differs False (matches liga True) cream PASS rects 0 adv [674.448, 855.132, 497.645] adv_liga [674.448, 855.132, 497.645]
+  stack totals {'paths': 6, 'rects': 3}
+  bands {'top_0_450': 0, 'bottom_2360_2622': 0, 'alpha_min': 255} | png = my render PASS
+
+== NON-NORMATIVE-flashcard  svg 06c8b13bc205a124  png 1ff196ef5092f3ae
+  text/image PASS | ids 62 dup PASS | refs 34 unresolved PASS []
+  coin NON-NORMATIVE  -   byte-identical PASS ids 53 refs 34 prefixed None/None inside PASS
+  op    rect 1 stroke PASS geo dev 0.0 | paths 2 data PASS fills PASS ['#4FB5B5', '#E8E0D2'] adv 616.307
+  rule  rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 413.76
+  divider byte-identical PASS T -74.836 PASS
+  lines paths 2 data(code points) PASS ligature-form differs True (matches liga False) cream PASS rects 0 adv [720.497, 943.208] adv_liga [718.373, 941.084]
+  stack totals {'paths': 5, 'rects': 3}
+  bands {'top_0_450': 0, 'bottom_2360_2622': 0, 'alpha_min': 255} | png = my render PASS
+
+== CRITICAL-flashcard  svg 7ef95fb6e0aee46e  png 9762a175f02cb364
+  text/image PASS | ids 64 dup PASS | refs 37 unresolved PASS []
+  coin CRITICAL       -   byte-identical PASS ids 55 refs 37 prefixed None/None inside PASS
+  op    rect 1 stroke PASS geo dev 0.0 | paths 2 data PASS fills PASS ['#E25C60', '#E8E0D2'] adv 658.646
+  rule  rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 379.464
+  divider byte-identical PASS T -74.836 PASS
+  lines paths 3 data(code points) PASS ligature-form differs False (matches liga True) cream PASS rects 0 adv [700.645, 833.778, 421.293] adv_liga [700.645, 833.778, 421.293]
+  stack totals {'paths': 6, 'rects': 3}
+  bands {'top_0_450': 0, 'bottom_2360_2622': 0, 'alpha_min': 255} | png = my render PASS
+
+== ALL-FOUR-flashcard  svg 0b83fba14b3c08d6  png 9da7baacc29fdd0a
+  text/image PASS | ids 227 dup PASS | refs 141 unresolved PASS []
+  coin NORMATIVE      n-  byte-identical PASS ids 54 refs 36 prefixed True/True inside PASS
+  coin NON-NORMATIVE  nn- byte-identical PASS ids 53 refs 34 prefixed True/True inside PASS
+  coin METACOGNITIVE  m-  byte-identical PASS ids 53 refs 34 prefixed True/True inside PASS
+  coin CRITICAL       c-  byte-identical PASS ids 55 refs 37 prefixed True/True inside PASS
+  op    rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 603.902
+  rule  rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 561.592
+  divider byte-identical PASS T -74.836 PASS
+  lines paths 3 data(code points) PASS ligature-form differs False (matches liga True) cream PASS rects 0 adv [383.032, 923.384, 1047.512] adv_liga [383.032, 923.384, 1047.512]
+  stack totals {'paths': 5, 'rects': 3}
+  bands {'top_0_450': 0, 'bottom_2360_2622': 0, 'alpha_min': 255} | png = my render PASS
+
+== ALL-FOUR-lockscreen  svg d551d3c339cdd915  png c5026f044c48c059
+  text/image PASS | ids 227 dup PASS | refs 141 unresolved PASS []
+  coin NORMATIVE      n-  byte-identical PASS ids 54 refs 36 prefixed True/True inside PASS
+  coin NON-NORMATIVE  nn- byte-identical PASS ids 53 refs 34 prefixed True/True inside PASS
+  coin METACOGNITIVE  m-  byte-identical PASS ids 53 refs 34 prefixed True/True inside PASS
+  coin CRITICAL       c-  byte-identical PASS ids 55 refs 37 prefixed True/True inside PASS
+  op    rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 603.902
+  rule  rect 1 stroke PASS geo dev 0.0 | paths 1 data PASS fills PASS ['#E8E0D2'] adv 561.592
+  divider byte-identical PASS T 128.041 PASS
+  lines paths 3 data(code points) PASS ligature-form differs False (matches liga True) cream PASS rects 0 adv [383.032, 923.384, 1047.512] adv_liga [383.032, 923.384, 1047.512]
+  stack totals {'paths': 5, 'rects': 3}
+  bands {'top_0_450': 0, 'bottom_2360_2622': 0, 'alpha_min': 255} | png = my render PASS
+_tags 5 files, 0 without the tags
+
+run json: /private/tmp/claude-501/-Users-careybalboa-Downloads/b119b13a-cfe3-4d61-ac43-467d3cd88a30/scratchpad/j4check/check-five-run.json

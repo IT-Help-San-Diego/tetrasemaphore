@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="-320.5 -141.3 641.0 282.6"
+     width="1923" height="848">
+  <defs><g id="tok" transform="scale(1 -1)"><g transform="scale(0.300000)"><path d="M545 454V471H274C118 471 35 368 35 214C35 122 64 -13 221 -13C360 -13 453 69 453 203C453 290 399 360 378 388V391H532ZM338 391C362 352 392 299 392 234C392 127 339 69 226 69C153 69 84 117 84 224C84 338 172 391 267 391Z"/></g><g transform="translate(163.500 -63.000) scale(0.210000)"><path d="M575 512H377V475C415 475 444 470 444 446C444 432 439 420 436 412L342 168L321 105H313L294 167L200 406C193 423 189 436 189 450C189 466 201 475 243 475V512H9V475C58 475 71 464 98 401L259 -6H324L493 406C513 459 533 475 575 475Z"/></g></g></defs>
+  <g fill="#4FB5B5">
+    <use xlink:href="#tok" transform="translate(-306.02155 38.5200)"/>
+    <use xlink:href="#tok" transform="translate(306.02155 38.5200) scale(-1 1)"/>
+  </g>
+  <rect x="-4.66535" y="-128.13" width="9.3307"
+        height="256.26" fill="#C7B469"/>
+</svg>

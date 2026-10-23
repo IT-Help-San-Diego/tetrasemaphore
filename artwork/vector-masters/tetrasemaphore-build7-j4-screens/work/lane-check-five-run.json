@@ -1,0 +1,707 @@
+{
+ "NORMATIVE-flashcard": {
+  "svg_sha16": "26c5648afbf9d3f8",
+  "text_or_image": false,
+  "ids": 63,
+  "dup_ids": [],
+  "refs": 36,
+  "unresolved": [],
+  "coins": [
+   {
+    "state": "NORMATIVE",
+    "transform": "translate(312 684) scale(0.708536585)",
+    "prefix": "",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 54,
+    "refs": 36,
+    "ids_prefixed": null,
+    "refs_prefixed": null,
+    "refs_inside": true
+   }
+  ],
+  "layers": [
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"operator\" transform=\"translate(0 -124.279)\" inkscape:label=\"operator row: I : (x, y) →",
+    "T": -124.279
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"forall\" transform=\"translate(0 -99.557)\" inkscape:label=\"rule box: ∀g. I ∘ g = g; box ",
+    "T": -99.557
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"divider-1\" transform=\"translate(0 -74.836)\" inkscape:label=\"divider 1\">",
+    "T": -74.836
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"cogito\" transform=\"translate(0 -50.115)\" inkscape:label=\"motto (3 lines, unboxed, crea",
+    "T": -50.115
+   }
+  ],
+  "rows": {
+   "op": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 2,
+    "path_data_exact": true,
+    "fills": [
+     "#C7B469",
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 515.062
+   },
+   "rule": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 398.92
+   },
+   "divider": {
+    "byte_identical": true,
+    "T": -74.836,
+    "T_ok": true
+   },
+   "lines": {
+    "paths": 3,
+    "path_data_exact": true,
+    "matches_ligature_form": true,
+    "ligature_form_differs": false,
+    "fills_cream": true,
+    "rects": 0,
+    "adv": [
+     674.448,
+     855.132,
+     497.645
+    ],
+    "adv_liga": [
+     674.448,
+     855.132,
+     497.645
+    ]
+   },
+   "stack_total": {
+    "paths": 6,
+    "rects": 3
+   }
+  },
+  "png_sha16": "b8e04fd9ad63be7b",
+  "png_pixels_equal_my_render": true,
+  "band_ink": {
+   "top_0_450": 0,
+   "bottom_2360_2622": 0,
+   "alpha_min": 255
+  },
+  "per_coin_render": [
+   {
+    "state": "NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     312,
+     684,
+     893,
+     1265
+    ]
+   }
+  ]
+ },
+ "NON-NORMATIVE-flashcard": {
+  "svg_sha16": "06c8b13bc205a124",
+  "text_or_image": false,
+  "ids": 62,
+  "dup_ids": [],
+  "refs": 34,
+  "unresolved": [],
+  "coins": [
+   {
+    "state": "NON-NORMATIVE",
+    "transform": "translate(312 684) scale(0.708536585)",
+    "prefix": "",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 53,
+    "refs": 34,
+    "ids_prefixed": null,
+    "refs_prefixed": null,
+    "refs_inside": true
+   }
+  ],
+  "layers": [
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"operator\" transform=\"translate(0 -124.279)\" inkscape:label=\"operator row: σᵥ : (x, y) ",
+    "T": -124.279
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"forall\" transform=\"translate(0 -99.557)\" inkscape:label=\"rule box: det(σᵥ) = −1; box 5",
+    "T": -99.557
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"divider-1\" transform=\"translate(0 -74.836)\" inkscape:label=\"divider 1\">",
+    "T": -74.836
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"cogito\" transform=\"translate(0 -50.115)\" inkscape:label=\"motto (2 lines, unboxed, crea",
+    "T": -50.115
+   }
+  ],
+  "rows": {
+   "op": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 2,
+    "path_data_exact": true,
+    "fills": [
+     "#4FB5B5",
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 616.307
+   },
+   "rule": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 413.76
+   },
+   "divider": {
+    "byte_identical": true,
+    "T": -74.836,
+    "T_ok": true
+   },
+   "lines": {
+    "paths": 2,
+    "path_data_exact": true,
+    "matches_ligature_form": false,
+    "ligature_form_differs": true,
+    "fills_cream": true,
+    "rects": 0,
+    "adv": [
+     720.497,
+     943.208
+    ],
+    "adv_liga": [
+     718.373,
+     941.084
+    ]
+   },
+   "stack_total": {
+    "paths": 5,
+    "rects": 3
+   }
+  },
+  "png_sha16": "1ff196ef5092f3ae",
+  "png_pixels_equal_my_render": true,
+  "band_ink": {
+   "top_0_450": 0,
+   "bottom_2360_2622": 0,
+   "alpha_min": 255
+  },
+  "per_coin_render": [
+   {
+    "state": "NON-NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     312,
+     684,
+     893,
+     1265
+    ]
+   }
+  ]
+ },
+ "CRITICAL-flashcard": {
+  "svg_sha16": "7ef95fb6e0aee46e",
+  "text_or_image": false,
+  "ids": 64,
+  "dup_ids": [],
+  "refs": 37,
+  "unresolved": [],
+  "coins": [
+   {
+    "state": "CRITICAL",
+    "transform": "translate(312 684) scale(0.708536585)",
+    "prefix": "",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 55,
+    "refs": 37,
+    "ids_prefixed": null,
+    "refs_prefixed": null,
+    "refs_inside": true
+   }
+  ],
+  "layers": [
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"operator\" transform=\"translate(0 -124.279)\" inkscape:label=\"operator row: C₂ : (x, y) ",
+    "T": -124.279
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"forall\" transform=\"translate(0 -99.557)\" inkscape:label=\"rule box: σᵥ ∘ σₕ = C₂; box 4",
+    "T": -99.557
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"divider-1\" transform=\"translate(0 -74.836)\" inkscape:label=\"divider 1\">",
+    "T": -74.836
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"cogito\" transform=\"translate(0 -50.115)\" inkscape:label=\"motto (3 lines, unboxed, crea",
+    "T": -50.115
+   }
+  ],
+  "rows": {
+   "op": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 2,
+    "path_data_exact": true,
+    "fills": [
+     "#E25C60",
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 658.646
+   },
+   "rule": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 379.464
+   },
+   "divider": {
+    "byte_identical": true,
+    "T": -74.836,
+    "T_ok": true
+   },
+   "lines": {
+    "paths": 3,
+    "path_data_exact": true,
+    "matches_ligature_form": true,
+    "ligature_form_differs": false,
+    "fills_cream": true,
+    "rects": 0,
+    "adv": [
+     700.645,
+     833.778,
+     421.293
+    ],
+    "adv_liga": [
+     700.645,
+     833.778,
+     421.293
+    ]
+   },
+   "stack_total": {
+    "paths": 6,
+    "rects": 3
+   }
+  },
+  "png_sha16": "9762a175f02cb364",
+  "png_pixels_equal_my_render": true,
+  "band_ink": {
+   "top_0_450": 0,
+   "bottom_2360_2622": 0,
+   "alpha_min": 255
+  },
+  "per_coin_render": [
+   {
+    "state": "CRITICAL",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     312,
+     684,
+     893,
+     1265
+    ]
+   }
+  ]
+ },
+ "ALL-FOUR-flashcard": {
+  "svg_sha16": "0b83fba14b3c08d6",
+  "text_or_image": false,
+  "ids": 227,
+  "dup_ids": [],
+  "refs": 141,
+  "unresolved": [],
+  "coins": [
+   {
+    "state": "NORMATIVE",
+    "transform": "translate(211.562 481.123) scale(0.437899692)",
+    "prefix": "n-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 54,
+    "refs": 36,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "NON-NORMATIVE",
+    "transform": "translate(635.361 481.123) scale(0.437899692)",
+    "prefix": "nn-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 53,
+    "refs": 34,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "METACOGNITIVE",
+    "transform": "translate(211.562 904.922) scale(0.437899692)",
+    "prefix": "m-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 53,
+    "refs": 34,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "CRITICAL",
+    "transform": "translate(635.361 904.922) scale(0.437899692)",
+    "prefix": "c-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 55,
+    "refs": 37,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   }
+  ],
+  "layers": [
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"operator\" transform=\"translate(0 -124.279)\" inkscape:label=\"the four symbols: V₄ = {I,",
+    "T": -124.279
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"forall\" transform=\"translate(0 -99.557)\" inkscape:label=\"the law: ∀g ∈ V₄. g ∘ g = I; ",
+    "T": -99.557
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"divider-1\" transform=\"translate(0 -74.836)\" inkscape:label=\"divider 1\">",
+    "T": -74.836
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"cogito\" transform=\"translate(0 -50.115)\" inkscape:label=\"the sentence (three lines on ",
+    "T": -50.115
+   }
+  ],
+  "rows": {
+   "op": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 603.902
+   },
+   "rule": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 561.592
+   },
+   "divider": {
+    "byte_identical": true,
+    "T": -74.836,
+    "T_ok": true
+   },
+   "lines": {
+    "paths": 3,
+    "path_data_exact": true,
+    "matches_ligature_form": true,
+    "ligature_form_differs": false,
+    "fills_cream": true,
+    "rects": 0,
+    "adv": [
+     383.032,
+     923.384,
+     1047.512
+    ],
+    "adv_liga": [
+     383.032,
+     923.384,
+     1047.512
+    ]
+   },
+   "stack_total": {
+    "paths": 5,
+    "rects": 3
+   }
+  },
+  "png_sha16": "9da7baacc29fdd0a",
+  "png_pixels_equal_my_render": true,
+  "band_ink": {
+   "top_0_450": 0,
+   "bottom_2360_2622": 0,
+   "alpha_min": 255
+  },
+  "per_coin_render": [
+   {
+    "state": "NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     211,
+     481,
+     571,
+     841
+    ]
+   },
+   {
+    "state": "NON-NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     635,
+     481,
+     995,
+     841
+    ]
+   },
+   {
+    "state": "METACOGNITIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     211,
+     904,
+     571,
+     1264
+    ]
+   },
+   {
+    "state": "CRITICAL",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     635,
+     904,
+     995,
+     1264
+    ]
+   }
+  ]
+ },
+ "ALL-FOUR-lockscreen": {
+  "svg_sha16": "d551d3c339cdd915",
+  "text_or_image": false,
+  "ids": 227,
+  "dup_ids": [],
+  "refs": 141,
+  "unresolved": [],
+  "coins": [
+   {
+    "state": "NORMATIVE",
+    "transform": "translate(110.123 481.123) scale(0.561605269)",
+    "prefix": "n-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 54,
+    "refs": 36,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "NON-NORMATIVE",
+    "transform": "translate(635.361 481.123) scale(0.561605269)",
+    "prefix": "nn-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 53,
+    "refs": 34,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "METACOGNITIVE",
+    "transform": "translate(110.123 1006.361) scale(0.561605269)",
+    "prefix": "m-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 53,
+    "refs": 34,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   },
+   {
+    "state": "CRITICAL",
+    "transform": "translate(635.361 1006.361) scale(0.561605269)",
+    "prefix": "c-",
+    "byte_identical": true,
+    "diff": null,
+    "ids": 55,
+    "refs": 37,
+    "ids_prefixed": true,
+    "refs_prefixed": true,
+    "refs_inside": true
+   }
+  ],
+  "layers": [
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"operator\" transform=\"translate(0 78.598)\" inkscape:label=\"the four symbols: V₄ = {I, σ",
+    "T": 78.598
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"forall\" transform=\"translate(0 103.32)\" inkscape:label=\"the law: ∀g ∈ V₄. g ∘ g = I; b",
+    "T": 103.32
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"divider-1\" transform=\"translate(0 128.041)\" inkscape:label=\"divider 1\">",
+    "T": 128.041
+   },
+   {
+    "open": "<g inkscape:groupmode=\"layer\" id=\"cogito\" transform=\"translate(0 152.762)\" inkscape:label=\"the sentence (three lines on ",
+    "T": 152.762
+   }
+  ],
+  "rows": {
+   "op": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 603.902
+   },
+   "rule": {
+    "rects": 1,
+    "stroke_ok": true,
+    "geo_max_dev": 0.0,
+    "paths": 1,
+    "path_data_exact": true,
+    "fills": [
+     "#E8E0D2"
+    ],
+    "fill_ok": true,
+    "advance": 561.592
+   },
+   "divider": {
+    "byte_identical": true,
+    "T": 128.041,
+    "T_ok": true
+   },
+   "lines": {
+    "paths": 3,
+    "path_data_exact": true,
+    "matches_ligature_form": true,
+    "ligature_form_differs": false,
+    "fills_cream": true,
+    "rects": 0,
+    "adv": [
+     383.032,
+     923.384,
+     1047.512
+    ],
+    "adv_liga": [
+     383.032,
+     923.384,
+     1047.512
+    ]
+   },
+   "stack_total": {
+    "paths": 5,
+    "rects": 3
+   }
+  },
+  "png_sha16": "c5026f044c48c059",
+  "png_pixels_equal_my_render": true,
+  "band_ink": {
+   "top_0_450": 0,
+   "bottom_2360_2622": 0,
+   "alpha_min": 255
+  },
+  "per_coin_render": [
+   {
+    "state": "NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     110,
+     481,
+     571,
+     942
+    ]
+   },
+   {
+    "state": "NON-NORMATIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     635,
+     481,
+     1096,
+     942
+    ]
+   },
+   {
+    "state": "METACOGNITIVE",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     110,
+     1006,
+     571,
+     1467
+    ]
+   },
+   {
+    "state": "CRITICAL",
+    "max": 0,
+    "mean": 0.0,
+    "box": [
+     635,
+     1006,
+     1096,
+     1467
+    ]
+   }
+  ]
+ },
+ "_tags": "5 files, 0 without the tags"
+}

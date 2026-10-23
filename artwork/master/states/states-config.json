@@ -1,0 +1,11 @@
+{
+ "_doc": "Generator config for the Dose 01 state medallions. tools/build_states.py reads this; edit here, never in the SVGs. owl_hex and ring_hex are the ONLY colour inputs; labels are generated from them.",
+ "common": {"owl_source": "master/pre-legend/MASTER-medallion-METACOGNITIVE-slot820.svg", "legend_knobs": "--corner 0.68 --plaque #221B12 --shadow 6 --shadowOp 0.75 --lip 1.2 --lipOp 0.3 --ao 5 --aoOp 0.30 --textShadow 1.2 --textShadowOp 0.6", "keys6": {"ring": "finish/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-slot820.svg", "a0": 45, "a1": 135}, "keys4": {"ring": "finish/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-slot820.svg", "a0": 60, "a1": 120}},
+ "guard": {"name": "METACOGNITIVE-approved", "out": "master/MASTER-medallion-METACOGNITIVE-slot820.svg", "word": "METACOGNITIVE", "keys": "keys6", "track": 1.10, "owl_hex": "#B498E6", "ring_hex": "#8C4191", "operator": null, "approved_labels": true},
+ "states": [
+  {"name": "NORMATIVE", "op": "I", "word": "NORMATIVE", "keys": "keys4", "track": 1.00, "owl_hex": "#D5AF64", "ring_hex": "#D5AF64", "operator": "matrix(1 0 0 -1 0 820)"},
+  {"name": "NON-NORMATIVE", "op": "σᵥ", "word": "NON-NORMATIVE", "keys": "keys6", "track": 1.0526, "owl_hex": "#4FB5B5", "ring_hex": "#4FB5B5", "operator": "matrix(-1 0 0 -1 820 820)"},
+  {"name": "CRITICAL", "op": "C₂", "word": "CRITICAL", "keys": "keys4", "track": 1.2578, "owl_hex": "#E25C60", "ring_hex": "#E25C60", "operator": "matrix(-1 0 0 1 820 0)"},
+  {"name": "METACOGNITIVE", "op": "σₕ", "word": "METACOGNITIVE", "keys": "keys6", "track": 1.10, "owl_hex": "#B498E6", "ring_hex": "#B498E6", "operator": null}
+ ]
+}

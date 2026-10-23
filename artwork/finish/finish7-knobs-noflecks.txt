@@ -1,0 +1,1 @@
+--bandBlur 0.8 --bandWarp 2.5 --rimStroke 0.8 --ridgeInset 4.8 --glints 0 --bandHex #332A11 --rimOp 0.65 --transOp 0.11 --centreOp 0.16 --opA 0.78 --opAd 0.52 --edgeCatch 0.3 --edgeCatchWidth 0.5 --edgeCatchColor #FFF9E3 --fleckOp 0

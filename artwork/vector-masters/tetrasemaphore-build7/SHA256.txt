@@ -1,0 +1,8 @@
+a62a3dd185089960 dose-01-iphone-17-pro-lockscreen-1206x2622-TETRASEMAPHORE-METACOGNITIVE-MASTER.svg
+f2e7dee3412f5b92 dose-01-iphone-17-pro-lockscreen-1206x2622-TETRASEMAPHORE-METACOGNITIVE.png
+4a61fba145951dcc proofs/TETRASEMAPHORE-LOCKSCREEN-METACOGNITIVE-build6-vs-build7-1206.png
+6f5f1471540d84bc proofs/TETRASEMAPHORE-LOCKSCREEN-METACOGNITIVE-build7-coin-and-row-3x.png
+b64cd9df95b18b8f work/build-meta7.js
+77aa2ab9541ca996 work/verify-meta7-run.json
+b575632ea6f45115 work/verify-meta7.py
+f0fb41b00306a09a README.md

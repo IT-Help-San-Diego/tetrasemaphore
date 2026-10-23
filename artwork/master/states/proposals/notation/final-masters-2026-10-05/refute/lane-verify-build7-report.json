@@ -1,0 +1,270 @@
+{
+ "ring uncut": {
+  "sha16": "29af7381e53a37a6",
+  "build6": "91d1a01b8e1392c0",
+  "levels": 65
+ },
+ "ring k21-2": {
+  "sha16": "5ba62c45788b29be",
+  "build6": "9af6030e1fe28c27",
+  "levels": 65
+ },
+ "ring k22-1": {
+  "sha16": "f20cf292bdc8113c",
+  "build6": "b809ccf6c6784407",
+  "levels": 65
+ },
+ "S2": {
+  "rim_px": 0,
+  "rim_peak": 0.0,
+  "over_067": 20,
+  "peak": 0.7843137383460999,
+  "method": "scipy edt (disk)",
+  "within_0p5mm": 18,
+  "over_067_pixels": [
+   {
+    "x": 1548,
+    "y": 456,
+    "r_units": 366.85,
+    "mm_from_rail": 3.008,
+    "alpha": 0.682
+   },
+   {
+    "x": 1549,
+    "y": 458,
+    "r_units": 366.48,
+    "mm_from_rail": 2.961,
+    "alpha": 0.698
+   },
+   {
+    "x": 3313,
+    "y": 4342,
+    "r_units": 344.49,
+    "mm_from_rail": 0.205,
+    "alpha": 0.725
+   },
+   {
+    "x": 3313,
+    "y": 4343,
+    "r_units": 344.64,
+    "mm_from_rail": 0.224,
+    "alpha": 0.784
+   },
+   {
+    "x": 3314,
+    "y": 4345,
+    "r_units": 345.02,
+    "mm_from_rail": 0.271,
+    "alpha": 0.776
+   },
+   {
+    "x": 3314,
+    "y": 4346,
+    "r_units": 345.17,
+    "mm_from_rail": 0.29,
+    "alpha": 0.733
+   },
+   {
+    "x": 3315,
+    "y": 4347,
+    "r_units": 345.39,
+    "mm_from_rail": 0.318,
+    "alpha": 0.745
+   },
+   {
+    "x": 3315,
+    "y": 4348,
+    "r_units": 345.54,
+    "mm_from_rail": 0.337,
+    "alpha": 0.745
+   },
+   {
+    "x": 3316,
+    "y": 4349,
+    "r_units": 345.76,
+    "mm_from_rail": 0.364,
+    "alpha": 0.698
+   },
+   {
+    "x": 3316,
+    "y": 4350,
+    "r_units": 345.91,
+    "mm_from_rail": 0.383,
+    "alpha": 0.78
+   },
+   {
+    "x": 1731,
+    "y": 4395,
+    "r_units": 344.68,
+    "mm_from_rail": 0.228,
+    "alpha": 0.702
+   },
+   {
+    "x": 1730,
+    "y": 4398,
+    "r_units": 345.2,
+    "mm_from_rail": 0.294,
+    "alpha": 0.678
+   },
+   {
+    "x": 2256,
+    "y": 4516,
+    "r_units": 344.42,
+    "mm_from_rail": 0.197,
+    "alpha": 0.69
+   },
+   {
+    "x": 2257,
+    "y": 4516,
+    "r_units": 344.41,
+    "mm_from_rail": 0.195,
+    "alpha": 0.678
+   },
+   {
+    "x": 2256,
+    "y": 4517,
+    "r_units": 344.59,
+    "mm_from_rail": 0.218,
+    "alpha": 0.69
+   },
+   {
+    "x": 2257,
+    "y": 4517,
+    "r_units": 344.57,
+    "mm_from_rail": 0.216,
+    "alpha": 0.678
+   },
+   {
+    "x": 2256,
+    "y": 4518,
+    "r_units": 344.76,
+    "mm_from_rail": 0.238,
+    "alpha": 0.69
+   },
+   {
+    "x": 2256,
+    "y": 4522,
+    "r_units": 345.42,
+    "mm_from_rail": 0.322,
+    "alpha": 0.678
+   },
+   {
+    "x": 2256,
+    "y": 4524,
+    "r_units": 345.75,
+    "mm_from_rail": 0.363,
+    "alpha": 0.682
+   },
+   {
+    "x": 2256,
+    "y": 4525,
+    "r_units": 345.92,
+    "mm_from_rail": 0.384,
+    "alpha": 0.78
+   }
+  ]
+ },
+ "S3": {
+  "mean": 0.006043189205229282,
+  "p99": 0.11372551321983337,
+  "max": 0.24705882370471954
+ },
+ "S4 uncut": {
+  "max": 6,
+  "differing": 27,
+  "over2": 19,
+  "over8": 0
+ },
+ "S4 k21-2": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18,
+  "over8": 0
+ },
+ "S4 k22-1": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19,
+  "over8": 0
+ },
+ "X notation NORMATIVE en": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X notation NORMATIVE es": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X notation NON-NORMATIVE en": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X notation NON-NORMATIVE es": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X notation METACOGNITIVE en": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X notation METACOGNITIVE es": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X notation CRITICAL en": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X notation CRITICAL es": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X owl NORMATIVE en": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X owl NORMATIVE es": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X owl NON-NORMATIVE en": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X owl NON-NORMATIVE es": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X owl METACOGNITIVE en": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X owl METACOGNITIVE es": {
+  "max": 6,
+  "differing": 23,
+  "over2": 18
+ },
+ "X owl CRITICAL en": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ },
+ "X owl CRITICAL es": {
+  "max": 6,
+  "differing": 24,
+  "over2": 19
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "_doc": "Generator config for the LAYERED Tetrasemaphore state masters, BUILD 3 (2026-10-05, Science build sheet TETRASEMAPHORE-SCIENCE-BUILD-SHEET-finals.md 9e021adbe53cb849, sections 5-8 and 14-16). tools/build_states_layered.py reads this. Against build 2 (superseded-build-2/states-config-layered.json) two things change: (1) stamp = cut-in (sheet section 15): the plate and its seams take the coin's field tint and the depth effects are left out (the --plaque value in legend_knobs is replaced by each coin's field_hex; the shadow / lip / ao / textShadow knobs no longer reach the file); (2) the Spanish legend of NON-NORMATIVE is INFORMATIVO (sheet section 16), tracked by the same rule as every other legend: 4.812 deg of plate left each side of the word, never tighter than 1.0 (the rule gives 1.2796). Ring: the UNCUT finished meander with the seam fix (tools/ring_build.js --seamFix 1). Field tints from the sheet section 5. Each legend layer carries the seam-fixed cut ring for its window (ring_cut, in finish/proposals/seam-fix/), clipped to the window sector padded by window_pad_deg and spanning window_r, so the rails beside the legend are clean rails. Spanish layers are in the file, hidden; the default language is English. mark_hex on NORMATIVE is the colour of its notation centre mark (the Fix gold), named in label 1; the other three marks are in the state colour. BUILD 4 (2026-10-09): INFORMATIVO at tracking 1.10, the same as METACOGNITIVE, instead of the rule's 1.2796 — Carey's choice B on the decision page (the word was spreading to fill its window; he wants it spaced like its neighbours). Nothing else changed. BUILD 5 (2026-10-09, evening): two changes (TETRASEMAPHORE-DOORBELL-CLAUDE-SCIENCE-RULINGS-2026-10-09.md): (1) the bright flecks of the gold are off — Science's recommendation and the direction Carey approved with Science, his pick among three gold versions still open, so this part is ahead of him and reverts by pointing the three ring paths back at the build-4 rings: the rings are the *-noflecks-* files (ring_build.js --knobs finish/finish7-knobs-noflecks.txt = the same knobs plus --fleckOp 0), which changes one number in the grain filter, three places per master; (2) CRÍTICO per Science ruling C through two new per-legend knobs of build_states_layered.py (radial_shift_units, accent), so the accent prints at weight and clears the floor. Build 4 is in superseded-build-4/. BUILD 6 (2026-10-10): the lit edge = gold version 3, Carey's pick (9 Oct, \"Three flecks off and lit edges in the ring's own gold\"); the rings are the *-litedge-* files (ring_build.js --litEdge 0.65 on the no-flecks knobs: one vector layer finalA5-litedge above the finish, spec Science rulings update 3), carried into every master and into the window rails. Nothing else changed; build 5 is in superseded-build-5/. BUILD 7 (2026-10-14): the rings are the *-litedge-guard-* files (litedge.js with Science's one-line bow-tie guard: no strip spans a join turning more than 170 deg; finish/proposals/NOTE-build7-litedge-guard.md); nothing else changed; build 6 is in superseded-build-6/.",
+ "common": {
+  "owl_source": "master/pre-legend/MASTER-medallion-METACOGNITIVE-slot820.svg",
+  "ring": "finish/proposals/uncut/MASTER-meander-v3.1C-finalA-UNCUT-seamfix-litedge-guard-slot820.svg",
+  "legend_knobs": "--corner 0.68 --plaque #221B12 --shadow 6 --shadowOp 0.75 --lip 1.2 --lipOp 0.3 --ao 5 --aoOp 0.30 --textShadow 1.2 --textShadowOp 0.6",
+  "legend_typeface": "DejaVu Sans Bold 2.34 (file 05-DejaVuSans-Bold.ttf 7e69e81478e233b8)",
+  "print_mm": 102.785,
+  "field_r": 403.678,
+  "languages": [
+   "en",
+   "es"
+  ],
+  "default_language": "en",
+  "keys6": {
+   "a0": 45,
+   "a1": 135,
+   "keys": "21-2",
+   "ring_cut": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys21-2-litedge-guard-slot820.svg"
+  },
+  "keys4": {
+   "a0": 60,
+   "a1": 120,
+   "keys": "22-1",
+   "ring_cut": "finish/proposals/seam-fix/MASTER-meander-v3.1C-finalA-LEGEND-keys22-1-litedge-guard-slot820.svg"
+  },
+  "window_pad_deg": 1.5,
+  "window_r": [
+   306.0,
+   390.0
+  ],
+  "stamp": "cut-in"
+ },
+ "states": [
+  {
+   "name": "NORMATIVE",
+   "op": "I",
+   "keys": "keys4",
+   "owl_hex": "#D5AF64",
+   "ring_hex": "#D5AF64",
+   "operator": "matrix(1 0 0 -1 0 820)",
+   "field_hex": "#181403",
+   "legend": {
+    "en": {
+     "word": "NORMATIVE",
+     "track": 1.0
+    },
+    "es": {
+     "word": "NORMATIVO",
+     "track": 1.0,
+     "status": "Spanish set of 2026-10-05: NORMATIVO / INFORMATIVO / CRÍTICO / METACOGNITIVO"
+    }
+   },
+   "mark_hex": "#C7B469"
+  },
+  {
+   "name": "NON-NORMATIVE",
+   "op": "σᵥ",
+   "keys": "keys6",
+   "owl_hex": "#4FB5B5",
+   "ring_hex": "#4FB5B5",
+   "operator": "matrix(-1 0 0 -1 820 820)",
+   "field_hex": "#001817",
+   "legend": {
+    "en": {
+     "word": "NON-NORMATIVE",
+     "track": 1.0526
+    },
+    "es": {
+     "word": "INFORMATIVO",
+     "track": 1.1,
+     "status": "Spanish set of 2026-10-05: NORMATIVO / INFORMATIVO / CRÍTICO / METACOGNITIVO; INFORMATIVO tracked 1.10 like METACOGNITIVE (Carey, 2026-10-09, decision 2: B, tighter)"
+    }
+   }
+  },
+  {
+   "name": "CRITICAL",
+   "op": "C₂",
+   "keys": "keys4",
+   "owl_hex": "#E25C60",
+   "ring_hex": "#E25C60",
+   "operator": "matrix(-1 0 0 1 820 0)",
+   "field_hex": "#1F100E",
+   "legend": {
+    "en": {
+     "word": "CRITICAL",
+     "track": 1.2578
+    },
+    "es": {
+     "word": "CRÍTICO",
+     "track": 1.4141,
+     "status": "Spanish set of 2026-10-05: NORMATIVO / INFORMATIVO / CRÍTICO / METACOGNITIVO; CRÍTICO set to Science ruling C (Carey, 9 Oct: C for the critical): the word 5.904 units outward so it is centred by its full height, the accent its own path lifted 2.2338 units with a 1.6753-unit round-joined stroke, reference TETRASEMAPHORE-SCIENCE-CRITICO-accent-C-reference.svg 9e8f7d33137c8ecc",
+     "radial_shift_units": 5.904,
+     "accent": {
+      "glyph": 2,
+      "lift_units": 2.2338,
+      "stroke_width": 1.6753
+     }
+    }
+   }
+  },
+  {
+   "name": "METACOGNITIVE",
+   "op": "σₕ",
+   "keys": "keys6",
+   "owl_hex": "#B498E6",
+   "ring_hex": "#B498E6",
+   "operator": null,
+   "field_hex": "#17121D",
+   "legend": {
+    "en": {
+     "word": "METACOGNITIVE",
+     "track": 1.1
+    },
+    "es": {
+     "word": "METACOGNITIVO",
+     "track": 1.0805,
+     "status": "Spanish set of 2026-10-05: NORMATIVO / INFORMATIVO / CRÍTICO / METACOGNITIVO"
+    }
+   }
+  }
+ ]
+}

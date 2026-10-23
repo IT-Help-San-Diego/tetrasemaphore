@@ -1,0 +1,102 @@
+// litedge.js — the LIT EDGE layer of build 6 (Carey chose gold version 3, 9 Oct 2026; spec: Claude Science, rulings doorbell update 3).
+// Pure vector. For every edge of the meander's ink outline (meander3.outline at inset 0: lines and circular arcs, tangent-continuous), the
+// ridge zone litIn..litOut print px inside that edge is filled with the ring's highlight gold at opacity litEdge x max(0, n.L)^2, where n is
+// the edge's outward unit normal (away from the ink) and L the sweep A axis pointing toward the top of the coin (axA = 83.094 deg:
+// L = -(cos axA, sin axA) = (-0.12024, -0.99274) in SVG coordinates). Arcs are sampled so that the chord error stays under 0.05 slot units,
+// the normal turns no more than 10 deg per sample, and the opacity changes less than 0.02 per sample; consecutive samples with the same
+// opacity (quantised to 0.01) form one strip (inner offset forward, outer offset back). Strips with opacity 0 are left out. One layer,
+// <g id="<prefix>litedge">, grouped by opacity, clipped to the ink footprint. Used by ring_build.js --litEdge <opacity>. Default off there.
+const path = require('path'); const { outline, DEFAULTS } = require(path.join(__dirname, 'meander3.js'));
+const n3 = x => { const t = (Math.round(x * 1000) / 1000).toFixed(3).replace(/\.?0+$/, ''); return t === '-0' ? '0' : t; };
+
+function parseSubpaths(d) {
+  // -> [{segs:[{kind:'L',p0,p1} | {kind:'A',p0,p1,r,large,sweep}]}] ; absolute M L A Z only (meander3's output)
+  const tok = d.match(/[MLAZ]|-?\d*\.?\d+(?:e-?\d+)?/g); const subs = []; let cur = null, pt = null, start = null, i = 0;
+  const num = () => parseFloat(tok[i++]);
+  while (i < tok.length) {
+    const c = tok[i++];
+    if (c === 'M') { pt = [num(), num()]; start = pt; cur = { segs: [] }; subs.push(cur); }
+    else if (c === 'L') { const p1 = [num(), num()]; cur.segs.push({ kind: 'L', p0: pt, p1 }); pt = p1; }
+    else if (c === 'A') { const rx = num(), ry = num(); num(); const large = num(), sweep = num(); const p1 = [num(), num()]; cur.segs.push({ kind: 'A', p0: pt, p1, r: rx, large, sweep }); pt = p1; }
+    else if (c === 'Z') { if (pt && start && (Math.abs(pt[0] - start[0]) > 1e-9 || Math.abs(pt[1] - start[1]) > 1e-9)) cur.segs.push({ kind: 'L', p0: pt, p1: start }); pt = start; }
+    else throw new Error('unexpected token ' + c);
+  }
+  return subs;
+}
+function arcCentre(s) {
+  // SVG arc (rx = ry = r, no rotation) -> centre, start angle, sweep angle (radians, SVG coords)
+  const [x0, y0] = s.p0, [x1, y1] = s.p1; let r = s.r; const dx = (x0 - x1) / 2, dy = (y0 - y1) / 2; const d2 = dx * dx + dy * dy;
+  let rr = r * r; if (d2 > rr) { r = Math.sqrt(d2); rr = d2; }    // radius too small for the chord: scale up (SVG rule)
+  let f = Math.sqrt(Math.max(0, (rr - d2) / d2)); if (s.large === s.sweep) f = -f;
+  const cx = (x0 + x1) / 2 + f * dy, cy = (y0 + y1) / 2 - f * dx;     // W3C arc conversion: cx' = coef * (rx * y1' / ry), cy' = coef * (-ry * x1' / rx)
+  const a0 = Math.atan2(y0 - cy, x0 - cx), a1 = Math.atan2(y1 - cy, x1 - cx); let da = a1 - a0;
+  if (s.sweep) { while (da < 0) da += 2 * Math.PI; } else { while (da > 0) da -= 2 * Math.PI; }
+  return { cx, cy, r, a0, da };
+}
+function samples(sub, L, opts) {
+  // -> list of {p:[x,y], t:[tx,ty]} along the subpath (tangent in the direction of travel), each segment's points, start included once
+  const out = []; const eps = opts.chordErr, maxStep = opts.maxDeg * Math.PI / 180, maxDo = opts.maxOpStep;
+  for (const s of sub.segs) {
+    if (s.kind === 'L') {
+      const tx = s.p1[0] - s.p0[0], ty = s.p1[1] - s.p0[1], len = Math.hypot(tx, ty); if (len < 1e-9) continue;
+      out.push({ p: s.p0, t: [tx / len, ty / len], seg: s }); out.push({ p: s.p1, t: [tx / len, ty / len], seg: s, end: true });
+    } else {
+      const { cx, cy, r, a0, da } = arcCentre(s); const sgn = Math.sign(da) || 1;
+      let step = Math.min(maxStep, 2 * Math.acos(Math.max(-1, 1 - eps / r)));
+      let n = Math.max(1, Math.ceil(Math.abs(da) / step));
+      const tangent = a => sgn > 0 ? [-Math.sin(a), Math.cos(a)] : [Math.sin(a), -Math.cos(a)];
+      // refine until the opacity step between consecutive samples is under maxDo (normal turns with the angle)
+      for (let it = 0; it < 12; it++) {
+        let worst = 0;
+        for (let k = 0; k < n; k++) { const b0 = a0 + da * k / n, b1 = a0 + da * (k + 1) / n; worst = Math.max(worst, Math.abs(opts.opAt(tangent(b0), sub) - opts.opAt(tangent(b1), sub))); }
+        if (worst <= maxDo || n > 4096) break; n *= 2;
+      }
+      for (let k = 0; k <= n; k++) { const a = a0 + da * k / n; out.push({ p: k === 0 ? s.p0 : k === n ? s.p1 : [cx + r * Math.cos(a), cy + r * Math.sin(a)], t: tangent(a), seg: s, end: k === n }); }
+    }
+  }
+  return out;
+}
+function signedArea(pts) { let a = 0; for (let i = 0; i < pts.length; i++) { const p = pts[i], q = pts[(i + 1) % pts.length]; a += p[0] * q[1] - q[0] * p[1]; } return a / 2; }
+
+function litEdgeLayer(g, o) {
+  const opts = Object.assign({ opacity: 0.65, color: '#F2E4B8', inPx: 2.2, outPx: 4.8, axisDeg: 83.094, idPrefix: 'finalA5-', chordErr: 0.05, maxDeg: 10, maxOpStep: 0.02, quant: 0.01, label: null }, o || {});
+  const p = Object.assign({}, DEFAULTS, g || {}, { inset: 0, filletMode: 'offset' });
+  const k = p.frame === 'print1220' ? 1 : 820 / 1220; const a = opts.inPx * k, b = opts.outPx * k;
+  const L = [-Math.cos(opts.axisDeg * Math.PI / 180), -Math.sin(opts.axisDeg * Math.PI / 180)];
+  const { pathB, pathA } = outline(p);
+  // ink side per subpath: pathB = [outer rail circle (ink inside), snaking contour (ink outside)]; pathA = [snaking contour (ink inside), inner circle (ink outside)]
+  const isCircle = sub => sub.segs.length === 2 && sub.segs.every(s => s.kind === 'A' && Math.abs(s.r - sub.segs[0].r) < 1e-9);
+  const plan = [];
+  for (const [d, which] of [[pathB, 'B'], [pathA, 'A']]) for (const sub of parseSubpaths(d)) plan.push({ sub, inkInside: which === 'B' ? isCircle(sub) : !isCircle(sub) });
+  const levels = new Map(); let pieces = 0, samplesN = 0;
+  for (const { sub, inkInside } of plan) {
+    // interior side from the signed area of a fine polygon of the subpath
+    const fine = samples(sub, L, Object.assign({}, opts, { maxDeg: 2, opAt: () => 0 })).map(s => s.p); const area = signedArea(fine);
+    const leftIsInterior = area > 0;
+    const outward = t => { const nl = [-t[1], t[0]]; const interior = leftIsInterior ? nl : [-nl[0], -nl[1]]; return inkInside ? [-interior[0], -interior[1]] : interior; };
+    const opAt = t => { const nn = outward(t); const c = Math.max(0, nn[0] * L[0] + nn[1] * L[1]); return opts.opacity * c * c; };
+    const S = samples(sub, L, Object.assign({}, opts, { opAt })); samplesN += S.length;
+    // per interval opacity (at the mid tangent), quantised; merge runs
+    const q = v => Math.round(v / opts.quant) * opts.quant;
+    const runs = []; let cur = null;
+    for (let i = 0; i + 1 < S.length; i++) {
+      const s0 = S[i], s1 = S[i + 1]; if (s0.end && s0.seg !== s1.seg && Math.hypot(s0.p[0] - s1.p[0], s0.p[1] - s1.p[1]) > 1e-6) { cur = null; continue; }   // a gap (should not happen)
+      const tm = [s0.t[0] + s1.t[0], s0.t[1] + s1.t[1]]; const lm = Math.hypot(tm[0], tm[1]) || 1; const op = q(opAt([tm[0] / lm, tm[1] / lm]));
+      if (cur && Math.abs(cur.op - op) < 1e-9 && cur.last === i) { cur.idx.push(i + 1); cur.last = i + 1; }
+      else { cur = { op, idx: [i, i + 1], last: i + 1 }; runs.push(cur); }
+    }
+    for (const r of runs) {
+      if (r.op <= 0) continue;
+      const inner = r.idx.map(i => { const nn = outward(S[i].t); return [S[i].p[0] - a * nn[0], S[i].p[1] - a * nn[1]]; });
+      const outer = r.idx.map(i => { const nn = outward(S[i].t); return [S[i].p[0] - b * nn[0], S[i].p[1] - b * nn[1]]; }).reverse();
+      const pts = inner.concat(outer); const dd = 'M' + pts.map(q2 => `${n3(q2[0])} ${n3(q2[1])}`).join('L') + 'Z';
+      const key = r.op.toFixed(2); if (!levels.has(key)) levels.set(key, []); levels.get(key).push(dd); pieces++;
+    }
+  }
+  const keys = [...levels.keys()].sort((x, y) => parseFloat(y) - parseFloat(x));
+  const label = opts.label || `3c lit edges (build 6): the ridge zone ${opts.inPx}-${opts.outPx} print px inside every edge of the ink, ${opts.color} at ${opts.opacity} x max(0, n.L)^2 from each edge's own outward normal n, L = the sweep A axis toward the top (${opts.axisDeg} deg); ${pieces} strips in ${keys.length} opacity levels of ${opts.quant}`;
+  const body = keys.map(kq => `<g fill-opacity="${kq}"><path d="${levels.get(kq).join(' ')}"/></g>`).join('\n');
+  const layer = `<g id="${opts.idPrefix}litedge" inkscape:groupmode="layer" inkscape:label="${label}" clip-path="url(#${opts.idPrefix}clip)" fill="${opts.color}">\n${body}\n</g>\n`;
+  return { layer, pieces, levels: keys.length, samples: samplesN, desc: ` Lit edges (build 6, litedge.js): ${opts.color} on the ridge zone ${opts.inPx}-${opts.outPx} print px inside every edge at opacity ${opts.opacity} x max(0, n.L)^2, n = the edge's outward normal, L = (${n3(L[0])}, ${n3(L[1])}) (sweep A axis toward the top); ${pieces} vector strips, ${keys.length} opacity levels.` };
+}
+module.exports = { litEdgeLayer, parseSubpaths, arcCentre };

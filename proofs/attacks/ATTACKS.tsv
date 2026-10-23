@@ -1,0 +1,39 @@
+attack	sha256_16	what it does
+ABBREV16	394f4265b65d9a7f	the same wrapper rebinding the numeral of the existing public theorem T8_sixteen, which becomes allSubs.length = allSubs.length
+ABBREV16_AUX	679346bd4f734bee	the aux-shaped wrapper on T8_sixteen, where the first two sections of the listing are byte-identical to the honest ones
+ABBREVFALSE	2a0a7218f1fa50fe	an OfNat instance behind a one-line abbrev: section 3k takes the head of the instance's type and sees the abbrev, not OfNat, so a count of 5 is proved to be 3
+ABBREVFALSE_AUX	a5d9ad3ad702a794	the aux-shaped wrapper: both added constants carry names the gate classifies as auxiliaries of listed declarations, so their rows land among the 345 in the third section
+AUXNAME_DEF	421628fb75a2408f	the enabling primitive of L3-SF-1: an author-declared constant under a name the gate classifies as a generated auxiliary, reported by no check
+Comm_tamper_dangling_print	7c01faa6f2a1a45f	the tamper that only the comm-based checks catch: a theorem's #print axioms line replaced by one naming a core lemma, so one theorem is unprinted and one printed name is not a theorem of this file
+DESYNC_EOF	84b28ac9093273a0	written here: the scanner reaches end of file inside a string, which v2.3 does not notice
+DESYNC_EVAL	2f05dbb2e1ea6d89	a char literal holding a double quote desyncs scan(), so the #eval on the next line is blanked, the file is elaborated and the IO runs during the gate
+DESYNC_RAWSTRING	66a2e64cff7acaad	written here: the same desync through a raw string, where the backslash does not escape and the quotation mark inside closes nothing
+F1_honest_variants	b99e16987e4d24ee	the honest variant that has to pass: a doc comment made of banned words, a namespaced extra theorem with its own #print axioms line
+F2_string_sorry	d7a7dae718f8c45d	honest Lean that v2.2 refused: a string literal carrying banned words, which the scanner did not blank
+K1d_proofN_name	3a445f6045d55e9a	the same with the name proof_1, which Name.isInternalDetail also calls internal and which has no leading underscore
+LTSWAP	479e787a4b37131f	note 1: a projection-class instance swap, which passes after regeneration but prints the foreign instance name in the row, unlike the literal classes
+M1a_holds_arm_swap	3f467c422bea4148	the andF and orF arms of Fml.holds swapped, arm order changed, right-hand sides in place - the reviewer's own spelling of item 3.5, byte-identical to their file
+M1b_holds_rhs_swap	e81fb7991e16cf83	the other spelling of the same swap: the right-hand sides swapped, arm order left alone, which v2.2 already caught on the Fml.holds.eq_def row
+N1_hidden_instance	865a0adbc58f4106	a hidden instance under a name Lean calls internal rebinds the numeral in T8_sixteen, which becomes allSubs.length = allSubs.length
+N1b_false_row_hidden_instance	d55a180f17526376	a hidden _k proves a count that is false (the true value is 5); as submitted it fails on the listing count, and after the listing is regenerated the row reads as a proved falsehood
+N1c_visible_instance	972f4f7eb24e6488	the control: the same attack under a visible name, which v2.2 caught on the listing alone
+N1e_aux_named_instance	cb6455d67334203a	written here, not in the packet: the same instance under a name that is both a shape Lean generates and the child of a listed declaration, which v2.3's name classification accepts as an auxiliary
+N3b_extern_existing_def	b4dc1f092d72de75	an extern attribute in second position on an already-listed definition: v2.2's pattern matched extern only as the first attribute
+N3b_extern_sameline	16b0a1a016895688	@[inline, extern "lean_nat_add"] on imageOf with the attribute and the declaration on one line, so the string interior is blanked and the extern keyword still has to match
+N6_eval_sees_wrapper	c4f501246159fe57	open X in <command> satisfies an allowlist that reads the first word of a line, so a smuggled #eval runs disk IO while the gate is running
+N6b_indented_eval	ea9b849369758a26	written here, not in the packet: the same IO from an #eval that is merely indented, which Lean accepts as a top-level command and v2.2's allowlist never looks at
+NEGFALSE	e3c7083d713059d7	a Neg instance under an aux-shaped name rebinds the literal -1, which section 3k never inspects: det I = -1 is proved where the determinant is 1
+NEGFALSE_VISIBLE	696a370cca6327c5	the same under a visible name, which is equally green because the gate has no check on Neg whatever the name is
+NEG_LOCAL_SECTION	9397021b1b684739	a local instance inside a section, the variant the packet's second skeptic reports; wrapped around an appended theorem here, because this rebuild's instance body `fun _ => Move.det Move.I` makes T10_det_table false and its `decide` proof fail (measured). The reviewer's own file uses `fun _ => Move.det Move.sv`, which keeps T10 true, and wraps T10_det_table itself; it is preserved in their v2.3 tree under skeptic-L3-BLOCKER-3-1/attacks/NEG-honest-local/ and version 2.4 refuses it in source at 1g4
+PRIVATE_DEF	f4f8e15bd0f18a22	fid23-1's probe: a private declaration, which 3j reports while the per-toolchain line prints 'private declarations: 0' as a literal
+S5_22_attr_newline_axiom	9684c2bbc806842c	section 5 row 2.2, never tested: an axiom whose attribute sits on the line above it, so the declaration line does not begin with the word
+S5_24_exit	f56319b02ebdc211	section 5 row 2.4, not re-tested since v2.1: #exit cuts the file short, so the theorems after it are never elaborated
+S5_31_keyword_split_newline	bb5e162fda4f1a01	section 5 row 3.1, never tested: a keyword split from its argument across a line break, which Lean reads as whitespace
+a10_macro_command	e1b99bba9b1a174f	v2.1 (g): a command of the file's own standing in for #print axioms
+a13_extern_space	7a7595d1cebebb26	v2.1 (h): @[ extern "…"] opaque, with a space after the bracket
+a15_full_chain	dd23dc149475cce5	v2.1 (c, e, g): macro-hidden decide +native plus a forged footprint
+a16_macro_sorry	0281e64041280278	v2.1 (f): sorry reached only through a macro alias
+a17_poison_audit	f4fd92eaef122513	v2.1 (h): namespace Lean declaring a name the checking program's own machinery uses
+a2_guard_msgs_printaxioms	29afe0ce95005872	v2.1 (a): a theorem's own #print axioms line swallowed by #guard_msgs(drop info)
+a5_macro_decide_native	9c6abfd37a11a8d2	v2.1 (c, g): decide +native behind a macro alias
+a9_quoted_sorryAx	c6638fe44c222a47	v2.1 (f): sorryAx written inside French quotation marks
