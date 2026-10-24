@@ -33,27 +33,30 @@ for p in PAGES:
             bad(f"{p}: <style> contains @import or url()")
 
 if len(styles) == len(PAGES):
-    ref_style = styles["index.html"]
-    for p in PAGES[1:]:
-        if styles[p] != ref_style:
-            bad(f"{p}: <style> block differs from index.html")
-    h = "sha256-" + base64.b64encode(hashlib.sha256(ref_style.encode("utf-8")).digest()).decode()
-    quoted = f"style-src 'self' '{h}'"
+    ref_other = styles["note.html"]
+    for p in ("method.html", "404.html"):
+        if styles[p] != ref_other:
+            bad(f"{p}: <style> block differs from note.html")
+    hashes = []
     for p in PAGES:
+        hp = "sha256-" + base64.b64encode(hashlib.sha256(styles[p].encode("utf-8")).digest()).decode()
+        if hp not in hashes:
+            hashes.append(hp)
         raw = open(p, encoding="utf-8").read()
         mc = re.search(r'<meta http-equiv="Content-Security-Policy" content="([^"]*)"', raw)
         if not mc:
             bad(f"{p}: meta CSP missing")
-        elif quoted not in mc.group(1):
-            bad(f"{p}: meta CSP missing quoted hash {quoted}")
+        elif f"'{hp}'" not in mc.group(1):
+            bad(f"{p}: meta CSP missing quoted hash '{hp}'")
     for pol in POLICIES:
         if not os.path.exists(pol):
             bad(f"{pol}: missing")
             continue
         raw_pol = open(pol, encoding="utf-8").read()
-        if quoted not in raw_pol:
-            bad(f"{pol}: policy CSP missing quoted hash {quoted}")
-    say(f"OK: <style> identical across pages and quoted CSP hash synced ({h})")
+        for hp in hashes:
+            if f"'{hp}'" not in raw_pol:
+                bad(f"{pol}: policy CSP missing quoted hash '{hp}'")
+    say(f"OK: per-page <style> CSP hashes synced across meta + CloudFront policies ({', '.join(hashes)})")
 
 # 2. No executable JS; every <script> tag must be literally <script type="application/ld+json"> and parse as JSON.
 for p in PAGES:
