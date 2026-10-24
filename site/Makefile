@@ -15,6 +15,7 @@ ALLOWLIST := \
 	--include "sitemap.xml" \
 	--include ".well-known/security.txt" \
 	--include "assets/og-card.jpg" \
+	--include "assets/og-card.png" \
 	--include "assets/TETRASEMAPHORE-NORMATIVE-en-512.png" \
 	--include "assets/TETRASEMAPHORE-NON-NORMATIVE-en-512.png" \
 	--include "assets/TETRASEMAPHORE-METACOGNITIVE-en-512.png" \

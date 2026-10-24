@@ -103,8 +103,9 @@ say("OK: no inline styles, external subresources, local paths, or bad code point
 # 4. og:image metadata and 1200x630 JPEG dimensions.
 for p in PAGES:
     raw = open(p, encoding="utf-8").read()
-    for prop, val in (("og:image", "https://tetrasemaphore.systems/assets/og-card.jpg"),
-                      ("og:image:type", "image/jpeg"),
+    for prop, val in (("og:image", "https://tetrasemaphore.systems/assets/og-card.png"),
+                      ("og:image:alt", "The four semaphores of the Tetrasemaphore, NORMATIVE, NON-NORMATIVE, METACOGNITIVE and CRITICAL, above the line V₄ = {I, σᵥ, σₕ, C₂}."),
+                      ("og:image:type", "image/png"),
                       ("og:image:width", "1200"),
                       ("og:image:height", "630")):
         if f'property="{prop}" content="{val}"' not in raw:
@@ -162,6 +163,7 @@ SEALED_ASSETS = {
     "assets/TETRASEMAPHORE-NORMATIVE-es-1298.png": "077215b442760441",
     "assets/TETRASEMAPHORE-NORMATIVE-es-512.png": "1c49f6829a561265",
     "assets/og-card.jpg": "a175dc759f3a2fd9",
+    "assets/og-card.png": "0cf08ac9028fc22d",
 }
 
 actual_assets = {}
