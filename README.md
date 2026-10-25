@@ -177,7 +177,7 @@ any culture, and the notation itself became the carrier. The dated record of whe
 > I can't speak for any of these peoples, and neither can the AI systems that helped me build this. So we did what we could check: we read
 > the sources, and we stopped where a living people had spoken for themselves.
 >
-> — Carey James Balboa, signed 11 October 2026
+> Carey James Balboa, signed 11 October 2026
 
 A printed semaphore cannot know who is looking at it, so when a picture's meaning changes from reader to reader, its maker has no way to
 correct for it. This project calls the meaning a picture brings with it, beyond the structure it carries, carrier colour. With the owl, the
