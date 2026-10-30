@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-hCSOu/WSa+lyMevopB3ehg8oFwm0fLxUa5fD5RJ/OG0='; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'none'; script-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-sSHichgQFfnf3jkdi6ajJ4BVwFNnypvhFT5meDDoEms='; connect-src 'self'; media-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
 <title>The Tetrasemaphore</title>
 <meta name="description" content="The Tetrasemaphore is four semaphores that mark how a piece of work stands: NORMATIVE, NON-NORMATIVE, METACOGNITIVE or CRITICAL.">
 <meta name="author" content="Carey James Balboa">
@@ -64,8 +64,8 @@ body{
     radial-gradient(ellipse 60% 40% at 50% 100%,rgba(56,168,154,0.04),transparent 70%);
   background-attachment:fixed;
 }
-main,header.site,footer.site nav{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:0.5rem}
-footer.site{max-width:56rem;margin:0 auto;padding:0 1.5rem}
+main,header.site,footer.site{max-width:56rem;margin:0 auto;padding:0 1.5rem}
+footer.site nav{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:0.5rem}
 header.site{
   padding-top:2.25rem;
   padding-bottom:1.35rem;
@@ -314,7 +314,7 @@ footer.site::before{
 .panel h4 b{display:inline-block;width:1.5rem;height:1.5rem;line-height:1.5rem;text-align:center;border-radius:50%;margin-right:.5rem;color:var(--bg-deep)}
 .panel p{margin:.2rem 0 .7rem 0}
 .hero{display:flex;gap:1rem;align-items:center}
-.hero img{width:46%;height:auto;flex:none}
+.hero>a{flex:none;width:46%}.hero img{display:block;width:100%;height:auto}
 .fbox{font-family:var(--math);font-size:1.2rem;border:1px solid var(--gold);border-radius:7px;padding:.25rem .65rem;display:inline-block;margin:.15rem 0 .1rem 0}
 .gloss{font-family:var(--sans);font-size:.9rem;color:var(--muted);margin:0 0 .55rem 0}
 .mat{display:inline-grid;grid-template-columns:auto auto;column-gap:.9em;border-left:2px solid var(--fg);border-right:2px solid var(--fg);padding:0 .45em;line-height:1.25;vertical-align:middle;text-align:right}
@@ -408,7 +408,7 @@ table.cay th{color:var(--gold);font-weight:400}
   <section class="sema norm" id="normative">
     <h3>NORMATIVE<span class="sym">· I</span></h3>
     <div class="strip">
-      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-NORMATIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-NORMATIVE-en-512.png" width="512" height="512" alt="The NORMATIVE semaphore" loading="lazy"></a><p>Keeps its stance and looks at its object: what has been tested and holds, for now.</p></div></div>
+      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-NORMATIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-NORMATIVE-en-512.png" width="512" height="512" alt="The NORMATIVE semaphore" loading="lazy"></a><p>Keeps its stance and looks at its object: what has been tested and holds, for now.</p></div><blockquote><p><strong>I state the standard.</strong> It marks epistemic status, not infallibility.</p></blockquote></div>
       <div class="panel"><h4><b>2</b>The move</h4><p><strong>Leave it alone.</strong></p><p><em>With your body.</em> Stand as you are. Nothing changes.</p><p><em>On paper.</em> The letter I looks the same after every move.</p></div>
       <div class="panel"><h4><b>3</b>The formulas</h4><div class="fbox">I : (x, y) → (x, y)</div><p class="gloss">Every point stays where it is.</p><div class="fbox"><span class="mat"><span>1</span><span>0</span><span>0</span><span>1</span></span></div><p class="gloss">The same move as a matrix: the identity.</p><div class="fbox">det I = +1</div><p class="gloss">No mirror in it: a left hand stays a left hand.</p><div class="fbox">I ∘ g = g ∘ I = g</div><p class="gloss">Doing nothing before or after a move leaves that move as it was.</p><div class="fbox">I ∘ I = I</div><p class="gloss">Its own way back, like every move here.</p></div>
       <div class="panel"><h4><b>4</b>What stays put</h4><p>Everything. That is why the whole mark is gold.</p><p><strong>The mark.</strong> Survives every move: σᵥ, σₕ and C₂ each leave it exactly as it was. In the proofs, its model mark is a seed together with all three of its images.</p></div>
@@ -418,7 +418,7 @@ table.cay th{color:var(--gold);font-weight:400}
   <section class="sema nonnorm" id="non-normative">
     <h3>NON-NORMATIVE<span class="sym">· σᵥ</span></h3>
     <div class="strip">
-      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-NON-NORMATIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-NON-NORMATIVE-en-512.png" width="512" height="512" alt="The NON-NORMATIVE semaphore" loading="lazy"></a><p>Mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it.</p></div></div>
+      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-NON-NORMATIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-NON-NORMATIVE-en-512.png" width="512" height="512" alt="The NON-NORMATIVE semaphore" loading="lazy"></a><p>Mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it.</p></div><blockquote><p><strong>I reflect the standard.</strong> It is reflection, not rejection.</p></blockquote></div>
       <div class="panel"><h4><b>2</b>The move</h4><p><strong>Flip it left to right.</strong></p><p><em>With your body.</em> Turn around. To someone facing you, your left and right swap, and your top stays on top.</p><p><em>On paper.</em> The letter A survives only the side-to-side turn.</p></div>
       <div class="panel"><h4><b>3</b>The formulas</h4><div class="fbox">σᵥ : (x, y) → (−x, y)</div><p class="gloss">Left and right swap; up and down stay.</p><div class="fbox"><span class="mat"><span>−1</span><span>0</span><span>0</span><span>1</span></span></div><p class="gloss">The same move as a matrix.</p><div class="fbox">det σᵥ = −1</div><p class="gloss">A mirror: a left hand becomes a right hand.</p><div class="fbox">σᵥ ∘ σᵥ = I</div><p class="gloss">Flip twice and you are back where you started.</p><div class="fbox">σᵥ ∘ σₕ = C₂</div><p class="gloss">Both mirrors, one after the other, are the half-turn.</p></div>
       <div class="panel"><h4><b>4</b>What stays put</h4><p>The vertical line x = 0, and nothing else: the gold line.</p><p><strong>The mark.</strong> Survives σᵥ and no other move.</p><p><strong>Twins.</strong> Nothing in the algebra tells σᵥ from σₕ: every statement in its language that is true of one is true of the other. Only the page does, by which way the gold line runs. A quarter turn carries one mirror onto the other, so this semaphore turned a quarter of the way round reads as METACOGNITIVE. That is why the two σ semaphores are twins.</p></div>
@@ -428,7 +428,7 @@ table.cay th{color:var(--gold);font-weight:400}
   <section class="sema meta" id="metacognitive">
     <h3>METACOGNITIVE<span class="sym">· σₕ</span></h3>
     <div class="strip">
-      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-METACOGNITIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-METACOGNITIVE-en-512.png" width="512" height="512" alt="The METACOGNITIVE semaphore" loading="lazy"></a><p>Keeps its stance but turns its look back to its own frame: thinking about thinking.</p></div></div>
+      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-METACOGNITIVE-en-1298.png"><img src="/assets/TETRASEMAPHORE-METACOGNITIVE-en-512.png" width="512" height="512" alt="The METACOGNITIVE semaphore" loading="lazy"></a><p>Keeps its stance but turns its look back to its own frame: thinking about thinking.</p></div><blockquote><p><strong>I metacognize; therefore, I am again and again.</strong> After Descartes’s <em lang="fr">je pense, donc je suis</em> (1637).</p></blockquote></div>
       <div class="panel"><h4><b>2</b>The move</h4><p><strong>Flip it top to bottom.</strong></p><p><em>With your body.</em> Face someone, bend over and look between your legs. Your top and bottom swap, and your left and right stay put. A handstand is the same move.</p><p><em>On paper.</em> The letter D survives only the top-to-bottom turn.</p></div>
       <div class="panel"><h4><b>3</b>The formulas</h4><div class="fbox">σₕ : (x, y) → (x, −y)</div><p class="gloss">Up and down swap; left and right stay.</p><div class="fbox"><span class="mat"><span>1</span><span>0</span><span>0</span><span>−1</span></span></div><p class="gloss">The same move as a matrix.</p><div class="fbox">det σₕ = −1</div><p class="gloss">A mirror, like its twin.</p><div class="fbox">σₕ ∘ σₕ = I</div><p class="gloss">Flip twice and you are back where you started.</p><div class="fbox">σₕ ∘ σᵥ = C₂</div><p class="gloss">Both mirrors, one after the other, are the half-turn.</p></div>
       <div class="panel"><h4><b>4</b>What stays put</h4><p>The horizontal line y = 0, and nothing else: the gold line.</p><p><strong>The mark.</strong> Survives σₕ and no other move.</p><p><strong>Worn as Dose 01.</strong> Dose 01 wears this semaphore with two more lines, ∀n. M(Iₙ) ⊢ Iₙ₊₁ and M := λx.Think(Think(x)). What they mean is on the Dose 01 page.</p></div>
@@ -438,7 +438,7 @@ table.cay th{color:var(--gold);font-weight:400}
   <section class="sema crit" id="critical">
     <h3>CRITICAL<span class="sym">· C₂</span></h3>
     <div class="strip">
-      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-CRITICAL-en-1298.png"><img src="/assets/TETRASEMAPHORE-CRITICAL-en-512.png" width="512" height="512" alt="The CRITICAL semaphore" loading="lazy"></a><p>Does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.</p></div></div>
+      <div class="panel"><h4><b>1</b>The semaphore</h4><div class="hero"><a href="/assets/TETRASEMAPHORE-CRITICAL-en-1298.png"><img src="/assets/TETRASEMAPHORE-CRITICAL-en-512.png" width="512" height="512" alt="The CRITICAL semaphore" loading="lazy"></a><p>Does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.</p></div><blockquote><p><strong>I invert the standard.</strong> It is structured inversion, not reaction.</p></blockquote></div>
       <div class="panel"><h4><b>2</b>The move</h4><p><strong>Turn it half way round: both flips at once.</strong></p><p><em>With your body.</em> Turn around, then look between your legs. Both swap, and you are looking back at where you started, upside down.</p><p><em>On paper.</em> The letter N survives only the half-turn.</p></div>
       <div class="panel"><h4><b>3</b>The formulas</h4><div class="fbox">C₂ : (x, y) → (−x, −y)</div><p class="gloss">Left and right swap, and up and down swap as well.</p><div class="fbox"><span class="mat"><span>−1</span><span>0</span><span>0</span><span>−1</span></span></div><p class="gloss">The same move as a matrix.</p><div class="fbox">det C₂ = +1</div><p class="gloss">A turn, not a mirror: a left hand stays a left hand, though it ends up upside down.</p><div class="fbox">C₂ = σᵥ ∘ σₕ = σₕ ∘ σᵥ</div><p class="gloss">Both mirrors, in either order.</p><div class="fbox">C₂ ∘ C₂ = I</div><p class="gloss">Two half-turns make a whole turn.</p></div>
       <div class="panel"><h4><b>4</b>What stays put</h4><p>One point, the centre (0, 0): where the two σ semaphores’ gold lines cross.</p><p><strong>The mark.</strong> Survives the half-turn and no other move.</p><p><strong>From every side.</strong> Turn or flip the page any of the eight ways a square allows, and the half-turn is still the half-turn; no view of it makes it a mirror. So CRITICAL reads as CRITICAL however the page is turned, where a quarter turn swaps the two σ twins.</p></div>
