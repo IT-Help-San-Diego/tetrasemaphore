@@ -1,0 +1,19 @@
+# PyPI wheels, the alternative environment (Python 3.11.15, osx-arm64); reproduces the sheets with Raqm off.
+# Exported from the environment the proof used, 7 November 2026.
+cairocffi==1.7.1
+cairosvg==2.9.1
+cffi==2.1.1
+cssselect2==0.10.1
+defusedxml==0.7.1
+imageio==2.38.1
+lazy-loader==0.6
+networkx==3.6.1
+numpy==2.4.6
+packaging==26.3
+pillow==12.2.0
+pycparser==3.0
+scikit-image==0.26.0
+scipy==1.17.1
+tifffile==2026.3.3
+tinycss2==1.5.1
+webencodings==0.6.1

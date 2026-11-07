@@ -1,0 +1,255 @@
+{
+ "colour": "#C3E6FF",
+ "name": "ice blue",
+ "colour_vision_views": {
+  "normal": {
+   "min_de_art": 21.42,
+   "nearest_art": "#B498E6",
+   "min_de_text": 21.42,
+   "nearest_text": "#B498E6",
+   "min_de": 21.42
+  },
+  "Machado protanopia": {
+   "min_de_art": 15.33,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 15.33,
+   "nearest_text": "#4FB5B5",
+   "min_de": 15.33
+  },
+  "Machado deuteranopia": {
+   "min_de_art": 16.31,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 16.31,
+   "nearest_text": "#4FB5B5",
+   "min_de": 16.31
+  },
+  "Machado tritanopia": {
+   "min_de_art": 17.85,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 17.85,
+   "nearest_text": "#4FB5B5",
+   "min_de": 17.85
+  },
+  "Vienot protanopia": {
+   "min_de_art": 15.71,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 15.71,
+   "nearest_text": "#4FB5B5",
+   "min_de": 15.71
+  },
+  "Vienot deuteranopia": {
+   "min_de_art": 16.3,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 16.3,
+   "nearest_text": "#4FB5B5",
+   "min_de": 16.3
+  },
+  "Vienot tritanopia": {
+   "min_de_art": 17.39,
+   "nearest_art": "#4FB5B5",
+   "min_de_text": 17.39,
+   "nearest_text": "#4FB5B5",
+   "min_de": 17.39
+  }
+ },
+ "worst_view": "Machado protanopia",
+ "worst_view_de": 15.33,
+ "models": [
+  "Machado, Oliveira & Fernandes 2009, severity 1.0, linear RGB",
+  "Vienot, Brettel & Mollon 1999, LMS-plane projection derived in choose_drafting_colour.py; its tritanopia case is the plane through white and the red primary, an approximation"
+ ],
+ "chosen_by_carey": true,
+ "search_rank": 20,
+ "search_qualifying": 8486,
+ "search_first": "#CFF2FF",
+ "search_first_de": 16.31,
+ "axis_clear_of_art_px": 3,
+ "rule": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia and tritanopia under two models - among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
+ "ciede2000_to_art": [
+  {
+   "dE": 21.42,
+   "hex": "#B498E6"
+  },
+  {
+   "dE": 22.06,
+   "hex": "#4FB5B5"
+  },
+  {
+   "dE": 22.74,
+   "hex": "#FFF9E3"
+  },
+  {
+   "dE": 23.38,
+   "hex": "#EBDFC8"
+  },
+  {
+   "dE": 24.36,
+   "hex": "#F0E3C9"
+  },
+  {
+   "dE": 29.27,
+   "hex": "#F2E4B8"
+  },
+  {
+   "dE": 32.83,
+   "hex": "#B29F7B"
+  },
+  {
+   "dE": 37.9,
+   "hex": "#DEC875"
+  },
+  {
+   "dE": 37.99,
+   "hex": "#C7B469"
+  },
+  {
+   "dE": 38.6,
+   "hex": "#D5AF64"
+  },
+  {
+   "dE": 47.6,
+   "hex": "#E25C60"
+  },
+  {
+   "dE": 55.08,
+   "hex": "#6C5324"
+  },
+  {
+   "dE": 55.33,
+   "hex": "#6E5321"
+  },
+  {
+   "dE": 74.64,
+   "hex": "#332A11"
+  }
+ ],
+ "min_de_art": 21.42,
+ "nearest_art": "#B498E6",
+ "ciede2000_to_text": [
+  {
+   "dE": 21.42,
+   "role": "titles METACOGNITIVE",
+   "hex": "#B498E6"
+  },
+  {
+   "dE": 22.06,
+   "role": "titles NON-NORMATIVE",
+   "hex": "#4FB5B5"
+  },
+  {
+   "dE": 29.27,
+   "role": "body",
+   "hex": "#F2E4B8"
+  },
+  {
+   "dE": 37.9,
+   "role": "values",
+   "hex": "#DEC875"
+  },
+  {
+   "dE": 37.99,
+   "role": "sources and checks",
+   "hex": "#C7B469"
+  },
+  {
+   "dE": 38.6,
+   "role": "titles NORMATIVE",
+   "hex": "#D5AF64"
+  },
+  {
+   "dE": 47.6,
+   "role": "titles CRITICAL",
+   "hex": "#E25C60"
+  }
+ ],
+ "min_de_text": 21.42,
+ "nearest_text": "#B498E6",
+ "ciede2000_to_grounds": [
+  {
+   "dE": 82.8,
+   "hex": "#001817"
+  },
+  {
+   "dE": 83.84,
+   "hex": "#17121D"
+  },
+  {
+   "dE": 84.61,
+   "hex": "#181403"
+  },
+  {
+   "dE": 85.47,
+   "hex": "#1F100E"
+  }
+ ],
+ "contrast_to_grounds": {
+  "#181403": 14.11,
+  "#001817": 14.07,
+  "#17121D": 14.1,
+  "#1F100E": 14.12
+ },
+ "min_contrast_to_ground": 14.07,
+ "line_weights_px_at_2400": {
+  "detail_window": 9,
+  "corner_brackets": 9,
+  "panel_frame": 9,
+  "leader_lines": 3,
+  "box_rules": 4,
+  "centre_axis": 2,
+  "halo_each_side": 4
+ },
+ "art_lines": {
+  "NORMATIVE": {
+   "reference_semaphore_px": 428,
+   "window_px": [
+    88.7,
+    49.1
+   ],
+   "art_line_px": {
+    "p10": 4.0,
+    "median": 6.0,
+    "p90": 7.21,
+    "max": 10.0
+   }
+  },
+  "NON-NORMATIVE": {
+   "reference_semaphore_px": 428,
+   "window_px": [
+    49.1,
+    88.7
+   ],
+   "art_line_px": {
+    "p10": 4.0,
+    "median": 6.0,
+    "p90": 6.0,
+    "max": 6.0
+   }
+  },
+  "METACOGNITIVE": {
+   "reference_semaphore_px": 428,
+   "window_px": [
+    88.7,
+    49.1
+   ],
+   "art_line_px": {
+    "p10": 4.0,
+    "median": 6.0,
+    "p90": 10.0,
+    "max": 12.0
+   }
+  },
+  "CRITICAL": {
+   "reference_semaphore_px": 428,
+   "window_px": [
+    88.7,
+    49.1
+   ],
+   "art_line_px": {
+    "p10": 4.0,
+    "median": 8.0,
+    "p90": 8.0,
+    "max": 12.65
+   }
+  }
+ }
+}

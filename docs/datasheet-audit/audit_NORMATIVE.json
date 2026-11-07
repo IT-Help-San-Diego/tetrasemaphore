@@ -1,0 +1,596 @@
+{
+ "generated": "2026-10-23T16:04:25+00:00",
+ "kind": "MOCK-UP for review; design work for site version 1.1; writes nothing to the release",
+ "state": "NORMATIVE",
+ "notation": "I",
+ "stations": 6,
+ "release": {
+  "tag": "v1.0.0",
+  "commit": "833c2438fc3e679096816abafead62f83e1aa944",
+  "doi": "10.5281/zenodo.23575816"
+ },
+ "standfirst": {
+  "text": "NORMATIVE keeps its stance and looks at its object: what has been tested and holds, for now.",
+  "source": "README.md at v1.0.0",
+  "sha16": "c98c3ee4a94a3dae",
+  "field": "lines 12–13",
+  "kind": "quote"
+ },
+ "sheet": {
+  "file": "datasheet_NORMATIVE.png",
+  "px": [
+   2400,
+   1500
+  ],
+  "ground": "#181403",
+  "palette": {
+   "state_colour": "#D5AF64",
+   "gold": "#DEC875",
+   "gold_fix": "#C7B469",
+   "highlight": "#F2E4B8"
+  },
+  "contrast_on_ground": {
+   "state_colour": 8.9,
+   "gold": 11.07,
+   "gold_fix": 8.91,
+   "highlight": 14.53
+  },
+  "contrast_floor": 4.5,
+  "contrast_below_floor": []
+ },
+ "sources": {
+  "master": {
+   "file": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+   "sha256": "e0b6366d5c032523dcd9b35658756570cbf0f2f09cbb1563f3885e53f0bec1e6"
+  },
+  "note": {
+   "file": "README.md at v1.0.0",
+   "sha256": "c98c3ee4a94a3daee326e7a2c41bf9af700f775132555241536c0076a6420927"
+  },
+  "measurements": {
+   "file": "notation-measurements.json",
+   "sha16": "24c49d6bafacdaf5"
+  },
+  "lean": {
+   "file": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+   "sha16": "f066faf6595d22e9"
+  },
+  "site_png": {
+   "file": "TETRASEMAPHORE-NORMATIVE-en-1298.png",
+   "sha16": "eacf65bc9181f649"
+  }
+ },
+ "scale": {
+  "u_per_mm": 7.9778,
+  "print_diameter_mm": 102.786,
+  "derived_from": "g#symmetry-marks label gives the bar as 31.911 x 7.18 slot units and as 4.0 x 0.9 mm",
+  "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+  "sha16": "e0b6366d5c032523"
+ },
+ "callouts": [
+  {
+   "n": 1,
+   "key": "field",
+   "title": "The ground",
+   "layer_groups": [
+    "field"
+   ],
+   "anchor_slot_units": [
+    728.103,
+    658.529
+   ],
+   "values": [
+    {
+     "text": "#181403 · disc r 403.678 slot units = 50.6 mm",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#field/circle/@fill,@r"
+    },
+    {
+     "text": "edge sits under the outer ring (its outer edge: 409.731)",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#field/circle/@r vs g#finalA5-rings/circle[2]"
+    }
+   ],
+   "meaning": {
+    "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+    "sha16": "e0b6366d5c032523",
+    "field": "g#field/@inkscape:label",
+    "text": "The dark ground the colours were chosen against: one lightness and one chroma for all four semaphores, hue from the semaphore's colour.",
+    "kind": "close paraphrase"
+   },
+   "check": {
+    "text": "The four masters' field fills: #181403 · #001817 · #17121D · #1F100E.",
+    "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+    "sha16": "e0b6366d5c032523",
+    "field": "g#field/circle/@fill, all four masters"
+   }
+  },
+  {
+   "n": 2,
+   "key": "rings",
+   "title": "The state colour",
+   "layer_groups": [
+    "finalA5-rings"
+   ],
+   "anchor_slot_units": [
+    708.321,
+    678.609
+   ],
+   "values": [
+    {
+     "text": "inner ring r 298.01, stroke 12.529 slot units (1.57 mm)",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#finalA5-rings/circle[1]"
+    },
+    {
+     "text": "outer ring r 401.43, stroke 16.602 = 2.08 mm · both #D5AF64",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#finalA5-rings/circle[2]"
+    }
+   ],
+   "meaning": {
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 100",
+    "kind": "quote",
+    "text": "“Colour comes second. Shape carries every state.”"
+   },
+   "check": {
+    "text": "Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape.",
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 122",
+    "kind": "pointer, paraphrased"
+   }
+  },
+  {
+   "n": 3,
+   "key": "meander",
+   "title": "The ring of keys, and its gold finish",
+   "layer_groups": [
+    "finalA5-finish",
+    "finalA5-geometry",
+    "finalA5-litedge"
+   ],
+   "anchor_slot_units": [
+    693.156,
+    615.725
+   ],
+   "values": [
+    {
+     "text": "meander v3.1 channel outline (meander3.js: rc 8, rf 7, phase 0)",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "svg/desc"
+    },
+    {
+     "text": "lit edges: 65 opacity levels, ridge zone 2.2–4.8 print px · sweep A axis 83.094°",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#finalA5-litedge/@inkscape:label"
+    }
+   ],
+   "meaning": {
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 91",
+    "kind": "quote",
+    "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
+   },
+   "check": {
+    "text": "Note, Reading the semaphores — “Check the mark, not the ring.”",
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 91",
+    "kind": "pointer with verbatim quotation"
+   }
+  },
+  {
+   "n": 4,
+   "key": "legend",
+   "title": "The plate cut into the ring, and the word",
+   "layer_groups": [
+    "legend-plaque-en",
+    "legend-text-en"
+   ],
+   "anchor_slot_units": [
+    520,
+    745
+   ],
+   "values": [
+    {
+     "text": "plate over keys 21–2 (45–135°) · floor, seams and plate all in the field tint #181403 · no edge strokes",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#legend-plaque-en/@inkscape:label"
+    },
+    {
+     "text": "DejaVu Sans Bold 2.34 as outlines · cap height 4.4 mm · 17.0 pt at 102.8 mm · tracking 1.1 · #DEC875",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#legend-text-en/@inkscape:label"
+    }
+   ],
+   "meaning": {
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 188–189",
+    "kind": "quote",
+    "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
+   },
+   "check": {
+    "text": "Note, test 5 — cover the words, then ask which state each print is.",
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 129",
+    "kind": "pointer, paraphrased"
+   }
+  },
+  {
+   "n": 5,
+   "key": "mark",
+   "title": "I: the identity, drawn as one outline",
+   "layer_groups": [
+    "glyph-placement"
+   ],
+   "anchor_slot_units": [
+    410,
+    560
+   ],
+   "values": [
+    {
+     "text": "one outline plus the shared line · 4 uses, 0 token definitions, 0 Fix elements",
+     "source": "notation-measurements.json",
+     "sha16": "24c49d6bafacdaf5",
+     "field": "states[NORMATIVE].exactness_grep"
+    },
+    {
+     "text": "mark 256.152 × 443.666 slot units = 32.11 × 55.61 mm, gold included · placement scale 0.545353",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#glyph-placement/@transform, @inkscape:label"
+    }
+   ],
+   "meaning": {
+    "source": "README.md at v1.0.0",
+    "sha16": "c98c3ee4a94a3dae",
+    "field": "lines 22–23",
+    "kind": "quote",
+    "text": "“Each semaphore's mark is built to survive its own move …”"
+   },
+   "check": {
+    "text": "Lean S2_markAll_invariant: the I mark is invariant under every move. Note, test 1.",
+    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+    "sha16": "f066faf6595d22e9",
+    "field": "S2_markAll_invariant"
+   }
+  },
+  {
+   "n": 6,
+   "key": "marks",
+   "title": "Two bars across each line, at both ends",
+   "layer_groups": [
+    "symmetry-marks"
+   ],
+   "anchor_slot_units": [
+    580.82,
+    410
+   ],
+   "values": [
+    {
+     "text": "8 bars on two axes, 31.911 × 7.18 slot units = 4 × 0.9 mm each · #C7B469",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#symmetry-marks/rect/@width,@height; g#symmetry-marks/@fill"
+    },
+    {
+     "text": "the first 1.5 mm beyond the mark, then 1.6 mm, then the second",
+     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+     "sha16": "e0b6366d5c032523",
+     "field": "g#symmetry-marks/@inkscape:label"
+    },
+    {
+     "text": "measured gap mark → nearest bar 1.52 mm · 0 px over the mark",
+     "source": "notation-measurements.json",
+     "sha16": "24c49d6bafacdaf5",
+     "field": "states[NORMATIVE].measure.symmetry_marks"
+    }
+   ],
+   "meaning": {
+    "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+    "sha16": "e0b6366d5c032523",
+    "field": "g#symmetry-marks/@inkscape:label",
+    "text": "The drafting convention for a line of symmetry (ISO 128-3); the proportions are ours.",
+    "kind": "close paraphrase"
+   },
+   "check": {
+    "text": "The note does not yet explain these bars to a reader — open question 1 in the spec.",
+    "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+    "sha16": "e0b6366d5c032523",
+    "field": "g#symmetry-marks/@inkscape:label"
+   }
+  }
+ ],
+ "absent": {
+  "title": "No separate gold layer here",
+  "text": "Fix(I) is every point, so the whole mark carries the Fix gold: the mark in station 5 is itself the gold, filled #C7B469.",
+  "kind": "close paraphrase",
+  "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
+  "sha16": "e0b6366d5c032523",
+  "field": "g#glyph-body/@inkscape:label, @fill",
+  "note": {
+   "text": "“… the whole figure for I …”",
+   "source": "README.md at v1.0.0",
+   "sha16": "c98c3ee4a94a3dae",
+   "field": "lines 95",
+   "kind": "quote"
+  }
+ },
+ "chart": {
+  "title": "Does the mark survive its own move?",
+  "own_move": [
+   "sigma_h",
+   "sigma_v",
+   "c2"
+  ],
+  "rows": [
+   {
+    "move": "top-to-bottom flip  σₕ",
+    "key": "sigma_h",
+    "iou": 0.9959,
+    "is_own": true
+   },
+   {
+    "move": "left-to-right flip  σᵥ",
+    "key": "sigma_v",
+    "iou": 0.9968,
+    "is_own": true
+   },
+   {
+    "move": "half-turn  C₂",
+    "key": "c2",
+    "iou": 0.9928,
+    "is_own": true
+   }
+  ],
+  "measured_at_px": 5139,
+  "mm_per_px": 0.020001,
+  "source": "notation-measurements.json",
+  "sha16": "24c49d6bafacdaf5",
+  "field": "states[NORMATIVE].measure.print.iou"
+ },
+ "drafting": {
+  "colour": "#C3E6FF",
+  "name": "ice blue",
+  "chosen_by": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia and tritanopia under two models - among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
+  "colour_vision": {
+   "normal": {
+    "min_de_art": 21.42,
+    "nearest_art": "#B498E6",
+    "min_de_text": 21.42,
+    "nearest_text": "#B498E6",
+    "min_de": 21.42
+   },
+   "Machado protanopia": {
+    "min_de_art": 15.33,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 15.33,
+    "nearest_text": "#4FB5B5",
+    "min_de": 15.33
+   },
+   "Machado deuteranopia": {
+    "min_de_art": 16.31,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 16.31,
+    "nearest_text": "#4FB5B5",
+    "min_de": 16.31
+   },
+   "Machado tritanopia": {
+    "min_de_art": 17.85,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 17.85,
+    "nearest_text": "#4FB5B5",
+    "min_de": 17.85
+   },
+   "Vienot protanopia": {
+    "min_de_art": 15.71,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 15.71,
+    "nearest_text": "#4FB5B5",
+    "min_de": 15.71
+   },
+   "Vienot deuteranopia": {
+    "min_de_art": 16.3,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 16.3,
+    "nearest_text": "#4FB5B5",
+    "min_de": 16.3
+   },
+   "Vienot tritanopia": {
+    "min_de_art": 17.39,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 17.39,
+    "nearest_text": "#4FB5B5",
+    "min_de": 17.39
+   }
+  },
+  "colour_vision_models": [
+   "Machado, Oliveira & Fernandes 2009, severity 1.0, linear RGB",
+   "Vienot, Brettel & Mollon 1999, LMS-plane projection derived in choose_drafting_colour.py; its tritanopia case is the plane through white and the red primary, an approximation"
+  ],
+  "worst_view": "Machado protanopia",
+  "worst_view_de": 15.33,
+  "chosen_by_carey": true,
+  "search_rank": 20,
+  "search_qualifying": 8486,
+  "search_first": "#CFF2FF",
+  "search_first_de": 16.31,
+  "ciede2000_to_art": [
+   {
+    "dE": 21.42,
+    "hex": "#B498E6"
+   },
+   {
+    "dE": 22.06,
+    "hex": "#4FB5B5"
+   },
+   {
+    "dE": 22.74,
+    "hex": "#FFF9E3"
+   },
+   {
+    "dE": 23.38,
+    "hex": "#EBDFC8"
+   },
+   {
+    "dE": 24.36,
+    "hex": "#F0E3C9"
+   },
+   {
+    "dE": 29.27,
+    "hex": "#F2E4B8"
+   },
+   {
+    "dE": 32.83,
+    "hex": "#B29F7B"
+   },
+   {
+    "dE": 37.9,
+    "hex": "#DEC875"
+   },
+   {
+    "dE": 37.99,
+    "hex": "#C7B469"
+   },
+   {
+    "dE": 38.6,
+    "hex": "#D5AF64"
+   },
+   {
+    "dE": 47.6,
+    "hex": "#E25C60"
+   },
+   {
+    "dE": 55.08,
+    "hex": "#6C5324"
+   },
+   {
+    "dE": 55.33,
+    "hex": "#6E5321"
+   },
+   {
+    "dE": 74.64,
+    "hex": "#332A11"
+   }
+  ],
+  "min_de_art": 21.42,
+  "nearest_art": "#B498E6",
+  "ciede2000_to_text": [
+   {
+    "dE": 21.42,
+    "role": "titles METACOGNITIVE",
+    "hex": "#B498E6"
+   },
+   {
+    "dE": 22.06,
+    "role": "titles NON-NORMATIVE",
+    "hex": "#4FB5B5"
+   },
+   {
+    "dE": 29.27,
+    "role": "body",
+    "hex": "#F2E4B8"
+   },
+   {
+    "dE": 37.9,
+    "role": "values",
+    "hex": "#DEC875"
+   },
+   {
+    "dE": 37.99,
+    "role": "sources and checks",
+    "hex": "#C7B469"
+   },
+   {
+    "dE": 38.6,
+    "role": "titles NORMATIVE",
+    "hex": "#D5AF64"
+   },
+   {
+    "dE": 47.6,
+    "role": "titles CRITICAL",
+    "hex": "#E25C60"
+   }
+  ],
+  "min_de_text": 21.42,
+  "nearest_text": "#B498E6",
+  "contrast_to_ground": 14.11,
+  "contrast_to_all_grounds": {
+   "#181403": 14.11,
+   "#001817": 14.07,
+   "#17121D": 14.1,
+   "#1F100E": 14.12
+  },
+  "halo": {
+   "colour": "#181403",
+   "px_at_2400": 4,
+   "px_at_1200": 2
+  },
+  "weights_px_at_2400": {
+   "detail_window": 9,
+   "corner_brackets": 9,
+   "panel_frame": 9,
+   "leader_lines": 3,
+   "box_rules": 4,
+   "centre_axis": 2,
+   "badge_radius": 16,
+   "anchor_dot_radius": 5
+  },
+  "window_assembly_px": 17,
+  "bracket_assembly_px": 17,
+  "art_lines": {
+   "reference_semaphore_px": 428,
+   "window_px": [
+    88.7,
+    49.1
+   ],
+   "art_line_px": {
+    "p10": 4.0,
+    "median": 6.0,
+    "p90": 7.21,
+    "max": 10.0
+   }
+  },
+  "covered": {
+   "art_px_erased_by_halo": 2357,
+   "axis_core_px": 1248,
+   "axis_core_px_over_art": 0,
+   "axis_clear_of_art_px": 3,
+   "axis_min_gap_to_art_px": 4.0,
+   "core_px": 45758,
+   "distinct_colours_under": 1333,
+   "min_contrast": 1.0,
+   "min_against": "#F9E084",
+   "median_contrast": 3.37,
+   "px_below_3to1": 2179
+  }
+ },
+ "audit": {
+  "quotes_verified": 6,
+  "pointers_verified": 3,
+  "lean_names_verified": 1,
+  "failures": [],
+  "strings_provenance_checked": 27,
+  "provenance_faults": [],
+  "quotation_spans_checked": 7,
+  "quotation_punctuation_faults": [],
+  "text_box_overlaps": [],
+  "text_outside_canvas": [],
+  "contrast_floor": 4.5,
+  "contrast_faults": []
+ }
+}

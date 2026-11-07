@@ -1,0 +1,2818 @@
+{
+ "art": [
+  "#F0E3C9",
+  "#6C5324",
+  "#EBDFC8",
+  "#6E5321",
+  "#FFF9E3",
+  "#E25C60",
+  "#B29F7B",
+  "#332A11",
+  "#F2E4B8",
+  "#DEC875",
+  "#C7B469",
+  "#B498E6",
+  "#4FB5B5",
+  "#D5AF64"
+ ],
+ "grounds": [
+  "#181403",
+  "#001817",
+  "#17121D",
+  "#1F100E"
+ ],
+ "text": [
+  "#DEC875",
+  "#F2E4B8",
+  "#C7B469",
+  "#D5AF64",
+  "#4FB5B5",
+  "#B498E6",
+  "#E25C60"
+ ],
+ "chosen": "#C3E6FF",
+ "chosen_rank": 20,
+ "qualifying": 8486,
+ "chosen_eval": {
+  "hex": "#C3E6FF",
+  "contrast_ground": {
+   "#181403": 14.11,
+   "#001817": 14.07,
+   "#17121D": 14.1,
+   "#1F100E": 14.12
+  },
+  "min_contrast_ground": 14.07,
+  "views": {
+   "normal": {
+    "min_de_art": 21.42,
+    "nearest_art": "#B498E6",
+    "min_de_text": 21.42,
+    "nearest_text": "#B498E6",
+    "min_de": 21.42
+   },
+   "Machado protanopia": {
+    "min_de_art": 15.33,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 15.33,
+    "nearest_text": "#4FB5B5",
+    "min_de": 15.33
+   },
+   "Machado deuteranopia": {
+    "min_de_art": 16.31,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 16.31,
+    "nearest_text": "#4FB5B5",
+    "min_de": 16.31
+   },
+   "Machado tritanopia": {
+    "min_de_art": 17.85,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 17.85,
+    "nearest_text": "#4FB5B5",
+    "min_de": 17.85
+   },
+   "Vienot protanopia": {
+    "min_de_art": 15.71,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 15.71,
+    "nearest_text": "#4FB5B5",
+    "min_de": 15.71
+   },
+   "Vienot deuteranopia": {
+    "min_de_art": 16.3,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 16.3,
+    "nearest_text": "#4FB5B5",
+    "min_de": 16.3
+   },
+   "Vienot tritanopia": {
+    "min_de_art": 17.39,
+    "nearest_art": "#4FB5B5",
+    "min_de_text": 17.39,
+    "nearest_text": "#4FB5B5",
+    "min_de": 17.39
+   }
+  },
+  "min_de_overall": 15.33,
+  "worst_view": "Machado protanopia",
+  "oklch": null
+ },
+ "ranked": [
+  {
+   "hex": "#CFF2FF",
+   "contrast_ground": {
+    "#181403": 15.61,
+    "#001817": 15.57,
+    "#17121D": 15.6,
+    "#1F100E": 15.63
+   },
+   "min_contrast_ground": 15.57,
+   "views": {
+    "normal": {
+     "min_de_art": 18.77,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.77
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.33,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.33,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.33
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.42,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.42,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.42
+    },
+    "Machado tritanopia": {
+     "min_de_art": 20.12,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 20.12,
+     "nearest_text": "#4FB5B5",
+     "min_de": 20.12
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.31,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.31,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.31
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.34,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.34,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.34
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 19.2,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.2
+    }
+   },
+   "min_de_overall": 16.31,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.94,
+    0.04,
+    222.0
+   ]
+  },
+  {
+   "hex": "#81FBFF",
+   "contrast_ground": {
+    "#181403": 15.06,
+    "#001817": 15.03,
+    "#17121D": 15.06,
+    "#1F100E": 15.08
+   },
+   "min_contrast_ground": 15.03,
+   "views": {
+    "normal": {
+     "min_de_art": 16.78,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.78,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.78
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.06,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.58,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.06
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.87,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.87
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.13,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.13,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.13
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.6,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.6,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.6
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.83,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.83,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.83
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.77,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.77,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.77
+    }
+   },
+   "min_de_overall": 16.06,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.11,
+    198.0
+   ]
+  },
+  {
+   "hex": "#C5F5FE",
+   "contrast_ground": {
+    "#181403": 15.67,
+    "#001817": 15.63,
+    "#17121D": 15.66,
+    "#1F100E": 15.69
+   },
+   "min_contrast_ground": 15.63,
+   "views": {
+    "normal": {
+     "min_de_art": 19.6,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.6
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.05,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.52,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.05
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.37,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.37,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.37
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.87,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.87
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.42,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.42,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.42
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.3
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.92,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.92
+    }
+   },
+   "min_de_overall": 16.05,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.94,
+    0.05,
+    210.0
+   ]
+  },
+  {
+   "hex": "#A3F5FD",
+   "contrast_ground": {
+    "#181403": 14.94,
+    "#001817": 14.9,
+    "#17121D": 14.94,
+    "#1F100E": 14.96
+   },
+   "min_contrast_ground": 14.9,
+   "views": {
+    "normal": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.06,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.06,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.06
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.95,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.95,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.95
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.29,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.29,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.29
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.01,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.01,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.01
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.53,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.53,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.53
+    }
+   },
+   "min_de_overall": 16.01,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.08,
+    204.0
+   ]
+  },
+  {
+   "hex": "#8EF9FD",
+   "contrast_ground": {
+    "#181403": 15.01,
+    "#001817": 14.98,
+    "#17121D": 15.01,
+    "#1F100E": 15.03
+   },
+   "min_contrast_ground": 14.98,
+   "views": {
+    "normal": {
+     "min_de_art": 16.62,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.62,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.62
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.95,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.34,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.95
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.87,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.87
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.28,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.28,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.28
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.3
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.87,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.87
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.57,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.57,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.57
+    }
+   },
+   "min_de_overall": 15.95,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.1,
+    198.0
+   ]
+  },
+  {
+   "hex": "#AEF2FE",
+   "contrast_ground": {
+    "#181403": 14.85,
+    "#001817": 14.81,
+    "#17121D": 14.84,
+    "#1F100E": 14.87
+   },
+   "min_contrast_ground": 14.81,
+   "views": {
+    "normal": {
+     "min_de_art": 17.71,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.71,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.71
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.96
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.97,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.97,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.97
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.49,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.49,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.49
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.94
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.95,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.95,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.95
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.66,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.66,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.66
+    }
+   },
+   "min_de_overall": 15.94,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.07,
+    210.0
+   ]
+  },
+  {
+   "hex": "#D7F0FB",
+   "contrast_ground": {
+    "#181403": 15.56,
+    "#001817": 15.53,
+    "#17121D": 15.56,
+    "#1F100E": 15.58
+   },
+   "min_contrast_ground": 15.53,
+   "views": {
+    "normal": {
+     "min_de_art": 16.95,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 23.04,
+     "nearest_text": "#B498E6",
+     "min_de": 16.95
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.96,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 15.97,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.96
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.19,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 18.59,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.19
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.51,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.69,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.51
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.83,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.83,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.83
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.51,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.51,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.51
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.23,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.81,
+     "nearest_text": "#B498E6",
+     "min_de": 16.23
+    }
+   },
+   "min_de_overall": 15.83,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.94,
+    0.03,
+    228.0
+   ]
+  },
+  {
+   "hex": "#B8EFFE",
+   "contrast_ground": {
+    "#181403": 14.75,
+    "#001817": 14.71,
+    "#17121D": 14.74,
+    "#1F100E": 14.77
+   },
+   "min_contrast_ground": 14.71,
+   "views": {
+    "normal": {
+     "min_de_art": 18.85,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.85,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.85
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.8,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.8,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.8
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.97,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.97,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.97
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.8,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.8,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.8
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.92,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.92
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.01,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.01,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.01
+    }
+   },
+   "min_de_overall": 15.8,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.06,
+    216.0
+   ]
+  },
+  {
+   "hex": "#ADF3FA",
+   "contrast_ground": {
+    "#181403": 14.89,
+    "#001817": 14.85,
+    "#17121D": 14.88,
+    "#1F100E": 14.91
+   },
+   "min_contrast_ground": 14.85,
+   "views": {
+    "normal": {
+     "min_de_art": 17.15,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.15,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.15
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.7
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.49,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.49,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.49
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.63,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.63,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.63
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.89,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.89,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.89
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.71,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.71,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.71
+    }
+   },
+   "min_de_overall": 15.63,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.07,
+    204.0
+   ]
+  },
+  {
+   "hex": "#CEF3FC",
+   "contrast_ground": {
+    "#181403": 15.66,
+    "#001817": 15.62,
+    "#17121D": 15.65,
+    "#1F100E": 15.68
+   },
+   "min_contrast_ground": 15.62,
+   "views": {
+    "normal": {
+     "min_de_art": 18.04,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.08,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.04
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.62,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.27,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.62
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.54,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.54,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.54
+    },
+    "Machado tritanopia": {
+     "min_de_art": 20.01,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 20.01,
+     "nearest_text": "#4FB5B5",
+     "min_de": 20.01
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.14,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.14,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.14
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.46,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.46,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.46
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 19.35,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.9,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.35
+    }
+   },
+   "min_de_overall": 15.62,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.94,
+    0.04,
+    216.0
+   ]
+  },
+  {
+   "hex": "#C1EDFD",
+   "contrast_ground": {
+    "#181403": 14.73,
+    "#001817": 14.7,
+    "#17121D": 14.73,
+    "#1F100E": 14.75
+   },
+   "min_contrast_ground": 14.7,
+   "views": {
+    "normal": {
+     "min_de_art": 20.1,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 20.1,
+     "nearest_text": "#4FB5B5",
+     "min_de": 20.1
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.61,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.61,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.61
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.99,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.99,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.99
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.85,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.85,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.85
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.6,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.6,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.6
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.96
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.73,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.73,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.73
+    }
+   },
+   "min_de_overall": 15.6,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.05,
+    222.0
+   ]
+  },
+  {
+   "hex": "#D6F0FA",
+   "contrast_ground": {
+    "#181403": 15.53,
+    "#001817": 15.49,
+    "#17121D": 15.52,
+    "#1F100E": 15.55
+   },
+   "min_contrast_ground": 15.49,
+   "views": {
+    "normal": {
+     "min_de_art": 16.77,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 22.77,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.77
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.6,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 15.89,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.6
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.93,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 18.55,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.93
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.79,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.5,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.79
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.74
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.48,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.48,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.48
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.45,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.88,
+     "nearest_text": "#B498E6",
+     "min_de": 16.45
+    }
+   },
+   "min_de_overall": 15.6,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.94,
+    0.03,
+    222.0
+   ]
+  },
+  {
+   "hex": "#D9EFFD",
+   "contrast_ground": {
+    "#181403": 15.54,
+    "#001817": 15.5,
+    "#17121D": 15.53,
+    "#1F100E": 15.56
+   },
+   "min_contrast_ground": 15.5,
+   "views": {
+    "normal": {
+     "min_de_art": 17.69,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 22.08,
+     "nearest_text": "#B498E6",
+     "min_de": 17.69
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.04,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.04,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.04
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.51,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.51,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.51
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.68,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 22.13,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.68
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.93,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.93,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.93
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.43,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.43,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.43
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.6,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.46,
+     "nearest_text": "#B498E6",
+     "min_de": 15.6
+    }
+   },
+   "min_de_overall": 15.6,
+   "worst_view": "Vienot tritanopia",
+   "oklch": [
+    0.94,
+    0.03,
+    234.0
+   ]
+  },
+  {
+   "hex": "#6CF6FB",
+   "contrast_ground": {
+    "#181403": 14.22,
+    "#001817": 14.18,
+    "#17121D": 14.21,
+    "#1F100E": 14.24
+   },
+   "min_contrast_ground": 14.18,
+   "views": {
+    "normal": {
+     "min_de_art": 15.66,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.66,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.66
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.59,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.59,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.59
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.62,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.62,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.62
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.76,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.76,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.76
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.59,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.59,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.59
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.7
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.67,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.67,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.67
+    }
+   },
+   "min_de_overall": 15.59,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.12,
+    198.0
+   ]
+  },
+  {
+   "hex": "#5BF8FD",
+   "contrast_ground": {
+    "#181403": 14.29,
+    "#001817": 14.25,
+    "#17121D": 14.28,
+    "#1F100E": 14.31
+   },
+   "min_contrast_ground": 14.25,
+   "views": {
+    "normal": {
+     "min_de_art": 16.01,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.01,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.01
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.9,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.9,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.9
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.53,
+     "nearest_art": "#B498E6",
+     "min_de_text": 15.53,
+     "nearest_text": "#B498E6",
+     "min_de": 15.53
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.03
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.91,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.91,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.91
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.54,
+     "nearest_art": "#B498E6",
+     "min_de_text": 15.54,
+     "nearest_text": "#B498E6",
+     "min_de": 15.54
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.06,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.06,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.06
+    }
+   },
+   "min_de_overall": 15.53,
+   "worst_view": "Machado deuteranopia",
+   "oklch": [
+    0.9,
+    0.13,
+    198.0
+   ]
+  },
+  {
+   "hex": "#D0E8FE",
+   "contrast_ground": {
+    "#181403": 14.61,
+    "#001817": 14.57,
+    "#17121D": 14.6,
+    "#1F100E": 14.63
+   },
+   "min_contrast_ground": 14.57,
+   "views": {
+    "normal": {
+     "min_de_art": 20.58,
+     "nearest_art": "#B498E6",
+     "min_de_text": 20.58,
+     "nearest_text": "#B498E6",
+     "min_de": 20.58
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.52,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.52,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.52
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.03
+    },
+    "Machado tritanopia": {
+     "min_de_art": 19.33,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.35,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.33
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.61,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.61,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.61
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.99,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.99,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.99
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.36,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.68,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.36
+    }
+   },
+   "min_de_overall": 15.52,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    246.0
+   ]
+  },
+  {
+   "hex": "#B7F0FB",
+   "contrast_ground": {
+    "#181403": 14.8,
+    "#001817": 14.76,
+    "#17121D": 14.79,
+    "#1F100E": 14.82
+   },
+   "min_contrast_ground": 14.76,
+   "views": {
+    "normal": {
+     "min_de_art": 18.18,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.18,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.18
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.56,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.56,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.56
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.93,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.93,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.93
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.5,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.5,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.5
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.88,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.88,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.88
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.05,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.05,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.05
+    }
+   },
+   "min_de_overall": 15.5,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.06,
+    210.0
+   ]
+  },
+  {
+   "hex": "#CEE9FD",
+   "contrast_ground": {
+    "#181403": 14.64,
+    "#001817": 14.61,
+    "#17121D": 14.64,
+    "#1F100E": 14.66
+   },
+   "min_contrast_ground": 14.61,
+   "views": {
+    "normal": {
+     "min_de_art": 20.46,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.05,
+     "nearest_text": "#B498E6",
+     "min_de": 20.46
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.44,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.44,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.44
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.03
+    },
+    "Machado tritanopia": {
+     "min_de_art": 19.91,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.91,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.91
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.48,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.48,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.48
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.99,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.99,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.99
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.01,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.38,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.01
+    }
+   },
+   "min_de_overall": 15.44,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    240.0
+   ]
+  },
+  {
+   "hex": "#CCEAFC",
+   "contrast_ground": {
+    "#181403": 14.68,
+    "#001817": 14.65,
+    "#17121D": 14.68,
+    "#1F100E": 14.7
+   },
+   "min_contrast_ground": 14.65,
+   "views": {
+    "normal": {
+     "min_de_art": 20.01,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.71,
+     "nearest_text": "#B498E6",
+     "min_de": 20.01
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.36,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.36,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.36
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.05,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.05,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.05
+    },
+    "Machado tritanopia": {
+     "min_de_art": 19.52,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.52,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.52
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.36,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.36,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.36
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.99,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.99,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.99
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.62,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 19.1,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.62
+    }
+   },
+   "min_de_overall": 15.36,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    234.0
+   ]
+  },
+  {
+   "hex": "#C3E6FF",
+   "contrast_ground": {
+    "#181403": 14.11,
+    "#001817": 14.07,
+    "#17121D": 14.1,
+    "#1F100E": 14.12
+   },
+   "min_contrast_ground": 14.07,
+   "views": {
+    "normal": {
+     "min_de_art": 21.42,
+     "nearest_art": "#B498E6",
+     "min_de_text": 21.42,
+     "nearest_text": "#B498E6",
+     "min_de": 21.42
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.33,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.33,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.33
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.31,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.31,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.31
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.85,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.85,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.85
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.71,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.71,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.71
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.3
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.39,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.39,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.39
+    }
+   },
+   "min_de_overall": 15.33,
+   "worst_view": "Machado protanopia",
+   "oklch": null
+  },
+  {
+   "hex": "#B5E7FE",
+   "contrast_ground": {
+    "#181403": 13.88,
+    "#001817": 13.85,
+    "#17121D": 13.87,
+    "#1F100E": 13.9
+   },
+   "min_contrast_ground": 13.85,
+   "views": {
+    "normal": {
+     "min_de_art": 19.58,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.58,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.58
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.31,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.31,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.31
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.86,
+     "nearest_art": "#B498E6",
+     "min_de_text": 15.86,
+     "nearest_text": "#B498E6",
+     "min_de": 15.86
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.96
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.52,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.52,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.52
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.82,
+     "nearest_art": "#B498E6",
+     "min_de_text": 15.82,
+     "nearest_text": "#B498E6",
+     "min_de": 15.82
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.81,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.81,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.81
+    }
+   },
+   "min_de_overall": 15.31,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.06,
+    228.0
+   ]
+  },
+  {
+   "hex": "#7AF5F8",
+   "contrast_ground": {
+    "#181403": 14.25,
+    "#001817": 14.21,
+    "#17121D": 14.24,
+    "#1F100E": 14.27
+   },
+   "min_contrast_ground": 14.21,
+   "views": {
+    "normal": {
+     "min_de_art": 15.49,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.49,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.49
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.32,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.32,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.32
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.57,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.57,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.57
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.43,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.43,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.43
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.3
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.6,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.6,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.6
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.49,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.49,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.49
+    }
+   },
+   "min_de_overall": 15.3,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.9,
+    0.11,
+    198.0
+   ]
+  },
+  {
+   "hex": "#C0EEFA",
+   "contrast_ground": {
+    "#181403": 14.78,
+    "#001817": 14.74,
+    "#17121D": 14.77,
+    "#1F100E": 14.8
+   },
+   "min_contrast_ground": 14.74,
+   "views": {
+    "normal": {
+     "min_de_art": 19.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.3
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.36,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.36,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.36
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.01,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.01,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.01
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.77,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.77,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.77
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.3,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.3,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.3
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.95,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.95,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.95
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.74
+    }
+   },
+   "min_de_overall": 15.3,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.05,
+    216.0
+   ]
+  },
+  {
+   "hex": "#B6F1F7",
+   "contrast_ground": {
+    "#181403": 14.83,
+    "#001817": 14.8,
+    "#17121D": 14.83,
+    "#1F100E": 14.85
+   },
+   "min_contrast_ground": 14.8,
+   "views": {
+    "normal": {
+     "min_de_art": 17.54,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.54,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.54
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.36,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.36,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.36
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.98,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.98,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.98
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.92,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.92
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.26,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.26,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.26
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.92,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.92
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.09,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.09,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.09
+    }
+   },
+   "min_de_overall": 15.26,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.06,
+    204.0
+   ]
+  },
+  {
+   "hex": "#BCF8FE",
+   "contrast_ground": {
+    "#181403": 15.78,
+    "#001817": 15.74,
+    "#17121D": 15.78,
+    "#1F100E": 15.8
+   },
+   "min_contrast_ground": 15.74,
+   "views": {
+    "normal": {
+     "min_de_art": 18.83,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.83,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.83
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.24,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.78,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.24
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.42,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.42,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.42
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.24,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.24,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.24
+    },
+    "Vienot protanopia": {
+     "min_de_art": 16.41,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.68,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.41
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.35,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.35,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.35
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.42,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.42,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.42
+    }
+   },
+   "min_de_overall": 15.24,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.94,
+    0.06,
+    204.0
+   ]
+  },
+  {
+   "hex": "#C4E2FE",
+   "contrast_ground": {
+    "#181403": 13.73,
+    "#001817": 13.7,
+    "#17121D": 13.73,
+    "#1F100E": 13.75
+   },
+   "min_contrast_ground": 13.7,
+   "views": {
+    "normal": {
+     "min_de_art": 20.06,
+     "nearest_art": "#B498E6",
+     "min_de_text": 20.06,
+     "nearest_text": "#B498E6",
+     "min_de": 20.06
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.2,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.2,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.2
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.84,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.84,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.84
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.0,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.0,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.0
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.53,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.53,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.53
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.82,
+     "nearest_art": "#B498E6",
+     "min_de_text": 15.82,
+     "nearest_text": "#B498E6",
+     "min_de": 15.82
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.32,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.32,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.32
+    }
+   },
+   "min_de_overall": 15.2,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.05,
+    246.0
+   ]
+  },
+  {
+   "hex": "#DAEEFE",
+   "contrast_ground": {
+    "#181403": 15.47,
+    "#001817": 15.43,
+    "#17121D": 15.47,
+    "#1F100E": 15.49
+   },
+   "min_contrast_ground": 15.43,
+   "views": {
+    "normal": {
+     "min_de_art": 18.3,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.67,
+     "nearest_text": "#B498E6",
+     "min_de": 18.3
+    },
+    "Machado protanopia": {
+     "min_de_art": 16.05,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.05,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.05
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 18.4,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.4,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.4
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.11,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 22.39,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.11
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.97,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.97,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.97
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 18.32,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.32,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.32
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.18,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.17,
+     "nearest_text": "#B498E6",
+     "min_de": 15.18
+    }
+   },
+   "min_de_overall": 15.18,
+   "worst_view": "Vienot tritanopia",
+   "oklch": [
+    0.94,
+    0.03,
+    240.0
+   ]
+  },
+  {
+   "hex": "#CAEBFA",
+   "contrast_ground": {
+    "#181403": 14.71,
+    "#001817": 14.68,
+    "#17121D": 14.71,
+    "#1F100E": 14.73
+   },
+   "min_contrast_ground": 14.68,
+   "views": {
+    "normal": {
+     "min_de_art": 19.37,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 21.42,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.37
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.19,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.19,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.19
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.05,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.05,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.05
+    },
+    "Machado tritanopia": {
+     "min_de_art": 19.18,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.18,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.18
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.14,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.14,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.14
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.98,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.98,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.98
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.88,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.88,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.88
+    }
+   },
+   "min_de_overall": 15.14,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    228.0
+   ]
+  },
+  {
+   "hex": "#A9EAFC",
+   "contrast_ground": {
+    "#181403": 13.91,
+    "#001817": 13.88,
+    "#17121D": 13.91,
+    "#1F100E": 13.93
+   },
+   "min_contrast_ground": 13.88,
+   "views": {
+    "normal": {
+     "min_de_art": 17.44,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.44,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.44
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.13,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.13,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.13
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.7
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.12,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.12,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.12
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.22,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.22,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.22
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.75,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.75,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.75
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.2,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.2,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.2
+    }
+   },
+   "min_de_overall": 15.12,
+   "worst_view": "Machado tritanopia",
+   "oklch": [
+    0.9,
+    0.07,
+    216.0
+   ]
+  },
+  {
+   "hex": "#87F2FC",
+   "contrast_ground": {
+    "#181403": 14.15,
+    "#001817": 14.12,
+    "#17121D": 14.15,
+    "#1F100E": 14.17
+   },
+   "min_contrast_ground": 14.12,
+   "views": {
+    "normal": {
+     "min_de_art": 15.6,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.6,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.6
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.47,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.47,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.47
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.74
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.09,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.09,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.09
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.48,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.48,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.48
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.82,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.82,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.82
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.23,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.23,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.23
+    }
+   },
+   "min_de_overall": 15.09,
+   "worst_view": "Machado tritanopia",
+   "oklch": [
+    0.9,
+    0.1,
+    204.0
+   ]
+  },
+  {
+   "hex": "#87F3F6",
+   "contrast_ground": {
+    "#181403": 14.19,
+    "#001817": 14.16,
+    "#17121D": 14.19,
+    "#1F100E": 14.21
+   },
+   "min_contrast_ground": 14.16,
+   "views": {
+    "normal": {
+     "min_de_art": 15.29,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.29,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.29
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.03
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.52,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.52,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.52
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.09,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.09,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.09
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.0,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.0,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.0
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.51,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.51,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.51
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.27,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.27,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.27
+    }
+   },
+   "min_de_overall": 15.0,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.9,
+    0.1,
+    198.0
+   ]
+  },
+  {
+   "hex": "#BFEEF7",
+   "contrast_ground": {
+    "#181403": 14.72,
+    "#001817": 14.69,
+    "#17121D": 14.72,
+    "#1F100E": 14.74
+   },
+   "min_contrast_ground": 14.69,
+   "views": {
+    "normal": {
+     "min_de_art": 18.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.7
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.1,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.1,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.1
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.94
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.64,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.64,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.64
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.0,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.0,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.0
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.87,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.87,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.87
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 17.66,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.66,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.66
+    }
+   },
+   "min_de_overall": 15.0,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.05,
+    210.0
+   ]
+  },
+  {
+   "hex": "#C1E3FC",
+   "contrast_ground": {
+    "#181403": 13.73,
+    "#001817": 13.7,
+    "#17121D": 13.73,
+    "#1F100E": 13.75
+   },
+   "min_contrast_ground": 13.7,
+   "views": {
+    "normal": {
+     "min_de_art": 20.8,
+     "nearest_art": "#B498E6",
+     "min_de_text": 20.8,
+     "nearest_text": "#B498E6",
+     "min_de": 20.8
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.96
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.7
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.47,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.47,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.47
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.16,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.16,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.16
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.74
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.96
+    }
+   },
+   "min_de_overall": 14.96,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.05,
+    240.0
+   ]
+  },
+  {
+   "hex": "#B3E8FB",
+   "contrast_ground": {
+    "#181403": 13.9,
+    "#001817": 13.87,
+    "#17121D": 13.9,
+    "#1F100E": 13.92
+   },
+   "min_contrast_ground": 13.87,
+   "views": {
+    "normal": {
+     "min_de_art": 18.58,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.58,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.58
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.94,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.94,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.94
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.72,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.72,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.72
+    },
+    "Machado tritanopia": {
+     "min_de_art": 15.8,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.8,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.8
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.03
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.74
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.74,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.74,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.74
+    }
+   },
+   "min_de_overall": 14.94,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.06,
+    222.0
+   ]
+  },
+  {
+   "hex": "#C9EBF8",
+   "contrast_ground": {
+    "#181403": 14.67,
+    "#001817": 14.63,
+    "#17121D": 14.66,
+    "#1F100E": 14.69
+   },
+   "min_contrast_ground": 14.63,
+   "views": {
+    "normal": {
+     "min_de_art": 18.94,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.88,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.94
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.98,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.98,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.98
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.98,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.98,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.98
+    },
+    "Machado tritanopia": {
+     "min_de_art": 19.02,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 19.02,
+     "nearest_text": "#4FB5B5",
+     "min_de": 19.02
+    },
+    "Vienot protanopia": {
+     "min_de_art": 14.9,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.9,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.9
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.91,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.91,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.91
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.78,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.78,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.78
+    }
+   },
+   "min_de_overall": 14.9,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    222.0
+   ]
+  },
+  {
+   "hex": "#92F0F9",
+   "contrast_ground": {
+    "#181403": 14.08,
+    "#001817": 14.05,
+    "#17121D": 14.07,
+    "#1F100E": 14.1
+   },
+   "min_contrast_ground": 14.05,
+   "views": {
+    "normal": {
+     "min_de_art": 15.48,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.48,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.48
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.04,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.04,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.04
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.57,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.57,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.57
+    },
+    "Machado tritanopia": {
+     "min_de_art": 14.86,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.86,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.86
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.03,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.03,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.03
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.59,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.59,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.59
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.07,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.07,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.07
+    }
+   },
+   "min_de_overall": 14.86,
+   "worst_view": "Machado tritanopia",
+   "oklch": [
+    0.9,
+    0.09,
+    204.0
+   ]
+  },
+  {
+   "hex": "#9EEDFB",
+   "contrast_ground": {
+    "#181403": 14.0,
+    "#001817": 13.96,
+    "#17121D": 13.99,
+    "#1F100E": 14.02
+   },
+   "min_contrast_ground": 13.96,
+   "views": {
+    "normal": {
+     "min_de_art": 16.24,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.24,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.24
+    },
+    "Machado protanopia": {
+     "min_de_art": 15.11,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.11,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.11
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.66,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.66,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.66
+    },
+    "Machado tritanopia": {
+     "min_de_art": 14.85,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.85,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.85
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.15,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.15,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.15
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.71,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.71,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.71
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 15.04,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.04,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.04
+    }
+   },
+   "min_de_overall": 14.85,
+   "worst_view": "Machado tritanopia",
+   "oklch": [
+    0.9,
+    0.08,
+    210.0
+   ]
+  },
+  {
+   "hex": "#BFE4FB",
+   "contrast_ground": {
+    "#181403": 13.77,
+    "#001817": 13.74,
+    "#17121D": 13.77,
+    "#1F100E": 13.79
+   },
+   "min_contrast_ground": 13.74,
+   "views": {
+    "normal": {
+     "min_de_art": 21.06,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 21.06,
+     "nearest_text": "#4FB5B5",
+     "min_de": 21.06
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.83,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.83,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.83
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 15.67,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.67,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.67
+    },
+    "Machado tritanopia": {
+     "min_de_art": 17.15,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.15,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.15
+    },
+    "Vienot protanopia": {
+     "min_de_art": 14.98,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.98,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.98
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 15.7,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 15.7,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.7
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.76,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.76,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.76
+    }
+   },
+   "min_de_overall": 14.83,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.9,
+    0.05,
+    234.0
+   ]
+  },
+  {
+   "hex": "#C8ECF6",
+   "contrast_ground": {
+    "#181403": 14.72,
+    "#001817": 14.68,
+    "#17121D": 14.71,
+    "#1F100E": 14.74
+   },
+   "min_contrast_ground": 14.68,
+   "views": {
+    "normal": {
+     "min_de_art": 18.42,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 20.19,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.42
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.91,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.91,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.91
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 17.1,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.1,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.1
+    },
+    "Machado tritanopia": {
+     "min_de_art": 18.88,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.88,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.88
+    },
+    "Vienot protanopia": {
+     "min_de_art": 14.79,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 14.79,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.79
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 17.02,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 17.02,
+     "nearest_text": "#4FB5B5",
+     "min_de": 17.02
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 18.73,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 18.73,
+     "nearest_text": "#4FB5B5",
+     "min_de": 18.73
+    }
+   },
+   "min_de_overall": 14.79,
+   "worst_view": "Vienot protanopia",
+   "oklch": [
+    0.92,
+    0.04,
+    216.0
+   ]
+  },
+  {
+   "hex": "#99F8FA",
+   "contrast_ground": {
+    "#181403": 15.05,
+    "#001817": 15.01,
+    "#17121D": 15.05,
+    "#1F100E": 15.07
+   },
+   "min_contrast_ground": 15.01,
+   "views": {
+    "normal": {
+     "min_de_art": 16.63,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.63,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.63
+    },
+    "Machado protanopia": {
+     "min_de_art": 14.78,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.15,
+     "nearest_text": "#4FB5B5",
+     "min_de": 14.78
+    },
+    "Machado deuteranopia": {
+     "min_de_art": 16.96,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.96,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.96
+    },
+    "Machado tritanopia": {
+     "min_de_art": 16.36,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.36,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.36
+    },
+    "Vienot protanopia": {
+     "min_de_art": 15.65,
+     "nearest_art": "#FFF9E3",
+     "min_de_text": 16.1,
+     "nearest_text": "#4FB5B5",
+     "min_de": 15.65
+    },
+    "Vienot deuteranopia": {
+     "min_de_art": 16.92,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.92,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.92
+    },
+    "Vienot tritanopia": {
+     "min_de_art": 16.6,
+     "nearest_art": "#4FB5B5",
+     "min_de_text": 16.6,
+     "nearest_text": "#4FB5B5",
+     "min_de": 16.6
+    }
+   },
+   "min_de_overall": 14.78,
+   "worst_view": "Machado protanopia",
+   "oklch": [
+    0.92,
+    0.09,
+    198.0
+   ]
+  }
+ ]
+}
