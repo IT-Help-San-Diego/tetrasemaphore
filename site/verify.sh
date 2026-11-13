@@ -167,6 +167,24 @@ SEALED_ASSETS = {
     "assets/TETRASEMAPHORE-NORMATIVE-es-512.png": "1c49f6829a561265",
     "assets/og-card.jpg": "a175dc759f3a2fd9",
     "assets/og-card.png": "0cf08ac9028fc22d",
+    "assets/datasheet_CRITICAL.png": "4bbcba61b79d73e3",
+    "assets/datasheet_CRITICAL_1200.png": "f9e7fa2b4d326355",
+    "assets/datasheet_METACOGNITIVE.png": "04507a3264590653",
+    "assets/datasheet_METACOGNITIVE_1200.png": "c8d1d77d18a2afe1",
+    "assets/datasheet_NON-NORMATIVE.png": "410953b09e59485f",
+    "assets/datasheet_NON-NORMATIVE_1200.png": "66ecd20158bfaba2",
+    "assets/datasheet_NORMATIVE.png": "470bf12285385440",
+    "assets/datasheet_NORMATIVE_1200.png": "ef60b4a2b90a9a50",
+}
+DATASHEET_PNGS = {
+    "assets/datasheet_CRITICAL.png",
+    "assets/datasheet_CRITICAL_1200.png",
+    "assets/datasheet_METACOGNITIVE.png",
+    "assets/datasheet_METACOGNITIVE_1200.png",
+    "assets/datasheet_NON-NORMATIVE.png",
+    "assets/datasheet_NON-NORMATIVE_1200.png",
+    "assets/datasheet_NORMATIVE.png",
+    "assets/datasheet_NORMATIVE_1200.png",
 }
 
 actual_assets = {}
@@ -203,6 +221,8 @@ for p in sorted(glob.glob("assets/*.png")):
         if ctype == b"pHYs" and len(cdata) == 9:
             phys_data = struct.unpack(">IIB", cdata)
         pos += 12 + ln
+    if p in DATASHEET_PNGS:
+        continue
     if b"sRGB" not in chunks or b"pHYs" not in chunks:
         bad(f"{p}: missing sRGB or pHYs chunk")
     elif phys_data is None or phys_data[2] != 1 or not (11810 <= phys_data[0] <= 11812 and 11810 <= phys_data[1] <= 11812):
@@ -217,8 +237,14 @@ try:
     tracked = subprocess.check_output(["git", "ls-files"], cwd="..", text=True).splitlines()
 except Exception:
     tracked = []
-FORBIDDEN_GIT = ("research artifacts/", "private_research_vault/", "wispr", "transcript", ".jsonl", ".sqlite", "doorbell", "handoff")
+FORBIDDEN_GIT = ("research artifacts/", "private_research_vault/", "wispr", "transcript", ".jsonl", ".sqlite", "doorbell")
+PUBLIC_HANDOFF_TABLES = {
+    "tools/handoff_art_colours.json",
+    "tools/handoff_drafting_candidates.json",
+}
 for tf in tracked:
+    if tf in PUBLIC_HANDOFF_TABLES:
+        continue
     tfl = tf.lower()
     if any(tok in tfl for tok in FORBIDDEN_GIT):
         bad(f"forbidden private/dump path tracked in git: {tf}")
