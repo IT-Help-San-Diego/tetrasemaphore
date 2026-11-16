@@ -27,12 +27,17 @@ What it does, in order:
      JSON (tag, commit if any, DOI), like the clock, so sheets that name no commit verify after their tag exists;
   4. runs test_quotation_punctuation.py against the staged note, so the build's "0 punctuation
      faults" is backed by the ten cases that prove the checker fires, and stops if any case misses;
+  4c. runs make_datasheet_html.py over the four audit JSONs it has just written, which lays each
+     record out as a page a phone can read (datasheet-<state>.html, styled by the checkout's
+     site/index.html), then check_datasheet_html.py --self-test, which reads each page back against
+     its record and stops the build on any text that is neither a record field nor a declared label;
   5. writes SHA256SUMS over everything it produced (<out>/sheets) and BUILD-RECORD.json: the
      interpreter check, every input with its source and hash, the citation, the clocks, the
      punctuation test's result, the products;
   6. with --verify, compares the build with the copies committed in the checkout
-     (site/assets/datasheet_*.png, docs/datasheet-audit/audit_*.json, docs/AUDIT_REPORT.md),
-     taking each state's clock from the committed audit JSON, and exits 1 on any difference.
+     (site/assets/datasheet_*.png, docs/datasheet-audit/audit_*.json, docs/AUDIT_REPORT.md,
+     site/datasheet-*.html), taking each state's clock from the committed audit JSON, and exits 1
+     on any difference.
 
 Usage:
   python3 -I tools/build_datasheets.py                 build into build/datasheets (clock: $SOURCE_DATE_EPOCH,
@@ -67,6 +72,7 @@ COMMITTED = {f'datasheet_{s}.png': os.path.join(ROOT, 'site', 'assets', f'datash
 COMMITTED.update({f'datasheet_{s}_1200.png': os.path.join(ROOT, 'site', 'assets', f'datasheet_{s}_1200.png') for s in STATES})
 COMMITTED.update({f'audit_{s}.json': os.path.join(ROOT, 'docs', 'datasheet-audit', f'audit_{s}.json') for s in STATES})
 COMMITTED['AUDIT_REPORT.md'] = os.path.join(ROOT, 'docs', 'AUDIT_REPORT.md')
+COMMITTED.update({f'datasheet-{s.lower()}.html': os.path.join(ROOT, 'site', f'datasheet-{s.lower()}.html') for s in STATES})
 
 PREFLIGHT = r'''
 import json, sys
@@ -195,7 +201,8 @@ def main():
     interp['DYLD_FALLBACK_LIBRARY_PATH'] = os.environ.get('DYLD_FALLBACK_LIBRARY_PATH')
     print('interpreter: ' + ', '.join(f'{k} {v}' for k, v in interp.items()))
     run_identity = dict(argv=sys.argv[1:], scripts={n: sha256(os.path.join(TOOLS, n)) for n in
-                        ('build_datasheets.py', 'make_anatomy_plate.py', 'make_audit_report.py', 'test_quotation_punctuation.py')})
+                        ('build_datasheets.py', 'make_anatomy_plate.py', 'make_audit_report.py', 'test_quotation_punctuation.py',
+                         'make_datasheet_html.py', 'check_datasheet_html.py', 'datasheet_html_labels.json')})
     if interp['raqm'] and not a.allow_raqm:
         with open(os.path.join(out, 'BUILD-RECORD.json'), 'w') as f:
             json.dump(dict(root=ROOT, interpreter=interp, run=run_identity, refused='Raqm layout engine on; nothing built'), f, indent=1)
@@ -256,6 +263,15 @@ def main():
     print('punctuation test:', punct)
     if r.returncode != 0 or 'all as intended: True' not in punct:
         raise SystemExit('the quotation-punctuation test did not pass; the sheets\' "0 punctuation faults" is not backed')
+
+    # 4c. the pages a phone can read, from the audit JSONs just written, then read back against them.
+    #     They take their style and policy line from the checkout's site/index.html, not from the cited
+    #     tag: a page is served beside the site as it stands, under the style hash the site pins today.
+    site = os.path.join(ROOT, 'site')
+    run([sys.executable, '-I', os.path.join(TOOLS, 'make_datasheet_html.py'), '--audit-dir', sheets, '--out-dir', sheets,
+         '--site', site], out, report_epoch)
+    run([sys.executable, '-I', os.path.join(TOOLS, 'check_datasheet_html.py'), '--self-test', '--audit-dir', sheets,
+         '--pages-dir', sheets, '--site', site], out, report_epoch)
 
     # 5. record
     products = sorted(f for f in os.listdir(sheets) if f != 'SHA256SUMS')
