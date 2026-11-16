@@ -6,7 +6,8 @@ Why: the datasheet plates are 2400 x 1500 px pictures whose smallest type is 14 
 375 px phone. The audit record the plate build writes already holds the plate's quotations, values,
 sources and measurements as data. This script lays that record out as a page that reflows on a phone,
 whose text can be selected, searched and read by a screen reader, and in which every station has its
-own address (datasheet-<state>.html#station-<n>).
+own address, taken from the record's own name for it (the callout's "key"):
+datasheet-metacognitive.html#fix, datasheet-critical.html#mark.
 
 The rule it carries:
   every word and number a reader sees is read from the audit record at build time, or is one of the
@@ -52,6 +53,9 @@ ELLIPSIS = '\u2026'
 AUDIT_REPO_DIR = 'docs/datasheet-audit/'
 SHEET_REPO_DIR = 'site/assets/'
 HERO_PX = 256          # the semaphore at the top: 256 CSS px, so it fits a 320 px phone with the site's gutters
+# the ids the page uses for its own parts; a station's id is its callout's key, and may not be one of these
+PAGE_IDS = {'main', 'semaphore', 'stations', 'absent', 'absent-title', 'chart', 'chart-title', 'scale',
+            'palette', 'palette-title', 'sources', 'record', 'datasheets'}
 
 
 def page_name(state):
@@ -301,11 +305,18 @@ class Page:
         n = self.value(b + '/n')
         if not n.isdigit():
             stop(f'{self.rec.name}: {b}/n is {n!r}, not a station number')
+        # the station's address is the record's own name for it, so a link to one station means the
+        # same part on every sheet (#fix, #mark) whatever its number there
+        key = self.value(b + '/key')
+        if not re.fullmatch(r'[a-z][a-z0-9-]*', key) or key in PAGE_IDS or key + '-title' in PAGE_IDS or key in self.keys:
+            stop(f'{self.rec.name}: {b}/key is {key!r}, which cannot serve as this station\'s id '
+                 f'(not a plain lower-case name, used twice, or one of the page\'s own ids)')
+        self.keys.append(key)
         values = self.rec.at(b + '/values')
         if not isinstance(values, list) or not values:
             stop(f'{self.rec.name}: {b}/values holds no value line')
-        out = [f'  <article class="panel" id="station-{n}" aria-labelledby="station-{n}-title">',
-               f'    <h3 id="station-{n}-title">{self.D(b + "/n")} {self.D(b + "/title")}</h3>', '    <ul>']
+        out = [f'  <article class="panel" id="{key}" aria-labelledby="{key}-title">',
+               f'    <h3 id="{key}-title">{self.D(b + "/n")} {self.D(b + "/title")}</h3>', '    <ul>']
         for j in range(len(values)):
             v = f'{b}/values/{j}'
             out.append(f'      <li>{self.D(v + "/text")}{self.swatches(v + "/text")}{self.source(v)}</li>')
@@ -323,6 +334,7 @@ class Page:
         if not isinstance(callouts, list) or str(len(callouts)) != count:
             stop(f'{self.rec.name}: /stations says {count} and /callouts holds '
                  f'{len(callouts) if isinstance(callouts, list) else "no list"}')
+        self.keys = []
         out = ['<section id="stations">',
                f'  <h2>{self.D("/stations")} {self.T("stations")}</h2>',
                f'  <div class="sema {STATE_CLASS[self.state]} strip">']

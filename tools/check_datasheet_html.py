@@ -17,14 +17,16 @@ checks, for each one,
   5. the site's hardening. One <style> block, byte for byte site/index.html's, its hash in the page's
      policy line, that line byte for byte index.html's; no script element, no style attribute, no
      event attribute, no external subresource; images only from site/assets and present there;
-  6. structure. One h1, heading levels in order, unique ids, one linkable article per station, alt on
+  6. structure. One h1, heading levels in order, unique ids, one article per station whose id is
+     that callout's "key" in the record and which holds that callout's lines and no other's, alt on
      every image, a scope on every table header;
   7. language. No em dash in a label, no personal name anywhere on a page, and no label declared
      that none of the four pages shows (the labels file lists as optional the few that belong to
      fields a record may leave out).
 
-With --self-test it first damages a copy of each page in eight ways (a changed digit, an added word, a
-dropped station and so on) and requires every damaged copy to fail, so a clean result means something.
+With --self-test it first damages a copy of each page in nine ways (a changed digit, an added word, a
+dropped station, two stations under each other's address and so on) and requires every damaged copy to
+fail on a fault the undamaged page does not have, so a clean result means something.
 
 Usage:
   python3 -I tools/check_datasheet_html.py                       site/ against docs/datasheet-audit
@@ -44,7 +46,8 @@ AUDIT_REPO_DIR, SHEET_REPO_DIR = 'docs/datasheet-audit/', 'site/assets/'
 NOT_SHOWN = [
     r'/drafting(/.*)?',                      # the plate's leader lines, badges and axis: a reflowed page has none
     r'/audit(/.*)?',                         # the plate build's own check counts, geometry among them
-    r'/callouts/\d+/key', r'/callouts/\d+/layer_groups/\d+', r'/callouts/\d+/anchor_slot_units/\d+',   # where the plate draws
+    r'/callouts/\d+/key',                   # not shown as text: it is the station's id, checked under structure
+    r'/callouts/\d+/layer_groups/\d+', r'/callouts/\d+/anchor_slot_units/\d+',   # where the plate draws
     r'/chart/own_move/\d+', r'/chart/rows/\d+/key',                                                     # keys; each row's is_own is shown
 ]
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
@@ -84,7 +87,8 @@ class Reader(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.stack, self.faults = [], []
         self.audited, self.loose, self.tags = [], [], []
-        self.capture = None            # [depth, kind, key, parts, attrs]
+        self.capture = None            # [depth, kind, key, parts, attrs, id of the article it sits in]
+        self.article = None
         self.title, self.styles = [], []
         self.in_body = False
 
@@ -99,6 +103,8 @@ class Reader(HTMLParser):
             self.in_body = True
         if tag == 'style':
             self.styles.append([])
+        if tag == 'article':
+            self.article = a.get('id')
         kinds = [k for k in ('data-audit', 'data-audit-file', 'data-audit-state') if k in a]
         if kinds and tag != 'svg':
             if self.capture is not None or len(kinds) > 1:
@@ -106,7 +112,7 @@ class Reader(HTMLParser):
             elif tag in VOID:
                 self.faults.append(f'<{tag}> is audited and can hold no text')
             else:
-                self.capture = [len(self.stack), kinds[0], a[kinds[0]], [], a]
+                self.capture = [len(self.stack), kinds[0], a[kinds[0]], [], a, self.article]
         if tag not in VOID:
             self.stack.append((tag, a))
 
@@ -122,9 +128,11 @@ class Reader(HTMLParser):
             self.faults.append(f'</{tag}> closes nothing open here (open: {[t for t, _ in self.stack][-3:]})')
             return
         self.stack.pop()
+        if tag == 'article':
+            self.article = None
         if self.capture is not None and len(self.stack) == self.capture[0]:
-            _, kind, key, parts, a = self.capture
-            self.audited.append((kind, key, ''.join(parts), tag, a))
+            _, kind, key, parts, a, article = self.capture
+            self.audited.append((kind, key, ''.join(parts), tag, a, article))
             self.capture = None
 
     def handle_data(self, data):
@@ -187,10 +195,15 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
 
     # 1. provenance: audited elements
     shown = {}
-    for kind, key, text, tag, a in r.audited:
+    keys = [str(c.get('key')) for c in rec.get('callouts', [])]
+    for kind, key, text, tag, a, article in r.audited:
         t = norm(text)
         if kind == 'data-audit':
             want = expect(key)
+            m = re.match(r'/callouts/(\d+)/', key)
+            home = keys[int(m.group(1))] if m and int(m.group(1)) < len(keys) else ('absent' if key.startswith('/absent/') else None)
+            if (m or key.startswith('/absent/')) and article != home:
+                F.append(f'{key} is shown inside the article {article!r}, not in {home!r}')
             if want is None:
                 F.append(f'<{tag} data-audit="{key}"> names a field the record does not hold')
             elif t != norm(want):
@@ -260,7 +273,7 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
     if '/release/doi' in known:
         allowed.add(L['doi_resolver'] + str(known['/release/doi']))
     aria = {v for v in labels['aria'].values()}
-    ids, headings, stations = [], [], 0
+    ids, headings, stations, station_ids = [], [], 0, []
     sf_shown = norm(str(known.get(standfirst[0], ''))) if len(standfirst) == 1 else None
     url = (chrome['origin'] or '') + page_name(state)
     want_meta = {'description': sf_shown, 'og:description': sf_shown, 'twitter:description': sf_shown,
@@ -296,10 +309,11 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
             F.append('a table header without a scope')
         if re.fullmatch(r'h[1-6]', tag):
             headings.append(int(tag[1]))
-        if tag == 'article' and re.fullmatch(r'station-\d+', a.get('id', '')):
+        if tag == 'article' and a.get('id') != 'absent':
             stations += 1
-            if a.get('aria-labelledby') != a['id'] + '-title':
-                F.append(f"{a['id']} is not labelled by its own title")
+            station_ids.append(a.get('id'))
+            if a.get('aria-labelledby') != str(a.get('id')) + '-title':
+                F.append(f"the article {a.get('id')!r} is not labelled by its own title")
         if tag == 'link':
             rel = a.get('rel')
             if rel == 'canonical':
@@ -353,10 +367,11 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
             F.append(f'a heading jumps from h{a_} to h{b_}')
     if str(stations) != str(rec.get('stations')) or stations != len(rec.get('callouts', [])):
         F.append(f"{stations} station articles for a record of {rec.get('stations')} stations")
-    callout_ns = [str(c.get('n')) for c in rec.get('callouts', [])]
-    for n in callout_ns:
-        if f'station-{n}' not in ids:
-            F.append(f'no element with the id station-{n}')
+    if station_ids != keys:        # a station's address is its callout's key, in the record's order
+        F.append(f'the station articles carry the ids {station_ids}, and the record\'s callout keys are {keys}')
+    for k in keys:
+        if k + '-title' not in ids:
+            F.append(f'no title element with the id {k}-title')
 
     # 7. language
     low = raw.lower()
@@ -364,19 +379,19 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
     for nm in NAMES:
         if nm in re.sub(r'<style>.*?</style>', '', low, flags=re.S):
             F.append(f'the name {nm!r} appears on the page')
-    used = {t for t, _ in r.loose} | {norm(text) for kind, key, text, tag, a in r.audited if isinstance(known.get(key), bool)}
+    used = {t for t, _ in r.loose} | {norm(text) for kind, key, text, tag, a, article in r.audited if isinstance(known.get(key), bool)}
     used_aria = {a['aria-label'] for tag, a, parents in r.tags if 'aria-label' in a}
     return F, dict(audited=len(r.audited), fields=len(shown), labels=len(r.loose), swatches=swatches,
                    stations=stations, record_leaves=len(known), used=used, used_aria=used_aria)
 
 
 def damaged(raw):
-    """Eight copies of a page, each wrong in one way the check must catch."""
+    """Nine copies of a page, each wrong in one way the check must catch."""
     out = []
     m = re.search(r'(<td data-audit="/chart/rows/0/iou">)(\d)', raw)
     out.append(('a changed digit in a measured value', raw[:m.start(2)] + str((int(m.group(2)) + 1) % 10) + raw[m.end(2):]))
     out.append(('a word that is neither record nor label', raw.replace('</h1>', '</h1>\n<p>Certified accurate.</p>', 1)))
-    m = re.search(r'  <article class="panel" id="station-2".*?</article>\n', raw, re.S)
+    m = list(re.finditer(r'  <article class="panel" id="[a-z0-9-]+" aria-labelledby=.*?</article>\n', raw, re.S))[1]
     out.append(('a station left out', raw[:m.start()] + raw[m.end():]))
     m = re.search(r'fill="#([0-9A-Fa-f]{6})"', raw)
     out.append(('a swatch in a colour the record does not state', raw[:m.start(1)] + 'FF00FF' + raw[m.end(1):]))
@@ -385,6 +400,11 @@ def damaged(raw):
     out.append(('a changed rule in the style block', raw.replace('<style>', '<style>\nbody{color:red}', 1)))
     m = re.search(r'<code data-audit="/callouts/0/values/0/sha16">(.*?)</code>', raw, re.S)
     out.append(('a source hash that is not the record\'s', raw[:m.start(1)] + '0000000000000000' + raw[m.end(1):]))
+    a0, a1 = list(re.finditer(r'<article class="panel" id="([a-z0-9-]+)" aria-labelledby="\1-title">', raw))[:2]
+    k0, k1 = a0.group(1), a1.group(1)
+    out.append(('two stations under each other\'s address',
+                raw[:a0.start()] + a0.group(0).replace(k0, k1) + raw[a0.end():a1.start()]
+                + a1.group(0).replace(k1, k0) + raw[a1.end():]))
     return out
 
 
@@ -393,7 +413,7 @@ def main():
     ap.add_argument('--audit-dir', default=os.path.join(ROOT, 'docs', 'datasheet-audit'))
     ap.add_argument('--pages-dir', default=None, help='where datasheet-<state>.html are read (default: the site folder)')
     ap.add_argument('--site', default=os.path.join(ROOT, 'site'), help='the site folder: index.html and assets/')
-    ap.add_argument('--self-test', action='store_true', help='first prove the check fires on eight kinds of damage')
+    ap.add_argument('--self-test', action='store_true', help='first prove the check fires on nine kinds of damage')
     a = ap.parse_args()
     pages_dir = a.pages_dir or a.site
     labels = json.load(open(LABELS_FILE, encoding='utf-8'))
@@ -417,11 +437,12 @@ def main():
         faults, n = check_page(s, raw, records[s], labels, a.site, all_states)
         if a.self_test:
             # a kind of damage counts as caught only when it raises a fault the undamaged page does not have
-            missed = [what for what, text in damaged(raw)
+            cases = damaged(raw)
+            missed = [what for what, text in cases
                       if not set(check_page(s, text, records[s], labels, a.site, all_states)[0]) - set(faults)]
             for what in missed:
                 print(f'FAULT  {page_name(s)}: the check did not catch {what}'); bad += 1
-            print(f'self-test  {page_name(s)}: {8 - len(missed)} of 8 kinds of damage caught')
+            print(f'self-test  {page_name(s)}: {len(cases) - len(missed)} of {len(cases)} kinds of damage caught')
         for f in faults:
             print(f'FAULT  {page_name(s)}: {f}')
         bad += len(faults)
