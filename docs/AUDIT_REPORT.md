@@ -1,12 +1,12 @@
 # Datasheet audit report
 
-Four sheets, one template. Generated 2026-10-23. MOCK-UP for review; design work for site version 1.1.
+Four sheets, one template. Generated 2026-11-16 (UTC).
 
-Sources, all read from the published tree at `v1.0.0` (commit `833c2438fc3e`, Zenodo 10.5281/zenodo.23575816):
+Sources, all read from the published tree at `v1.1.0` (Zenodo 10.5281/zenodo.24267509):
 
-- published note: `README.md at v1.0.0`, sha256 `c98c3ee4a94a3dae`
+- published note: `README.md at v1.1.0`, sha256 `eac1dee95aa6a61b`
 - measurement record: `notation-measurements.json`, sha16 `24c49d6bafacdaf5`
-- proofs: `proofs/TetrasemaphoreAlgebra.lean at v1.0.0`, sha16 `f066faf6595d22e9`
+- proofs: `proofs/TetrasemaphoreAlgebra.lean at v1.1.0`, sha16 `f066faf6595d22e9`
 - masters and site assets: per sheet, below.
 
 ## Totals
@@ -25,7 +25,7 @@ Every cited string — quotation and pointer alike — is looked up in the publi
 
 ## Every quotation, by sheet
 
-Line numbers are in the published note, sha256 `c98c3ee4a94a3dae`.
+Line numbers are in the published note, sha256 `eac1dee95aa6a61b`.
 
 ### NORMATIVE
 
@@ -63,7 +63,7 @@ Master: `MASTER-medallion-NON-NORMATIVE-notation-slot820.svg`, sha256 `4ef1de6ae
 
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
-| standfirst | “METACOGNITIVE keeps its stance but turns its look back to its own frame, the way you can keep your feet planted and look back between your legs; this is thinking about thinking.” | 14–15 | quote |
+| standfirst | “METACOGNITIVE keeps its stance but turns its look back to its own frame. …” | 14–16 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
 | 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
@@ -79,7 +79,7 @@ Master: `MASTER-medallion-METACOGNITIVE-notation-slot820.svg`, sha256 `cccfcff10
 
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
-| standfirst | “CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.” | 15–16 | quote |
+| standfirst | “CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.” | 16–17 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
 | 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
@@ -169,10 +169,10 @@ Line weights, px at 2400 px wide (halo adds 4 px each side):
 
 | sheet | art line in the window region (p10 / median / max, px) | window core | window with halo | marks over art: min contrast | median | px below 3:1 | axis px over art | art px under a halo |
 |---|---|---|---|---|---|---|---|---|
-| NORMATIVE | 4.0 / 6.0 / 10.0 | 9 | 17 | 1.0:1 vs `#F9E084` | 3.37:1 | 2179 of 45758 | 0 of 1248 | 2357 |
-| NON-NORMATIVE | 4.0 / 6.0 / 6.0 | 9 | 17 | 1.04:1 vs `#F7DC80` | 3.32:1 | 1505 of 41470 | 0 of 1551 | 1553 |
-| METACOGNITIVE | 4.0 / 6.0 / 12.0 | 9 | 17 | 1.04:1 vs `#F5DD7F` | 3.58:1 | 2610 of 48248 | 0 of 1449 | 2714 |
-| CRITICAL | 4.0 / 8.0 / 12.65 | 9 | 17 | 1.0:1 vs `#F8E183` | 3.82:1 | 4093 of 45847 | 0 of 1231 | 3189 |
+| NORMATIVE | 4.0 / 6.0 / 10.0 | 9 | 17 | 1.0:1 vs `#F9E084` | 3.37:1 | 2179 of 45754 | 0 of 1244 | 2357 |
+| NON-NORMATIVE | 4.0 / 6.0 / 6.0 | 9 | 17 | 1.04:1 vs `#F7DC80` | 3.32:1 | 1505 of 41471 | 0 of 1552 | 1553 |
+| METACOGNITIVE | 4.0 / 6.0 / 12.0 | 9 | 17 | 1.04:1 vs `#F5DD7F` | 3.58:1 | 2610 of 48252 | 0 of 1453 | 2714 |
+| CRITICAL | 4.0 / 8.0 / 12.65 | 9 | 17 | 1.0:1 vs `#F8E183` | 3.82:1 | 4093 of 45849 | 0 of 1233 | 3189 |
 
 The art-line figures are measured on the reference semaphore at 428 px, the scale the detail window is drawn at. Comparison, computed from the rows above rather than asserted: the 9 px core is heavier than the median art line on 4 of the 4 sheets (widest median 8.0 px, CRITICAL); the 17 px assembly, core plus halo both sides, is heavier than the thickest single art stroke on 4 of the 4 (thickest 12.65 px, CRITICAL). The marks-over-art columns are the worst case where a mark crosses the lightest gold and cream: the ground halo carries the separation there, at the ground contrast above.
 

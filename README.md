@@ -12,16 +12,16 @@ it looking at its object, or back at its own frame: the premises, method and ass
 the standard, or reverse that stance, the way a mirror reverses left and right? Two yes-or-no questions have exactly four answers. NORMATIVE
 keeps its stance and looks at its object: what has been tested and holds, for now. NON-NORMATIVE mirrors its stance and looks at its object:
 exploration that stands alongside the standard without claiming to replace it. METACOGNITIVE keeps its stance but turns its look back to its
-own frame, the way you can keep your feet planted and look back between your legs; this is thinking about thinking. CRITICAL does both at
-once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong. The Tetrasemaphore proposes
-holding two questions about any piece of thinking as two mirrors at a right angle, so that changing your stance or your focus becomes a move
-you can see, make and undo. In a flat picture the same four answers are four moves: leave it alone (I), flip it left to right (σᵥ), flip it
-top to bottom (σₕ), or turn it half way round (C₂), which is both flips at once. NORMATIVE is I, NON-NORMATIVE is σᵥ, METACOGNITIVE is σₕ
-and CRITICAL is C₂. The moves and their symbols were part of mathematics long before this project, and the semaphores point at them. That's
-what we do when we discover math: honor finally what is. Psychology has met this structure before: Jean Piaget held that formal reasoning
-uses four transformations that combine exactly as these four moves do (his INRC group; Inhelder & Piaget 1958). Each semaphore's mark is
-built to survive its own move: the σᵥ mark only the left-right flip, the σₕ mark only the top-bottom flip, the C₂ mark only the half-turn,
-and the I mark, whose move changes nothing, every move.
+own frame. You can picture that, or keep your feet planted and look back between your legs; the move is the same either way, and the move is
+what thinking about thinking means here. CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline
+assumption as possibly wrong. The Tetrasemaphore proposes holding two questions about any piece of thinking as two mirrors at a right angle,
+so that changing your stance or your focus becomes a move you can see, make and undo. In a flat picture the same four answers are four
+moves: leave it alone (I), flip it left to right (σᵥ), flip it top to bottom (σₕ), or turn it half way round (C₂), which is both flips at
+once. NORMATIVE is I, NON-NORMATIVE is σᵥ, METACOGNITIVE is σₕ and CRITICAL is C₂. The moves and their symbols were part of mathematics long
+before this project, and the semaphores point at them. That's what we do when we discover math: honor finally what is. Psychology has met
+this structure before: Jean Piaget held that formal reasoning uses four transformations that combine exactly as these four moves do (his
+INRC group; Inhelder & Piaget 1958). Each semaphore's mark is built to survive its own move: the σᵥ mark only the left-right flip, the σₕ
+mark only the top-bottom flip, the C₂ mark only the half-turn, and the I mark, whose move changes nothing, every move.
 
 The semaphores are for naming the state of your own thinking, not for labelling anyone else's. That doesn't mean people can't be read: we
 read each other every day, better than chance for some things and only barely for others, such as lies, and we misread ourselves too. What

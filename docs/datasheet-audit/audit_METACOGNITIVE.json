@@ -1,20 +1,20 @@
 {
- "generated": "2026-10-23T16:04:20+00:00",
- "kind": "MOCK-UP for review; design work for site version 1.1; writes nothing to the release",
+ "generated": "2026-11-16T01:26:37+00:00",
+ "kind": "Release file for v1.1.0",
  "state": "METACOGNITIVE",
  "notation": "σₕ",
  "stations": 7,
  "release": {
-  "tag": "v1.0.0",
-  "commit": "833c2438fc3e679096816abafead62f83e1aa944",
-  "doi": "10.5281/zenodo.23575816"
+  "tag": "v1.1.0",
+  "doi": "10.5281/zenodo.24267509"
  },
  "standfirst": {
-  "text": "METACOGNITIVE keeps its stance but turns its look back to its own frame, the way you can keep your feet planted and look back between your legs; this is thinking about thinking.",
-  "source": "README.md at v1.0.0",
-  "sha16": "c98c3ee4a94a3dae",
-  "field": "lines 14–15",
-  "kind": "quote"
+  "text": "METACOGNITIVE keeps its stance but turns its look back to its own frame. …",
+  "source": "README.md at v1.1.0",
+  "sha16": "eac1dee95aa6a61b",
+  "field": "lines 14–16",
+  "kind": "quote",
+  "unelided": "METACOGNITIVE keeps its stance but turns its look back to its own frame. You can picture that, or keep your feet planted and look back between your legs; the move is the same either way, and the move is what thinking about thinking means here."
  },
  "sheet": {
   "file": "datasheet_METACOGNITIVE.png",
@@ -44,15 +44,15 @@
    "sha256": "cccfcff10dc74930139864a290b62d65e0c1ef68b65f3821955206d4c5e87c8b"
   },
   "note": {
-   "file": "README.md at v1.0.0",
-   "sha256": "c98c3ee4a94a3daee326e7a2c41bf9af700f775132555241536c0076a6420927"
+   "file": "README.md at v1.1.0",
+   "sha256": "eac1dee95aa6a61b5c09857476578fced15d878637fbf3fa8e96e9d699a223a6"
   },
   "measurements": {
    "file": "notation-measurements.json",
    "sha16": "24c49d6bafacdaf5"
   },
   "lean": {
-   "file": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+   "file": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
    "sha16": "f066faf6595d22e9"
   },
   "site_png": {
@@ -133,16 +133,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 100",
     "kind": "quote",
     "text": "“Colour comes second. Shape carries every state.”"
    },
    "check": {
     "text": "Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape.",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 122",
     "kind": "pointer, paraphrased"
    }
@@ -175,16 +175,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
     "kind": "quote",
     "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
    },
    "check": {
     "text": "Note, Reading the semaphores — “Check the mark, not the ring.”",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
     "kind": "pointer with verbatim quotation"
    }
@@ -216,16 +216,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 188–189",
     "kind": "quote",
     "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
    },
    "check": {
     "text": "Note, test 5 — cover the words, then ask which state each print is.",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 129",
     "kind": "pointer, paraphrased"
    }
@@ -262,15 +262,15 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 22–23",
     "kind": "quote",
     "text": "“Each semaphore's mark is built to survive its own move …”"
    },
    "check": {
     "text": "Lean S2_mark_sh_exact: the mark is invariant under k exactly when k is I or σₕ. Note, test 1.",
-    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
     "sha16": "f066faf6595d22e9",
     "field": "S2_mark_sh_exact"
    }
@@ -307,15 +307,15 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 95–96",
     "kind": "quote",
     "text": "“Gold shows what the semaphore's move leaves in place: … a horizontal line for σₕ …”"
    },
    "check": {
     "text": "Lean T4_fix_sh: σₕ fixes (x, y) exactly when y = 0 — the horizontal axis.",
-    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
     "sha16": "f066faf6595d22e9",
     "field": "T4_fix_sh"
    }
@@ -602,11 +602,11 @@
   },
   "covered": {
    "art_px_erased_by_halo": 2714,
-   "axis_core_px": 1449,
+   "axis_core_px": 1453,
    "axis_core_px_over_art": 0,
    "axis_clear_of_art_px": 3,
    "axis_min_gap_to_art_px": 4.0,
-   "core_px": 48248,
+   "core_px": 48252,
    "distinct_colours_under": 1305,
    "min_contrast": 1.04,
    "min_against": "#F5DD7F",

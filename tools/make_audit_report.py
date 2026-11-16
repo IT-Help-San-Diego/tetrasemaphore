@@ -13,8 +13,9 @@ def build_time():
 STATES = ['NORMATIVE', 'NON-NORMATIVE', 'METACOGNITIVE', 'CRITICAL']
 P = json.load(open(f'audit_{STATES[0]}.json'))
 L = ["# Datasheet audit report", "",
-     f"Four sheets, one template. Generated {build_time().date().isoformat()}. "
-     f"MOCK-UP for review; design work for site version 1.1.", "",
+     f"Four sheets, one template. Generated {build_time().date().isoformat()} (UTC)."
+     + ("" if P['release'].get('doi') else
+        " MOCK-UP for review; design work for site version 1.1."), "",
      f"Sources, all read from the published tree at `{P['release']['tag']}`"
      + ((' (' + ', '.join(p for p in ((f"commit `{P['release']['commit'][:12]}`" if P['release'].get('commit') else ''),
                                         (f"Zenodo {P['release']['doi']}" if P['release'].get('doi') else '')) if p) + ')')

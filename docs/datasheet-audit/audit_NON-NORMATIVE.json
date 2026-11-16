@@ -1,20 +1,20 @@
 {
- "generated": "2026-10-23T16:04:23+00:00",
- "kind": "MOCK-UP for review; design work for site version 1.1; writes nothing to the release",
+ "generated": "2026-11-16T01:26:37+00:00",
+ "kind": "Release file for v1.1.0",
  "state": "NON-NORMATIVE",
  "notation": "σᵥ",
  "stations": 7,
  "release": {
-  "tag": "v1.0.0",
-  "commit": "833c2438fc3e679096816abafead62f83e1aa944",
-  "doi": "10.5281/zenodo.23575816"
+  "tag": "v1.1.0",
+  "doi": "10.5281/zenodo.24267509"
  },
  "standfirst": {
   "text": "NON-NORMATIVE mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it.",
-  "source": "README.md at v1.0.0",
-  "sha16": "c98c3ee4a94a3dae",
+  "source": "README.md at v1.1.0",
+  "sha16": "eac1dee95aa6a61b",
   "field": "lines 13–14",
-  "kind": "quote"
+  "kind": "quote",
+  "unelided": "NON-NORMATIVE mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it."
  },
  "sheet": {
   "file": "datasheet_NON-NORMATIVE.png",
@@ -44,15 +44,15 @@
    "sha256": "4ef1de6ae126279e83c65570ba0454fef3862bb6599798bf5d6fc1dc5c100f10"
   },
   "note": {
-   "file": "README.md at v1.0.0",
-   "sha256": "c98c3ee4a94a3daee326e7a2c41bf9af700f775132555241536c0076a6420927"
+   "file": "README.md at v1.1.0",
+   "sha256": "eac1dee95aa6a61b5c09857476578fced15d878637fbf3fa8e96e9d699a223a6"
   },
   "measurements": {
    "file": "notation-measurements.json",
    "sha16": "24c49d6bafacdaf5"
   },
   "lean": {
-   "file": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+   "file": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
    "sha16": "f066faf6595d22e9"
   },
   "site_png": {
@@ -133,16 +133,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 100",
     "kind": "quote",
     "text": "“Colour comes second. Shape carries every state.”"
    },
    "check": {
     "text": "Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape.",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 122",
     "kind": "pointer, paraphrased"
    }
@@ -175,16 +175,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
     "kind": "quote",
     "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
    },
    "check": {
     "text": "Note, Reading the semaphores — “Check the mark, not the ring.”",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
     "kind": "pointer with verbatim quotation"
    }
@@ -216,16 +216,16 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 188–189",
     "kind": "quote",
     "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
    },
    "check": {
     "text": "Note, test 5 — cover the words, then ask which state each print is.",
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 129",
     "kind": "pointer, paraphrased"
    }
@@ -262,15 +262,15 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 22–23",
     "kind": "quote",
     "text": "“Each semaphore's mark is built to survive its own move …”"
    },
    "check": {
     "text": "Lean S2_mark_sv_exact: the mark is invariant under k exactly when k is I or σᵥ. Note, test 1.",
-    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
     "sha16": "f066faf6595d22e9",
     "field": "S2_mark_sv_exact"
    }
@@ -307,15 +307,15 @@
     }
    ],
    "meaning": {
-    "source": "README.md at v1.0.0",
-    "sha16": "c98c3ee4a94a3dae",
+    "source": "README.md at v1.1.0",
+    "sha16": "eac1dee95aa6a61b",
     "field": "lines 95–96",
     "kind": "quote",
     "text": "“Gold shows what the semaphore's move leaves in place: … a vertical line for σᵥ …”"
    },
    "check": {
     "text": "Lean T4_fix_sv: σᵥ fixes (x, y) exactly when x = 0 — the vertical axis.",
-    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.0.0",
+    "source": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
     "sha16": "f066faf6595d22e9",
     "field": "T4_fix_sv"
    }
@@ -602,11 +602,11 @@
   },
   "covered": {
    "art_px_erased_by_halo": 1553,
-   "axis_core_px": 1551,
+   "axis_core_px": 1552,
    "axis_core_px_over_art": 0,
    "axis_clear_of_art_px": 3,
    "axis_min_gap_to_art_px": 4.0,
-   "core_px": 41470,
+   "core_px": 41471,
    "distinct_colours_under": 1092,
    "min_contrast": 1.04,
    "min_against": "#F7DC80",

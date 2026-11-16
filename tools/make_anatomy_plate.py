@@ -410,16 +410,29 @@ class Sources:
 # ------------------------------------------------- the note's own sentences --
 # Each entry is (text, line range in README.md at v1.0.0, sha c98c3ee4a94a3dae).
 STANDFIRST = {
+    # (shown on the sheet, looked up in the note, line range in that note). The two differ only
+    # where the sheet elides; the elision is marked \u2026 and the unelided sentence is what is
+    # verified against the note and recorded, as DATASHEET_SPEC.md section 2 requires.
     'NORMATIVE': ("NORMATIVE keeps its stance and looks at its object: what has been tested and "
+                  "holds, for now.",
+                  "NORMATIVE keeps its stance and looks at its object: what has been tested and "
                   "holds, for now.", "12\u201313"),
     'NON-NORMATIVE': ("NON-NORMATIVE mirrors its stance and looks at its object: exploration that "
+                      "stands alongside the standard without claiming to replace it.",
+                      "NON-NORMATIVE mirrors its stance and looks at its object: exploration that "
                       "stands alongside the standard without claiming to replace it.", "13\u201314"),
-    'METACOGNITIVE': ("METACOGNITIVE keeps its stance but turns its look back to its own frame, "
-                      "the way you can keep your feet planted and look back between your legs; "
-                      "this is thinking about thinking.", "14\u201315"),
+    'METACOGNITIVE': ("METACOGNITIVE keeps its stance but turns its look back to its own frame. "
+                      "\u2026",
+                      "METACOGNITIVE keeps its stance but turns its look back to its own frame. "
+                      "You can picture that, or keep your feet planted and look back between your "
+                      "legs; the move is the same either way, and the move is what thinking about "
+                      "thinking means here.", "14\u201316"),
     'CRITICAL': ("CRITICAL does both at once: it turns over the framework a claim rests on, "
-                 "treating every baseline assumption as possibly wrong.", "15\u201316"),
+                 "treating every baseline assumption as possibly wrong.",
+                 "CRITICAL does both at once: it turns over the framework a claim rests on, "
+                 "treating every baseline assumption as possibly wrong.", "16\u201317"),
 }
+
 # Each clause ends as the source does: the first three are followed by a comma in
 # the note, so the quotation stops with an ellipsis and adds no punctuation of its
 # own; C2's clause ends the sentence, so its full stop is the source's.
@@ -706,9 +719,10 @@ def compose(state, outdir='.'):
            F_SANS, 15, HI, BOX_X1 - BOX_X0 - 28, 20, 'howto')
 
     # --------------------------------------------------------- left column
-    sf_text, sf_lines = STANDFIRST[state]
-    sf_src = S.q(sf_text, sf_lines)
-    y = T.para((LEFT_X0, 164), "\u201c" + sf_text + "\u201d", F_SANS, 19, HI,
+    sf_shown, sf_quoted, sf_lines = STANDFIRST[state]
+    sf_src = S.q(sf_quoted, sf_lines)
+    sf_src['unelided'] = sf_quoted
+    y = T.para((LEFT_X0, 164), "\u201c" + sf_shown + "\u201d", F_SANS, 19, HI,
                LEFT_X1 - LEFT_X0, 25, 'standfirst')
     T.draw((LEFT_X0, y + 2),
            f"published note, sha {S.note_sha16[:8]}, {sf_src['field']} \u00b7 its move is {nota}",
@@ -894,7 +908,9 @@ def compose(state, outdir='.'):
         f"number badges, caption boxes, the centre axis and the direction arrow are drafting "
         f"marks, not data; the field plate's edge is stroked at its own measured radius so a "
         f"{GROUND} disc is visible on a {GROUND} sheet. "
-        f"MOCK-UP for review, {build_time().date().isoformat()} \u2014 not a release file.")
+        + (""   # a sheet is a release file when it carries its release citation, and not before
+           if RELEASE['doi'] else
+           f"MOCK-UP for review, {build_time().date().isoformat()} (UTC) \u2014 not a release file."))
     T.para((M, 1428), foot, F_SANS, 14, GOLD2, W - 2 * M, 19, 'footer')
 
     # ---- the drafting marks go on last, over everything they describe
@@ -1016,7 +1032,7 @@ def compose(state, outdir='.'):
 
     # ---- quotation punctuation, over every string the sheet draws
     qp_checked, qp_faults = 0, []
-    drawn = ['\u201c' + sf_text + '\u201d']      # the sheet draws the standfirst quoted
+    drawn = ['\u201c' + sf_shown + '\u201d']     # the sheet draws the standfirst quoted, elision and all
     for c in ST:
         drawn += [v['text'] for v in c['values']] + [c['meaning']['text'], c['check']['text']]
     if absent is not None:
@@ -1054,10 +1070,11 @@ def compose(state, outdir='.'):
 
     payload = dict(
         generated=build_time().isoformat(timespec='seconds'),
-        kind="MOCK-UP for review; design work for site version 1.1; writes nothing to the release",
+        kind=(f"Release file for {RELEASE['tag']}" if RELEASE['doi']
+              else "MOCK-UP for review; design work for site version 1.1; writes nothing to the release"),
         state=state, notation=nota, stations=len(ST),
         release={k: v for k, v in RELEASE.items() if v},
-        standfirst=dict(text=sf_text, **sf_src),
+        standfirst=dict(text=sf_shown, **sf_src),   # 'unelided' in sf_src carries the whole sentence
         sheet=dict(file=stem + ".png", px=list(CANVAS), ground=GROUND,
                    palette=dict(state_colour=CC, gold=GOLD, gold_fix=GOLD2, highlight=HI),
                    contrast_on_ground={k: round(contrast(v, GROUND), 2) for k, v in
