@@ -6,7 +6,7 @@ request closes.
 
 ## What was measured
 
-The four pages as committed in `4bdf0414a06f` on the branch `claude-code/datasheet-html`:
+The four pages as committed in `4bdf0414a06f` on the branch `claude-code/datasheet-html` (unchanged in its second commit, `18543d50e75d`):
 
 | page | sha256, first 16 |
 |---|---|
@@ -26,6 +26,27 @@ For each page, viewport width and colour scheme, the page ran this in the docume
 - the largest `getBoundingClientRect().right` over every element in `body` that has a size;
 - the smallest computed `font-size` over every text node inside `main`;
 - then every `details` element was opened and the first two were measured again.
+
+## After these measurements: the station ids changed, and nothing else
+
+The pages above are those of the branch's first two commits. Its third commit, `0aa71c9aedd9`, gives each
+station article the id of its callout's `key` in the record (`#field`, `#rings`, `#meander`, `#legend`,
+`#mark`, `#fix`, `#marks`) in place of `#station-<n>`. The four pages at that commit:
+
+| page | sha256, first 16 |
+|---|---|
+| `site/datasheet-normative.html` | `f5bae98dad7acdbb` |
+| `site/datasheet-non-normative.html` | `81571bd522c8f35b` |
+| `site/datasheet-metacognitive.html` | `dcc088427d40a87a` |
+| `site/datasheet-critical.html` | `8fa7e2f8ec656d4a` |
+
+They differ from the measured ones only in `id` and `aria-labelledby` values, and the style block has no
+id selector, so no box can have moved. Measured again all the same, on the new pages, at 320 px with every
+source folded and unfolded: `320 / 320 / 320` on all four; and CRITICAL at 1280 px: `1265 / 1265 / 1136.5`.
+Opened at `datasheet-normative.html#marks`, `datasheet-non-normative.html#fix`,
+`datasheet-metacognitive.html#fix` and `datasheet-critical.html#mark`, each page's `:target` was that
+station's article, at the top of the window. The screenshots below were taken before this change; the one
+whose name says "station 6" shows the article now addressed as `#fix`.
 
 ## Result: no sideways scroll
 
