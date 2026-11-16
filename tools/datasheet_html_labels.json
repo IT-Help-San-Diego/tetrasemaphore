@@ -1,5 +1,5 @@
 {
- "about": "Every word on a datasheet HTML page that does not come from the audit record is declared in this file and nowhere else. tools/make_datasheet_html.py reads its labels from here and stops on a key that is missing; tools/check_datasheet_html.py fails a page that shows a word found neither here nor in the audit record. Change a label here, rebuild, and the four pages follow.",
+ "about": "Every word on a datasheet HTML page that does not come from the audit record is declared in this file and nowhere else. tools/make_datasheet_html.py reads its labels from here and stops on a key that is missing; tools/check_datasheet_html.py fails a page that shows a word found neither here nor in the audit record. Change a label here, rebuild, and the four pages follow. The check also fails on a label declared here that none of the four pages shows, except those listed under optional, which belong to fields a record may leave out (a release with no commit yet, a release with no DOI) or to a list that may be empty.",
  "text": {
   "skip": "Skip to main content",
   "eyebrow": "Tetrasemaphore ·",
@@ -59,6 +59,7 @@
   "licence_apache": "Apache 2.0",
   "licence_end": "."
  },
+ "optional": ["release_commit", "release_doi", "none"],
  "booleans": {
   "is_own": {
    "true": "its own move",

@@ -20,7 +20,8 @@ checks, for each one,
   6. structure. One h1, heading levels in order, unique ids, one linkable article per station, alt on
      every image, a scope on every table header;
   7. language. No em dash in a label, no personal name anywhere on a page, and no label declared
-     that none of the four pages shows.
+     that none of the four pages shows (the labels file lists as optional the few that belong to
+     fields a record may leave out).
 
 With --self-test it first damages a copy of each page in eight ways (a changed digit, an added word, a
 dropped station and so on) and requires every damaged copy to fail, so a clean result means something.
@@ -432,8 +433,11 @@ def main():
     # the labels file lists the words the pages show, and no others
     declared = dict(labels['text'])
     declared.update({f'booleans.{k}.{tf}': v for k, pair in labels['booleans'].items() for tf, v in pair.items()})
+    optional = set(labels.get('optional', []))
+    for k in sorted(optional - set(labels['text'])):
+        print(f'FAULT  labels file: optional names {k!r}, which is not a text label'); bad += 1
     for k, v in declared.items():
-        if norm(v) not in used:
+        if norm(v) not in used and k not in optional:
             print(f'FAULT  labels file: {k} ({v!r}) is declared and shown on none of the four pages'); bad += 1
     for k, v in labels['aria'].items():
         if v not in used_aria:
