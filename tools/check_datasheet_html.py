@@ -20,11 +20,11 @@ checks, for each one,
   6. structure. One h1, heading levels in order, unique ids, one article per station whose id is
      that callout's "key" in the record and which holds that callout's lines and no other's, alt on
      every image, a scope on every table header;
-  7. language. No em dash in a label, no personal name anywhere on a page, and no label declared
+  7. language. No em dash in a label or anywhere in a page's decoded text, no personal name on a page, and no label declared
      that none of the four pages shows (the labels file lists as optional the few that belong to
      fields a record may leave out).
 
-With --self-test it first damages a copy of each page in nine ways (a changed digit, an added word, a
+With --self-test it first damages a copy of each page in ten ways (a changed digit, an added word, a
 dropped station, two stations under each other's address and so on) and requires every damaged copy to
 fail on a fault the undamaged page does not have, so a clean result means something.
 
@@ -33,7 +33,7 @@ Usage:
   python3 -I tools/check_datasheet_html.py --self-test
   python3 -I tools/check_datasheet_html.py --audit-dir DIR --pages-dir DIR [--site DIR]
 """
-import argparse, base64, hashlib, json, os, re, sys
+import argparse, base64, hashlib, html, json, os, re, sys
 from html.parser import HTMLParser
 
 STATES = ['NORMATIVE', 'NON-NORMATIVE', 'METACOGNITIVE', 'CRITICAL']
@@ -379,6 +379,12 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
     for nm in NAMES:
         if nm in re.sub(r'<style>.*?</style>', '', low, flags=re.S):
             F.append(f'the name {nm!r} appears on the page')
+    # Our own reader-facing words carry no em dash (the rule of 17 November 2026). Tested on the decoded
+    # text, so that neither the character nor an entity for it passes; the record's build refuses one
+    # too, and this is the page's own check.
+    decoded = html.unescape(re.sub(r'<style>.*?</style>', '', raw, flags=re.S))
+    if EM_DASH in decoded:
+        F.append(f'the page carries {decoded.count(EM_DASH)} em dash(es) in its decoded text')
     used = {t for t, _ in r.loose} | {norm(text) for kind, key, text, tag, a, article in r.audited if isinstance(known.get(key), bool)}
     used_aria = {a['aria-label'] for tag, a, parents in r.tags if 'aria-label' in a}
     return F, dict(audited=len(r.audited), fields=len(shown), labels=len(r.loose), swatches=swatches,
@@ -386,7 +392,7 @@ def check_page(state, raw, record_path, labels, site_dir, all_states):
 
 
 def damaged(raw):
-    """Nine copies of a page, each wrong in one way the check must catch."""
+    """Ten copies of a page, each wrong in one way the check must catch."""
     out = []
     m = re.search(r'(<td data-audit="/chart/rows/0/iou">)(\d)', raw)
     out.append(('a changed digit in a measured value', raw[:m.start(2)] + str((int(m.group(2)) + 1) % 10) + raw[m.end(2):]))
@@ -405,6 +411,8 @@ def damaged(raw):
     out.append(('two stations under each other\'s address',
                 raw[:a0.start()] + a0.group(0).replace(k0, k1) + raw[a0.end():a1.start()]
                 + a1.group(0).replace(k1, k0) + raw[a1.end():]))
+    m = re.search(r'<span data-audit="/callouts/0/title">', raw)
+    out.append(('an em dash written as an entity inside a record value', raw[:m.end()] + '&#8212;' + raw[m.end():]))
     return out
 
 
