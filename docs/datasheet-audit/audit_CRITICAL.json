@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T01:26:37+00:00",
+ "generated": "2026-11-17T18:33:36+00:00",
  "kind": "Release file for v1.1.0",
  "state": "CRITICAL",
  "notation": "C₂",
@@ -140,7 +140,7 @@
     "text": "“Colour comes second. Shape carries every state.”"
    },
    "check": {
-    "text": "Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape.",
+    "text": "Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape.",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 122",
@@ -182,7 +182,7 @@
     "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
    },
    "check": {
-    "text": "Note, Reading the semaphores — “Check the mark, not the ring.”",
+    "text": "Note, Reading the semaphores: “Check the mark, not the ring.”",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
@@ -223,7 +223,7 @@
     "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
    },
    "check": {
-    "text": "Note, test 5 — cover the words, then ask which state each print is.",
+    "text": "Note, test 5: cover the words, then ask which state each print is.",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 129",
@@ -243,7 +243,7 @@
    ],
    "values": [
     {
-     "text": "defined once, used 5 times; 2 of them rotate(180) — a half-turn, not a redrawn copy",
+     "text": "defined once, used 5 times; 2 of them rotate(180): a half-turn, not a redrawn copy",
      "source": "notation-measurements.json",
      "sha16": "24c49d6bafacdaf5",
      "field": "states[CRITICAL].exactness_grep"
@@ -288,7 +288,7 @@
      "field": "g#glyph-placement/circle#glyph-fix/@r,@fill; @transform"
     },
     {
-     "text": "centred on (410, 410) — the centre of the slot, where the two triangles meet",
+     "text": "centred on (410, 410), the centre of the slot, where the two triangles meet",
      "source": "MASTER-medallion-CRITICAL-notation-slot820.svg",
      "sha16": "33413c4af9ec838c",
      "field": "g#glyph-placement/circle#glyph-fix/@cx,@cy; @transform"
@@ -308,7 +308,7 @@
     "text": "“Gold shows what the semaphore's move leaves in place: … a single point for C₂.”"
    },
    "check": {
-    "text": "Lean T4_fix_C2: C₂ fixes (x, y) exactly when x = 0 and y = 0 — the centre alone.",
+    "text": "Lean T4_fix_C2: C₂ fixes (x, y) exactly when x = 0 and y = 0: the centre alone.",
     "source": "proofs/TetrasemaphoreAlgebra.lean at v1.1.0",
     "sha16": "f066faf6595d22e9",
     "field": "T4_fix_C2"

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T01:26:37+00:00",
+ "generated": "2026-11-17T18:33:36+00:00",
  "kind": "Release file for v1.1.0",
  "state": "NORMATIVE",
  "notation": "I",
@@ -140,7 +140,7 @@
     "text": "“Colour comes second. Shape carries every state.”"
    },
    "check": {
-    "text": "Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape.",
+    "text": "Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape.",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 122",
@@ -182,7 +182,7 @@
     "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
    },
    "check": {
-    "text": "Note, Reading the semaphores — “Check the mark, not the ring.”",
+    "text": "Note, Reading the semaphores: “Check the mark, not the ring.”",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 91",
@@ -223,7 +223,7 @@
     "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
    },
    "check": {
-    "text": "Note, test 5 — cover the words, then ask which state each print is.",
+    "text": "Note, test 5: cover the words, then ask which state each print is.",
     "source": "README.md at v1.1.0",
     "sha16": "eac1dee95aa6a61b",
     "field": "lines 129",
@@ -308,7 +308,7 @@
     "kind": "close paraphrase"
    },
    "check": {
-    "text": "The note does not yet explain these bars to a reader — open question 1 in the spec.",
+    "text": "The note does not yet explain these bars to a reader (open question 1 in the spec).",
     "source": "MASTER-medallion-NORMATIVE-notation-slot820.svg",
     "sha16": "e0b6366d5c032523",
     "field": "g#symmetry-marks/@inkscape:label"

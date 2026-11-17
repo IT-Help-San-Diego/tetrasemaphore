@@ -51,7 +51,7 @@ for st in STATES:
 L.append(f"| **all four** | **{sum(D[s]['stations'] for s in STATES)}** | **{tot['q']}** | "
          f"**{tot['p']}** | **{tot['l']}** | **{tot['s']}** | **{tot['f']}** | "
          f"**{tot['qs']}** | **{tot['qf']}** | **{tot['o']}** | **{tot['x']}** |")
-L += ["", "Every cited string \u2014 quotation and pointer alike \u2014 is looked up in the "
+L += ["", "Every cited string, quotation and pointer alike, is looked up in the "
           "published note before anything is drawn, and a Lean name is looked up as a `theorem` "
           "or `lemma` declaration in the published proof file. The two columns separate how the "
           "sheet *presents* a cited string: a **quotation** reproduces the note's own words; a "
@@ -63,7 +63,7 @@ L += ["", "Every cited string \u2014 quotation and pointer alike \u2014 is looke
       "against the note: a span ending in punctuation claims the note carries that mark at that "
       "point, and a span ending in an ellipsis claims nothing. `test_quotation_punctuation.py` "
       "runs the check over the three faults found in review, their three corrected forms, the one "
-      "full stop the note does have, and three invented cases \u2014 ten cases, all as intended \u2014 "
+      "full stop the note does have, and three invented cases (ten cases, all as intended), "
       "so a zero here is informative rather than vacuous.", ""]
 
 L += ["## Every quotation, by sheet", "",
@@ -134,7 +134,7 @@ L += ["", f"The worst of the seven views is **{G.get('worst_view')}** at \u0394E
           f"`choose_drafting_colour.py` places it {G.get('search_rank')} of "
           f"{G.get('search_qualifying')} candidates clearing 7:1 on all four grounds, with "
           f"`{G.get('search_first')}` first at \u0394E2000 {_fd}"
-          + (f" \u2014 {round(_fd - _wd, 2)} \u0394E2000 units apart in the worst view"
+          + (f", {round(_fd - _wd, 2)} \u0394E2000 units apart in the worst view"
              if (_wd is not None and _fd is not None) else "")
           + ". The sheets carry Carey's choice.", ""]
 L += ["", "Line weights, px at 2400 px wide (halo adds "
@@ -190,9 +190,9 @@ L += ["", f"**The centre axis.** Where the axis passes behind a part it now stop
           f"finished image, the nearest axis pixel sits "
           + " \u00b7 ".join(f"{st} {D[st]['drafting']['covered']['axis_min_gap_to_art_px']}"
                             for st in STATES)
-          + f" px from the nearest art pixel, against the {_axc} px setting \u2014 a wrong radius "
+          + f" px from the nearest art pixel, against the {_axc} px setting; a wrong radius "
           f"would read here as a different gap. The last column counts every "
-          f"pixel where art was painted and a drafting halo now covers it \u2014 "
+          f"pixel where art was painted and a drafting halo now covers it: "
           f"{min(_halo_rng)} to {max(_halo_rng)} px per sheet, all of it from the number badges, "
           f"leader lines and detail window, none of it from the axis.", ""]
 L += ["", "## Contrast of every text colour against each sheet's ground", "",
@@ -210,6 +210,8 @@ L += ["", f"Sixteen colour-on-ground pairs, measured: {lo[0]:.2f}:1 ({lo[1]} {lo
           f"{hi[0]:.2f}:1 ({hi[1]} {hi[2]}). All sit above the 4.5:1 floor for body text. "
           f"The least headroom is {lo[1]}'s state colour at {lo[0]:.2f}:1; the other three state "
           f"colours sit at {min(others):.2f}\u2013{max(others):.2f}:1.", ""]
+if '\u2014' in '\n'.join(L):     # house rule: no em dash in the report's own words
+    raise AssertionError('em dash in AUDIT_REPORT.md: ' + next(x for x in L if '\u2014' in x)[:100])
 open('AUDIT_REPORT.md', 'w').write('\n'.join(L) + '\n')
 print('\n'.join(L[:24]))
 print('...')

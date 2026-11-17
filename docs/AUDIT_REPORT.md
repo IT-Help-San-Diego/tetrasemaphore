@@ -1,6 +1,6 @@
 # Datasheet audit report
 
-Four sheets, one template. Generated 2026-11-16 (UTC).
+Four sheets, one template. Generated 2026-11-17 (UTC).
 
 Sources, all read from the published tree at `v1.1.0` (Zenodo 10.5281/zenodo.24267509):
 
@@ -19,9 +19,9 @@ Sources, all read from the published tree at `v1.1.0` (Zenodo 10.5281/zenodo.242
 | CRITICAL | 6 | 7 | 3 | 2 | 27 | 0 | 8 | 0 | 0 | 0 |
 | **all four** | **26** | **25** | **12** | **7** | **116** | **0** | **29** | **0** | **0** | **0** |
 
-Every cited string — quotation and pointer alike — is looked up in the published note before anything is drawn, and a Lean name is looked up as a `theorem` or `lemma` declaration in the published proof file. The two columns separate how the sheet *presents* a cited string: a **quotation** reproduces the note's own words; a **pointer** names a test or a section in wording of ours, with the test's title or sentence verified verbatim behind it. The provenance check tests, in both directions, that each string's field names a place that can exist in the file its source names.
+Every cited string, quotation and pointer alike, is looked up in the published note before anything is drawn, and a Lean name is looked up as a `theorem` or `lemma` declaration in the published proof file. The two columns separate how the sheet *presents* a cited string: a **quotation** reproduces the note's own words; a **pointer** names a test or a section in wording of ours, with the test's title or sentence verified verbatim behind it. The provenance check tests, in both directions, that each string's field names a place that can exist in the file its source names.
 
-**Quotation punctuation.** Every span a sheet wraps in typographic quotes is tested against the note: a span ending in punctuation claims the note carries that mark at that point, and a span ending in an ellipsis claims nothing. `test_quotation_punctuation.py` runs the check over the three faults found in review, their three corrected forms, the one full stop the note does have, and three invented cases — ten cases, all as intended — so a zero here is informative rather than vacuous.
+**Quotation punctuation.** Every span a sheet wraps in typographic quotes is tested against the note: a span ending in punctuation claims the note carries that mark at that point, and a span ending in an ellipsis claims nothing. `test_quotation_punctuation.py` runs the check over the three faults found in review, their three corrected forms, the one full stop the note does have, and three invented cases (ten cases, all as intended), so a zero here is informative rather than vacuous.
 
 ## Every quotation, by sheet
 
@@ -33,11 +33,11 @@ Line numbers are in the published note, sha256 `eac1dee95aa6a61b`.
 |---|---|---|---|
 | standfirst | “NORMATIVE keeps its stance and looks at its object: what has been tested and holds, for now.” | 12–13 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores — “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
 | 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5 — cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
 | absent note | “… the whole figure for I …” | 95 | quote |
 
@@ -49,11 +49,11 @@ Master: `MASTER-medallion-NORMATIVE-notation-slot820.svg`, sha256 `e0b6366d5c032
 |---|---|---|---|
 | standfirst | “NON-NORMATIVE mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it.” | 13–14 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores — “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
 | 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5 — cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
 | 6 fix | “Gold shows what the semaphore's move leaves in place: … a vertical line for σᵥ …” | 95–96 | quote |
 
@@ -65,11 +65,11 @@ Master: `MASTER-medallion-NON-NORMATIVE-notation-slot820.svg`, sha256 `4ef1de6ae
 |---|---|---|---|
 | standfirst | “METACOGNITIVE keeps its stance but turns its look back to its own frame. …” | 14–16 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores — “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
 | 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5 — cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
 | 6 fix | “Gold shows what the semaphore's move leaves in place: … a horizontal line for σₕ …” | 95–96 | quote |
 
@@ -81,11 +81,11 @@ Master: `MASTER-medallion-METACOGNITIVE-notation-slot820.svg`, sha256 `cccfcff10
 |---|---|---|---|
 | standfirst | “CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.” | 16–17 | quote |
 | 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 — take the colour away: in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
 | 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores — “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
 | 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5 — cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
 | 6 fix | “Gold shows what the semaphore's move leaves in place: … a single point for C₂.” | 95–96 | quote |
 | absent note | “… a single point for C₂.” | 95–96 | quote |
@@ -98,11 +98,11 @@ Master: `MASTER-medallion-CRITICAL-notation-slot820.svg`, sha256 `33413c4af9ec83
 |---|---|---|
 | NORMATIVE | `S2_markAll_invariant` | Lean S2_markAll_invariant: the I mark is invariant under every move. Note, test 1. |
 | NON-NORMATIVE | `S2_mark_sv_exact` | Lean S2_mark_sv_exact: the mark is invariant under k exactly when k is I or σᵥ. Note, test 1. |
-| NON-NORMATIVE | `T4_fix_sv` | Lean T4_fix_sv: σᵥ fixes (x, y) exactly when x = 0 — the vertical axis. |
+| NON-NORMATIVE | `T4_fix_sv` | Lean T4_fix_sv: σᵥ fixes (x, y) exactly when x = 0: the vertical axis. |
 | METACOGNITIVE | `S2_mark_sh_exact` | Lean S2_mark_sh_exact: the mark is invariant under k exactly when k is I or σₕ. Note, test 1. |
-| METACOGNITIVE | `T4_fix_sh` | Lean T4_fix_sh: σₕ fixes (x, y) exactly when y = 0 — the horizontal axis. |
+| METACOGNITIVE | `T4_fix_sh` | Lean T4_fix_sh: σₕ fixes (x, y) exactly when y = 0: the horizontal axis. |
 | CRITICAL | `S2_mark_C2_exact` | Lean S2_mark_C2_exact: the mark is invariant under k exactly when k is I or C₂. Note, test 1. |
-| CRITICAL | `T4_fix_C2` | Lean T4_fix_C2: C₂ fixes (x, y) exactly when x = 0 and y = 0 — the centre alone. |
+| CRITICAL | `T4_fix_C2` | Lean T4_fix_C2: C₂ fixes (x, y) exactly when x = 0 and y = 0: the centre alone. |
 
 ## The drafting style
 
@@ -151,7 +151,7 @@ The green used in version 4 turned pale gold under simulated dichromacy, close t
 | Vienot deuteranopia | `#4FB5B5` | 16.3 |
 | Vienot tritanopia | `#4FB5B5` | 17.39 |
 
-The worst of the seven views is **Machado protanopia** at ΔE2000 15.33. Carey chose this colour from a preview on 23 October 2026. The search in `choose_drafting_colour.py` places it 20 of 8486 candidates clearing 7:1 on all four grounds, with `#CFF2FF` first at ΔE2000 16.31 — 0.98 ΔE2000 units apart in the worst view. The sheets carry Carey's choice.
+The worst of the seven views is **Machado protanopia** at ΔE2000 15.33. Carey chose this colour from a preview on 23 October 2026. The search in `choose_drafting_colour.py` places it 20 of 8486 candidates clearing 7:1 on all four grounds, with `#CFF2FF` first at ΔE2000 16.31, 0.98 ΔE2000 units apart in the worst view. The sheets carry Carey's choice.
 
 
 Line weights, px at 2400 px wide (halo adds 4 px each side):
@@ -177,7 +177,7 @@ Line weights, px at 2400 px wide (halo adds 4 px each side):
 The art-line figures are measured on the reference semaphore at 428 px, the scale the detail window is drawn at. Comparison, computed from the rows above rather than asserted: the 9 px core is heavier than the median art line on 4 of the 4 sheets (widest median 8.0 px, CRITICAL); the 17 px assembly, core plus halo both sides, is heavier than the thickest single art stroke on 4 of the 4 (thickest 12.65 px, CRITICAL). The marks-over-art columns are the worst case where a mark crosses the lightest gold and cream: the ground halo carries the separation there, at the ground contrast above.
 
 
-**The centre axis.** Where the axis passes behind a part it now stops 3 px short of it, at 2400 px wide: the axis is drawn to its own layer, and that layer is cleared wherever the art beneath it, dilated by 3 px, is present. The gap the clearance leaves is ground, so the separation a halo would give is there without a halo being painted over the artwork. The count of axis pixels over art is 0 on the four sheets, which is what the clearing step forces rather than an independent test of it: the same mask does the clearing and the counting, so the intersection is empty whether or not the radius is the intended one. The figure that can come out wrong is the distance. Measured on the finished image, the nearest axis pixel sits NORMATIVE 4.0 · NON-NORMATIVE 4.0 · METACOGNITIVE 4.0 · CRITICAL 4.0 px from the nearest art pixel, against the 3 px setting — a wrong radius would read here as a different gap. The last column counts every pixel where art was painted and a drafting halo now covers it — 1553 to 3189 px per sheet, all of it from the number badges, leader lines and detail window, none of it from the axis.
+**The centre axis.** Where the axis passes behind a part it now stops 3 px short of it, at 2400 px wide: the axis is drawn to its own layer, and that layer is cleared wherever the art beneath it, dilated by 3 px, is present. The gap the clearance leaves is ground, so the separation a halo would give is there without a halo being painted over the artwork. The count of axis pixels over art is 0 on the four sheets, which is what the clearing step forces rather than an independent test of it: the same mask does the clearing and the counting, so the intersection is empty whether or not the radius is the intended one. The figure that can come out wrong is the distance. Measured on the finished image, the nearest axis pixel sits NORMATIVE 4.0 · NON-NORMATIVE 4.0 · METACOGNITIVE 4.0 · CRITICAL 4.0 px from the nearest art pixel, against the 3 px setting; a wrong radius would read here as a different gap. The last column counts every pixel where art was painted and a drafting halo now covers it: 1553 to 3189 px per sheet, all of it from the number badges, leader lines and detail window, none of it from the axis.
 
 
 ## Contrast of every text colour against each sheet's ground

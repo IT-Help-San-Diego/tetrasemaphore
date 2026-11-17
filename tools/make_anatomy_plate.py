@@ -300,6 +300,8 @@ class Text:
     def draw(self, xy, s, path, size, fill, tag='', anchor='la'):
         if not s:
             return 0
+        if '\u2014' in s:      # house rule: no em dash in the sheet's own words
+            raise AssertionError(f"em dash in drawn text: {s[:90]!r}")
         f = self.font(path, size)
         self.d.text(xy, s, font=f, fill=fill, anchor=anchor)
         self.boxes.append((tag, s, self.d.textbbox(xy, s, font=f, anchor=anchor)))
@@ -445,9 +447,9 @@ FIX_THM = {'NORMATIVE': 'T4_fix_I', 'NON-NORMATIVE': 'T4_fix_sv',
 MARK_THM = {'NON-NORMATIVE': 'S2_mark_sv_exact', 'METACOGNITIVE': 'S2_mark_sh_exact',
             'CRITICAL': 'S2_mark_C2_exact', 'NORMATIVE': 'S2_markAll_invariant'}
 FIX_SAYS = {'NORMATIVE': 'I fixes every point of the plane',
-            'NON-NORMATIVE': '\u03c3\u1d65 fixes (x, y) exactly when x = 0 \u2014 the vertical axis',
-            'METACOGNITIVE': '\u03c3\u2095 fixes (x, y) exactly when y = 0 \u2014 the horizontal axis',
-            'CRITICAL': 'C\u2082 fixes (x, y) exactly when x = 0 and y = 0 \u2014 the centre alone'}
+            'NON-NORMATIVE': '\u03c3\u1d65 fixes (x, y) exactly when x = 0: the vertical axis',
+            'METACOGNITIVE': '\u03c3\u2095 fixes (x, y) exactly when y = 0: the horizontal axis',
+            'CRITICAL': 'C\u2082 fixes (x, y) exactly when x = 0 and y = 0: the centre alone'}
 MARK_SAYS = {'NON-NORMATIVE': 'the mark is invariant under k exactly when k is I or \u03c3\u1d65',
              'METACOGNITIVE': 'the mark is invariant under k exactly when k is I or \u03c3\u2095',
              'CRITICAL': 'the mark is invariant under k exactly when k is I or C\u2082',
@@ -497,7 +499,7 @@ def build_stations(m, S):
         ],
         meaning=dict(text="\u201cColour comes second. Shape carries every state.\u201d",
                      src=S.q("Colour comes second. Shape carries every state.", "100")),
-        check=dict(text="Note, test 3 \u2014 take the colour away: in greyscale all four can "
+        check=dict(text="Note, test 3 (take the colour away): in greyscale all four can "
                         "still be told apart by shape.",
                    src=S.q("Take the colour away.", "122", kind='pointer, paraphrased'))))
 
@@ -515,7 +517,7 @@ def build_stations(m, S):
                           "while a half-turn leaves the ring as it was.\u201d",
                      src=S.q("The ring's keys all turn one way, so a mirror reverses them, while "
                              "a half-turn leaves the ring as it was.", "91")),
-        check=dict(text="Note, Reading the semaphores \u2014 \u201cCheck the mark, not the "
+        check=dict(text="Note, Reading the semaphores: \u201cCheck the mark, not the "
                         "ring.\u201d",
                    src=S.q("Check the mark, not the ring.", "91",
                            kind='pointer with verbatim quotation'))))
@@ -535,7 +537,7 @@ def build_stations(m, S):
                           "line that shows its mirror.\u201d",
                      src=S.q("each semaphore states it, with its word and with the gold line that "
                              "shows its mirror.", "188\u2013189")),
-        check=dict(text="Note, test 5 \u2014 cover the words, then ask which state each print is.",
+        check=dict(text="Note, test 5: cover the words, then ask which state each print is.",
                    src=S.q("Cover the words, then show them twenty prints", "129",
                            kind='pointer, paraphrased'))))
 
@@ -549,13 +551,13 @@ def build_stations(m, S):
         anchor5 = (410, 560)
     elif m.state == 'CRITICAL':
         v1 = dict(text=f"defined once, used {eg['uses']} times; {eg['rotate_180']} of them "
-                       f"rotate(180) \u2014 a half-turn, not a redrawn copy",
+                       f"rotate(180): a half-turn, not a redrawn copy",
                   src=S.j(f"states[{m.state}].exactness_grep"))
         title5 = f"{nota}: one token, and its half-turn"
         anchor5 = (300, 480)
     else:
-        v1 = dict(text=f"defined once, used {eg['uses']} times; the second use is scale(1 -1) "
-                       f"\u2014 a mirror, not a redrawn copy",
+        v1 = dict(text=f"defined once, used {eg['uses']} times; the second use is scale(1 -1): "
+                       f"a mirror, not a redrawn copy",
                   src=S.j(f"states[{m.state}].exactness_grep"))
         title5 = f"{nota}: one token, and its exact mirror"
         anchor5 = (330, 560) if m.state == 'METACOGNITIVE' else (410, 560)
@@ -604,7 +606,7 @@ def build_stations(m, S):
                 dict(text=f"radius {m.fix['r']:g} token units \u00d7 {s:g} = {r_slot:.3f} slot "
                           f"units = {m.mm(r_slot, 3):g} mm \u00b7 {m.fix['fill']}",
                      src=S.m("g#glyph-placement/circle#glyph-fix/@r,@fill; @transform")),
-                dict(text=f"centred on ({anchor6[0]:g}, {anchor6[1]:g}) \u2014 the centre of the "
+                dict(text=f"centred on ({anchor6[0]:g}, {anchor6[1]:g}), the centre of the "
                           f"slot, where the two triangles meet",
                      src=S.m("g#glyph-placement/circle#glyph-fix/@cx,@cy; @transform")),
             ]
@@ -651,8 +653,8 @@ def build_stations(m, S):
             meaning=dict(text="The drafting convention for a line of symmetry (ISO 128-3); the "
                               "proportions are ours.",
                          src=S.m("g#symmetry-marks/@inkscape:label"), kind='close paraphrase'),
-            check=dict(text="The note does not yet explain these bars to a reader \u2014 open "
-                            "question 1 in the spec.",
+            check=dict(text="The note does not yet explain these bars to a reader (open "
+                            "question 1 in the spec).",
                        src=S.m("g#symmetry-marks/@inkscape:label"))))
 
     for i, c in enumerate(st, start=1):
@@ -710,7 +712,7 @@ def compose(state, outdir='.'):
     yy = T.para((BOX_X0 + 14, 42), "HOW TO READ THIS SHEET", F_BOLD, 16, GOLD,
                 BOX_X1 - BOX_X0 - 28, 21, 'howto')
     T.para((BOX_X0 + 14, yy + 2),
-           "Read the stack from the bottom up \u2014 the order the semaphore is drawn in. Every "
+           "Read the stack from the bottom up, the order the semaphore is drawn in. Every "
            "value, tick and label here is read from the master file, from the measurement record "
            "made from it, or quoted from the published note, and each one carries its source. The "
            "numbers, leader lines, boxes, centre axis and arrow are drafting marks, not data: "
@@ -734,7 +736,7 @@ def compose(state, outdir='.'):
     img.paste(coin, coin_xy, coin)
     ck = coin_px / 820.0
     T.para((LEFT_X0, coin_xy[1] + coin_px + 12),
-           f"The semaphore as the site shows it — site/assets/TETRASEMAPHORE-{state}-en-1298"
+           f"The semaphore as the site shows it: site/assets/TETRASEMAPHORE-{state}-en-1298"
            f".png at {RELEASE['tag']}, sha {sha(site, 8)}.",
            F_SANS, 14, GOLD2, LEFT_X1 - LEFT_X0, 19, 'coin-cap')
 
@@ -773,7 +775,7 @@ def compose(state, outdir='.'):
     img.paste(crop, (cx0, cy0), crop)
     DR.rect([cx0, cy0, cx0 + crop.width, cy0 + crop.height], Draft.W_FRAME)
     det_mag = (crop.width / wu) / ck
-    T.draw((LEFT_X0, det_y0 - 26), "DETAIL A \u2014 where the gold meets the mark", F_BOLD, 17,
+    T.draw((LEFT_X0, det_y0 - 26), "DETAIL A: where the gold meets the mark", F_BOLD, 17,
            GOLD, 'detail-title')
     T.para((LEFT_X0, det_box[3] + 10),
            f"Enlarged {det_mag:.1f}\u00d7 from the semaphore above. The area shown is "
@@ -902,7 +904,7 @@ def compose(state, outdir='.'):
         f"{citation_clause()}sha256 {m.sha256}. "
         f"Rendered with cairosvg {cairosvg.__version__}; cairosvg renders no SVG filters, so the "
         f"foil grain (feTurbulence) and the organic band displacement are absent from the "
-        f"{len(ST)} layer renders \u2014 the semaphore at upper left is the site's own PNG. "
+        f"{len(ST)} layer renders; the semaphore at upper left is the site's own PNG. "
         f"Scale: 1 mm = {m.u_per_mm:.4f} slot units (820 units = {m.print_mm:.3f} mm), derived "
         f"from this master ({m.scale_note}). Set in DejaVu Sans / DejaVu Sans Mono. Leader lines, "
         f"number badges, caption boxes, the centre axis and the direction arrow are drafting "
@@ -910,7 +912,7 @@ def compose(state, outdir='.'):
         f"{GROUND} disc is visible on a {GROUND} sheet. "
         + (""   # a sheet is a release file when it carries its release citation, and not before
            if RELEASE['doi'] else
-           f"MOCK-UP for review, {build_time().date().isoformat()} (UTC) \u2014 not a release file."))
+           f"MOCK-UP for review, {build_time().date().isoformat()} (UTC). Not a release file."))
     T.para((M, 1428), foot, F_SANS, 14, GOLD2, W - 2 * M, 19, 'footer')
 
     # ---- the drafting marks go on last, over everything they describe
@@ -1155,6 +1157,9 @@ def compose(state, outdir='.'):
                    contrast_floor=CONTRAST_FLOOR,
                    contrast_faults=contrast_faults),
     )
+    _dashed = json.dumps(payload, ensure_ascii=False).count('\u2014')
+    if _dashed:                 # house rule: no em dash in the record's own words
+        raise AssertionError(f"{_dashed} em dash(es) in the audit record for {state}")
     with open(os.path.join(outdir, f"audit_{state}.json"), 'w') as f:
         json.dump(payload, f, indent=1, ensure_ascii=False)
     return p_full, payload, report
