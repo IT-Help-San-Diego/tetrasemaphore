@@ -1,4 +1,4 @@
-# The Tetrasemaphore 1.0.0: release manifest
+# The Tetrasemaphore 1.1.0: release manifest
 
 Every file of this release, with its size in bytes and its SHA-256, so that anyone can check a copy: `shasum -a 256 <file>` (or `sha256sum <file>`)
 prints the hash that stands beside it here. The list covers every file except this one, `CHANGELOG.md` and `CITATION.cff`, which are written at the
@@ -38,7 +38,7 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `LICENSE` | 18,657 | 9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411 |
 | `LICENSE-CODE` | 11,358 | cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 |
 | `NOTICE` | 344 | cec827fe3863ed1c42e0e4ecccab4f9656a1e3b1d62e4a07bae3c3e7409121f4 |
-| `README.md` | 23,648 | c98c3ee4a94a3daee326e7a2c41bf9af700f775132555241536c0076a6420927 |
+| `README.md` | 23,710 | eac1dee95aa6a61b5c09857476578fced15d878637fbf3fa8e96e9d699a223a6 |
 | `artwork/finish/finish7-knobs-noflecks.txt` | 233 | f3f10832e8ae6194b9b770a64d9905dcacca36dbd0d5bf3cd46a0cc0b99622ce |
 | `artwork/finish/finish7-knobs.txt` | 221 | bef0253d36e2a95983df5d8d2c4c8f2f0932aef40646db271d1e0e1277c4d74a |
 | `artwork/finish/proposals/NOTE-build5-noflecks.md` | 1,402 | f91da5803384ce9ae300ddd4a072c557154a54c5a6c3de735e3721516adae9e8 |
@@ -287,8 +287,8 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `record/release-plan.md` | 25,667 | 07cb7d0457baa3c9533b9a97abc032a9c6462ec2bb5d20a1cc3b70f8baad0471 |
 | `record/test-register.md` | 23,076 | 23b34fb2164f1da4ed07a9ac54178dbe3be4bd9cefb3a1ab615b5bbb756648d2 |
 | `site/.well-known/security.txt` | 159 | e6955225abbdb95fde382ff4607f42c6a0512f02ff592e9b311985216dec9b47 |
-| `site/404.html` | 12,175 | d80a2e8a50c933351069b59609af44affa787518957c4b40658a1a678db1d8a7 |
-| `site/Makefile` | 2,198 | bc1d5d2e00bab8ccf8d5169074add3817f57a512b3fde56840965a2b818e5dd5 |
+| `site/404.html` | 12,677 | 821fcca8ad9e55f63012583d5175e5e24bcf8ad7222fa41b915ba70e33fdd966 |
+| `site/Makefile` | 2,232 | 9a42ebcb0efa1ff0358c21843ab15b81930047f5de4b237eda81953f2beed08a |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-1298.png` | 757,191 | a43da812ca3a7c885a4e688c978e6e4011c0996968b2411b6ca8a959a0ae2461 |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-512.png` | 170,102 | 89dc35c8fcd840f0de8b75e3df094798b9a417472ffaa1ca707b2a7bac5613a3 |
 | `site/assets/TETRASEMAPHORE-CRITICAL-es-1298.png` | 756,826 | 54bcc40dea8e470dc1f7e9a2ab6f5b0f5c73b258339908608e8eed38158015b7 |
@@ -306,14 +306,14 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-1298.png` | 755,972 | 077215b442760441426bd4270d844bbf16848891edeeea9a00f1b0837101b696 |
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-512.png` | 168,591 | 1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577 |
 | `site/assets/og-card.jpg` | 183,315 | a175dc759f3a2fd950ff2710ea94eb4e8f8bcc0a5590ee7a89344615d1066573 |
-| `site/index.html` | 24,917 | 9cefa8b1bcaaa572390a7b361df925b3566b607fcd374580672563521991bbe5 |
+| `site/index.html` | 44,025 | 12f9b0c74f1b34d3074ed6b5501cd60841f4009d1c2ca6d3632229de88285f0e |
 | `site/infra/cloudfront/README.md` | 919 | 264cacf2b4beca9bf81d67d9139c66c9a181854d1a928b7474dbb9d258cf181a |
-| `site/infra/cloudfront/assets-headers.json` | 2,472 | 8720263cee6486bfc79a288b17ebffedd93e6d86b53caea5bafc95c97914cb74 |
-| `site/infra/cloudfront/security-headers.json` | 2,540 | b1db1cc42b2ca247f098d5050a731fccfc1f83ac9af59daf47130a1aef14d0a4 |
+| `site/infra/cloudfront/assets-headers.json` | 2,634 | 52f96590470cdff3796f4d2aadff13cd32aab97611db419463fc33e7e016b071 |
+| `site/infra/cloudfront/security-headers.json` | 2,702 | 5a3d7d12816ba3eae6015dd87601bd5ce1c56e8899c9abad077dbf86865e995c |
 | `site/llms.txt` | 731 | da4c8e0c64396e80d105a8324bc25c0853fc4ee118fb943c2c199bdbe0807971 |
-| `site/method.html` | 23,836 | 410b96764ff72659a3b748843998184640dba23d83d13aaf43001bc7d6897f5a |
-| `site/note.html` | 40,336 | 425ddf1074af7775e341ed89af60ca1a8f5bc05bf711adc3bdb14ee5f3a056bd |
+| `site/method.html` | 24,338 | 324e50ca8ccb3da0e27b59a79705c3ba25fbbbdf514d4aa828cc302c01a5785b |
+| `site/note.html` | 41,069 | 33e44500cc08c46f0cf20910abb2246eb3251cb712102fe4f36474c11b0b5099 |
 | `site/robots.txt` | 76 | 2a3a3eb6c8c64a268097fd3fc989b7ee7caac07785f4c4fa3a71ad70dbb69089 |
 | `site/sitemap.xml` | 424 | 86c9471d3f7fe9bc345ef2497e4a599d2d064489374a781bde713a76ba35a9a9 |
-| `site/verify.sh` | 9,501 | 9c1d072fb53aa3b11ddd33b1002046ce7133944bcdf0b96f24b0377302b66811 |
+| `site/verify.sh` | 10,909 | aba86c1ba7bd23a184b40f53a89f03e28f82ff560804c8c291f3f6c3c250ba32 |
 | `tools/generate_pdfs.py` | 20,070 | 3e6eea4933a83d6191b412616df6e33a8ecdb679806e055112cfc433a9469a32 |
