@@ -15,6 +15,9 @@ def bad(msg):
     FAIL = 1
 
 PAGES = tuple(p for p in ("index.html", "note.html", "method.html", "404.html") if p in ("index.html", "method.html", "404.html") or os.path.exists(p))
+# The datasheet pages (tools/make_datasheet_html.py) are held to every page rule below, and their <style> block must be index.html's.
+DATASHEET_PAGES = tuple(sorted(glob.glob("datasheet-*.html")))
+PAGES += DATASHEET_PAGES
 POLICIES = ("infra/cloudfront/security-headers.json", "infra/cloudfront/assets-headers.json")
 
 # 1. All three <style> blocks must be byte-identical, contain no @import/url(), and their quoted sha256 hash must sit in all 3 meta CSPs + both header policies.
@@ -37,6 +40,9 @@ if len(styles) == len(PAGES):
     for p in ("method.html", "404.html"):
         if styles[p] != ref_other:
             bad(f"{p}: <style> block differs from note.html")
+    for p in DATASHEET_PAGES:
+        if styles[p] != styles["index.html"]:
+            bad(f"{p}: <style> block differs from index.html")
     hashes = []
     for p in PAGES:
         hp = "sha256-" + base64.b64encode(hashlib.sha256(styles[p].encode("utf-8")).digest()).decode()
