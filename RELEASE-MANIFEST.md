@@ -1,19 +1,26 @@
 # The Tetrasemaphore 1.1.0: release manifest
 
 Every file of this release, with its size in bytes and its SHA-256, so that anyone can check a copy: `shasum -a 256 <file>` (or `sha256sum <file>`)
-prints the hash that stands beside it here. The list covers every file except this one, `CHANGELOG.md` and `CITATION.cff`, which are written at the
-push with the record's DOI. The paths are the repository's. `artwork/` holds the sealed build records of the semaphores and screens with their paths kept
-as they were built, so that every reference inside their configs, READMEs and scripts resolves; `proofs/` holds the Lean proofs, their checker and
-the record of their red team; `record/` holds the decision log, the exchanges, the release plan and the test register; `methods/` holds methods
-note 01 in revision 1 (`tetrasemaphore-methods-note-01-rev1.md`) and, unchanged, the original it revises (`tetrasemaphore-methods-note-01.md`).
-`pdf/` holds two PDFs made by `tools/generate_pdfs.py`: typeset copies of `README.md` and of revision 1. `site/` is the website as
-deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Apache License 2.0 (`LICENSE-CODE`; `NOTICE` says which files).
+prints the hash that stands beside it here. The list covers every file except this one, `CHANGELOG.md` and `CITATION.cff`, which are written at the push
+with the record's DOI. The paths are the repository's. `artwork/` holds the sealed build records of the semaphores and screens with their paths kept as
+they were built, so that every reference inside their configs, READMEs and scripts resolves; `proofs/` holds the Lean proofs, their checker and the
+record of their red team; `record/` holds the decision log, the exchanges, the release plan and the test register; `methods/` holds methods note 01 in
+revision 1 (`tetrasemaphore-methods-note-01-rev1.md`) and, unchanged, the original it revises (`tetrasemaphore-methods-note-01.md`). `docs/` holds the
+datasheet specification, the datasheets' audit report and their four audit records; `tools/` holds the scripts that make the PDFs, the datasheets and the
+table below, with their data files, the pinned build environment of the datasheets (`tools/datasheets-environment/`) and the three DejaVu font files the
+datasheets are set in (`tools/fonts/`). `pdf/` holds two PDFs made by `tools/generate_pdfs.py`: a typeset copy of `README.md`, typeset for 1.1.0, and a
+typeset copy of revision 1, which is the PDF published in 1.0.0, byte for byte, and so carries that release's version and DOI. `site/` is the website:
+the pages and assets it deploys (the list is in `site/Makefile`), its deploy gate and its response-header policies, and in `site/assets/` the four
+datasheets with their 1200 px previews (`datasheet_*.png`), which are release files that the deploy list leaves out. Text and art are under CC BY 4.0
+(`LICENSE`); the code is under the Apache License 2.0 (`LICENSE-CODE`; `NOTICE` says which files); the three DejaVu font files in `tools/fonts/` are
+other people's work and keep their own licence (`tools/fonts/LICENSE-DejaVu.txt`).
 
 ## Not included, and why
 - **Five build inputs that carry a licensed stock image of an owl.** The project's licences do not cover that image, so these files stay out.
   SHA-256 (first 16 characters): ba6b89bf94983fd6, a2aba8f772f29420, 36a0633d5ae3ca0e, 46f1faa25c89350c, 53e411c36898e6c4. The note's section
   "Why we left the owl" tells the history.
-- **The two typefaces used for the lettering,** cited here so that a builder can fetch and check the same files:
+- **One of the two typefaces used for the lettering.** Both are cited here so that a builder can fetch and check the same files; since 1.1.0 the first
+  is also in the release, as `tools/fonts/DejaVuSans-Bold.ttf`, and the second stays out:
   - DejaVu Sans Bold, version 2.34 (`DejaVuSans-Bold.ttf`, 693,876 bytes; SHA-256 7e69e81478e233b81c3ad730f5b10abe76c792d48ec6c3e7cc3b3596a37bb3b1). Licence: the DejaVu fonts licence
     (Bitstream Vera and Arev copyrights; DejaVu's own changes are in the public domain). Source: the DejaVu fonts project, https://dejavu-fonts.github.io/;
     release 2.34 (25 August 2013) is at https://sourceforge.net/projects/dejavu/files/dejavu/2.34/.
@@ -23,12 +30,14 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 - **Two inputs from the earlier Dose 01 work** that the screens' build records cite: the Dose 01 lock-screen master (SHA-256 first 16: 1cf8f0f9f4aa30ea),
   which carries the owl, and a text-layout helper from the same work (c197c06602351a05). The screens' build scripts read both, so the scripts are a
   record of how the screens were made; they do not run from this release alone.
-- **The seven DejaVu 2.37 font files the two PDFs in `pdf/` are set in** (`DejaVuSerif.ttf`, `DejaVuSerif-Italic.ttf`, `DejaVuSerif-Bold.ttf`,
-  `DejaVuSerif-BoldItalic.ttf`, `DejaVuSans.ttf`, `DejaVuSans-Bold.ttf`, `DejaVuSansMono.ttf`), each pinned by size and SHA-256 inside
-  `tools/generate_pdfs.py`, which stops if one differs; the PDFs embed subsets of them. They are byte for byte the files of the DejaVu project's
-  release 2.37 (`dejavu-fonts-ttf-2.37.zip`), which LibreOffice also ships. Licence: the DejaVu fonts licence (Bitstream Vera and Arev copyrights;
-  DejaVu's own changes are in the public domain). Source: the DejaVu fonts project, https://dejavu-fonts.github.io/; release 2.37 is at
-  https://github.com/dejavu-fonts/dejavu-fonts/releases/tag/version_2_37 and https://sourceforge.net/projects/dejavu/files/dejavu/2.37/.
+- **Five of the seven DejaVu 2.37 font files that `tools/generate_pdfs.py` typesets the two PDFs in `pdf/` with** (`DejaVuSerif.ttf`,
+  `DejaVuSerif-Italic.ttf`, `DejaVuSerif-Bold.ttf`, `DejaVuSerif-BoldItalic.ttf` and `DejaVuSans-Bold.ttf`; the other two, `DejaVuSans.ttf` and
+  `DejaVuSansMono.ttf`, are in the release since 1.1.0 under `tools/fonts/`). All seven are pinned by size and SHA-256 inside
+  `tools/generate_pdfs.py`, which stops if one differs; the PDFs embed subsets of six of them (`DejaVuSerif-BoldItalic.ttf` is given to the typesetter
+  and not used). The 2.37 `DejaVuSans-Bold.ttf` (705,684 bytes) is not the 2.34 file of the same name in `tools/fonts/`. They are byte for byte the
+  files of the DejaVu project's release 2.37 (`dejavu-fonts-ttf-2.37.zip`), which LibreOffice also ships. Licence: the DejaVu fonts licence (Bitstream
+  Vera and Arev copyrights; DejaVu's own changes are in the public domain). Source: the DejaVu fonts project, https://dejavu-fonts.github.io/; release
+  2.37 is at https://github.com/dejavu-fonts/dejavu-fonts/releases/tag/version_2_37 and https://sourceforge.net/projects/dejavu/files/dejavu/2.37/.
 
 ## Files
 
@@ -37,8 +46,8 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `.gitignore` | 370 | c764305965f310bc922cef67e2faa810d5f2c6360e5178489d45f1c7d7ce149b |
 | `LICENSE` | 18,657 | 9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411 |
 | `LICENSE-CODE` | 11,358 | cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 |
-| `NOTICE` | 344 | cec827fe3863ed1c42e0e4ecccab4f9656a1e3b1d62e4a07bae3c3e7409121f4 |
-| `README.md` | 23,710 | eac1dee95aa6a61b5c09857476578fced15d878637fbf3fa8e96e9d699a223a6 |
+| `NOTICE` | 799 | 9a1190909a291f5a4543cc00b477997068ef911874f955a2db28529d197d4f3a |
+| `README.md` | 23,880 | 1191e5639adb4cfc48bd5abfdc0993208860b66d3ac4b1819a891ebbe574a210 |
 | `artwork/finish/finish7-knobs-noflecks.txt` | 233 | f3f10832e8ae6194b9b770a64d9905dcacca36dbd0d5bf3cd46a0cc0b99622ce |
 | `artwork/finish/finish7-knobs.txt` | 221 | bef0253d36e2a95983df5d8d2c4c8f2f0932aef40646db271d1e0e1277c4d74a |
 | `artwork/finish/proposals/NOTE-build5-noflecks.md` | 1,402 | f91da5803384ce9ae300ddd4a072c557154a54c5a6c3de735e3721516adae9e8 |
@@ -218,10 +227,16 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `artwork/vector-masters/tetrasemaphore-build7/work/build-meta7.js` | 8,277 | b64cd9df95b18b8fdce95304598a363c107c16e3fb982cbd76588257466c3408 |
 | `artwork/vector-masters/tetrasemaphore-build7/work/verify-meta7-run.json` | 676 | 77aa2ab9541ca99649562b35af04837bcbeb65693f6d138d3a8e7b6f6d5c2f9f |
 | `artwork/vector-masters/tetrasemaphore-build7/work/verify-meta7.py` | 5,357 | b575632ea6f451151bfb458eb7f5f88d63141cb87737ba115d62f3b8f2a40165 |
+| `docs/AUDIT_REPORT.md` | 14,830 | 231462c99df6f60b535972ff79457561072caefe4aa78298c17e834ad1fdd752 |
+| `docs/DATASHEET_SPEC.md` | 22,308 | aaa20b44975e8745d11ab0d6e01d50857e91d55e13afcd35603a805de42832f4 |
+| `docs/datasheet-audit/audit_CRITICAL.json` | 15,589 | 749557ab2bfe334591650ae9ad90305c94a07ad74f791bee6c23ea020ba92b8d |
+| `docs/datasheet-audit/audit_METACOGNITIVE.json` | 17,048 | 12152090640bb2958c5221c082de54790463cb3b2de004d7f3894eceb677d420 |
+| `docs/datasheet-audit/audit_NON-NORMATIVE.json` | 16,996 | d83f5cdde1352d48eed42f66c1c5ceb2cf302f6b08c028e6246803d3ea6021b3 |
+| `docs/datasheet-audit/audit_NORMATIVE.json` | 15,530 | 5f92ba5402e1feeefd945de6c6b3cffe26660d7f279ff4b8de26fa30206c49c5 |
 | `methods/tetrasemaphore-methods-note-01-rev1.md` | 15,308 | 46f436d9ef3a35ceceec395a4f86009e8bfa094fcf786fbb1e9da468b518cb05 |
 | `methods/tetrasemaphore-methods-note-01.md` | 7,829 | 10a216a4cf8861c0ab04b5faca8ec529eaf6cfea76838c3fd2e7d091d420e536 |
 | `pdf/TETRASEMAPHORE-METHODS-NOTE-01.pdf` | 2,796,025 | 3bf981b258544cf15c2c2c22ef9aad1433a8a32bea2bff79e6d6fd601191ad36 |
-| `pdf/TETRASEMAPHORE-PUBLIC-NOTE.pdf` | 2,802,582 | 7e4f0e52986dcf2fc02f33c7c19a4bb31abdc1c06059bb2912c8b932ba3266cd |
+| `pdf/TETRASEMAPHORE-PUBLIC-NOTE.pdf` | 2,802,972 | 1e290e0f2198ffc439a83873b48d3d8e3ce29cfec8b2792946fc055a02c46197 |
 | `proofs/ANSWERS_v2.2_SECOND_OPINION.md` | 30,607 | b7897400e7b9bbe492c816da063d6596a70c9eff0a08a995ef258baad0b18297 |
 | `proofs/ANSWERS_v2.3_SECOND_OPINION.md` | 25,086 | 8e0180103468f93d0049cca9a3382dc3d4873fe0ccaa061b1c4693a631da808b |
 | `proofs/CHANGES_v2.2_to_v2.3.md` | 19,783 | b7d8c2031cd20aacce6a98d7f9f39d3afdcfe9f4aaece574e31928bcb59be94d |
@@ -287,7 +302,7 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `record/release-plan.md` | 25,667 | 07cb7d0457baa3c9533b9a97abc032a9c6462ec2bb5d20a1cc3b70f8baad0471 |
 | `record/test-register.md` | 23,076 | 23b34fb2164f1da4ed07a9ac54178dbe3be4bd9cefb3a1ab615b5bbb756648d2 |
 | `site/.well-known/security.txt` | 159 | e6955225abbdb95fde382ff4607f42c6a0512f02ff592e9b311985216dec9b47 |
-| `site/404.html` | 12,677 | 821fcca8ad9e55f63012583d5175e5e24bcf8ad7222fa41b915ba70e33fdd966 |
+| `site/404.html` | 12,677 | 8728c8abbb7f9c4b76a6d634726e1b34db057477aa56f6439bd2ec4ad870d5e9 |
 | `site/Makefile` | 2,232 | 9a42ebcb0efa1ff0358c21843ab15b81930047f5de4b237eda81953f2beed08a |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-1298.png` | 757,191 | a43da812ca3a7c885a4e688c978e6e4011c0996968b2411b6ca8a959a0ae2461 |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-512.png` | 170,102 | 89dc35c8fcd840f0de8b75e3df094798b9a417472ffaa1ca707b2a7bac5613a3 |
@@ -305,15 +320,44 @@ deployed. Text and art are under CC BY 4.0 (`LICENSE`); the code is under the Ap
 | `site/assets/TETRASEMAPHORE-NORMATIVE-en-512.png` | 168,560 | b893c34898ab9ebc4fcd8eb2f915a30253d5afb64548aad0afe1af7b3160600d |
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-1298.png` | 755,972 | 077215b442760441426bd4270d844bbf16848891edeeea9a00f1b0837101b696 |
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-512.png` | 168,591 | 1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577 |
+| `site/assets/datasheet_CRITICAL.png` | 586,660 | 4c9551dd62a858c09b309cf192e91917047f0c6aa842eb6777793aae6db1bec7 |
+| `site/assets/datasheet_CRITICAL_1200.png` | 476,310 | f7c6ce81ccee3230117aa8ed78e8af9f21b5bd00700fc93a19083c576f57cb1b |
+| `site/assets/datasheet_METACOGNITIVE.png` | 604,371 | 4b828da69e24e11a5e35614dc8ed757750ca769b6e8427c5f893e78c767151c4 |
+| `site/assets/datasheet_METACOGNITIVE_1200.png` | 498,730 | 96dd95ac8c62a9e3aad803364d60c061503d1455e36fe0e3d4a617e1d7e1bdf6 |
+| `site/assets/datasheet_NON-NORMATIVE.png` | 592,783 | 46b54095cf8c2d48b2b0fb51a4f51c37cad92f0af2e0bf8c7cdd9a14f321ad9f |
+| `site/assets/datasheet_NON-NORMATIVE_1200.png` | 498,351 | c8b63aac9d7098b77be90deaa832a499471880849e45e9d5b22091bb080201b2 |
+| `site/assets/datasheet_NORMATIVE.png` | 591,533 | 170fd2d257d292351280f1eba1a014bdc518300bc12ea7515715025ad4764913 |
+| `site/assets/datasheet_NORMATIVE_1200.png` | 480,417 | 0af73e505b085f6bc6f4ca3ad4f2ed929393c986414750a6bb7c009a63cdea14 |
 | `site/assets/og-card.jpg` | 183,315 | a175dc759f3a2fd950ff2710ea94eb4e8f8bcc0a5590ee7a89344615d1066573 |
-| `site/index.html` | 44,025 | 12f9b0c74f1b34d3074ed6b5501cd60841f4009d1c2ca6d3632229de88285f0e |
+| `site/assets/og-card.png` | 217,921 | 0cf08ac9028fc22dcc3c927cabd64dd3ec22234a168f4af2f23c912885aa4ce3 |
+| `site/index.html` | 44,025 | 8d6104794e03345e2d8d6c56b135971fcbd7c585d3bd16e5c50e86906df100ce |
 | `site/infra/cloudfront/README.md` | 919 | 264cacf2b4beca9bf81d67d9139c66c9a181854d1a928b7474dbb9d258cf181a |
 | `site/infra/cloudfront/assets-headers.json` | 2,634 | 52f96590470cdff3796f4d2aadff13cd32aab97611db419463fc33e7e016b071 |
 | `site/infra/cloudfront/security-headers.json` | 2,702 | 5a3d7d12816ba3eae6015dd87601bd5ce1c56e8899c9abad077dbf86865e995c |
 | `site/llms.txt` | 731 | da4c8e0c64396e80d105a8324bc25c0853fc4ee118fb943c2c199bdbe0807971 |
-| `site/method.html` | 24,338 | 324e50ca8ccb3da0e27b59a79705c3ba25fbbbdf514d4aa828cc302c01a5785b |
-| `site/note.html` | 41,069 | 33e44500cc08c46f0cf20910abb2246eb3251cb712102fe4f36474c11b0b5099 |
+| `site/method.html` | 24,338 | 8835bf926d231e4316e07d935434bb248fd68e9ea9769141fe2aa604759925d4 |
+| `site/note.html` | 41,069 | ec26c8acea200fce4d429fc5efdb0614cf2fac10e782f1d7cf776a2be513d2ba |
 | `site/robots.txt` | 76 | 2a3a3eb6c8c64a268097fd3fc989b7ee7caac07785f4c4fa3a71ad70dbb69089 |
-| `site/sitemap.xml` | 424 | 86c9471d3f7fe9bc345ef2497e4a599d2d064489374a781bde713a76ba35a9a9 |
-| `site/verify.sh` | 10,909 | aba86c1ba7bd23a184b40f53a89f03e28f82ff560804c8c291f3f6c3c250ba32 |
-| `tools/generate_pdfs.py` | 20,070 | 3e6eea4933a83d6191b412616df6e33a8ecdb679806e055112cfc433a9469a32 |
+| `site/sitemap.xml` | 424 | 32e4a4c91e3b076727a5b577f572702a5c53cf71882b1542968c2b2cfa20b612 |
+| `site/verify.sh` | 10,909 | 075060cd509c8c52e09cb6a356e23dfba595e36f204c095a9c2c2d470379c98a |
+| `tools/build_datasheets.py` | 17,585 | dd9faaac6a8281562e19e576f1b56fe9009890d81ec859d7304d9afa59856e92 |
+| `tools/choose_drafting_colour.py` | 9,153 | 550d14d8a3d4bc7bf4ce50bbc942bde17280a56400547ff63a4b4caa06d3d77b |
+| `tools/datasheets-environment/README.md` | 3,965 | 56cd4d7c9b5e005c05ddbbad30fdfa359bce250eadf3ef1c7f0440be22dda4e7 |
+| `tools/datasheets-environment/conda-explicit-osx-arm64.txt` | 10,524 | 285cf0eadbc86bcbe78cb3c813a96dbabadd71e7c6e2c669b5cd02b8eaae874a |
+| `tools/datasheets-environment/requested-builds.txt` | 519 | aa9ad65db3af4591134608eb5db7f77bb138fd5eb85ca863adcff475a03583f1 |
+| `tools/datasheets-environment/requirements-pip.txt` | 477 | 61a1be1eab6c75f94eb96c1c3c9226fc9dee85f05217d338098a8dff256bd08a |
+| `tools/datasheets-environment/requirements-wheels.txt` | 454 | 66bda2501de0dfae446529e9e2d660aa255e1ccbae93b195080b718e7be9b1fe |
+| `tools/drafting_measurements.json` | 4,620 | 0f677fa3bcdd2bd93b2bc63401e79eef45c12553f13bcbb2ca8f7e178290ed24 |
+| `tools/fonts/DejaVuSans-Bold.ttf` | 693,876 | 7e69e81478e233b81c3ad730f5b10abe76c792d48ec6c3e7cc3b3596a37bb3b1 |
+| `tools/fonts/DejaVuSans.ttf` | 757,076 | 7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954 |
+| `tools/fonts/DejaVuSansMono.ttf` | 340,712 | b4a6c3e4faab8773f4ff761d56451646409f29abedd68f05d38c2df667d3c582 |
+| `tools/fonts/LICENSE-DejaVu.txt` | 4,766 | 4d0644fe20b43d078496305a2c178620ceb71d257e0f623f1bdf07c4561bddd8 |
+| `tools/fonts/README.md` | 1,357 | b8ab6b84c2a8538e73e571aa3db9e1198d5266318e0f595cf068b8f225678f80 |
+| `tools/generate_pdfs.py` | 23,239 | a50425fa9635fcb45c5992a2e76cee8e42f0745a527882af659d2ca61dbc3239 |
+| `tools/handoff_art_colours.json` | 1,112 | cbb2a3989accf6c97b4cc5036f975bcb33b249930d7dd8840b15a020e50ea4c0 |
+| `tools/handoff_drafting_candidates.json` | 61,982 | 63478a002aeb19c2887b5390dd5f945e9bf9944eb96fd36f69896a0ff558af0b |
+| `tools/make_anatomy_plate.py` | 68,870 | f31d2e00e8e723c5319194a79c9ebe8426b75aad0abb2117c36d71e7d68df2da |
+| `tools/make_audit_report.py` | 14,206 | eade21b56dfd08c79784f9c6889421b435a7143596540938f33cc837ec67159e |
+| `tools/make_release_manifest.py` | 6,560 | 41897b949cb8930f131169f2ed855c0365f9a60f10b2ad256df2a972170ba718 |
+| `tools/measure_drafting.py` | 6,134 | 7b1d4a51b438d9d9fa0514a8bffefffefc8e46d722906fd749b39ec98497799e |
+| `tools/test_quotation_punctuation.py` | 2,658 | 2fa0f0d8e5af1741427181a63825c26ade0897aea721de4175e42ddcf950ab40 |

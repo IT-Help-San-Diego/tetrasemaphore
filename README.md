@@ -49,25 +49,26 @@ grew out of the first of these. They are places to read the four, not the edges 
 
 ## How to test it
 
-Every claim here can be checked by someone who does not trust us. Each check below says what it needs, and the first two need nothing but
-your body, or a pen and a scrap of paper. If turning or bending is hard, the pen-and-paper check makes the same moves. **With your body:**
-have someone stand in front of you and watch your head. Stand as you are, and nothing changes (I). Turn around: to them, your left and right
-swap, and your top stays on top (σᵥ). Face them, bend over and look between your legs: your top and bottom swap, and your left and right
-stay put (σₕ). A handstand is the same move. Turn around, then look between your legs: both swap, and you are looking back at where you
-started, upside down (C₂). Each move is its own way back, and any two of the last three make the other. The two moves are the two questions,
-done with the body: turning around reverses the way you face, as NON-NORMATIVE reverses its stance toward the standard, and looking back
-between your legs turns your view away from what is in front of you and back past yourself, as METACOGNITIVE turns from its object back to
-its own frame. **With a pen and paper:** write the letters I, A, D and N in block capitals, hold the page up to a window, and turn it over
-side to side, then top to bottom, then spin it half way round, each time from the start. I survives every move, A only the side-to-side
-turn, D only the top-to-bottom turn, and N only the half-turn: the same four as the semaphores. **With a printer or a phone:** print the
-semaphores or open them on a screen, look only at the mark in the middle, and flip and turn each one. Switch the screen to greyscale, and
-the four still differ by shape alone. **With a computer:** the algebra is machine-checked in the Lean proof assistant, with a script that
-runs under bash, wherever Lean is installed, and a report on what the proofs cover and what they do not: they cover the algebra, not the
-artwork. **With another person:** this is the test that matters most. Teach someone the rule, that each mark survives its own move, in five
-minutes; then show them prints flipped or turned at random, or make the four moves with your body in a random order, and ask which state
-each one is. Guessing gets one in four right, so if people who have just learned the rule do little better, the system does not teach,
-whatever the mathematics says. Whether the semaphores help people think about their thinking is the open question, and these tests are how
-to find out. The details follow.
+Every claim here can be checked by someone who does not trust us. Each check below says what it needs. You can run any of them in your head:
+picture the mark, picture the move, and see whether anything changed. The body and the paper are here because imagination is easy to fool,
+and turning a real card over settles what picturing it only suggests. If turning or bending is hard, the pen-and-paper check makes the same
+moves. **With your body:** have someone stand in front of you and watch your head. Stand as you are, and nothing changes (I). Turn around:
+to them, your left and right swap, and your top stays on top (σᵥ). Face them, bend over and look between your legs: your top and bottom
+swap, and your left and right stay put (σₕ). A handstand is the same move. Turn around, then look between your legs: both swap, and you are
+looking back at where you started, upside down (C₂). Each move is its own way back, and any two of the last three make the other. The two
+moves are the two questions, done with the body: turning around reverses the way you face, as NON-NORMATIVE reverses its stance toward the
+standard, and looking back between your legs turns your view away from what is in front of you and back past yourself, as METACOGNITIVE
+turns from its object back to its own frame. **With a pen and paper:** write the letters I, A, D and N in block capitals, hold the page up
+to a window, and turn it over side to side, then top to bottom, then spin it half way round, each time from the start. I survives every
+move, A only the side-to-side turn, D only the top-to-bottom turn, and N only the half-turn: the same four as the semaphores. **With a
+printer or a phone:** print the semaphores or open them on a screen, look only at the mark in the middle, and flip and turn each one. Switch
+the screen to greyscale, and the four still differ by shape alone. **With a computer:** the algebra is machine-checked in the Lean proof
+assistant, with a script that runs under bash, wherever Lean is installed, and a report on what the proofs cover and what they do not: they
+cover the algebra, not the artwork. **With another person:** this is the test that matters most. Teach someone the rule, that each mark
+survives its own move, in five minutes; then show them prints flipped or turned at random, or make the four moves with your body in a random
+order, and ask which state each one is. Guessing gets one in four right, so if people who have just learned the rule do little better, the
+system does not teach, whatever the mathematics says. Whether the semaphores help people think about their thinking is the open question,
+and these tests are how to find out. The details follow.
 
 **What the tests are for.** The moves are made with the body on purpose. The working hypothesis, untested, is that a move learned together
 with one of the four states can later serve as a cue to stop and check, a way out of a line of thinking, and that with practice it can

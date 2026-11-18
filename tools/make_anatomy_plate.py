@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-make_anatomy_plate.py — build one semaphore DATASHEET for the Tetrasemaphore site.
+make_anatomy_plate.py: build one semaphore DATASHEET of a Tetrasemaphore release.
 
-MOCK-UP for review: design work for site version 1.1. It reads the published
-v1.0.0 tree and writes nothing back to it.
+The builder of one release datasheet from the tag it cites. tools/build_datasheets.py
+stages the inputs from that tag (git show <tag>:<path>) and runs this script once per
+state; it writes nothing back to the tree it reads. A sheet says it is a release file
+only when it is given the release's DOI, and prints a mock-up line otherwise.
 
 The honesty rule this script carries:
   every number, value, tick and label on the sheet is read out of the semaphore's
   master SVG, out of the measurement record generated from it, or quoted from the
-  published note (README.md at v1.0.0), and each one carries its source
+  published note (README.md at the cited tag), and each one carries its source
   (file + sha16 + the field or line it came from) into its callouts JSON.
   Two kinds of mark are drawn that are not data, and the footnote names both:
   the drafting marks (leader lines, number badges, caption boxes, the centre
@@ -27,8 +29,12 @@ Landed in the repository for version 1.1, step 1 (Claude Code, 7 November 2026):
 fonts travel with the toolchain (tools/fonts), SOURCE_DATE_EPOCH pins the clock, and
 tools/build_datasheets.py stages the inputs from the checkout into ./src and runs the
 four states. The drawing code is unchanged from the 23 October 2026 build.
+
+Release 1.1.0: a citation's line range is tested against the lines
+its string occupies in the staged note, and the build stops when the range does not
+contain them (Sources.q).
 """
-import argparse, hashlib, io, json, math, os, re, sys, datetime
+import argparse, bisect, hashlib, io, json, math, os, re, sys, datetime
 import xml.etree.ElementTree as ET
 import cairosvg
 import numpy as np
@@ -339,6 +345,15 @@ class Sources:
         self.note_sha256 = sha(NOTE)
         self.note_sha16 = self.note_sha256[:16]
         self.note_flat = ' '.join(raw.replace('**', '').split())
+        # Where each word of the flattened note sits in the file, so that a citation's line
+        # range can be tested against the lines its string occupies (q below).
+        self._word_start, self._word_line, at = [], [], 0
+        for number, line in enumerate(raw.split('\n'), 1):
+            for word in line.replace('**', '').split():
+                self._word_start.append(at)
+                self._word_line.append(number)
+                at += len(word) + 1
+        assert at - 1 == len(self.note_flat) or not self.note_flat
         self.meas = json.load(open(MEASJSON))
         self.meas_sha16 = sha(MEASJSON, 16)
         self.lean = open(LEANFILE, encoding='utf-8').read()
@@ -349,13 +364,35 @@ class Sources:
         return dict(source=os.path.basename(self.master.path), sha16=self.master.sha16,
                     field=field)
 
+    def lines_of(self, flat):
+        """The lines of the note that a string occupies, as (first, last), once for each
+        place the string stands in the note."""
+        found, i = [], self.note_flat.find(flat)
+        while i != -1:
+            first = self._word_line[bisect.bisect_right(self._word_start, i) - 1]
+            last = self._word_line[bisect.bisect_right(self._word_start, i + len(flat) - 1) - 1]
+            found.append((first, last))
+            i = self.note_flat.find(flat, i + 1)
+        return found
+
     def q(self, text, lines, kind='quote'):
-        """Looks the exact string up in the published note. `kind` records how the
+        """Looks the exact string up in the published note, and tests the line range the
+        citation gives against the lines the string occupies there. `kind` records how the
         sheet presents it: a quotation, or a pointer whose wording is ours."""
         flat = ' '.join(text.split())
         if flat not in self.note_flat:
             self.failed.append(('note', flat[:70]))
             raise AssertionError(f"string not in the published note: {flat[:90]!r}")
+        cited = re.fullmatch(r'(\d+)(?:[\u2013-](\d+))?', lines)
+        if not cited:
+            raise AssertionError(f"a citation's line range must be N or N\u2013M, not {lines!r}")
+        lo, hi = int(cited.group(1)), int(cited.group(2) or cited.group(1))
+        occupied = self.lines_of(flat)
+        if not any(lo <= first and last <= hi for first, last in occupied):
+            self.failed.append(('lines', flat[:70]))
+            where = ', '.join(str(a) if a == b else f'{a} to {b}' for a, b in occupied)
+            raise AssertionError(f"cited as lines {lines} of the note, where the string occupies "
+                                 f"lines {where}: {flat[:90]!r}")
         self.verified.append(('note', kind, flat[:60]))
         return dict(source='README.md at ' + RELEASE['tag'], sha16=self.note_sha16,
                     field=f"lines {lines}", kind=kind)
@@ -410,11 +447,11 @@ class Sources:
 
 
 # ------------------------------------------------- the note's own sentences --
-# Each entry is (text, line range in README.md at v1.0.0, sha c98c3ee4a94a3dae).
+# Each entry is (text, line range in README.md at v1.1.0, sha 1191e5639adb4cfc).
 STANDFIRST = {
     # (shown on the sheet, looked up in the note, line range in that note). The two differ only
     # where the sheet elides; the elision is marked \u2026 and the unelided sentence is what is
-    # verified against the note and recorded, as DATASHEET_SPEC.md section 2 requires.
+    # verified against the note and recorded, as DATASHEET_SPEC.md section 3 requires.
     'NORMATIVE': ("NORMATIVE keeps its stance and looks at its object: what has been tested and "
                   "holds, for now.",
                   "NORMATIVE keeps its stance and looks at its object: what has been tested and "
@@ -498,10 +535,10 @@ def build_stations(m, S):
                       f"\u00b7 both {ro['stroke']}", src=S.m("g#finalA5-rings/circle[2]")),
         ],
         meaning=dict(text="\u201cColour comes second. Shape carries every state.\u201d",
-                     src=S.q("Colour comes second. Shape carries every state.", "100")),
+                     src=S.q("Colour comes second. Shape carries every state.", "101")),
         check=dict(text="Note, test 3 (take the colour away): in greyscale all four can "
                         "still be told apart by shape.",
-                   src=S.q("Take the colour away.", "122", kind='pointer, paraphrased'))))
+                   src=S.q("Take the colour away.", "123", kind='pointer, paraphrased'))))
 
     geo = m.desc.split('Finish:')[0].replace('Geometry:', '').strip().rstrip('.')
     st.append(dict(key='meander', title='The ring of keys, and its gold finish',
@@ -516,10 +553,10 @@ def build_stations(m, S):
         meaning=dict(text="\u201cThe ring's keys all turn one way, so a mirror reverses them, "
                           "while a half-turn leaves the ring as it was.\u201d",
                      src=S.q("The ring's keys all turn one way, so a mirror reverses them, while "
-                             "a half-turn leaves the ring as it was.", "91")),
+                             "a half-turn leaves the ring as it was.", "92")),
         check=dict(text="Note, Reading the semaphores: \u201cCheck the mark, not the "
                         "ring.\u201d",
-                   src=S.q("Check the mark, not the ring.", "91",
+                   src=S.q("Check the mark, not the ring.", "92",
                            kind='pointer with verbatim quotation'))))
 
     st.append(dict(key='legend', title='The plate cut into the ring, and the word',
@@ -536,9 +573,9 @@ def build_stations(m, S):
         meaning=dict(text="\u201c\u2026 each semaphore states it, with its word and with the gold "
                           "line that shows its mirror.\u201d",
                      src=S.q("each semaphore states it, with its word and with the gold line that "
-                             "shows its mirror.", "188\u2013189")),
+                             "shows its mirror.", "189\u2013190")),
         check=dict(text="Note, test 5: cover the words, then ask which state each print is.",
-                   src=S.q("Cover the words, then show them twenty prints", "129",
+                   src=S.q("Cover the words, then show them twenty prints", "130",
                            kind='pointer, paraphrased'))))
 
     # ---- the mark
@@ -622,7 +659,7 @@ def build_stations(m, S):
                          src=S.q("Gold shows what the semaphore's move leaves in place: the whole "
                                  "figure for I, a vertical line for \u03c3\u1d65, a horizontal "
                                  "line for \u03c3\u2095, a single point for C\u2082.",
-                                 "95\u201396")),
+                                 "96\u201397")),
             check=dict(text=f"Lean {FIX_THM[m.state]}: {FIX_SAYS[m.state]}.",
                        src=S.thm(FIX_THM[m.state]))))
 
@@ -668,7 +705,7 @@ def build_stations(m, S):
                            "mark in station 5 is itself the gold, filled " + m.glyph_fill + ".",
                       src=S.m("g#glyph-body/@inkscape:label, @fill"), kind='close paraphrase',
                       note=dict(text="\u201c\u2026 the whole figure for I \u2026\u201d",
-                                src=S.q("the whole figure for I", "95")))
+                                src=S.q("the whole figure for I", "96")))
     elif not m.marks:
         absent = dict(title='No symmetry marks here',
                       text="This master carries no symmetry-mark layer. The bars on the other "
@@ -677,7 +714,7 @@ def build_stations(m, S):
                       src=S.m("g#symmetry-marks absent from the file"),
                       kind='observed absence, with our reading of why',
                       note=dict(text="\u201c\u2026 a single point for C\u2082.\u201d",
-                                src=S.q("a single point for C\u2082", "95\u201396")))
+                                src=S.q("a single point for C\u2082", "96\u201397")))
     return st, absent
 
 

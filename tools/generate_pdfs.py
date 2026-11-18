@@ -1,19 +1,31 @@
 #!/usr/bin/env python3
-"""tools/generate_pdfs.py: typeset the two release PDFs of The Tetrasemaphore 1.0.0 from the approved sources.
+"""tools/generate_pdfs.py: typeset the two release PDFs of The Tetrasemaphore from the approved sources.
 
 Spec: Claude Science's PDF spec for release 1.0.0 (22 October 2026, 18:59Z, with its update of 19:00Z; the project's decision log, item 118).
 Pipeline: source markdown -> pandoc (-f gfm -t typst) -> the Typst template below -> typst compile (PDF/A-2a).
 Standard-library Python only. Every input is checked by sha256 before use and the run stops on the first mismatch.
-Nothing is read from outside the release tree, the font folder and the build folder; nothing is written into the release tree.
+Nothing is read from outside the release tree, the font folder and the build folder; nothing is written into the release tree
+unless an --out folder is inside it.
 
 The two PDFs:
   pdf/TETRASEMAPHORE-PUBLIC-NOTE.pdf      from README.md                                  (cover title: The Tetrasemaphore)
   pdf/TETRASEMAPHORE-METHODS-NOTE-01.pdf  from methods/tetrasemaphore-methods-note-01-rev1.md (cover title: the source's first line)
 
+Since release 1.1.0 each PDF carries the release it was typeset for (DOCS below: version, DOI, timestamp, and the sha256 and
+size of the file that release published). A PDF is typeset again only when its source changes. README.md changed in 1.1.0, so
+the public note is typeset for 1.1.0; the methods note did not change, so its PDF stays the file published in 1.0.0. A run
+builds every PDF with its own release's version, DOI and timestamp and stops unless each is byte for byte the recorded file,
+so a source that changes without its PDF, or a PDF that no longer rebuilds, stops the run.
+
 Usage (from anywhere):
   python3 tools/generate_pdfs.py --tree <release tree> --font-dir <folder with the seven DejaVu 2.37 files>
-      --timestamp <unix epoch> (--doi 10.5281/zenodo.<n> | --doi-pending) [--suffix -PREVIEW]
       --build <build folder> --out <folder> [--out <another folder>]
+          rebuild both PDFs as recorded and check them against the record
+  ... --first-typesetting
+          for a PDF whose record has no sha256 yet: build it with the recorded version, DOI and timestamp and print the
+          hash and size to record; PDFs that have a recorded hash are still checked
+  ... --doi-pending --suffix=-PREVIEW --timestamp <unix epoch>
+          a preview: "DOI pending" wherever the DOI goes, the given timestamp, nothing checked against the record
 The same inputs and timestamp give byte-identical PDFs.
 """
 import argparse, hashlib, json, os, re, shutil, subprocess, sys
@@ -23,7 +35,7 @@ TYPST_VERSION = '0.14.2'
 
 # Inputs by sha256 (release paths; the full hashes are the rows of the release manifest and the font files' own hashes).
 SOURCES = {
-    'README.md': ('c98c3ee4a94a3daee326e7a2c41bf9af700f775132555241536c0076a6420927', 23648),  # the public note, version 2 (Carey's approval, item 148; NOTE-V2-TEXT-PASS 1ab9ba1cf43bba71)
+    'README.md': ('1191e5639adb4cfc48bd5abfdc0993208860b66d3ac4b1819a891ebbe574a210', 23880),  # the public note as released in 1.1.0, with the two lines approved on 6 November 2026 that the note carries (in 1.0.0: c98c3ee4a94a3dae, 23648 bytes)
     'methods/tetrasemaphore-methods-note-01-rev1.md': ('46f436d9ef3a35ceceec395a4f86009e8bfa094fcf786fbb1e9da468b518cb05', 15308),
 }
 PNG_DIR = 'artwork/master/states/proposals/notation/final-masters-2026-10-05/png'
@@ -46,8 +58,7 @@ FONTS = {  # DejaVu 2.37, the files LibreOffice ships
 # The fixed strings of the spec's section 5, each with its source.
 EYEBROW = 'Tetrasemaphore \u00b7 V\u2084 = {I, \u03c3\u1d65, \u03c3\u2095, C\u2082}'   # site/note.html, the eyebrow
 AUTHOR = 'Carey James Balboa'                                                 # NOTICE; the creator
-VERSION_LINE = 'Version 1.0.0'                                                # the release
-HEADER_VERSION = '1.0.0'                                                      # the release
+VERSION_WORD = 'Version'                                                      # the cover line and the citation: 'Version ' + the PDF's release
 LICENCE = 'CC BY 4.0'                                                         # NOTICE; LICENSE
 SITE = 'tetrasemaphore.systems'                                               # the site
 SITE_URL = 'https://tetrasemaphore.systems/'
@@ -63,6 +74,9 @@ DOCS = [
         'title': 'The Tetrasemaphore',                       # site/note.html h1; the Zenodo title
         'header_left': 'The Tetrasemaphore \u00b7 ' + PUBLIC_NOTE_MENU,
         'title_from_first_line': False,
+        # typeset for 1.1.0, in which README.md changed
+        'release': {'version': '1.1.0', 'doi': '10.5281/zenodo.24267509', 'timestamp': 1794961781,
+                    'sha256': '1e290e0f2198ffc439a83873b48d3d8e3ce29cfec8b2792946fc055a02c46197', 'bytes': 2802972},
     },
     {   # the methods note
         'name': 'TETRASEMAPHORE-METHODS-NOTE-01',
@@ -70,11 +84,14 @@ DOCS = [
         'title': None,                                        # the source's first line, without its '# '
         'header_left': None,                                  # the source's title
         'title_from_first_line': True,
+        # unchanged since 1.0.0: the file that release published, kept byte for byte
+        'release': {'version': '1.0.0', 'doi': '10.5281/zenodo.23575816', 'timestamp': 1792709396,
+                    'sha256': '3bf981b258544cf15c2c2c22ef9aad1433a8a32bea2bff79e6d6fd601191ad36', 'bytes': 2796025},
     },
 ]
 
 # The Typst template. @@TOKENS@@ are replaced by this script; the body is pandoc's typst for the source.
-TEMPLATE = r'''// The Tetrasemaphore 1.0.0: generated by tools/generate_pdfs.py from @@SOURCE_PATH@@ (sha256 @@SOURCE_SHA16@@). Do not edit.
+TEMPLATE = r'''// The Tetrasemaphore @@VERSION@@: generated by tools/generate_pdfs.py from @@SOURCE_PATH@@ (sha256 @@SOURCE_SHA16@@). Do not edit.
 #let ground = rgb("#0d1117")
 #let fg = rgb("#e8e4dc")
 #let gold = rgb("#d4a853")
@@ -139,7 +156,7 @@ TEMPLATE = r'''// The Tetrasemaphore 1.0.0: generated by tools/generate_pdfs.py 
 
   #text(font: sans, size: 9pt, fill: fg)[#link("@@SITE_URL@@")[@@SITE@@] · #link("@@REPO_URL@@")[@@REPO@@]]
   #v(12pt)
-  #text(font: sans, size: 8pt, fill: muted)[Cite as: Balboa, C. J. (2026). The Tetrasemaphore (Version 1.0.0). Zenodo. #doi-link(cite-tail)]
+  #text(font: sans, size: 8pt, fill: muted)[Cite as: Balboa, C. J. (2026). The Tetrasemaphore (@@VERSION_LINE@@). Zenodo. #doi-link(cite-tail)]
 ]
 
 // Pages 2 onward: white, for reading and printing.
@@ -203,24 +220,26 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--tree', default=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')), help='the release tree (default: the parent of this file\'s folder)')
     ap.add_argument('--font-dir', required=True, help='folder holding the seven DejaVu 2.37 files')
-    ap.add_argument('--timestamp', required=True, type=int, help='unix epoch used as the PDFs\' creation date (recorded; a rebuild with it is byte-identical)')
-    g = ap.add_mutually_exclusive_group(required=True)
-    g.add_argument('--doi', help='the reserved DOI, as 10.5281/zenodo.<n>')
-    g.add_argument('--doi-pending', action='store_true', help='preview: the string "DOI pending" wherever the DOI goes, with no link')
-    ap.add_argument('--suffix', default='', help='appended to the PDF names, e.g. -PREVIEW')
+    ap.add_argument('--timestamp', type=int, help='preview only: unix epoch used as the PDFs\' creation date (a release PDF takes its recorded timestamp)')
+    ap.add_argument('--doi-pending', action='store_true', help='preview: the string "DOI pending" wherever the DOI goes, with no link, and nothing checked against the record')
+    ap.add_argument('--first-typesetting', action='store_true', help='build a PDF whose record has no sha256 yet and print the hash and size to record')
+    ap.add_argument('--suffix', default='', help='preview only: appended to the PDF names; write it with an equals sign, --suffix=-PREVIEW')
     ap.add_argument('--build', required=True, help='build folder: the .typ files, the copied pictures and the report')
     ap.add_argument('--out', action='append', required=True, help='output folder for the PDFs (repeatable; every copy is the same bytes)')
     ap.add_argument('--pandoc', default='pandoc'); ap.add_argument('--typst', default='typst')
     ap.add_argument('--allow-other-versions', action='store_true')
     A = ap.parse_args()
 
-    if A.doi and not re.fullmatch(r'10\.5281/zenodo\.[0-9]+', A.doi):
-        sys.exit('STOP: the DOI must be 10.5281/zenodo.<n> with n digits only; got %r' % A.doi)
-    if A.doi_pending and not A.suffix.strip():
-        sys.exit('STOP: a render with "DOI pending" is a preview: pass --suffix -PREVIEW')
+    for doc in DOCS:
+        if not re.fullmatch(r'10\.5281/zenodo\.[0-9]+', doc['release']['doi']):
+            sys.exit('STOP: the DOI must be 10.5281/zenodo.<n> with n digits only; got %r' % doc['release']['doi'])
+    if A.doi_pending and (not A.suffix.strip() or A.timestamp is None):
+        sys.exit('STOP: a render with "DOI pending" is a preview: pass --suffix=-PREVIEW and --timestamp')
+    if not A.doi_pending and (A.suffix or A.timestamp is not None):
+        sys.exit('STOP: --suffix and --timestamp belong to a preview (--doi-pending); a release PDF takes its recorded timestamp and name')
 
-    report = {'tree': os.path.abspath(A.tree), 'font_dir': os.path.abspath(A.font_dir), 'timestamp': A.timestamp,
-              'doi': A.doi or DOI_PENDING, 'suffix': A.suffix, 'inputs': [], 'tools': {}, 'outputs': []}
+    report = {'tree': os.path.abspath(A.tree), 'font_dir': os.path.abspath(A.font_dir),
+              'preview': bool(A.doi_pending), 'suffix': A.suffix, 'inputs': [], 'tools': {}, 'outputs': []}
 
     # 1. Tools.
     report['tools']['pandoc'] = tool_version(A.pandoc, 'pandoc', PANDOC_VERSION, A.allow_other_versions)
@@ -242,11 +261,13 @@ def main():
     for out in A.out:
         os.makedirs(out, exist_ok=True)
 
-    doi_text = ('DOI ' + A.doi) if A.doi else DOI_PENDING
-    doi_url = ('https://doi.org/' + A.doi) if A.doi else ''
-    cite_tail = doi_url if A.doi else DOI_PENDING
-
     for doc in DOCS:
+        rel = doc['release']                      # the release this PDF was typeset for
+        doi = None if A.doi_pending else rel['doi']
+        timestamp = A.timestamp if A.doi_pending else rel['timestamp']
+        doi_text = ('DOI ' + doi) if doi else DOI_PENDING
+        doi_url = ('https://doi.org/' + doi) if doi else ''
+        cite_tail = doi_url if doi else DOI_PENDING
         src_rel = doc['source']; src = os.path.join(A.tree, src_rel)
         src_sha = SOURCES[src_rel][0]
         with open(src, 'rb') as f:
@@ -285,9 +306,9 @@ def main():
         lines = ''.join('    transform("%s"),\n' % typst_string(l) for w, c, l, h, n, alt in SEMAPHORES)
         rep = {
             '@@SOURCE_PATH@@': src_rel, '@@SOURCE_SHA16@@': src_sha[:16], '@@TITLE@@': typst_string(title),
-            '@@HEADER_LEFT@@': typst_string(header_left), '@@HEADER_VERSION@@': HEADER_VERSION,
+            '@@HEADER_LEFT@@': typst_string(header_left), '@@HEADER_VERSION@@': rel['version'], '@@VERSION@@': rel['version'],
             '@@DOI_TEXT@@': doi_text, '@@DOI_URL@@': doi_url, '@@CITE_TAIL@@': cite_tail,
-            '@@AUTHOR@@': AUTHOR, '@@EYEBROW@@': EYEBROW, '@@VERSION_LINE@@': VERSION_LINE, '@@LICENCE@@': LICENCE,
+            '@@AUTHOR@@': AUTHOR, '@@EYEBROW@@': EYEBROW, '@@VERSION_LINE@@': VERSION_WORD + ' ' + rel['version'], '@@LICENCE@@': LICENCE,
             '@@SITE@@': SITE, '@@SITE_URL@@': SITE_URL, '@@REPO@@': REPO, '@@REPO_URL@@': REPO_URL,
             '@@SEMAPHORE_ROW@@': (images + words + lines).rstrip('\n'),
             '@@PANDOC_VERSION@@': report['tools']['pandoc'], '@@TYPST_VERSION@@': report['tools']['typst'], '@@PNG_DIR@@': PNG_DIR,
@@ -305,16 +326,29 @@ def main():
         # 5. typst compile, PDF/A-2a, the seven fonts only, the recorded timestamp.
         pdf_name = doc['name'] + A.suffix + '.pdf'
         cmd = [A.typst, 'compile', '--root', bdir, '--ignore-system-fonts', '--ignore-embedded-fonts', '--font-path', os.path.abspath(A.font_dir),
-               '--pdf-standard', 'a-2a', '--creation-timestamp', str(A.timestamp), typ_name, pdf_name]
+               '--pdf-standard', 'a-2a', '--creation-timestamp', str(timestamp), typ_name, pdf_name]
         t = subprocess.run(cmd, cwd=bdir, capture_output=True, encoding='utf-8', errors='replace')
         if t.returncode != 0:
             sys.exit('STOP: typst failed on %s:\n%s' % (typ_name, t.stderr))
         built = os.path.join(bdir, pdf_name)
         out_sha = sha256(built)
-        report['outputs'].append({'pdf': pdf_name, 'sha256': out_sha, 'bytes': os.path.getsize(built), 'typ_sha256': sha256(os.path.join(bdir, typ_name)),
+        out_bytes = os.path.getsize(built)
+        if A.doi_pending:
+            against = 'preview, not checked'
+        elif rel['sha256'] is None:
+            if not A.first_typesetting:
+                sys.exit('STOP: %s has no recorded sha256; pass --first-typesetting, then record the hash and size it prints' % pdf_name)
+            against = 'FIRST TYPESETTING: record sha256 %s and bytes %d in DOCS' % (out_sha, out_bytes)
+        elif out_sha != rel['sha256'] or out_bytes != rel['bytes']:
+            sys.exit('STOP: %s is not the file release %s published\n  recorded %s %d\n  built    %s %d' % (
+                pdf_name, rel['version'], rel['sha256'], rel['bytes'], out_sha, out_bytes))
+        else:
+            against = 'byte for byte the file of release %s' % rel['version']
+        report['outputs'].append({'pdf': pdf_name, 'sha256': out_sha, 'bytes': out_bytes, 'typ_sha256': sha256(os.path.join(bdir, typ_name)),
                                   'source': src_rel, 'title': title, 'built': built, 'copies': [], 'typst_stderr': t.stderr.strip(),
+                                  'version': rel['version'], 'doi': doi or DOI_PENDING, 'timestamp': timestamp, 'record': against,
                                   'command': ' '.join(cmd)})
-        print('%s  %d bytes  sha256 %s  <- %s' % (pdf_name, os.path.getsize(built), out_sha[:16], src_rel))
+        print('%s  %d bytes  sha256 %s  <- %s  (%s)' % (pdf_name, out_bytes, out_sha[:16], src_rel, against))
 
     # 6. Both built: now the copies into every --out folder (nothing is copied if either PDF failed).
     for o in report['outputs']:

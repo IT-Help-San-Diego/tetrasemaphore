@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T18:33:36+00:00",
+ "generated": "2026-11-18T01:33:20+00:00",
  "kind": "Release file for v1.1.0",
  "state": "CRITICAL",
  "notation": "C₂",
@@ -11,7 +11,7 @@
  "standfirst": {
   "text": "CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.",
   "source": "README.md at v1.1.0",
-  "sha16": "eac1dee95aa6a61b",
+  "sha16": "1191e5639adb4cfc",
   "field": "lines 16–17",
   "kind": "quote",
   "unelided": "CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong."
@@ -45,7 +45,7 @@
   },
   "note": {
    "file": "README.md at v1.1.0",
-   "sha256": "eac1dee95aa6a61b5c09857476578fced15d878637fbf3fa8e96e9d699a223a6"
+   "sha256": "1191e5639adb4cfc48bd5abfdc0993208860b66d3ac4b1819a891ebbe574a210"
   },
   "measurements": {
    "file": "notation-measurements.json",
@@ -134,16 +134,16 @@
    ],
    "meaning": {
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 100",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 101",
     "kind": "quote",
     "text": "“Colour comes second. Shape carries every state.”"
    },
    "check": {
     "text": "Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape.",
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 122",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 123",
     "kind": "pointer, paraphrased"
    }
   },
@@ -176,16 +176,16 @@
    ],
    "meaning": {
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 91",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 92",
     "kind": "quote",
     "text": "“The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.”"
    },
    "check": {
     "text": "Note, Reading the semaphores: “Check the mark, not the ring.”",
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 91",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 92",
     "kind": "pointer with verbatim quotation"
    }
   },
@@ -217,16 +217,16 @@
    ],
    "meaning": {
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 188–189",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 189–190",
     "kind": "quote",
     "text": "“… each semaphore states it, with its word and with the gold line that shows its mirror.”"
    },
    "check": {
     "text": "Note, test 5: cover the words, then ask which state each print is.",
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 129",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 130",
     "kind": "pointer, paraphrased"
    }
   },
@@ -257,7 +257,7 @@
    ],
    "meaning": {
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
+    "sha16": "1191e5639adb4cfc",
     "field": "lines 22–23",
     "kind": "quote",
     "text": "“Each semaphore's mark is built to survive its own move …”"
@@ -302,8 +302,8 @@
    ],
    "meaning": {
     "source": "README.md at v1.1.0",
-    "sha16": "eac1dee95aa6a61b",
-    "field": "lines 95–96",
+    "sha16": "1191e5639adb4cfc",
+    "field": "lines 96–97",
     "kind": "quote",
     "text": "“Gold shows what the semaphore's move leaves in place: … a single point for C₂.”"
    },
@@ -325,8 +325,8 @@
   "note": {
    "text": "“… a single point for C₂.”",
    "source": "README.md at v1.1.0",
-   "sha16": "eac1dee95aa6a61b",
-   "field": "lines 95–96",
+   "sha16": "1191e5639adb4cfc",
+   "field": "lines 96–97",
    "kind": "quote"
   }
  },
@@ -364,7 +364,7 @@
  "drafting": {
   "colour": "#C3E6FF",
   "name": "ice blue",
-  "chosen_by": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia and tritanopia under two models - among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
+  "chosen_by": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views (normal vision and protanopia, deuteranopia and tritanopia under two models) among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
   "colour_vision": {
    "normal": {
     "min_de_art": 21.42,

@@ -3,7 +3,7 @@ message: "If you reference the Tetrasemaphore, please cite this release. The Tet
 title: "The Tetrasemaphore"
 type: software
 version: "1.1.0"
-date-released: "2026-11-15"
+date-released: "2026-11-17"
 doi: "10.5281/zenodo.24267509"
 url: "https://tetrasemaphore.systems/"
 repository-code: "https://github.com/IT-Help-San-Diego/tetrasemaphore"

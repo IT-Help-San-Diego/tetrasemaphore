@@ -1,10 +1,10 @@
 # Datasheet audit report
 
-Four sheets, one template. Generated 2026-11-17 (UTC).
+Four sheets, one template. Generated 2026-11-18 (UTC).
 
 Sources, all read from the published tree at `v1.1.0` (Zenodo 10.5281/zenodo.24267509):
 
-- published note: `README.md at v1.1.0`, sha256 `eac1dee95aa6a61b`
+- published note: `README.md at v1.1.0`, sha256 `1191e5639adb4cfc`
 - measurement record: `notation-measurements.json`, sha16 `24c49d6bafacdaf5`
 - proofs: `proofs/TetrasemaphoreAlgebra.lean at v1.1.0`, sha16 `f066faf6595d22e9`
 - masters and site assets: per sheet, below.
@@ -25,21 +25,21 @@ Every cited string, quotation and pointer alike, is looked up in the published n
 
 ## Every quotation, by sheet
 
-Line numbers are in the published note, sha256 `eac1dee95aa6a61b`.
+Line numbers are in the published note, sha256 `1191e5639adb4cfc`.
 
 ### NORMATIVE
 
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
 | standfirst | “NORMATIVE keeps its stance and looks at its object: what has been tested and holds, for now.” | 12–13 | quote |
-| 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
-| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
-| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 2 rings | “Colour comes second. Shape carries every state.” | 101 | quote |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 123 | pointer, paraphrased |
+| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 92 | quote |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 92 | pointer with verbatim quotation |
+| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 189–190 | quote |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 130 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
-| absent note | “… the whole figure for I …” | 95 | quote |
+| absent note | “… the whole figure for I …” | 96 | quote |
 
 Master: `MASTER-medallion-NORMATIVE-notation-slot820.svg`, sha256 `e0b6366d5c032523`. Site asset: `TETRASEMAPHORE-NORMATIVE-en-1298.png`, sha16 `eacf65bc9181f649`. Scale: 1 mm = 7.9778 slot units (102.786 mm across).
 
@@ -48,14 +48,14 @@ Master: `MASTER-medallion-NORMATIVE-notation-slot820.svg`, sha256 `e0b6366d5c032
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
 | standfirst | “NON-NORMATIVE mirrors its stance and looks at its object: exploration that stands alongside the standard without claiming to replace it.” | 13–14 | quote |
-| 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
-| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
-| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 2 rings | “Colour comes second. Shape carries every state.” | 101 | quote |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 123 | pointer, paraphrased |
+| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 92 | quote |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 92 | pointer with verbatim quotation |
+| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 189–190 | quote |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 130 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
-| 6 fix | “Gold shows what the semaphore's move leaves in place: … a vertical line for σᵥ …” | 95–96 | quote |
+| 6 fix | “Gold shows what the semaphore's move leaves in place: … a vertical line for σᵥ …” | 96–97 | quote |
 
 Master: `MASTER-medallion-NON-NORMATIVE-notation-slot820.svg`, sha256 `4ef1de6ae126279e`. Site asset: `TETRASEMAPHORE-NON-NORMATIVE-en-1298.png`, sha16 `658837bd2d2802b3`. Scale: 1 mm = 7.9778 slot units (102.786 mm across).
 
@@ -64,14 +64,14 @@ Master: `MASTER-medallion-NON-NORMATIVE-notation-slot820.svg`, sha256 `4ef1de6ae
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
 | standfirst | “METACOGNITIVE keeps its stance but turns its look back to its own frame. …” | 14–16 | quote |
-| 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
-| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
-| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 2 rings | “Colour comes second. Shape carries every state.” | 101 | quote |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 123 | pointer, paraphrased |
+| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 92 | quote |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 92 | pointer with verbatim quotation |
+| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 189–190 | quote |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 130 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
-| 6 fix | “Gold shows what the semaphore's move leaves in place: … a horizontal line for σₕ …” | 95–96 | quote |
+| 6 fix | “Gold shows what the semaphore's move leaves in place: … a horizontal line for σₕ …” | 96–97 | quote |
 
 Master: `MASTER-medallion-METACOGNITIVE-notation-slot820.svg`, sha256 `cccfcff10dc74930`. Site asset: `TETRASEMAPHORE-METACOGNITIVE-en-1298.png`, sha16 `0f050e240c74e952`. Scale: 1 mm = 7.9778 slot units (102.786 mm across).
 
@@ -80,15 +80,15 @@ Master: `MASTER-medallion-METACOGNITIVE-notation-slot820.svg`, sha256 `cccfcff10
 | station | text on the sheet | lines | kind |
 |---|---|---|---|
 | standfirst | “CRITICAL does both at once: it turns over the framework a claim rests on, treating every baseline assumption as possibly wrong.” | 16–17 | quote |
-| 2 rings | “Colour comes second. Shape carries every state.” | 100 | quote |
-| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 122 | pointer, paraphrased |
-| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 91 | quote |
-| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 91 | pointer with verbatim quotation |
-| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 188–189 | quote |
-| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 129 | pointer, paraphrased |
+| 2 rings | “Colour comes second. Shape carries every state.” | 101 | quote |
+| 2 rings | Note, test 3 (take the colour away): in greyscale all four can still be told apart by shape. | 123 | pointer, paraphrased |
+| 3 meander | “The ring's keys all turn one way, so a mirror reverses them, while a half-turn leaves the ring as it was.” | 92 | quote |
+| 3 meander | Note, Reading the semaphores: “Check the mark, not the ring.” | 92 | pointer with verbatim quotation |
+| 4 legend | “… each semaphore states it, with its word and with the gold line that shows its mirror.” | 189–190 | quote |
+| 4 legend | Note, test 5: cover the words, then ask which state each print is. | 130 | pointer, paraphrased |
 | 5 mark | “Each semaphore's mark is built to survive its own move …” | 22–23 | quote |
-| 6 fix | “Gold shows what the semaphore's move leaves in place: … a single point for C₂.” | 95–96 | quote |
-| absent note | “… a single point for C₂.” | 95–96 | quote |
+| 6 fix | “Gold shows what the semaphore's move leaves in place: … a single point for C₂.” | 96–97 | quote |
+| absent note | “… a single point for C₂.” | 96–97 | quote |
 
 Master: `MASTER-medallion-CRITICAL-notation-slot820.svg`, sha256 `33413c4af9ec838c`. Site asset: `TETRASEMAPHORE-CRITICAL-en-1298.png`, sha16 `a43da812ca3a7c88`. Scale: 1 mm = 7.9778 slot units (102.786 mm across).
 
@@ -106,7 +106,7 @@ Master: `MASTER-medallion-CRITICAL-notation-slot820.svg`, sha256 `33413c4af9ec83
 
 ## The drafting style
 
-All drafting marks on all four sheets are drawn in **ice blue `#C3E6FF`** over a halo in each sheet's own ground, 4 px each side at 2400 px wide (2 px at the 1200 px preview). The colour was chosen by measurement: largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia and tritanopia under two models - among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates. It appears in none of the four semaphores' art.
+All drafting marks on all four sheets are drawn in **ice blue `#C3E6FF`** over a halo in each sheet's own ground, 4 px each side at 2400 px wide (2 px at the 1200 px preview). The colour was chosen by measurement: largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views (normal vision and protanopia, deuteranopia and tritanopia under two models) among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates. It appears in none of the four semaphores' art.
 
 | measurement | value |
 |---|---|

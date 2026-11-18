@@ -64,7 +64,7 @@
  "search_first": "#CFF2FF",
  "search_first_de": 16.31,
  "axis_clear_of_art_px": 3,
- "rule": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia and tritanopia under two models - among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
+ "rule": "largest minimum CIEDE2000 difference from the four semaphores' art and from the text colours, taken as the worst of seven views (normal vision and protanopia, deuteranopia and tritanopia under two models) among candidates clearing 7:1 on all four grounds; the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
  "ciede2000_to_art": [
   {
    "dE": 21.42,

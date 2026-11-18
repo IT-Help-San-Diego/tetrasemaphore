@@ -4,3 +4,9 @@ Copyright 2026 Carey James Balboa
 The code in this repository (the Lean proofs, the checker and the build scripts: the files ending .lean, .sh, .py or .js, and
 proofs/lean-toolchain) is licensed under the Apache License 2.0; see LICENSE-CODE. Everything else, the text and the art, is
 licensed under CC BY 4.0; see LICENSE.
+
+The three font files in tools/fonts/ (DejaVuSans.ttf, DejaVuSans-Bold.ttf, DejaVuSansMono.ttf) are not this project's work
+and are not under either licence above: they are under the DejaVu fonts licence; see tools/fonts/LICENSE-DejaVu.txt. The two
+PDFs in pdf/ embed subsets of DejaVu fonts, which stay under the same licence.
+
+Words quoted from others, and the texts of the licences themselves, are not this project's work and are not relicensed by it.

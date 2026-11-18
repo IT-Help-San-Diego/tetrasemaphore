@@ -85,8 +85,8 @@ out = dict(
     search_first_de=(cand['ranked'][0]['min_de_overall'] if cand.get('ranked') else None),
     axis_clear_of_art_px=mk.Draft.CLEAR_OF_ART,
     rule="largest minimum CIEDE2000 difference from the four semaphores' art and from the text "
-         "colours, taken as the worst of seven views - normal vision and protanopia, deuteranopia "
-         "and tritanopia under two models - among candidates clearing 7:1 on all four grounds; "
+         "colours, taken as the worst of seven views (normal vision and protanopia, deuteranopia "
+         "and tritanopia under two models) among candidates clearing 7:1 on all four grounds; "
          "the colour in use is Carey's pick from a preview, 20th of 8486 qualifying candidates",
     ciede2000_to_art=[dict(dE=d, hex=h) for d, h in art_tbl],
     min_de_art=art_tbl[0][0], nearest_art=art_tbl[0][1],
