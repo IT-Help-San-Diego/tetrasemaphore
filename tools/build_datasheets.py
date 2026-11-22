@@ -31,7 +31,7 @@ What it does, in order:
      interpreter check, every input with its source and hash, the citation, the clocks, the
      punctuation test's result, the products;
   6. with --verify, compares the build with the copies committed in the checkout
-     (site/assets/datasheet_*.png, docs/datasheet-audit/audit_*.json, docs/AUDIT_REPORT.md),
+     (semaphores/datasheets/datasheet_*.png, docs/datasheet-audit/audit_*.json, docs/AUDIT_REPORT.md),
      taking each state's clock from the committed audit JSON, and exits 1 on any difference.
 
 Usage:
@@ -50,9 +50,15 @@ TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 
 # what make_anatomy_plate.py reads (its ./src contract): repository path -> staged path
-MASTERS_REL = 'artwork/master/states/proposals/notation/final-masters-2026-10-05'
-def inputs_for(tag):
+MASTERS_SUB = 'master/states/proposals/notation/final-masters-2026-10-05'
+ARTWORK_TAGS = ('v1.0.0', 'v1.1.0')     # the releases whose build record sits under artwork/; from 1.2.0 it is build-record/
+def masters_rel(tag, from_tag=True):
+    """The sealed masters' folder: under artwork/ in the trees of 1.0.0 and 1.1.0, under build-record/ in a later
+    tree and in the working tree. The build reads the build record's own files, not the copies in semaphores/."""
+    return ('artwork/' if from_tag and tag in ARTWORK_TAGS else 'build-record/') + MASTERS_SUB
+def inputs_for(tag, from_tag=True):
     """The repository paths the build reads, and the names make_anatomy_plate.py expects them under src/."""
+    MASTERS_REL = masters_rel(tag, from_tag)
     return [(f'{MASTERS_REL}/MASTER-medallion-{s}-notation-slot820.svg',
              os.path.join('src', 'masters', f'MASTER-medallion-{s}-notation-slot820.svg')) for s in STATES] + [
             ('README.md', os.path.join('src', f'README-{tag}.md')),
@@ -63,8 +69,8 @@ def inputs_for(tag):
 TOOL_INPUTS = [(os.path.join(TOOLS, 'drafting_measurements.json'), 'drafting_measurements.json')]
 
 # where the checkout commits the build's products (--verify compares against these)
-COMMITTED = {f'datasheet_{s}.png': os.path.join(ROOT, 'site', 'assets', f'datasheet_{s}.png') for s in STATES}
-COMMITTED.update({f'datasheet_{s}_1200.png': os.path.join(ROOT, 'site', 'assets', f'datasheet_{s}_1200.png') for s in STATES})
+COMMITTED = {f'datasheet_{s}.png': os.path.join(ROOT, 'semaphores', 'datasheets', f'datasheet_{s}.png') for s in STATES}
+COMMITTED.update({f'datasheet_{s}_1200.png': os.path.join(ROOT, 'semaphores', 'datasheets', f'datasheet_{s}_1200.png') for s in STATES})
 COMMITTED.update({f'audit_{s}.json': os.path.join(ROOT, 'docs', 'datasheet-audit', f'audit_{s}.json') for s in STATES})
 COMMITTED['AUDIT_REPORT.md'] = os.path.join(ROOT, 'docs', 'AUDIT_REPORT.md')
 
@@ -207,6 +213,8 @@ def main():
     # 2. stage the inputs, from the cited release when the checkout's history has it
     from_tag = git_show(a.cited_tag, 'README.md') is not None
     inputs_from = f'git show {a.cited_tag}' if from_tag else 'working tree'
+    if not from_tag:
+        INPUTS = inputs_for(a.cited_tag, from_tag=False)      # the working tree's layout, not the cited tag's
     if not from_tag:
         print(f'WARNING: {a.cited_tag} is not available from git here; staging the inputs from the working tree, '
               f'which may not be the note the sheets cite')

@@ -167,24 +167,6 @@ SEALED_ASSETS = {
     "assets/TETRASEMAPHORE-NORMATIVE-es-512.png": "1c49f6829a561265",
     "assets/og-card.jpg": "a175dc759f3a2fd9",
     "assets/og-card.png": "0cf08ac9028fc22d",
-    "assets/datasheet_CRITICAL.png": "4c9551dd62a858c0",
-    "assets/datasheet_CRITICAL_1200.png": "f7c6ce81ccee3230",
-    "assets/datasheet_METACOGNITIVE.png": "4b828da69e24e11a",
-    "assets/datasheet_METACOGNITIVE_1200.png": "96dd95ac8c62a9e3",
-    "assets/datasheet_NON-NORMATIVE.png": "46b54095cf8c2d48",
-    "assets/datasheet_NON-NORMATIVE_1200.png": "c8b63aac9d7098b7",
-    "assets/datasheet_NORMATIVE.png": "170fd2d257d29235",
-    "assets/datasheet_NORMATIVE_1200.png": "0af73e505b085f6b",
-}
-DATASHEET_PNGS = {
-    "assets/datasheet_CRITICAL.png",
-    "assets/datasheet_CRITICAL_1200.png",
-    "assets/datasheet_METACOGNITIVE.png",
-    "assets/datasheet_METACOGNITIVE_1200.png",
-    "assets/datasheet_NON-NORMATIVE.png",
-    "assets/datasheet_NON-NORMATIVE_1200.png",
-    "assets/datasheet_NORMATIVE.png",
-    "assets/datasheet_NORMATIVE_1200.png",
 }
 
 actual_assets = {}
@@ -221,8 +203,6 @@ for p in sorted(glob.glob("assets/*.png")):
         if ctype == b"pHYs" and len(cdata) == 9:
             phys_data = struct.unpack(">IIB", cdata)
         pos += 12 + ln
-    if p in DATASHEET_PNGS:
-        continue
     if b"sRGB" not in chunks or b"pHYs" not in chunks:
         bad(f"{p}: missing sRGB or pHYs chunk")
     elif phys_data is None or phys_data[2] != 1 or not (11810 <= phys_data[0] <= 11812 and 11810 <= phys_data[1] <= 11812):
