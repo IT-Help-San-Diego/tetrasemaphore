@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0] — 2026-11-22
+
+Version DOI `10.5281/zenodo.24448318` (concept DOI `10.5281/zenodo.23575814`, which always resolves to the latest version). Continues 1.1.0 (`10.5281/zenodo.24267509`) and 1.0.0 (`10.5281/zenodo.23575816`), which stay published and citable. A layout release: no picture, datasheet, PDF or page of the website changes by a byte.
+
+- **A top folder for the finished files (`semaphores/`):** A reader looking for the semaphores had to go six folders down, into a folder named "proposals". `semaphores/vector-masters/` now holds the four layered SVG masters, `semaphores/pictures/` the 40 finished pictures (512, 1024, 1214, 1298 and 2460 px, in English and Spanish) and `semaphores/datasheets/` the four datasheets with their 1200 px previews, which move there from `site/assets/`. `semaphores/README.md` gives sizes, layers, colour, licence and how to cite. These are the files to use and to cite.
+- **Build record (`build-record/`, named `artwork/` until now):** The folder is renamed for what it holds and gains a short README. Nothing inside it changed. It keeps the same masters and pictures, with its paths as they were built, as the evidence of how they were made. `tools/check_semaphores.py` is new: it stops unless each master and picture in `semaphores/` is byte for byte the build record's file and carries the hash that record's `MANIFEST.json` gives.
+- **Datasheets (`semaphores/datasheets/`, `tools/build_datasheets.py`, `site/verify.sh`):** The eight pictures are the files published in 1.1.0 and cite that release. `build_datasheets.py --verify` finds them in their new folder, still stages its inputs from the tag the sheets cite, and reads the masters from `build-record/` where that tag is not available from git. The site's deploy gate no longer admits datasheet images under `site/assets/`.
+- **PDFs (`pdf/`, `tools/generate_pdfs.py`):** Neither source changed, so both PDFs are the files earlier releases published, byte for byte: the public note is the 1.1.0 file and the methods note the 1.0.0 file, and each prints that release's version and DOI. The generator reads the pictures from `semaphores/pictures/` and prints in each colophon the folder they were in when that PDF was typeset.
+- **Manifest and specification (`RELEASE-MANIFEST.md`, `docs/DATASHEET_SPEC.md`):** The manifest's guide names `semaphores/` and `build-record/`, and its rows are regenerated. The specification's status paragraph says where the datasheets now are.
+
 ## [1.1.0] — 2026-11-17
 
 Version DOI `10.5281/zenodo.24267509` (concept DOI `10.5281/zenodo.23575814`, which always resolves to the latest version). Continues 1.0.0 (`10.5281/zenodo.23575816`), which stays published and citable.
