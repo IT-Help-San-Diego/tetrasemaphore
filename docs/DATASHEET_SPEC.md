@@ -2,16 +2,16 @@
 
 **Status: the specification the four datasheets of release 1.1.0 were built to.** It was written
 as a proposal against the published 1.0.0 tree (tag `v1.0.0`), and the measurements it states
-were first taken on that tree. The sheets in this release are release files for `v1.1.0`: they
-read the note, the Lean file, the masters and the site images at that tag, they name the
-release's DOI (10.5281/zenodo.24267509), and they carry no mock-up line. In this release they
-are release files only: no page of the site shows or links them, and the deploy list in
-`site/Makefile` leaves them out, so section 2 describes where they are meant to sit. The Lean
-file, the masters, the site images and the measurement record are the same files at both tags.
-The results of the release build are in `AUDIT_REPORT.md` and in the four audit records in
-`datasheet-audit/`; where a figure there differs from one here, that report is the record. Carey
-approved the direction and the word "datasheet" on 22 October 2026, and the sheets as final
-before the release was published.
+were first taken on that tree. The sheets are release files for `v1.1.0`: they read the note,
+the Lean file, the masters and the site images at that tag, they name that release's DOI
+(10.5281/zenodo.24267509), and they carry no mock-up line. Release 1.2.0 carries the same eight
+pictures, byte for byte, in `semaphores/datasheets/`. No page of the site shows or links them
+yet, so section 2 describes where they are meant to sit. The Lean file, the masters, the site
+images and the measurement record are the same files in 1.0.0, 1.1.0 and 1.2.0. The results of
+the release build are in `AUDIT_REPORT.md` and in the four audit records in `datasheet-audit/`;
+where a figure there differs from one here, that report is the record. Carey approved the
+direction and the word "datasheet" on 22 October 2026, and the sheets as final before release
+1.1.0 was published.
 
 Four sheets are built: `datasheet_NORMATIVE.png`, `datasheet_NON-NORMATIVE.png`,
 `datasheet_METACOGNITIVE.png`, `datasheet_CRITICAL.png`, each with a 1200 px preview, from one

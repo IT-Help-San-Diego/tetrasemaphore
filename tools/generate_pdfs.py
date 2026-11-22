@@ -16,6 +16,9 @@ size of the file that release published). A PDF is typeset again only when its s
 the public note is typeset for 1.1.0; the methods note did not change, so its PDF stays the file published in 1.0.0. A run
 builds every PDF with its own release's version, DOI and timestamp and stops unless each is byte for byte the recorded file,
 so a source that changes without its PDF, or a PDF that no longer rebuilds, stops the run.
+Release 1.2.0 moved the pictures to semaphores/pictures/ and changed neither source, so both PDFs stay the files published
+before it: the pictures are read from the new folder (the same bytes, pinned below), and each colophon still names the
+folder they were in when that PDF was typeset.
 
 Usage (from anywhere):
   python3 tools/generate_pdfs.py --tree <release tree> --font-dir <folder with the seven DejaVu 2.37 files>
@@ -38,7 +41,8 @@ SOURCES = {
     'README.md': ('1191e5639adb4cfc48bd5abfdc0993208860b66d3ac4b1819a891ebbe574a210', 23880),  # the public note as released in 1.1.0, with the two lines approved on 6 November 2026 that the note carries (in 1.0.0: c98c3ee4a94a3dae, 23648 bytes)
     'methods/tetrasemaphore-methods-note-01-rev1.md': ('46f436d9ef3a35ceceec395a4f86009e8bfa094fcf786fbb1e9da468b518cb05', 15308),
 }
-PNG_DIR = 'artwork/master/states/proposals/notation/final-masters-2026-10-05/png'
+PNG_DIR = 'semaphores/pictures'                 # where the tree holds the pictures, from release 1.2.0
+PNG_DIR_UNTIL_1_1 = 'artwork/master/states/proposals/notation/final-masters-2026-10-05/png'   # where 1.0.0 and 1.1.0 held them; their PDFs print it
 SEMAPHORES = [  # state word, bright colour (site --c-*-bright), transform line (site index.html figcaption), png sha256, bytes, alt text (site index.html, after the text pass of item 149)
     ('NORMATIVE', '#e5c97b', 'I : (x, y) \u2192 (x, y)', 'eacf65bc9181f649ff29d76011bc0cc759f3c9aacb01b0ab4875c764b2526438', 755820, 'The NORMATIVE semaphore'),
     ('NON-NORMATIVE', '#5ec4b6', '\u03c3\u1d65 : (x, y) \u2192 (\u2212x, y)', '658837bd2d2802b35b8a85f91fdd50d839471acf092f57e9f587589f42bc8db0', 720684, 'The NON-NORMATIVE semaphore'),
@@ -75,7 +79,7 @@ DOCS = [
         'header_left': 'The Tetrasemaphore \u00b7 ' + PUBLIC_NOTE_MENU,
         'title_from_first_line': False,
         # typeset for 1.1.0, in which README.md changed
-        'release': {'version': '1.1.0', 'doi': '10.5281/zenodo.24267509', 'timestamp': 1794961781,
+        'release': {'version': '1.1.0', 'doi': '10.5281/zenodo.24267509', 'timestamp': 1794961781, 'png_dir': PNG_DIR_UNTIL_1_1,
                     'sha256': '1e290e0f2198ffc439a83873b48d3d8e3ce29cfec8b2792946fc055a02c46197', 'bytes': 2802972},
     },
     {   # the methods note
@@ -85,7 +89,7 @@ DOCS = [
         'header_left': None,                                  # the source's title
         'title_from_first_line': True,
         # unchanged since 1.0.0: the file that release published, kept byte for byte
-        'release': {'version': '1.0.0', 'doi': '10.5281/zenodo.23575816', 'timestamp': 1792709396,
+        'release': {'version': '1.0.0', 'doi': '10.5281/zenodo.23575816', 'timestamp': 1792709396, 'png_dir': PNG_DIR_UNTIL_1_1,
                     'sha256': '3bf981b258544cf15c2c2c22ef9aad1433a8a32bea2bff79e6d6fd601191ad36', 'bytes': 2796025},
     },
 ]
@@ -311,7 +315,7 @@ def main():
             '@@AUTHOR@@': AUTHOR, '@@EYEBROW@@': EYEBROW, '@@VERSION_LINE@@': VERSION_WORD + ' ' + rel['version'], '@@LICENCE@@': LICENCE,
             '@@SITE@@': SITE, '@@SITE_URL@@': SITE_URL, '@@REPO@@': REPO, '@@REPO_URL@@': REPO_URL,
             '@@SEMAPHORE_ROW@@': (images + words + lines).rstrip('\n'),
-            '@@PANDOC_VERSION@@': report['tools']['pandoc'], '@@TYPST_VERSION@@': report['tools']['typst'], '@@PNG_DIR@@': PNG_DIR,
+            '@@PANDOC_VERSION@@': report['tools']['pandoc'], '@@TYPST_VERSION@@': report['tools']['typst'], '@@PNG_DIR@@': rel.get('png_dir', PNG_DIR),
             '@@BODY@@': body.rstrip('\n'),
         }
         typ = TEMPLATE
