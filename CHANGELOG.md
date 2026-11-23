@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Correction, home page (`site/index.html`):** The page said that of the sixteen sets of moves "exactly five are closed". Six are: the empty set is closed too. The five meant are the ones that contain I and are closed, which is what the cited theorem `T8_five_are` proves, and the sentence now says so. Found on 23 November 2026 by a check of the proofs' statements against the English. The note and the PDFs never carried the sentence. `RELEASE-MANIFEST.md` has the page's new row.
+
 ## [1.2.0] — 2026-11-22
 
 Version DOI `10.5281/zenodo.24448318` (concept DOI `10.5281/zenodo.23575814`, which always resolves to the latest version). Continues 1.1.0 (`10.5281/zenodo.24267509`) and 1.0.0 (`10.5281/zenodo.23575816`), which stay published and citable. A layout release: no picture, datasheet, PDF or page of the website changes by a byte.
