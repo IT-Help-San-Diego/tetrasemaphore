@@ -1,16 +1,17 @@
-# The Tetrasemaphore 1.2.0: release manifest
+# The Tetrasemaphore 1.3.0: release manifest
 
 Every file of this release, with its size in bytes and its SHA-256, so that anyone can check a copy: `shasum -a 256 <file>` (or `sha256sum <file>`)
 prints the hash that stands beside it here. The list covers every file except this one, `CHANGELOG.md` and `CITATION.cff`, which are written at the
 push with the record's DOI. The paths are the repository's. `semaphores/` holds what most readers come for: the four layered vector masters
-(`vector-masters/`), the finished pictures in five sizes, in English and in Spanish (`pictures/`), and the four datasheets with their 1200 px previews
-(`datasheets/`). These are the files to use and to cite. The build record keeps the same masters and pictures, byte for byte, as the evidence of how
+(`vector-masters/`), the finished pictures in five sizes, in English and in Spanish (`pictures/`), the four datasheets with their 1200 px previews
+(`datasheets/`), and, since 1.3.0, the films of the semaphores making their moves (`films/`). These are the files to use and to cite. The build record keeps the same masters and pictures, byte for byte, as the evidence of how
 they were built, and `tools/check_semaphores.py` stops if the two differ. `build-record/`, which was named `artwork/` in 1.0.0 and 1.1.0, holds the
 sealed build records of the semaphores and screens with their paths kept as they were built, so that every reference inside their configs, READMEs and
-scripts resolves; `proofs/` holds the Lean proofs, their checker and the record of their red team; `record/` holds the decision log, the exchanges,
+scripts resolves; `proofs/` holds the Lean proofs, their checker, the record of their red team and, since 1.3.0, the check of their statements by Lean's judge
+(`proofs/comparator/`); `record/` holds the decision log, the exchanges,
 the release plan and the test register; `methods/` holds methods note 01 in revision 1 (`tetrasemaphore-methods-note-01-rev1.md`) and, unchanged, the
 original it revises (`tetrasemaphore-methods-note-01.md`). `docs/` holds the datasheet specification, the datasheets' audit report and their four
-audit records; `tools/` holds the scripts that make the PDFs, the datasheets and the table below, the check of `semaphores/`, their data files, the
+audit records; `tools/` holds the scripts that make the PDFs, the datasheets, the films and the table below, the check of `semaphores/`, their data files, the
 pinned build environment of the datasheets (`tools/datasheets-environment/`) and the three DejaVu font files the datasheets are set in
 (`tools/fonts/`). `pdf/` holds two PDFs made by `tools/generate_pdfs.py`, each the file an earlier release published, byte for byte, because its
 source has not changed since: the typeset copy of `README.md` is the 1.1.0 file and the typeset copy of revision 1 is the 1.0.0 file, so each carries
@@ -47,7 +48,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 
 | path | bytes | SHA-256 |
 |---|---|---|
-| `.gitignore` | 370 | c764305965f310bc922cef67e2faa810d5f2c6360e5178489d45f1c7d7ce149b |
+| `.gitignore` | 539 | 3f7fa7466639362a95f612bce6f36045eafee66ff55f9b79a700c5f7c7ce8e22 |
 | `LICENSE` | 18,657 | 9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411 |
 | `LICENSE-CODE` | 11,358 | cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 |
 | `NOTICE` | 799 | 9a1190909a291f5a4543cc00b477997068ef911874f955a2db28529d197d4f3a |
@@ -233,7 +234,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `build-record/vector-masters/tetrasemaphore-build7/work/verify-meta7-run.json` | 676 | 77aa2ab9541ca99649562b35af04837bcbeb65693f6d138d3a8e7b6f6d5c2f9f |
 | `build-record/vector-masters/tetrasemaphore-build7/work/verify-meta7.py` | 5,357 | b575632ea6f451151bfb458eb7f5f88d63141cb87737ba115d62f3b8f2a40165 |
 | `docs/AUDIT_REPORT.md` | 14,830 | 231462c99df6f60b535972ff79457561072caefe4aa78298c17e834ad1fdd752 |
-| `docs/DATASHEET_SPEC.md` | 22,302 | d81be93a4a72187febca57663a7ac5438d1fc4e96485ed480fb56630e9eb4d37 |
+| `docs/DATASHEET_SPEC.md` | 22,318 | fb480b2bda319969e8d6a6c59afff9ddc9b80279e7f2a8ca7f5d8ccca343047f |
 | `docs/datasheet-audit/audit_CRITICAL.json` | 15,589 | 749557ab2bfe334591650ae9ad90305c94a07ad74f791bee6c23ea020ba92b8d |
 | `docs/datasheet-audit/audit_METACOGNITIVE.json` | 17,048 | 12152090640bb2958c5221c082de54790463cb3b2de004d7f3894eceb677d420 |
 | `docs/datasheet-audit/audit_NON-NORMATIVE.json` | 16,996 | d83f5cdde1352d48eed42f66c1c5ceb2cf302f6b08c028e6246803d3ea6021b3 |
@@ -301,12 +302,28 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `proofs/attacks/build_attacks_v24.py` | 6,850 | 82d45ebb0b0e9ce91206d0548759881c3d6efb2fed8fb261c21184fa4e17d83f |
 | `proofs/check.sh` | 102,794 | ab6f55d3216e1f193678e94eeb6c780572163906cd389188a17332850655b626 |
 | `proofs/check_output.txt` | 14,484 | df2f24dc4e5e38521b9fd3e0dca57fd76986047ae1eec46b0628e374804242e0 |
+| `proofs/comparator/Challenge.lean` | 9,118 | c5ed8f0cac379627175a311004af6cd26c3356b1227feab2e794aaca05f1491f |
+| `proofs/comparator/README.md` | 23,825 | 1e47652f618177d3b96591d84b81fe592cc1de4b3645ee4b81501844604bccfe |
+| `proofs/comparator/RESULT-lab-pc-2026-11-23.md` | 3,940 | ef4abce78e3850d4bd2bf3b7c121757afd688e330c1ac9ca323f2b84bf28728a |
+| `proofs/comparator/comparator-15.json` | 531 | 8ca76d3ab556fa15bed14de91006d1f3511f45d734207a138e6619d958a4243d |
+| `proofs/comparator/comparator-T1_all_distinct.json` | 243 | 3742bdca210349f07b208cce1c11197e1a331a4e2ebb34e73f6ba98a7e98d9cb |
+| `proofs/comparator/comparator-T8_five_are.json` | 239 | 4442c9290432023e7b165c304020abf3b8691a3d7edbd2d6c37acecbee406bbb |
+| `proofs/comparator/comparator.json` | 573 | 73f4037133946138e4f83296c4b445d787085869cc42d461da0a4250c81bb55f |
+| `proofs/comparator/export-targets.txt` | 537 | 61e1a1e37ac215288d2a8c397bb4149a6592f4dd0e3d530efc0038c3794dadf5 |
+| `proofs/comparator/lake-manifest.json` | 161 | 3685ed2a9459a7d78eba42b630e1a75ed4884726226d53aa38e23ef71fb1bdca |
+| `proofs/comparator/lakefile.toml` | 527 | 7a0cc99b22f535229a33bd5cc7297650dfe2a8f3cc1b988ef67f5215b077b862 |
+| `proofs/comparator/lean-toolchain` | 25 | 582a63f8f9c5128067b688778c1051cf1464c3ca9d57b9325025c051c29b774a |
+| `proofs/comparator/rehearsal/DumpChallenge.lean` | 123 | b2eee7a9dec299034152cfd7b01bf7bbc2c5c3f1ccfbe67c1b556bd3751e03f5 |
+| `proofs/comparator/rehearsal/DumpCore.lean` | 4,395 | 78b2f5e66906ceef12f74c63f32926a7a86e637dd45f40aef0a50da2893cbe57 |
+| `proofs/comparator/rehearsal/DumpPublished.lean` | 147 | 3aa67e7feff60009cc054c50f4d100349dd3183a0de521be36dc7b62145f7019 |
+| `proofs/comparator/rehearsal/lean-toolchain` | 25 | 302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b |
+| `proofs/comparator/rehearsal/rehearse.sh` | 2,780 | 906b42efaf4515c5ecd327b3363c951a3d6c401304cb4f0e8ca6d85273a25829 |
 | `proofs/lean-toolchain` | 25 | 302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b |
 | `record/decision-log.md` | 74,854 | 612cc1da69b448c0cee547e3eba0dbf4461cab9fce2769e679db9cdbc04b9ac0 |
 | `record/exchanges.md` | 9,013 | b2185f5bd07e8b20268790fe875edd16047b6823f8170192a481d95c5e0063fa |
 | `record/release-plan.md` | 25,667 | 07cb7d0457baa3c9533b9a97abc032a9c6462ec2bb5d20a1cc3b70f8baad0471 |
 | `record/test-register.md` | 23,076 | 23b34fb2164f1da4ed07a9ac54178dbe3be4bd9cefb3a1ab615b5bbb756648d2 |
-| `semaphores/README.md` | 3,330 | 968b34f20f2df870cef8643f8327e4506a0a104ba704203e41edc96c479d1de8 |
+| `semaphores/README.md` | 4,857 | 132ed283873fcc1caf7032e3ddabc2d4451ccc8c53ea5181d11f20983237a49f |
 | `semaphores/datasheets/datasheet_CRITICAL.png` | 586,660 | 4c9551dd62a858c09b309cf192e91917047f0c6aa842eb6777793aae6db1bec7 |
 | `semaphores/datasheets/datasheet_CRITICAL_1200.png` | 476,310 | f7c6ce81ccee3230117aa8ed78e8af9f21b5bd00700fc93a19083c576f57cb1b |
 | `semaphores/datasheets/datasheet_METACOGNITIVE.png` | 604,371 | 4b828da69e24e11a5e35614dc8ed757750ca769b6e8427c5f893e78c767151c4 |
@@ -315,6 +332,16 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `semaphores/datasheets/datasheet_NON-NORMATIVE_1200.png` | 498,351 | c8b63aac9d7098b77be90deaa832a499471880849e45e9d5b22091bb080201b2 |
 | `semaphores/datasheets/datasheet_NORMATIVE.png` | 591,533 | 170fd2d257d292351280f1eba1a014bdc518300bc12ea7515715025ad4764913 |
 | `semaphores/datasheets/datasheet_NORMATIVE_1200.png` | 480,417 | 0af73e505b085f6bc6f4ca3ad4f2ed929393c986414750a6bb7c009a63cdea14 |
+| `semaphores/films/CRITICAL-semaphore-three-moves.mp4` | 4,243,707 | 5ec0d38ab26f27f468fe7ae84803e37b2ba1405a069de52777b7288469501d6a |
+| `semaphores/films/CRITICAL-semaphore-three-moves.webm` | 3,019,623 | 76f52d0773424721fbaacc7cf10031289d4393aa72504ca471ce222bea002df7 |
+| `semaphores/films/METACOGNITIVE-semaphore-three-moves.mp4` | 4,101,671 | 145b27519fc8e0e493b786e82b797850cc216f2c82668d3bb40374b23174c71c |
+| `semaphores/films/METACOGNITIVE-semaphore-three-moves.webm` | 2,969,080 | cd3242484589a9f9a50a8497c1d498912d5299332eaf6c4c8ce806fad6cc46bd |
+| `semaphores/films/NON-NORMATIVE-semaphore-three-moves.mp4` | 4,006,793 | 2ac167ff861474393cc9ff7ed26fc4ac08762ca08135e0c648328da10e03068e |
+| `semaphores/films/NON-NORMATIVE-semaphore-three-moves.webm` | 2,861,364 | b1942e8d2e817f62238d4ad4ef7b1485ececfb4382499fa21a69964d516c30dc |
+| `semaphores/films/NORMATIVE-semaphore-three-moves.mp4` | 4,091,455 | 33718b22afe8ef1429a352afc42de12caf59388865dde1c5122737d0802b01e8 |
+| `semaphores/films/NORMATIVE-semaphore-three-moves.webm` | 3,039,365 | 2c87ea10582734ead58cacc3bbfbf54b9863bf7fa8882e61e42c388f62746c1f |
+| `semaphores/films/TETRASEMAPHORE-four-own-moves-loop.mp4` | 7,659,067 | 35c210d93378ba0d7d7686d9c02718062648a34e388f5165e61ac04cdeb759bc |
+| `semaphores/films/TETRASEMAPHORE-four-own-moves-loop.webm` | 5,989,557 | ed041ff799eddffa891108cd9b39abf466fb9d9a80f11fe244c5b0731505d039 |
 | `semaphores/pictures/TETRASEMAPHORE-CRITICAL-en-1024.png` | 517,040 | d59377d73fccc1e6576ccf4f1a0935fe6810990ec2f7f961444746c9f56866f6 |
 | `semaphores/pictures/TETRASEMAPHORE-CRITICAL-en-1214.png` | 681,745 | d7efbf891970aef009e6293c4f690cc2061696788ec235d3dcc64e695091863d |
 | `semaphores/pictures/TETRASEMAPHORE-CRITICAL-en-1298.png` | 757,191 | a43da812ca3a7c885a4e688c978e6e4011c0996968b2411b6ca8a959a0ae2461 |
@@ -380,7 +407,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-512.png` | 168,591 | 1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577 |
 | `site/assets/og-card.jpg` | 183,315 | a175dc759f3a2fd950ff2710ea94eb4e8f8bcc0a5590ee7a89344615d1066573 |
 | `site/assets/og-card.png` | 217,921 | 0cf08ac9028fc22dcc3c927cabd64dd3ec22234a168f4af2f23c912885aa4ce3 |
-| `site/index.html` | 44,039 | 73518ab6c703d48cc847afb18052dda015573c417e18c774fec4e44c0c53c42d |
+| `site/index.html` | 44,049 | d5e585b23a87c208df747acc00308bf43c97eb767a1e41862f6919f419feb5d7 |
 | `site/infra/cloudfront/README.md` | 919 | 264cacf2b4beca9bf81d67d9139c66c9a181854d1a928b7474dbb9d258cf181a |
 | `site/infra/cloudfront/assets-headers.json` | 2,634 | 52f96590470cdff3796f4d2aadff13cd32aab97611db419463fc33e7e016b071 |
 | `site/infra/cloudfront/security-headers.json` | 2,702 | 5a3d7d12816ba3eae6015dd87601bd5ce1c56e8899c9abad077dbf86865e995c |
@@ -408,6 +435,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `tools/handoff_art_colours.json` | 1,112 | cbb2a3989accf6c97b4cc5036f975bcb33b249930d7dd8840b15a020e50ea4c0 |
 | `tools/handoff_drafting_candidates.json` | 61,982 | 63478a002aeb19c2887b5390dd5f945e9bf9944eb96fd36f69896a0ff558af0b |
 | `tools/make_anatomy_plate.py` | 68,870 | f31d2e00e8e723c5319194a79c9ebe8426b75aad0abb2117c36d71e7d68df2da |
+| `tools/make_animation.py` | 21,736 | f254fe98490aead2250242001cd32cdaf4e4c1f308ba908ae38ab84a425b9484 |
 | `tools/make_audit_report.py` | 14,206 | eade21b56dfd08c79784f9c6889421b435a7143596540938f33cc837ec67159e |
 | `tools/make_release_manifest.py` | 6,560 | 41897b949cb8930f131169f2ed855c0365f9a60f10b2ad256df2a972170ba718 |
 | `tools/measure_drafting.py` | 6,134 | 7b1d4a51b438d9d9fa0514a8bffefffefc8e46d722906fd749b39ec98497799e |

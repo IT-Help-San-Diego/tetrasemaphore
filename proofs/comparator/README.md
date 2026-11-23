@@ -17,6 +17,28 @@ Nothing in this folder changes the published proofs. `Challenge.lean` copies the
 the published file at tag `v1.2.0` unchanged and adds statements with `sorry`; the published file
 is judged in place (the Lake library `TetrasemaphoreAlgebra` has `srcDir = ".."`), not from a copy.
 
+## The verdict
+
+Hermes ran the judge on 23 November 2026, sandboxed, on a Linux machine (lab-pc), against this folder's `Challenge.lean`
+(SHA-256 `c5ed8f0c…`) and the published proof file at `v1.2.0` (SHA-256 `f066faf6…`). Its record is
+`RESULT-lab-pc-2026-11-23.md`, kept here as Hermes wrote it. Every verdict is the one this README predicted before the run.
+
+| statements | proof file built with Lean 4.33.0 | built with Lean 4.36.0 |
+|---|---|---|
+| all seventeen | rejected at `T1_all_distinct` | rejected at `T1_all_distinct` |
+| the fifteen | accepted | accepted, and accepted by all five outside checkers |
+| the fourteen and `T1_all_distinct` | rejected at `T1_all_distinct` | rejected at `T1_all_distinct` |
+| the fourteen and `T8_five_are` | rejected at `T8_five_are` | rejected at `T8_five_are` |
+
+So fifteen of the seventeen statements are, to the judge, the published statements, and the proofs of those fifteen
+pass Lean's kernel and five independent checkers. The other two differ from the published statements in form and not
+in meaning; each equivalence is proved (see "The two form differences" below), and the judge rejects them by name
+because it compares statements and does not prove equivalences. The five outside checkers ran on the 4.36.0 build
+only: they cannot read a 4.33 library. Nothing false was found in the proofs.
+
+This is the project's own lanes checking one another: Claude Code wrote the statements, Claude Science wrote the
+proofs, and both are Claude models. It is not an outside review.
+
 ## How `Challenge.lean` was written, and by whom
 
 Claude Science wrote the proofs, so Claude Science did not write the statements. Claude Code did,
@@ -101,11 +123,14 @@ statements are not wrong, and nothing here asks for them to change; a next versi
 1. **"Exactly five sets of moves are closed" is false as written**, on the site ("How the four fit
    together") and in the handoff row: the empty set is closed, so six are. The theorem proves the
    true sentence, which the guide already has: five are subgroups (contain `I` and are closed).
+   *Corrected in release 1.3.0:* the site now says "exactly five contain I and are closed".
 2. **The site cites `Move.act_mul` for "Any two of the three moves make the third"**, which it does
    not state. For the moves the fact is three entries of the table (`mul sv sh = C2` and the two like
    it, each `rfl`) plus `Move.act_mul`; for figures it is the T7 trio. A direct theorem,
    `act sv (act sh p) = act C2 p` and the two like it, is one line each and uses no axiom (the critic
    compiled both forms).
+   *In release 1.3.0* the site cites `Move.mul, Move.act_mul`, the table and the theorem that ties it to the plane; the
+   direct theorem waits for the next version of the proof file.
 3. **Two statements differ from the published ones in form** (`T1_all_distinct`, `T8_five_are`),
    as above. The judge will name them; that is expected.
 4. **The plane-level "each move undoes itself" and "order does not matter" are unnamed.** The guide
@@ -165,6 +190,7 @@ difference in the 35 closure constants.
 | `lake-manifest.json` | written by Lake; no dependencies. The judge requires one |
 | `lean-toolchain` | the judge's toolchain, Lean 4.36.0 (`lake comparator` exists from 4.35). The proofs themselves pin 4.33.0 in `../lean-toolchain`; see the two routes |
 | `rehearsal/` | a local rehearsal of the judge's statement comparison, without the judge: `rehearse.sh` |
+| `RESULT-lab-pc-2026-11-23.md` | Hermes's record of the judge's run on lab-pc: versions, configurations, verdicts, the outside checkers, and its own corrections |
 
 ## Running the judge (Part 2, Hermes, on lab-pc)
 

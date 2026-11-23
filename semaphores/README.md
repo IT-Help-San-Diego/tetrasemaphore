@@ -1,4 +1,4 @@
-# The four semaphores: masters, pictures, datasheets
+# The four semaphores: masters, pictures, datasheets, films
 
 These are the Tetrasemaphore's finished files: the ones to use, to print and to cite.
 
@@ -12,6 +12,7 @@ These are the Tetrasemaphore's finished files: the ones to use, to print and to 
 | `vector-masters/` | The layered vector masters, one per semaphore. Open these to edit, to print or to render at any size. | 4 SVG |
 | `pictures/` | The finished pictures, ready to place, in five sizes, in English and in Spanish. | 40 PNG |
 | `datasheets/` | One sheet per semaphore that takes it apart layer by layer, with the source of every value. | 8 PNG |
+| `films/` | The semaphores making their moves: one film per semaphore and one loop of all four, each as MP4 and as WebM. | 10 videos |
 
 ## Vector masters
 
@@ -45,6 +46,24 @@ Every picture is square, sRGB, tagged 300 dpi, and transparent outside the disc.
 files published in release 1.1.0, byte for byte, and they cite that release. Their audit records are in
 `../docs/datasheet-audit/`, the report in `../docs/AUDIT_REPORT.md`, and `python3 -I tools/build_datasheets.py --verify`,
 run from the top folder, rebuilds them and compares.
+
+## Films
+
+`<STATE>-semaphore-three-moves` shows one semaphore under each of the three moves in turn, with the published overlap
+after each move: 549 frames, 18.3 seconds. `TETRASEMAPHORE-four-own-moves-loop` shows all four at once and loops without
+a seam: 324 frames, 10.8 seconds. Each is 1080 by 1080 pixels at 30 frames a second, as `.mp4` (H.264) and as `.webm`
+(VP9), the same frames in both.
+
+Every frame is made from the release's own finished picture in `pictures/`; nothing is redrawn. A flip is shown as the
+picture turned over, and a half-turn as the picture turned in its plane. The frame that ends each move is the picture
+with its rows, its columns, or both reversed, pixel for pixel, and `python3 tools/make_animation.py --tree . --check-frames`,
+run from the top folder, tests that. After a flip the word on the ring reads reversed: the move acts on the whole
+picture, and only the mark at the centre is built to survive it. The overlap figures are read from the release's
+measurement record and cover the mark alone.
+
+`tools/make_animation.py` makes the films. A new run gives the same frames and not the same bytes, because a video
+encoder's output differs from one build of it to the next; the published files are the ones whose SHA-256 is in
+`../RELEASE-MANIFEST.md`. They were encoded with ffmpeg 9.0, the build the Python package imageio-ffmpeg 0.8.1 carries.
 
 ## Licence and how to cite
 
