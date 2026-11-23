@@ -56,7 +56,7 @@ a seam: 324 frames, 10.8 seconds. Each is 1080 by 1080 pixels at 30 frames a sec
 
 Every frame is made from the release's own finished picture in `pictures/`; nothing is redrawn. A flip is shown as the
 picture turned over, and a half-turn as the picture turned in its plane. The frame that ends each move is the picture
-with its rows, its columns, or both reversed, pixel for pixel, and `python3 tools/make_animation.py --tree . --check-frames`,
+with its rows, its columns, or both reversed, pixel for pixel, and `python3 tools/make_animation.py --check-frames`,
 run from the top folder, tests that. After a flip the word on the ring reads reversed: the move acts on the whole
 picture, and only the mark at the centre is built to survive it. The overlap figures are read from the release's
 measurement record and cover the mark alone.

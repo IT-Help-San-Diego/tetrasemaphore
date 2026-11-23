@@ -323,7 +323,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `record/exchanges.md` | 9,013 | b2185f5bd07e8b20268790fe875edd16047b6823f8170192a481d95c5e0063fa |
 | `record/release-plan.md` | 25,667 | 07cb7d0457baa3c9533b9a97abc032a9c6462ec2bb5d20a1cc3b70f8baad0471 |
 | `record/test-register.md` | 23,076 | 23b34fb2164f1da4ed07a9ac54178dbe3be4bd9cefb3a1ab615b5bbb756648d2 |
-| `semaphores/README.md` | 4,857 | 132ed283873fcc1caf7032e3ddabc2d4451ccc8c53ea5181d11f20983237a49f |
+| `semaphores/README.md` | 4,848 | 74afaa0cc5cdfa5ed9326ea420c0f65c94da6227974b147b09c37b0936a00942 |
 | `semaphores/datasheets/datasheet_CRITICAL.png` | 586,660 | 4c9551dd62a858c09b309cf192e91917047f0c6aa842eb6777793aae6db1bec7 |
 | `semaphores/datasheets/datasheet_CRITICAL_1200.png` | 476,310 | f7c6ce81ccee3230117aa8ed78e8af9f21b5bd00700fc93a19083c576f57cb1b |
 | `semaphores/datasheets/datasheet_METACOGNITIVE.png` | 604,371 | 4b828da69e24e11a5e35614dc8ed757750ca769b6e8427c5f893e78c767151c4 |
@@ -435,7 +435,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `tools/handoff_art_colours.json` | 1,112 | cbb2a3989accf6c97b4cc5036f975bcb33b249930d7dd8840b15a020e50ea4c0 |
 | `tools/handoff_drafting_candidates.json` | 61,982 | 63478a002aeb19c2887b5390dd5f945e9bf9944eb96fd36f69896a0ff558af0b |
 | `tools/make_anatomy_plate.py` | 68,870 | f31d2e00e8e723c5319194a79c9ebe8426b75aad0abb2117c36d71e7d68df2da |
-| `tools/make_animation.py` | 21,736 | f254fe98490aead2250242001cd32cdaf4e4c1f308ba908ae38ab84a425b9484 |
+| `tools/make_animation.py` | 21,962 | 37ec29b7b40df7d888cb80dcb9d87bced531a9f1bbef445948c14d56db73642a |
 | `tools/make_audit_report.py` | 14,206 | eade21b56dfd08c79784f9c6889421b435a7143596540938f33cc837ec67159e |
 | `tools/make_release_manifest.py` | 6,560 | 41897b949cb8930f131169f2ed855c0365f9a60f10b2ad256df2a972170ba718 |
 | `tools/measure_drafting.py` | 6,134 | 7b1d4a51b438d9d9fa0514a8bffefffefc8e46d722906fd749b39ec98497799e |

@@ -32,9 +32,10 @@ The films of the release are in semaphores/films/, and RELEASE-MANIFEST.md gives
 makes the same frames from the same pictures. It does not make the same bytes: a video encoder's output differs from one
 ffmpeg build to the next, so the published files are identified by their hashes and not by a rebuild.
 
-Usage, from the top folder:
-  python3 tools/make_animation.py --tree . --out <folder> [--only <STATE>|loop]    make the films
-  python3 tools/make_animation.py --tree . --check-frames                          test that every landing is exact
+Usage:
+  python3 tools/make_animation.py --out <folder> [--only <STATE>|loop]    make the films
+  python3 tools/make_animation.py --check-frames                          test that every landing is exact
+  --tree <release tree> names another copy of the release; without it, the tree is the folder above tools/.
 
 --check-frames makes each of the three moves on each of the four pictures and stops with exit code 1 unless the picture
 after the move is the picture with its rows, its columns, or both reversed, pixel for pixel, and the picture after the
@@ -335,7 +336,9 @@ def check_frames(tree):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--tree', required=True); ap.add_argument('--out', default='')
+    ap.add_argument('--tree', default=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')),
+                    help='the release tree; default: the folder above tools/')
+    ap.add_argument('--out', default='')
     ap.add_argument('--only', default='', help='a state name, or "loop"; default: all five films')
     ap.add_argument('--check-frames', action='store_true', help='test the landings and make no film')
     a = ap.parse_args()
