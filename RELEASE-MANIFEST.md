@@ -380,7 +380,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-512.png` | 168,591 | 1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577 |
 | `site/assets/og-card.jpg` | 183,315 | a175dc759f3a2fd950ff2710ea94eb4e8f8bcc0a5590ee7a89344615d1066573 |
 | `site/assets/og-card.png` | 217,921 | 0cf08ac9028fc22dcc3c927cabd64dd3ec22234a168f4af2f23c912885aa4ce3 |
-| `site/index.html` | 44,025 | 8d6104794e03345e2d8d6c56b135971fcbd7c585d3bd16e5c50e86906df100ce |
+| `site/index.html` | 44,039 | 73518ab6c703d48cc847afb18052dda015573c417e18c774fec4e44c0c53c42d |
 | `site/infra/cloudfront/README.md` | 919 | 264cacf2b4beca9bf81d67d9139c66c9a181854d1a928b7474dbb9d258cf181a |
 | `site/infra/cloudfront/assets-headers.json` | 2,634 | 52f96590470cdff3796f4d2aadff13cd32aab97611db419463fc33e7e016b071 |
 | `site/infra/cloudfront/security-headers.json` | 2,702 | 5a3d7d12816ba3eae6015dd87601bd5ce1c56e8899c9abad077dbf86865e995c |
