@@ -31,7 +31,17 @@ ALLOWLIST := \
 	--include "assets/TETRASEMAPHORE-NORMATIVE-es-1298.png" \
 	--include "assets/TETRASEMAPHORE-NON-NORMATIVE-es-1298.png" \
 	--include "assets/TETRASEMAPHORE-METACOGNITIVE-es-1298.png" \
-	--include "assets/TETRASEMAPHORE-CRITICAL-es-1298.png"
+	--include "assets/TETRASEMAPHORE-CRITICAL-es-1298.png" \
+	--include "assets/films/CRITICAL-semaphore-three-moves.mp4" \
+	--include "assets/films/CRITICAL-semaphore-three-moves.webm" \
+	--include "assets/films/METACOGNITIVE-semaphore-three-moves.mp4" \
+	--include "assets/films/METACOGNITIVE-semaphore-three-moves.webm" \
+	--include "assets/films/NON-NORMATIVE-semaphore-three-moves.mp4" \
+	--include "assets/films/NON-NORMATIVE-semaphore-three-moves.webm" \
+	--include "assets/films/NORMATIVE-semaphore-three-moves.mp4" \
+	--include "assets/films/NORMATIVE-semaphore-three-moves.webm" \
+	--include "assets/films/TETRASEMAPHORE-four-own-moves-loop.mp4" \
+	--include "assets/films/TETRASEMAPHORE-four-own-moves-loop.webm"
 
 check:
 	@./verify.sh
@@ -52,4 +62,10 @@ deploy: check
 		aws s3 cp "$$f" "$(BUCKET)/$$f" --region $(REGION) --content-type "text/plain; charset=utf-8" --cache-control "no-cache"; \
 	done
 	aws s3 cp sitemap.xml "$(BUCKET)/sitemap.xml" --region $(REGION) --content-type "application/xml; charset=utf-8" --cache-control "no-cache"
+	for f in assets/films/*.webm; do \
+		aws s3 cp "$$f" "$(BUCKET)/$$f" --region $(REGION) --content-type "video/webm"; \
+	done
+	for f in assets/films/*.mp4; do \
+		aws s3 cp "$$f" "$(BUCKET)/$$f" --region $(REGION) --content-type "video/mp4"; \
+	done
 	aws cloudfront create-invalidation --distribution-id $(DIST_ID) --paths "/*"

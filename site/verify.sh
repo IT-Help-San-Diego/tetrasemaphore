@@ -165,6 +165,16 @@ SEALED_ASSETS = {
     "assets/TETRASEMAPHORE-NORMATIVE-en-512.png": "b893c34898ab9ebc",
     "assets/TETRASEMAPHORE-NORMATIVE-es-1298.png": "077215b442760441",
     "assets/TETRASEMAPHORE-NORMATIVE-es-512.png": "1c49f6829a561265",
+    "assets/films/CRITICAL-semaphore-three-moves.mp4": "5ec0d38ab26f27f4",
+    "assets/films/CRITICAL-semaphore-three-moves.webm": "76f52d0773424721",
+    "assets/films/METACOGNITIVE-semaphore-three-moves.mp4": "145b27519fc8e0e4",
+    "assets/films/METACOGNITIVE-semaphore-three-moves.webm": "cd3242484589a9f9",
+    "assets/films/NON-NORMATIVE-semaphore-three-moves.mp4": "2ac167ff86147439",
+    "assets/films/NON-NORMATIVE-semaphore-three-moves.webm": "b1942e8d2e817f62",
+    "assets/films/NORMATIVE-semaphore-three-moves.mp4": "33718b22afe8ef14",
+    "assets/films/NORMATIVE-semaphore-three-moves.webm": "2c87ea10582734ea",
+    "assets/films/TETRASEMAPHORE-four-own-moves-loop.mp4": "35c210d93378ba0d",
+    "assets/films/TETRASEMAPHORE-four-own-moves-loop.webm": "ed041ff799eddffa",
     "assets/og-card.jpg": "a175dc759f3a2fd9",
     "assets/og-card.png": "0cf08ac9028fc22d",
 }
@@ -210,6 +220,30 @@ for p in sorted(glob.glob("assets/*.png")):
     n_png += 1
 
 say(f"OK: {len(actual_assets)} sealed assets verified, {n_png} PNGs tagged sRGB + 300 dpi, no owl/flashcard ships")
+
+# 5b. The films are the release's own files, byte for byte (semaphores/films at the repository root), WebM and MP4.
+FILMS = (
+    "CRITICAL-semaphore-three-moves.mp4",
+    "CRITICAL-semaphore-three-moves.webm",
+    "METACOGNITIVE-semaphore-three-moves.mp4",
+    "METACOGNITIVE-semaphore-three-moves.webm",
+    "NON-NORMATIVE-semaphore-three-moves.mp4",
+    "NON-NORMATIVE-semaphore-three-moves.webm",
+    "NORMATIVE-semaphore-three-moves.mp4",
+    "NORMATIVE-semaphore-three-moves.webm",
+    "TETRASEMAPHORE-four-own-moves-loop.mp4",
+    "TETRASEMAPHORE-four-own-moves-loop.webm",
+)
+for fn in FILMS:
+    site_f = os.path.join("assets", "films", fn)
+    rel_f = os.path.join("..", "semaphores", "films", fn)
+    if not os.path.exists(site_f):
+        bad(f"missing film: {site_f}"); continue
+    if not os.path.exists(rel_f):
+        bad(f"release film missing: {rel_f}"); continue
+    if hashlib.sha256(open(site_f, "rb").read()).hexdigest() != hashlib.sha256(open(rel_f, "rb").read()).hexdigest():
+        bad(f"{site_f} differs from the release file {rel_f}")
+say(f"OK: {len(FILMS)} films equal the release's semaphores/films byte for byte")
 
 # 6. Repo privacy gate: forbid tracking Research Artifacts, private_research_vault, transcripts, or sqlite/jsonl dumps in git.
 import subprocess
