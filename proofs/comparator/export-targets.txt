@@ -1,0 +1,4 @@
+Quot Quot.mk Quot.lift Quot.ind
+Move.act_mul T1_self_inverse T1_mul_comm T1_mem_all T1_all_distinct T2_faithful T4_fix_I T4_fix_sv T4_fix_sh T4_fix_C2 T7_both_mirrors T8_five_are S1_one_of_five S2_mark_sv_exact S2_mark_sh_exact S2_mark_C2_exact S2_markAll_invariant
+propext Quot.sound Classical.choice
+Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam

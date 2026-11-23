@@ -17,3 +17,8 @@ scratch/
 *.sqlite3
 *wispr*
 *transcript*
+
+# Lake build outputs and judge exports of the statement check (proofs/comparator)
+proofs/comparator/.lake/
+proofs/comparator/rehearsal/.out/
+proofs/comparator/*.export
