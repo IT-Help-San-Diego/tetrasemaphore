@@ -1,0 +1,15 @@
+# Lake workspace for `lake comparator`: judges the published proof file, in place, against Challenge.lean.
+# `Challenge` is the statements file in this folder; `TetrasemaphoreAlgebra` is ../TetrasemaphoreAlgebra.lean,
+# the published file itself (srcDir = ".."), not a copy.
+name = "tetrasemaphore-comparator"
+defaultTargets = ["Challenge", "TetrasemaphoreAlgebra"]
+
+[[lean_lib]]
+name = "Challenge"
+srcDir = "."
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "TetrasemaphoreAlgebra"
+srcDir = ".."
+roots = ["TetrasemaphoreAlgebra"]
