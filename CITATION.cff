@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you reference the Tetrasemaphore, please cite this release. The Tetrasemaphore continues the Owl Semaphore Badge System (concept DOI 10.5281/zenodo.19473697), which stays published and citable under its own name."
 title: "The Tetrasemaphore"
 type: software
-version: "1.2.0"
-date-released: "2026-11-22"
-doi: "10.5281/zenodo.24448318"
+version: "1.3.0"
+date-released: "2026-11-23"
+doi: "10.5281/zenodo.24481385"
 url: "https://tetrasemaphore.systems/"
 repository-code: "https://github.com/IT-Help-San-Diego/tetrasemaphore"
 license:
@@ -15,6 +15,9 @@ authors:
     given-names: "Carey James"
     orcid: "https://orcid.org/0009-0000-5237-9065"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24481385"
+    description: "The Tetrasemaphore 1.3.0 version DOI on Zenodo."
   - type: doi
     value: "10.5281/zenodo.24448318"
     description: "The Tetrasemaphore 1.2.0 version DOI on Zenodo."

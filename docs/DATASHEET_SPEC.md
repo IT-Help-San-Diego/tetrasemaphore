@@ -4,10 +4,10 @@
 as a proposal against the published 1.0.0 tree (tag `v1.0.0`), and the measurements it states
 were first taken on that tree. The sheets are release files for `v1.1.0`: they read the note,
 the Lean file, the masters and the site images at that tag, they name that release's DOI
-(10.5281/zenodo.24267509), and they carry no mock-up line. Release 1.2.0 carries the same eight
+(10.5281/zenodo.24267509), and they carry no mock-up line. Releases 1.2.0 and 1.3.0 carry the same eight
 pictures, byte for byte, in `semaphores/datasheets/`. No page of the site shows or links them
 yet, so section 2 describes where they are meant to sit. The Lean file, the masters, the site
-images and the measurement record are the same files in 1.0.0, 1.1.0 and 1.2.0. The results of
+images and the measurement record are the same files in 1.0.0, 1.1.0, 1.2.0 and 1.3.0. The results of
 the release build are in `AUDIT_REPORT.md` and in the four audit records in `datasheet-audit/`;
 where a figure there differs from one here, that report is the record. Carey approved the
 direction and the word "datasheet" on 22 October 2026, and the sheets as final before release
