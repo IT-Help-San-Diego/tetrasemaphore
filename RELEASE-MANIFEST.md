@@ -387,7 +387,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `semaphores/vector-masters/MASTER-medallion-NON-NORMATIVE-notation-slot820.svg` | 2,801,300 | 4ef1de6ae126279e83c65570ba0454fef3862bb6599798bf5d6fc1dc5c100f10 |
 | `semaphores/vector-masters/MASTER-medallion-NORMATIVE-notation-slot820.svg` | 2,977,433 | e0b6366d5c032523dcd9b35658756570cbf0f2f09cbb1563f3885e53f0bec1e6 |
 | `site/.well-known/security.txt` | 159 | e6955225abbdb95fde382ff4607f42c6a0512f02ff592e9b311985216dec9b47 |
-| `site/404.html` | 12,677 | 8728c8abbb7f9c4b76a6d634726e1b34db057477aa56f6439bd2ec4ad870d5e9 |
+| `site/404.html` | 12,653 | 03d0fb0cbba4d84de2a2862bd62091a2611ffa426417c265f1425f08cf67c52b |
 | `site/Makefile` | 4,317 | d03e354d8a3de47e2ff02500a3322305f851b8e7952a3788710cb5aaebbbf6cb |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-1298.png` | 757,191 | a43da812ca3a7c885a4e688c978e6e4011c0996968b2411b6ca8a959a0ae2461 |
 | `site/assets/TETRASEMAPHORE-CRITICAL-en-512.png` | 170,102 | 89dc35c8fcd840f0de8b75e3df094798b9a417472ffaa1ca707b2a7bac5613a3 |
@@ -407,13 +407,13 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `site/assets/TETRASEMAPHORE-NORMATIVE-es-512.png` | 168,591 | 1c49f6829a561265fcd0334654ec39c81ebc37caaaf2a8b1067be57f9dbc2577 |
 | `site/assets/og-card.jpg` | 183,315 | a175dc759f3a2fd950ff2710ea94eb4e8f8bcc0a5590ee7a89344615d1066573 |
 | `site/assets/og-card.png` | 217,921 | 0cf08ac9028fc22dcc3c927cabd64dd3ec22234a168f4af2f23c912885aa4ce3 |
-| `site/index.html` | 48,879 | 4657a13e0feec74db10ede27cd7cd17b4401e549de7cba5927e7bb25064ab907 |
+| `site/index.html` | 48,862 | 2277abc45f276fd3d22c39557449dc1852265155aa4d581b62abfd92e65739f9 |
 | `site/infra/cloudfront/README.md` | 919 | 264cacf2b4beca9bf81d67d9139c66c9a181854d1a928b7474dbb9d258cf181a |
-| `site/infra/cloudfront/assets-headers.json` | 2,634 | 0811da384ebaa07adf221548ae8853a637d9ff659a9d151e995af62c46b6122a |
-| `site/infra/cloudfront/security-headers.json` | 2,702 | 0f177804b660b05ebc85049976dcaea11e59272772cff2af77c701e3ce384ad4 |
+| `site/infra/cloudfront/assets-headers.json` | 2,688 | 91854535b6e1b1c2113ef5293fc63a868f04a81f9a266facf7dd890c40f67265 |
+| `site/infra/cloudfront/security-headers.json` | 2,756 | 5629e2ddaa56cfa3631711053f5be6a33f8bd66e273956b8046e4a1bda20191c |
 | `site/llms.txt` | 731 | da4c8e0c64396e80d105a8324bc25c0853fc4ee118fb943c2c199bdbe0807971 |
-| `site/method.html` | 24,338 | 8835bf926d231e4316e07d935434bb248fd68e9ea9769141fe2aa604759925d4 |
-| `site/note.html` | 41,069 | ec26c8acea200fce4d429fc5efdb0614cf2fac10e782f1d7cf776a2be513d2ba |
+| `site/method.html` | 24,314 | c33c58f99d38a0d9f495d96ac59f4586384458510e52005511b86169c8637242 |
+| `site/note.html` | 41,045 | 9283f073ed38316527a2a26a4cb16cae51e35575daec2a1da23b48ce2d949604 |
 | `site/robots.txt` | 76 | 2a3a3eb6c8c64a268097fd3fc989b7ee7caac07785f4c4fa3a71ad70dbb69089 |
 | `site/sitemap.xml` | 424 | 0e4db74dcc0fda631910c1b032b56b81a43c9ebd3b02177e105282e482314c4c |
 | `site/verify.sh` | 21,910 | 5982e10b271287304359e4382f3351e8821dcb2267950e147324b85f08867391 |
