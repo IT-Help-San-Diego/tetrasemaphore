@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Films on the home page (`site/index.html`, `site/Makefile`, `site/verify.sh`, `site/infra/cloudfront/`):** Under each semaphore's still, a closed line opens that semaphore's film, and "How the four fit together" has the loop of all four. The stills are unchanged and remain the semaphores; before a film plays it shows the release's own still. Nothing is fetched until a reader presses play, and there is no script and no outside video host. The films served are the files in `semaphores/films/`, byte for byte, and the site's gate checks their hashes. The page's style block changed, so its hash changed in the page's policy and in the two CloudFront header policies.
+
 ## [1.3.0] — 2026-11-23
 
 Version DOI `10.5281/zenodo.24481385` (concept DOI `10.5281/zenodo.23575814`, which always resolves to the latest version). Continues 1.2.0 (`10.5281/zenodo.24448318`), 1.1.0 (`10.5281/zenodo.24267509`) and 1.0.0 (`10.5281/zenodo.23575816`), which stay published and citable. This release adds the films and a check of what the proofs' statements say, and corrects one sentence on the home page. The proof file, the masters, the pictures, the datasheets, the note and the PDFs are the files of 1.2.0, byte for byte.
