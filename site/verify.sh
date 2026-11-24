@@ -319,7 +319,7 @@ at = mk.find("\n" + EXPECTED_BLOCK)
 if at < 0 or mk[max(at - 1, 0):at] == "\\":
     bad_film("Makefile must hold verbatim, after a line that is not continued, the block that sets FILMS_DIR to ../semaphores/films and lists the five WebM and the five MP4 films in sorted order, one to a line, as the sealed Makefile does")
 for name in ("FILMS_DIR", "FILMS_WEBM", "FILMS_MP4"):
-    count = len(re.findall(r"(?<!\$\()(?<!\$\{)" + name + r"\b", mk))
+    count = mk.replace("$(" + name + ")", "").replace("${" + name + "}", "").count(name)
     if count != 1:
         bad_film(f"Makefile must name {name} once only, where it is set ($({name}) and ${{{name}}} references aside, comments included); found {count}")
 if re.search(r"^[ \t]*(?:-|s)?include\b", mk, re.M):
