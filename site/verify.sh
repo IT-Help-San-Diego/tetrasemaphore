@@ -211,24 +211,193 @@ for p in sorted(glob.glob("assets/*.png")):
 
 say(f"OK: {len(actual_assets)} sealed assets verified, {n_png} PNGs tagged sRGB + 300 dpi, no owl/flashcard ships")
 
+# 5b. The films. The site serves the release's own ten films from semaphores/films at the repository root and keeps no
+# copy of them; site/Makefile uploads them from there to assets/films/ in the bucket. This section seals those ten
+# files and the Makefile that uploads them. It catches accidents and drift in a reviewed checkout. Outside it: the
+# deploying shell's command line and environment (another -f makefile, MAKEFILES, -i, the path of the checkout), and
+# anyone able to write to the checkout, who could change this script itself.
+SEALED_FILMS = {
+    "CRITICAL-semaphore-three-moves.mp4": "5ec0d38ab26f27f468fe7ae84803e37b2ba1405a069de52777b7288469501d6a",
+    "CRITICAL-semaphore-three-moves.webm": "76f52d0773424721fbaacc7cf10031289d4393aa72504ca471ce222bea002df7",
+    "METACOGNITIVE-semaphore-three-moves.mp4": "145b27519fc8e0e493b786e82b797850cc216f2c82668d3bb40374b23174c71c",
+    "METACOGNITIVE-semaphore-three-moves.webm": "cd3242484589a9f9a50a8497c1d498912d5299332eaf6c4c8ce806fad6cc46bd",
+    "NON-NORMATIVE-semaphore-three-moves.mp4": "2ac167ff861474393cc9ff7ed26fc4ac08762ca08135e0c648328da10e03068e",
+    "NON-NORMATIVE-semaphore-three-moves.webm": "b1942e8d2e817f62238d4ad4ef7b1485ececfb4382499fa21a69964d516c30dc",
+    "NORMATIVE-semaphore-three-moves.mp4": "33718b22afe8ef1429a352afc42de12caf59388865dde1c5122737d0802b01e8",
+    "NORMATIVE-semaphore-three-moves.webm": "2c87ea10582734ead58cacc3bbfbf54b9863bf7fa8882e61e42c388f62746c1f",
+    "TETRASEMAPHORE-four-own-moves-loop.mp4": "35c210d93378ba0d7d7686d9c02718062648a34e388f5165e61ac04cdeb759bc",
+    "TETRASEMAPHORE-four-own-moves-loop.webm": "ed041ff799eddffa891108cd9b39abf466fb9d9a80f11fe244c5b0731505d039",
+}
+FILMS_DIR = os.path.join("..", "semaphores", "films")
+FILM_EXT = (".webm", ".mp4")
+VIDEO_EXT = FILM_EXT + (".mov", ".m4v", ".mkv", ".ogv", ".avi", ".mpg", ".mpeg", ".m2ts", ".wmv", ".flv", ".3gp", ".vob",
+                        ".divx", ".f4v", ".asf")
+film_fails = []
+def bad_film(msg):
+    film_fails.append(msg); bad(msg)
+def finder_file(folder, n):
+    path = os.path.join(folder, n)
+    return n == ".DS_Store" and os.path.isfile(path) and not os.path.islink(path)
+
+# (a) The folder. Apart from a Finder .DS_Store file it holds exactly the ten sealed films, as regular files, under exactly
+# those names (matched against the folder's own listing, so a case-only rename fails even on a case-insensitive disk;
+# a symlink or a folder in a film's place fails), each with its sealed sha256 (the digests RELEASE-MANIFEST.md
+# publishes for release 1.3.0). Neither semaphores/ nor semaphores/films/ may be a symlink.
+for folder in (os.path.join("..", "semaphores"), FILMS_DIR):
+    if os.path.islink(folder):
+        bad_film(f"{folder} is a symlink: the films must sit in the repository's own folder")
+if not os.path.isdir(FILMS_DIR):
+    bad_film(f"{FILMS_DIR} is missing")
+    present = []
+else:
+    present = sorted(n for n in os.listdir(FILMS_DIR) if not finder_file(FILMS_DIR, n))
+for fn in present:
+    if fn not in SEALED_FILMS:
+        bad_film(f"unexpected entry in {FILMS_DIR}: {fn} (the folder may hold only the ten sealed films)")
+for fn, h in sorted(SEALED_FILMS.items()):
+    path = os.path.join(FILMS_DIR, fn)
+    if fn not in present:
+        bad_film(f"release film missing: {path}"); continue
+    if os.path.islink(path) or not os.path.isfile(path):
+        bad_film(f"{path} is not a regular file (a symlink or a folder in a film's place is not admitted)"); continue
+    try:
+        hf = hashlib.sha256(open(path, "rb").read()).hexdigest()
+    except OSError as e:
+        bad_film(f"{path} cannot be read: {e}"); continue
+    if hf != h:
+        bad_film(f"{path}: sha256 {hf} != sealed {h}")
+
+# (b) One copy. Under site/: no file with one of VIDEO_EXT, no symlinked folder, no folder that cannot be read, and
+# nothing in a leftover assets/films folder but a Finder .DS_Store file.
+def walk_error(e):
+    bad_film(f"cannot read {getattr(e, 'filename', '?')} under site/: {e.__class__.__name__}")
+for root, dirs, fs in os.walk(".", onerror=walk_error):
+    for d in dirs:
+        if os.path.islink(os.path.join(root, d)):
+            bad_film(f"symlinked folder under site/: {os.path.join(root, d)} (nothing under site/ may be a symlinked folder)")
+    for fn in fs:
+        if fn.lower().endswith(VIDEO_EXT):
+            bad_film(f"video file under site/: {os.path.join(root, fn)} (the site keeps no copy of the films)")
+leftover = os.path.join("assets", "films")
+if os.path.isdir(leftover) and not os.path.islink(leftover):
+    try:
+        extra = sorted(n for n in os.listdir(leftover) if not finder_file(leftover, n))
+    except OSError:
+        extra = ["(unreadable)"]
+    if extra:
+        bad_film(f"assets/films holds {', '.join(extra[:3])}{' and more' if len(extra) > 3 else ''}: remove the folder (the site keeps no copy of the films; they are served from ../semaphores/films)")
+elif os.path.lexists(leftover):
+    bad_film("assets/films is not a folder: remove it (the site keeps no copy of the films)")
+
+# (c) The Makefile is sealed by its sha256, so its recipes, its folder line and its two lists are the reviewed text. A
+# change to the Makefile must update SEALED_MAKEFILE here, as a style change updates the CSP hash.
+SEALED_MAKEFILE = "d03e354d8a3de47e2ff02500a3322305f851b8e7952a3788710cb5aaebbbf6cb"
+mk_bytes = open("Makefile", "rb").read()
+mk_sha = hashlib.sha256(mk_bytes).hexdigest()
+if mk_sha != SEALED_MAKEFILE:
+    if hashlib.sha256(mk_bytes.replace(b"\r\n", b"\n")).hexdigest() == SEALED_MAKEFILE:
+        bad_film("Makefile has CRLF line endings and is otherwise the sealed text: check it out with LF line endings (do not update the seal)")
+    else:
+        bad_film(f"Makefile differs from the sealed text: sha256 {mk_sha} != sealed {SEALED_MAKEFILE} (review the change, then update SEALED_MAKEFILE in verify.sh)")
+
+# (d) Readable checks on the Makefile, for the day its seal is updated. They compare text (CRLF read as LF) and do not
+# interpret make. The Makefile holds, verbatim and after a line that is not continued, the block that sets the folder
+# and the two lists (EXPECTED_BLOCK: the sealed folder, then the five WebM and the five MP4 names in sorted order, one
+# to a line). The names FILMS_DIR, FILMS_WEBM and FILMS_MP4 occur nowhere else in the file, comments included, except
+# as $(NAME) or ${NAME}. No line begins with include, -include or sinclude, and 'eval' appears nowhere in the file. The
+# file ends with the three lines that declare the Makefile never remade, after a line that is not continued. No
+# GNUmakefile, makefile, Makefile.* sibling, RCS or SCCS sits beside the Makefile, in any letter case (make would read
+# or rebuild from those). What the recipes do with the folder and the lists is not checked here: the seal alone guards
+# the recipes.
+mk = mk_bytes.decode("utf-8", "replace").replace("\r\n", "\n")
+def listed(ext):
+    return " \\\n".join("\t" + n for n in sorted(SEALED_FILMS) if n.endswith(ext)) + "\n"
+EXPECTED_BLOCK = ("override FILMS_DIR := ../semaphores/films\n"
+                  + "override FILMS_WEBM := \\\n" + listed(".webm")
+                  + "override FILMS_MP4 := \\\n" + listed(".mp4"))
+at = mk.find("\n" + EXPECTED_BLOCK)
+if at < 0 or mk[max(at - 1, 0):at] == "\\":
+    bad_film("Makefile must hold verbatim, after a line that is not continued, the block that sets FILMS_DIR to ../semaphores/films and lists the five WebM and the five MP4 films in sorted order, one to a line, as the sealed Makefile does")
+for name in ("FILMS_DIR", "FILMS_WEBM", "FILMS_MP4"):
+    count = mk.replace("$(" + name + ")", "").replace("${" + name + "}", "").count(name)
+    if count != 1:
+        bad_film(f"Makefile must name {name} once only, where it is set ($({name}) and ${{{name}}} references aside, comments included); found {count}")
+if re.search(r"^[ \t]*(?:-|s)?include\b", mk, re.M):
+    bad_film("Makefile must not include another makefile (no line may begin with include, -include or sinclude)")
+if "eval" in mk:
+    bad_film("Makefile must not contain 'eval' anywhere, comments included")
+NEVER_REMADE = "\nMAKEFLAGS += -r\n.SUFFIXES:\nMakefile: ;\n"
+if not mk.endswith(NEVER_REMADE) or mk[:-len(NEVER_REMADE)].endswith("\\"):
+    bad_film("Makefile must end with the three lines 'MAKEFLAGS += -r', '.SUFFIXES:' and 'Makefile: ;', after a line that is not continued: they declare the Makefile never remade")
+for other in sorted(n for n in os.listdir(".") if n != "Makefile" and n.lower() in ("gnumakefile", "makefile")):
+    bad_film(f"{other} sits beside Makefile: GNU make would read it first, so the sealed Makefile would not be the one run")
+for other in sorted(n for n in os.listdir(".") if n != "Makefile" and (n.lower().startswith("makefile.") or n.lower() in ("makefile,v", "rcs", "sccs", "s.makefile"))):
+    bad_film(f"{other} sits beside Makefile: a sibling of that name could rebuild or replace it (make rebuilds a makefile from Makefile.sh and the like); remove it")
+
+# (e) The pages. Python's html.parser reads each page. For every src or href attribute it reports on a start tag, the
+# value is taken as a browser takes a URL: tab, newline and carriage return are removed, then control characters and
+# spaces at both ends, then everything from the first ? or #. If what is left ends in .webm or .mp4 (in any letter
+# case) or begins with /assets/films/, it must be exactly /assets/films/ followed by a sealed film's name. Prose and
+# other attributes are not read. A page the parser cannot read fails.
+from html.parser import HTMLParser
+class FilmRefs(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.refs = []
+    def handle_starttag(self, tag, attrs):
+        for k, v in attrs:
+            if k in ("src", "href") and v:
+                self.refs.append((tag, k, v))
+C0_AND_SPACE = "".join(map(chr, range(33)))
+named = set()
+for p in PAGES:
+    film_refs = FilmRefs()
+    try:
+        film_refs.feed(open(p, encoding="utf-8").read())
+        film_refs.close()
+    except Exception as e:
+        bad_film(f"{p}: the HTML parser could not read this page ({e.__class__.__name__}), so its film references are unchecked: repair the markup")
+        continue
+    for tag, k, v in film_refs.refs:
+        path = re.split(r"[?#]", re.sub(r"[\t\n\r]", "", v).strip(C0_AND_SPACE), maxsplit=1)[0]
+        if not (path.lower().endswith(FILM_EXT) or path.startswith("/assets/films/")):
+            continue
+        name = path[len("/assets/films/"):] if path.startswith("/assets/films/") else None
+        if name in SEALED_FILMS:
+            named.add(name)
+        else:
+            bad_film(f"{p}: <{tag} {k}={v!r}> is a film reference that is not exactly /assets/films/<a sealed film>")
+if not film_fails:
+    say(f"OK: {len(SEALED_FILMS)} films sealed by sha256 in ../semaphores/films (nothing else there but, at most, a Finder .DS_Store file); no file with one of the gate's video extensions under site/; the Makefile is the sealed text and sets exactly those ten; {len(named)} of them named by the pages")
+
 # 6. Repo privacy gate: forbid tracking Research Artifacts, private_research_vault, transcripts, or sqlite/jsonl dumps in git.
+# For the films: no file with one of VIDEO_EXT may be tracked outside semaphores/films/ (the repository holds the films
+# once). Git's raw, NUL-separated paths are read. If git does not answer, these checks are skipped and the gate says so.
 import subprocess
+git_ok = True
 try:
-    tracked = subprocess.check_output(["git", "ls-files"], cwd="..", text=True).splitlines()
+    tracked = [t for t in subprocess.check_output(["git", "ls-files", "-z"], cwd="..", stderr=subprocess.DEVNULL).decode("utf-8", "backslashreplace").split("\0") if t]
 except Exception:
     tracked = []
+    git_ok = False
 FORBIDDEN_GIT = ("research artifacts/", "private_research_vault/", "wispr", "transcript", ".jsonl", ".sqlite", "doorbell")
 PUBLIC_HANDOFF_TABLES = {
     "tools/handoff_art_colours.json",
     "tools/handoff_drafting_candidates.json",
 }
+git_fails = 0
 for tf in tracked:
     if tf in PUBLIC_HANDOFF_TABLES:
         continue
     tfl = tf.lower()
     if any(tok in tfl for tok in FORBIDDEN_GIT):
-        bad(f"forbidden private/dump path tracked in git: {tf}")
-say("OK: git tracked-files privacy gate clean")
+        bad(f"forbidden private/dump path tracked in git: {tf}"); git_fails += 1
+    if tfl.endswith(VIDEO_EXT) and not tf.startswith("semaphores/films/"):
+        bad(f"video file tracked outside semaphores/films/: {tf} (the repository holds the films once)"); git_fails += 1
+if not git_ok:
+    say("SKIPPED: git ls-files did not answer here (not a repository, no git, or git refused): the tracked-files checks did not run")
+elif git_fails == 0:
+    say("OK: git tracked-files privacy gate clean; no file with one of the gate's video extensions tracked outside semaphores/films/")
 
 if FAIL == 0:
     say("verify.sh: ALL CHECKS PASS")
