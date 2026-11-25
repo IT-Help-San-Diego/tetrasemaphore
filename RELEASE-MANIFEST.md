@@ -48,7 +48,7 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 
 | path | bytes | SHA-256 |
 |---|---|---|
-| `.gitignore` | 539 | 3f7fa7466639362a95f612bce6f36045eafee66ff55f9b79a700c5f7c7ce8e22 |
+| `.gitignore` | 625 | 50ef76ffefb6d5aeb032a8e57af72fefca112a7418ab64befecbbfb3597b90bf |
 | `LICENSE` | 18,657 | 9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411 |
 | `LICENSE-CODE` | 11,358 | cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 |
 | `NOTICE` | 799 | 9a1190909a291f5a4543cc00b477997068ef911874f955a2db28529d197d4f3a |
@@ -239,6 +239,9 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `docs/datasheet-audit/audit_METACOGNITIVE.json` | 17,048 | 12152090640bb2958c5221c082de54790463cb3b2de004d7f3894eceb677d420 |
 | `docs/datasheet-audit/audit_NON-NORMATIVE.json` | 16,996 | d83f5cdde1352d48eed42f66c1c5ceb2cf302f6b08c028e6246803d3ea6021b3 |
 | `docs/datasheet-audit/audit_NORMATIVE.json` | 15,530 | 5f92ba5402e1feeefd945de6c6b3cffe26660d7f279ff4b8de26fa30206c49c5 |
+| `lake-manifest.json` | 146 | 27b44bcb5efa91172391edce2c83ac519c6412d5bfed0aa5b96eee1c60a2f41d |
+| `lakefile.toml` | 731 | 34a3487263002ef0ac82e0be5c06a39da8f808abac8e99c9207578dfa4fbc583 |
+| `lean-toolchain` | 25 | 302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b |
 | `methods/tetrasemaphore-methods-note-01-rev1.md` | 15,308 | 46f436d9ef3a35ceceec395a4f86009e8bfa094fcf786fbb1e9da468b518cb05 |
 | `methods/tetrasemaphore-methods-note-01.md` | 7,829 | 10a216a4cf8861c0ab04b5faca8ec529eaf6cfea76838c3fd2e7d091d420e536 |
 | `pdf/TETRASEMAPHORE-METHODS-NOTE-01.pdf` | 2,796,025 | 3bf981b258544cf15c2c2c22ef9aad1433a8a32bea2bff79e6d6fd601191ad36 |

@@ -22,3 +22,6 @@ scratch/
 proofs/comparator/.lake/
 proofs/comparator/rehearsal/.out/
 proofs/comparator/*.export
+
+# Lake build outputs of the standard build at the top folder (lakefile.toml)
+/.lake/

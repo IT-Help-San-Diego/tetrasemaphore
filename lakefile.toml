@@ -1,0 +1,15 @@
+# The standard Lean build for this repository: run `lake build` in this folder.
+#
+# It compiles proofs/TetrasemaphoreAlgebra.lean under the Lean version that lean-toolchain pins, with no dependency
+# to fetch, and prints each theorem's axiom line. If any proof fails, the build fails.
+#
+# What it shows: every proof in that file compiles. What it does not show: proofs/check.sh is the fuller check (it
+# audits the compiled module's axioms and compares the statement listing with the committed one), and
+# proofs/comparator/ is the check of what the statements say. Neither is replaced by this file.
+
+name = "tetrasemaphore"
+defaultTargets = ["TetrasemaphoreAlgebra"]
+
+[[lean_lib]]
+name = "TetrasemaphoreAlgebra"
+srcDir = "proofs"
