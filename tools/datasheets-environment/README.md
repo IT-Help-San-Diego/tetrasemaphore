@@ -12,8 +12,11 @@ folder's evidence):
   sits a little differently and 6.0 to 6.7 percent of a sheet's pixels change, all of them text; every
   quotation, value and check stays identical and the build's own checks pass either way.
 - With Raqm off, the conda-forge build (python 3.11.15, pillow 12.2.0 py311hd37aea2_0, freetype 2.14.3
-  hce30654_1, cairo 1.18.4 he0f2337_1, pixman 0.46.4) and the PyPI wheels of the same versions give the
-  same bytes: VERIFY PASS, 13 of 13, in both.
+  hce30654_1, cairo 1.18.4 he0f2337_1, pixman 0.46.4) and the PyPI wheels of the same versions gave the
+  same bytes: VERIFY PASS, 13 of 13, in both. Since 23 November 2026 the wheels file pins pillow 13.0.0
+  (GitHub's 56 Dependabot alerts were all against the 12.2.0 pin); the sheets reproduce byte for byte
+  under 12.2.0, 12.3.0 and 13.0.0 alike, as the file's header records, and the conda-forge lock keeps
+  pillow 12.2.0, the environment the proof used.
 - With the engine explicit in the template, the wheels with Raqm on also reproduce the sheets (measured,
   one configuration, this platform). `tools/build_datasheets.py` still refuses to build when Pillow reports
   Raqm on unless `--allow-raqm` is given, so the condition is never silent; and it removes a second variable,

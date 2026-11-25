@@ -420,11 +420,11 @@ that release's version and DOI and names the pictures' folder as it was then. `s
 | `tools/build_datasheets.py` | 18,285 | 9a37b0e7401252c7857203444be69cbcbe3a71fe896f8e48bfe55524cf132579 |
 | `tools/check_semaphores.py` | 3,581 | 96c4649abb7da984f36eb01375e66e4c94e11aa9467aff2025a38f80f169d48b |
 | `tools/choose_drafting_colour.py` | 9,153 | 550d14d8a3d4bc7bf4ce50bbc942bde17280a56400547ff63a4b4caa06d3d77b |
-| `tools/datasheets-environment/README.md` | 3,965 | 56cd4d7c9b5e005c05ddbbad30fdfa359bce250eadf3ef1c7f0440be22dda4e7 |
+| `tools/datasheets-environment/README.md` | 4,276 | b2a6668aa8ec9c455590454e7d1454a108540e9fde0b257f053efa176b3266ce |
 | `tools/datasheets-environment/conda-explicit-osx-arm64.txt` | 10,524 | 285cf0eadbc86bcbe78cb3c813a96dbabadd71e7c6e2c669b5cd02b8eaae874a |
 | `tools/datasheets-environment/requested-builds.txt` | 519 | aa9ad65db3af4591134608eb5db7f77bb138fd5eb85ca863adcff475a03583f1 |
 | `tools/datasheets-environment/requirements-pip.txt` | 477 | 61a1be1eab6c75f94eb96c1c3c9226fc9dee85f05217d338098a8dff256bd08a |
-| `tools/datasheets-environment/requirements-wheels.txt` | 454 | 66bda2501de0dfae446529e9e2d660aa255e1ccbae93b195080b718e7be9b1fe |
+| `tools/datasheets-environment/requirements-wheels.txt` | 952 | 7d7418d3183caa56c158b16d1d5b459f85d978953207af6d6b6b3b92e4225fad |
 | `tools/drafting_measurements.json` | 4,620 | 0f677fa3bcdd2bd93b2bc63401e79eef45c12553f13bcbb2ca8f7e178290ed24 |
 | `tools/fonts/DejaVuSans-Bold.ttf` | 693,876 | 7e69e81478e233b81c3ad730f5b10abe76c792d48ec6c3e7cc3b3596a37bb3b1 |
 | `tools/fonts/DejaVuSans.ttf` | 757,076 | 7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954 |
